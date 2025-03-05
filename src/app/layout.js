@@ -16,6 +16,8 @@ export const metadata = {
 	description: "Family Game Night Leaderboard",
 };
 
+// const bgColor = "bg-zinc-950";
+
 export default function RootLayout({children}) {
 	return (
 		<html lang="en">

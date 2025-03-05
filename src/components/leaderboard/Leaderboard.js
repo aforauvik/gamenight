@@ -106,6 +106,18 @@ const sortedTeams = allTeams
 	.sort((a, b) => b.points - a.points)
 	.map((team, index) => ({...team, rank: index + 1}));
 
+function getRankColor(rank) {
+	if (rank === 1) {
+		return "bg-emerald-200";
+	} else if (rank === 2) {
+		return "bg-emerald-100";
+	} else if (rank === 3) {
+		return "bg-emerald-50";
+	} else {
+		return "";
+	}
+}
+
 const Standings = () => {
 	return (
 		<div className="flex flex-col items-start justify-center px-4 lg:px-40 py-4">
@@ -125,14 +137,14 @@ const Standings = () => {
 							2nd
 						</TableHead>
 						<TableHead className="text-right hidden sm:table-cell">
-							3rd{" "}
+							3rd
 						</TableHead>
 						<TableHead className="text-right">Points</TableHead>
 					</TableRow>
 				</TableHeader>
 				<TableBody>
 					{sortedTeams.map((team, index) => (
-						<TableRow key={index}>
+						<TableRow key={index} className={getRankColor(team.rank)}>
 							<TableCell className="font-medium">
 								{String(team.rank).padStart(2, "0")}
 							</TableCell>
