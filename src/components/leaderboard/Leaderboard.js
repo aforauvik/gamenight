@@ -24,7 +24,7 @@ function calculatePoints() {
 const allTeams = [
 	{
 		name: "Grandma",
-		avatar: "https://github.com/shadcn.png",
+		avatar: "/grandma.webp",
 		played: 5,
 		first: 2,
 		second: 0,
@@ -35,7 +35,7 @@ const allTeams = [
 	},
 	{
 		name: "Aunt Sabrina",
-		avatar: "https://github.com/shadcn.png",
+		avatar: "/aunt-sabrina.webp",
 		played: 5,
 		first: 3,
 		second: 1,
@@ -46,7 +46,7 @@ const allTeams = [
 	},
 	{
 		name: "Mom",
-		avatar: "https://github.com/shadcn.png",
+		avatar: "/mom.webp",
 		played: 5,
 		first: 0,
 		second: 1,
