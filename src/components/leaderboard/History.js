@@ -24,12 +24,12 @@ function calculatePoints() {
 const allTeams = [
 	{
 		date: "Mar 04, 2025",
-		name: "TBA",
+		name: "Landon",
 		topic: "Guess The Movie From A Quote",
-		avatar: "/shadcn.png",
-		round1: 0,
-		round2: 0,
-		round3: 0,
+		avatar: "/landon.jpeg",
+		round1: 7,
+		round2: 5,
+		round3: 8,
 		get points() {
 			return calculatePoints.call(this);
 		},

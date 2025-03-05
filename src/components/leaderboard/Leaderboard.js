@@ -25,10 +25,10 @@ const allTeams = [
 	{
 		name: "Grandma",
 		avatar: "/grandma.webp",
-		played: 5,
+		played: 6,
 		first: 2,
 		second: 0,
-		third: 0,
+		third: 1,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -47,7 +47,7 @@ const allTeams = [
 	{
 		name: "Mom",
 		avatar: "/mom.webp",
-		played: 5,
+		played: 6,
 		first: 0,
 		second: 1,
 		third: 1,
@@ -58,9 +58,9 @@ const allTeams = [
 	{
 		name: "Hannah",
 		avatar: "/hannah.jpeg",
-		played: 5,
+		played: 6,
 		first: 1,
-		second: 3,
+		second: 4,
 		third: 0,
 		get points() {
 			return calculatePoints.call(this);
@@ -80,8 +80,8 @@ const allTeams = [
 	{
 		name: "Landon",
 		avatar: "/landon.jpeg",
-		played: 5,
-		first: 0,
+		played: 6,
+		first: 1,
 		second: 1,
 		third: 0,
 		get points() {
@@ -91,7 +91,7 @@ const allTeams = [
 	{
 		name: "Christine",
 		avatar: "/christine.jpeg",
-		played: 5,
+		played: 6,
 		first: 0,
 		second: 0,
 		third: 0,
