@@ -30,7 +30,7 @@ function calculatePoints() {
 const allTeams = [
 	{
 		name: "Grandma",
-		avatar: "https://github.com/shadcn.png",
+		avatar: "/grandma.webp",
 		played: allInfo.rounds,
 		round1: 0,
 		round2: 0,
@@ -41,7 +41,7 @@ const allTeams = [
 	},
 	{
 		name: "Aunt Sabrina",
-		avatar: "https://github.com/shadcn.png",
+		avatar: "/aunt-sabrina.webp",
 		played: allInfo.rounds,
 		round1: 0,
 		round2: 0,
@@ -52,7 +52,7 @@ const allTeams = [
 	},
 	{
 		name: "Mom",
-		avatar: "https://github.com/shadcn.png",
+		avatar: "/mom.webp",
 		played: allInfo.rounds,
 		round1: 0,
 		round2: 0,
@@ -128,7 +128,7 @@ const Standings = () => {
 
 			<hr className="border-zinc-100 border-[1px] w-full mb-4"></hr>
 
-			<h1 className="text-base font-normal text-left mb-4">Standings</h1>
+			<h1 className="text-base font-normal text-left mb-4">Scoreboard</h1>
 			<Table>
 				<TableHeader>
 					<TableRow>
