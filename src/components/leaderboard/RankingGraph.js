@@ -19,13 +19,13 @@ import {
 } from "@/components/ui/chart";
 
 const chartData = [
-	{month: "Aunt Sabrina", points: 11},
-	{month: "Grandma", points: 7},
-	{month: "Hannah", points: 11},
-	{month: "Julian", points: 3},
-	{month: "Landon", points: 5},
-	{month: "Mom", points: 3},
-	{month: "Christine", points: 0},
+	{player: "Aunt Sabrina", points: 11},
+	{player: "Grandma", points: 7},
+	{player: "Hannah", points: 11},
+	{player: "Julian", points: 3},
+	{player: "Landon", points: 5},
+	{player: "Mom", points: 3},
+	{player: "Christine", points: 0},
 ].sort((a, b) => b.points - a.points);
 
 const chartConfig = {
@@ -53,7 +53,7 @@ export function RankingGraph() {
 					>
 						<CartesianGrid vertical={false} />
 						<XAxis
-							dataKey="month"
+							dataKey="player"
 							tickLine={false}
 							tickMargin={10}
 							axisLine={false}

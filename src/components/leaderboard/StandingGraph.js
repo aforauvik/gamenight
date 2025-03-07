@@ -30,7 +30,7 @@ function nopositioncalc() {
 
 const chartData = [
 	{
-		month: "Aunt Sabrina",
+		player: "Aunt Sabrina",
 		first: 3,
 		second: 1,
 		third: 0,
@@ -39,7 +39,7 @@ const chartData = [
 		},
 	},
 	{
-		month: "Grandma",
+		player: "Grandma",
 		first: 2,
 		second: 0,
 		third: 1,
@@ -48,7 +48,7 @@ const chartData = [
 		},
 	},
 	{
-		month: "Hannah",
+		player: "Hannah",
 		first: 1,
 		second: 4,
 		third: 0,
@@ -57,7 +57,7 @@ const chartData = [
 		},
 	},
 	{
-		month: "Julian",
+		player: "Julian",
 		first: 1,
 		second: 0,
 		third: 0,
@@ -66,7 +66,7 @@ const chartData = [
 		},
 	},
 	{
-		month: "Landon",
+		player: "Landon",
 		first: 1,
 		second: 1,
 		third: 0,
@@ -75,7 +75,7 @@ const chartData = [
 		},
 	},
 	{
-		month: "Mom",
+		player: "Mom",
 		first: 0,
 		second: 1,
 		third: 1,
@@ -84,7 +84,7 @@ const chartData = [
 		},
 	},
 	{
-		month: "Christine",
+		player: "Christine",
 		first: 0,
 		second: 0,
 		third: 0,
@@ -125,7 +125,7 @@ export function StandingGraph() {
 					<BarChart accessibilityLayer data={chartData}>
 						<CartesianGrid vertical={false} />
 						<XAxis
-							dataKey="month"
+							dataKey="player"
 							tickLine={false}
 							tickMargin={10}
 							axisLine={false}
