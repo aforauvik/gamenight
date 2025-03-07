@@ -51,7 +51,7 @@ const chartData = [
 		player: "Hannah",
 		first: 1,
 		second: 4,
-		third: 0,
+		third: 1,
 		get noposition() {
 			return nopositioncalc.call(this);
 		},

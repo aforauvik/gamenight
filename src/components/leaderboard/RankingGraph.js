@@ -18,15 +18,7 @@ import {
 	ChartTooltipContent,
 } from "@/components/ui/chart";
 
-const chartData = [
-	{player: "Aunt Sabrina", points: 11},
-	{player: "Grandma", points: 7},
-	{player: "Hannah", points: 11},
-	{player: "Julian", points: 3},
-	{player: "Landon", points: 5},
-	{player: "Mom", points: 3},
-	{player: "Christine", points: 0},
-].sort((a, b) => b.points - a.points);
+import {allTeams} from "./Leaderboard";
 
 const chartConfig = {
 	points: {
@@ -36,6 +28,13 @@ const chartConfig = {
 };
 
 export function RankingGraph() {
+	const chartData = allTeams
+		.map((team) => ({
+			player: team.name,
+			points: team.points,
+		}))
+		.sort((a, b) => b.points - a.points);
+
 	return (
 		<Card className="w-full shadow-none">
 			<CardHeader>
@@ -44,13 +43,7 @@ export function RankingGraph() {
 			</CardHeader>
 			<CardContent>
 				<ChartContainer config={chartConfig} className="min-h-[200px] w-full">
-					<BarChart
-						accessibilityLayer
-						data={chartData}
-						margin={{
-							top: 20,
-						}}
-					>
+					<BarChart accessibilityLayer data={chartData} margin={{top: 20}}>
 						<CartesianGrid vertical={false} />
 						<XAxis
 							dataKey="player"

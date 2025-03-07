@@ -23,11 +23,7 @@ const allInfo = {
 	game: 6,
 };
 
-function calculatePoints() {
-	return this.first * 3 + this.second * 2 + this.third * 1;
-}
-
-const allTeams = [
+export const allTeams = [
 	{
 		name: "Grandma",
 		avatar: "/grandma.webp",
@@ -35,9 +31,6 @@ const allTeams = [
 		first: 2,
 		second: 0,
 		third: 1,
-		get points() {
-			return calculatePoints.call(this);
-		},
 	},
 	{
 		name: "Aunt Sabrina",
@@ -46,9 +39,6 @@ const allTeams = [
 		first: 3,
 		second: 1,
 		third: 0,
-		get points() {
-			return calculatePoints.call(this);
-		},
 	},
 	{
 		name: "Mom",
@@ -57,9 +47,6 @@ const allTeams = [
 		first: 0,
 		second: 1,
 		third: 1,
-		get points() {
-			return calculatePoints.call(this);
-		},
 	},
 	{
 		name: "Hannah",
@@ -67,10 +54,7 @@ const allTeams = [
 		game: allInfo.game,
 		first: 1,
 		second: 4,
-		third: 0,
-		get points() {
-			return calculatePoints.call(this);
-		},
+		third: 1,
 	},
 	{
 		name: "Julian",
@@ -79,9 +63,6 @@ const allTeams = [
 		first: 1,
 		second: 0,
 		third: 0,
-		get points() {
-			return calculatePoints.call(this);
-		},
 	},
 	{
 		name: "Landon",
@@ -90,9 +71,6 @@ const allTeams = [
 		first: 1,
 		second: 1,
 		third: 0,
-		get points() {
-			return calculatePoints.call(this);
-		},
 	},
 	{
 		name: "Christine",
@@ -101,14 +79,13 @@ const allTeams = [
 		first: 0,
 		second: 0,
 		third: 0,
-		get points() {
-			return calculatePoints.call(this);
-		},
 	},
-];
+].map((team) => ({
+	...team,
+	points: team.first * 3 + team.second * 2 + team.third * 1,
+}));
 
 const sortedTeams = allTeams
-	.map((team) => ({...team}))
 	.sort((a, b) => b.points - a.points)
 	.map((team, index) => ({...team, rank: index + 1}));
 

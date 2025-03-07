@@ -130,7 +130,7 @@ const Standings = () => {
 		<div className="flex flex-col items-start justify-center px-4 lg:px-40 py-4">
 			<hr className="border-zinc-100 border-[1px] w-full mb-4"></hr>
 			<div className="flex lg:flex-row flex-col lg:items-center items-start justify-between w-full">
-				<h1 className="lg:text-xl text-base font-bold text-left mb-4">
+				<h1 className="lg:text-xl text-base font-bold text-left lg:mb-4 mb-1">
 					Family Gaming League
 				</h1>
 				<div className="flex lg:flex-row justify-center items-center gap-2">
