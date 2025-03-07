@@ -60,7 +60,7 @@ export function RankingGraph() {
 							dataKey="points"
 							fill="var(--color-points)"
 							fillOpacity={0.4}
-							radius={8}
+							// radius={8}
 						>
 							<LabelList
 								position="top"

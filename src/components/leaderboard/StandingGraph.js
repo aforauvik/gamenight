@@ -20,79 +20,12 @@ import {
 	ChartTooltipContent,
 } from "@/components/ui/chart";
 
-const allInfo = {
-	game: 6,
-};
+import {allTeams} from "./Leaderboard";
+import {allInfo} from "./Leaderboard";
 
-function nopositioncalc() {
-	return allInfo.game - (this.first + this.second + this.third);
+function nopositioncalc(first, second, third) {
+	return allInfo.game - (first + second + third);
 }
-
-const chartData = [
-	{
-		player: "Aunt Sabrina",
-		first: 3,
-		second: 1,
-		third: 0,
-		get noposition() {
-			return nopositioncalc.call(this);
-		},
-	},
-	{
-		player: "Grandma",
-		first: 2,
-		second: 0,
-		third: 1,
-		get noposition() {
-			return nopositioncalc.call(this);
-		},
-	},
-	{
-		player: "Hannah",
-		first: 1,
-		second: 4,
-		third: 1,
-		get noposition() {
-			return nopositioncalc.call(this);
-		},
-	},
-	{
-		player: "Julian",
-		first: 1,
-		second: 0,
-		third: 0,
-		get noposition() {
-			return nopositioncalc.call(this);
-		},
-	},
-	{
-		player: "Landon",
-		first: 1,
-		second: 1,
-		third: 0,
-		get noposition() {
-			return nopositioncalc.call(this);
-		},
-	},
-	{
-		player: "Mom",
-		first: 0,
-		second: 1,
-		third: 1,
-		get noposition() {
-			return nopositioncalc.call(this);
-		},
-	},
-	{
-		player: "Christine",
-		first: 0,
-		second: 0,
-		third: 0,
-		get noposition() {
-			return nopositioncalc.call(this);
-		},
-	},
-].sort((a, b) => b.first - a.first);
 
 const chartConfig = {
 	first: {
@@ -114,6 +47,15 @@ const chartConfig = {
 };
 
 export function StandingGraph() {
+	const chartData = allTeams
+		.map((team) => ({
+			player: team.name,
+			first: team.first,
+			second: team.second,
+			third: team.third,
+			noposition: nopositioncalc(team.first, team.second, team.third),
+		}))
+		.sort((a, b) => b.first - a.first);
 	return (
 		<Card className="w-full shadow-none">
 			<CardHeader>
@@ -138,21 +80,21 @@ export function StandingGraph() {
 							dataKey="first"
 							stackId="a"
 							fill="var(--color-first)"
-							radius={[0, 0, 4, 4]}
+							// radius={[0, 0, 4, 4]}
 							fillOpacity={0.4}
 						/>
 						<Bar
 							dataKey="second"
 							stackId="a"
 							fill="var(--color-second)"
-							radius={[0, 0, 0, 0]}
+							// radius={[0, 0, 0, 0]}
 							fillOpacity={0.4}
 						/>
 						<Bar
 							dataKey="third"
 							stackId="a"
 							fill="var(--color-third)"
-							radius={[0, 0, 0, 0]}
+							// radius={[0, 0, 0, 0]}
 							fillOpacity={0.4}
 						/>
 
@@ -160,7 +102,7 @@ export function StandingGraph() {
 							dataKey="noposition"
 							stackId="a"
 							fill="var(--color-noposition)"
-							radius={[4, 4, 0, 0]}
+							// radius={[4, 4, 0, 0]}
 							fillOpacity={0.4}
 						/>
 					</BarChart>

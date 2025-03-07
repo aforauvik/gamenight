@@ -19,7 +19,7 @@ import Image from "next/image";
 import {RankingGraph} from "./RankingGraph";
 import {StandingGraph} from "./StandingGraph";
 
-const allInfo = {
+export const allInfo = {
 	game: 6,
 };
 
