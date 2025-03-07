@@ -16,6 +16,12 @@ import {
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 
 import Image from "next/image";
+import {RankingGraph} from "./RankingGraph";
+import {StandingGraph} from "./StandingGraph";
+
+const allInfo = {
+	game: 6,
+};
 
 function calculatePoints() {
 	return this.first * 3 + this.second * 2 + this.third * 1;
@@ -25,7 +31,7 @@ const allTeams = [
 	{
 		name: "Grandma",
 		avatar: "/grandma.webp",
-		played: 6,
+		game: allInfo.game,
 		first: 2,
 		second: 0,
 		third: 1,
@@ -36,7 +42,7 @@ const allTeams = [
 	{
 		name: "Aunt Sabrina",
 		avatar: "/aunt-sabrina.webp",
-		played: 5,
+		game: allInfo.game,
 		first: 3,
 		second: 1,
 		third: 0,
@@ -47,7 +53,7 @@ const allTeams = [
 	{
 		name: "Mom",
 		avatar: "/mom.webp",
-		played: 6,
+		game: allInfo.game,
 		first: 0,
 		second: 1,
 		third: 1,
@@ -58,7 +64,7 @@ const allTeams = [
 	{
 		name: "Hannah",
 		avatar: "/hannah.jpeg",
-		played: 6,
+		game: allInfo.game,
 		first: 1,
 		second: 4,
 		third: 0,
@@ -69,7 +75,7 @@ const allTeams = [
 	{
 		name: "Julian",
 		avatar: "/julian.jpeg",
-		played: 5,
+		game: allInfo.game,
 		first: 1,
 		second: 0,
 		third: 0,
@@ -80,7 +86,7 @@ const allTeams = [
 	{
 		name: "Landon",
 		avatar: "/landon.jpeg",
-		played: 6,
+		game: allInfo.game,
 		first: 1,
 		second: 1,
 		third: 0,
@@ -91,7 +97,7 @@ const allTeams = [
 	{
 		name: "Christine",
 		avatar: "/christine.jpeg",
-		played: 6,
+		game: allInfo.game,
 		first: 0,
 		second: 0,
 		third: 0,
@@ -120,61 +126,68 @@ function getRankColor(rank) {
 
 const Standings = () => {
 	return (
-		<div className="flex flex-col items-start justify-center px-4 lg:px-40 py-4">
-			<h1 className="text-base font-normal text-left mb-4">Leaderboard</h1>
-			<Table>
-				<TableHeader>
-					<TableRow>
-						<TableHead className="w-[120px]">Rank</TableHead>
-						<TableHead>Player</TableHead>
-						<TableHead className="text-right hidden sm:table-cell">
-							Played
-						</TableHead>
-						<TableHead className="text-right hidden sm:table-cell">
-							1st
-						</TableHead>
-						<TableHead className="text-right hidden sm:table-cell">
-							2nd
-						</TableHead>
-						<TableHead className="text-right hidden sm:table-cell">
-							3rd
-						</TableHead>
-						<TableHead className="text-right">Points</TableHead>
-					</TableRow>
-				</TableHeader>
-				<TableBody>
-					{sortedTeams.map((team, index) => (
-						<TableRow key={index} className={getRankColor(team.rank)}>
-							<TableCell className="font-medium">
-								{String(team.rank).padStart(2, "0")}
-							</TableCell>
-							<TableCell className="flex items-center gap-2">
-								<Avatar>
-									<AvatarImage src={team.avatar} alt={team.name} />
-									<AvatarFallback>
-										{team.name.substring(0, 2).toUpperCase()}
-									</AvatarFallback>
-								</Avatar>
-								{team.name}
-							</TableCell>
-							<TableCell className="text-right hidden sm:table-cell">
-								{team.played}
-							</TableCell>
-							<TableCell className="text-right hidden sm:table-cell">
-								{team.first}
-							</TableCell>
-							<TableCell className="text-right hidden sm:table-cell">
-								{team.second}
-							</TableCell>
-							<TableCell className="text-right hidden sm:table-cell">
-								{team.third}
-							</TableCell>
-							<TableCell className="text-right">{team.points}</TableCell>
+		<>
+			<div className="flex flex-col items-start justify-center px-4 lg:px-40 py-4">
+				<h1 className="text-base font-normal text-left mb-4">Leaderboard</h1>
+				<Table>
+					<TableHeader>
+						<TableRow>
+							<TableHead className="w-[120px]">Rank</TableHead>
+							<TableHead>Player</TableHead>
+							<TableHead className="text-right hidden sm:table-cell">
+								Game
+							</TableHead>
+							<TableHead className="text-right hidden sm:table-cell">
+								1st
+							</TableHead>
+							<TableHead className="text-right hidden sm:table-cell">
+								2nd
+							</TableHead>
+							<TableHead className="text-right hidden sm:table-cell">
+								3rd
+							</TableHead>
+							<TableHead className="text-right">Points</TableHead>
 						</TableRow>
-					))}
-				</TableBody>
-			</Table>
-		</div>
+					</TableHeader>
+					<TableBody>
+						{sortedTeams.map((team, index) => (
+							<TableRow key={index} className={getRankColor(team.rank)}>
+								<TableCell className="font-medium">
+									{String(team.rank).padStart(2, "0")}
+								</TableCell>
+								<TableCell className="flex items-center gap-2">
+									<Avatar>
+										<AvatarImage src={team.avatar} alt={team.name} />
+										<AvatarFallback>
+											{team.name.substring(0, 2).toUpperCase()}
+										</AvatarFallback>
+									</Avatar>
+									{team.name}
+								</TableCell>
+								<TableCell className="text-right hidden sm:table-cell">
+									{team.game}
+								</TableCell>
+								<TableCell className="text-right hidden sm:table-cell">
+									{team.first}
+								</TableCell>
+								<TableCell className="text-right hidden sm:table-cell">
+									{team.second}
+								</TableCell>
+								<TableCell className="text-right hidden sm:table-cell">
+									{team.third}
+								</TableCell>
+								<TableCell className="text-right">{team.points}</TableCell>
+							</TableRow>
+						))}
+					</TableBody>
+				</Table>
+			</div>
+
+			<div className="flex lg:flex-row flex-col justify-center gap-4 w-full lg:px-40 py-4 px-4">
+				<RankingGraph />
+				<StandingGraph />
+			</div>
+		</>
 	);
 };
 
