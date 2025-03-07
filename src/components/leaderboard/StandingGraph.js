@@ -109,7 +109,7 @@ const chartConfig = {
 	},
 	noposition: {
 		label: "No Position",
-		color: "#71717a",
+		color: "#484848",
 	},
 };
 

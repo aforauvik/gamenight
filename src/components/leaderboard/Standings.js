@@ -16,6 +16,7 @@ import {
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 
 import Image from "next/image";
+import {ModeToggle} from "../mode-toggler";
 
 const allInfo = {
 	gameName: "Guess The Movie From A Quote",
@@ -114,11 +115,11 @@ const sortedTeams = allTeams
 
 function getRankColor(rank) {
 	if (rank === 1) {
-		return "bg-emerald-200";
+		return "bg-emerald-200 dark:bg-emerald-500/9";
 	} else if (rank === 2) {
-		return "bg-emerald-100";
+		return "bg-emerald-100 dark:bg-emerald-500/7";
 	} else if (rank === 3) {
-		return "bg-emerald-50";
+		return "bg-emerald-50 dark:bg-emerald-500/5";
 	} else {
 		return "";
 	}
@@ -128,14 +129,20 @@ const Standings = () => {
 	return (
 		<div className="flex flex-col items-start justify-center px-4 lg:px-40 py-4">
 			<hr className="border-zinc-100 border-[1px] w-full mb-4"></hr>
-			<div className="flex lg:flex-row flex-col items-center justify-between w-full">
+			<div className="flex lg:flex-row flex-col lg:items-center items-start justify-between w-full">
 				<h1 className="lg:text-xl text-base font-bold text-left mb-4">
 					Family Gaming League
 				</h1>
-				<p className="lg:text-base text-sm font-semibold text-right mb-4">
-					{" "}
-					{allInfo.gameName}
-				</p>
+				<div className="flex lg:flex-row justify-center items-center gap-2">
+					<p className="lg:text-base text-sm font-semibold text-right text-zinc-500 mb-4">
+						{" "}
+						{allInfo.gameName}
+					</p>
+
+					{/* <p className="lg:text-base text-sm font-semibold text-right mb-4">
+						<ModeToggle />
+					</p> */}
+				</div>
 			</div>
 
 			<hr className="border-zinc-100 border-[1px] w-full mb-4"></hr>

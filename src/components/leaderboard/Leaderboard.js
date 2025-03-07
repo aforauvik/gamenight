@@ -114,11 +114,11 @@ const sortedTeams = allTeams
 
 function getRankColor(rank) {
 	if (rank === 1) {
-		return "bg-emerald-200";
+		return "bg-emerald-200 dark:bg-emerald-500/9";
 	} else if (rank === 2) {
-		return "bg-emerald-100";
+		return "bg-emerald-100 dark:bg-emerald-500/7";
 	} else if (rank === 3) {
-		return "bg-emerald-50";
+		return "bg-emerald-50 dark:bg-emerald-500/5";
 	} else {
 		return "";
 	}

@@ -4,6 +4,7 @@ import Leaderboard from "@/components/leaderboard/Leaderboard";
 import {Chart} from "@/components/leaderboard/Charts";
 import {StandingGraph} from "@/components/leaderboard/StandingGraph";
 import {RankingGraph} from "@/components/leaderboard/RankingGraph";
+import {ModeToggle} from "@/components/mode-toggler";
 
 export default function Home() {
 	return (
