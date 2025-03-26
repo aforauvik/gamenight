@@ -62,7 +62,7 @@ export const allTeams = [
 		game: allInfo.game,
 		first: 1,
 		second: 0,
-		third: 0,
+		third: 1,
 	},
 	{
 		name: "Landon",
