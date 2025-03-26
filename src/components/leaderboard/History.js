@@ -23,13 +23,25 @@ function calculatePoints() {
 
 const allTeams = [
 	{
+		date: "Mar 25, 2025",
+		name: "Christine",
+		topic: "Facts About US States",
+		avatar: "/christine.jpeg",
+		round1: 7,
+		round2: 4,
+		round3: 4,
+		get points() {
+			return calculatePoints.call(this);
+		},
+	},
+	{
 		date: "Mar 04, 2025",
 		name: "Landon",
 		topic: "Guess The Movie From A Quote",
 		avatar: "/landon.jpeg",
 		round1: 7,
-		round2: 5,
-		round3: 8,
+		round2: 4,
+		round3: 4,
 		get points() {
 			return calculatePoints.call(this);
 		},
