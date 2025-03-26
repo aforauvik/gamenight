@@ -19,7 +19,7 @@ import Image from "next/image";
 import {ModeToggle} from "../mode-toggler";
 
 const allInfo = {
-	gameName: "Guess The Movie From A Quote",
+	gameName: "Facts About US States",
 	season: "Feb, 2025",
 	rounds: 30,
 };
@@ -33,9 +33,9 @@ const allTeams = [
 		name: "Grandma",
 		avatar: "/grandma.webp",
 		played: allInfo.rounds,
-		round1: 8,
-		round2: 7,
-		round3: 4,
+		round1: 7,
+		round2: 4,
+		round3: 2,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -55,9 +55,9 @@ const allTeams = [
 		name: "Mom",
 		avatar: "/mom.webp",
 		played: allInfo.rounds,
-		round1: 9,
-		round2: 6,
-		round3: 4,
+		round1: 7,
+		round2: 2,
+		round3: 3,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -66,9 +66,9 @@ const allTeams = [
 		name: "Hannah",
 		avatar: "/hannah.jpeg",
 		played: allInfo.rounds,
-		round1: 9,
-		round2: 7,
-		round3: 4,
+		round1: 5,
+		round2: 2,
+		round3: 2,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -76,6 +76,17 @@ const allTeams = [
 	{
 		name: "Julian",
 		avatar: "/julian.jpeg",
+		played: allInfo.rounds,
+		round1: 6,
+		round2: 4,
+		round3: 2,
+		get points() {
+			return calculatePoints.call(this);
+		},
+	},
+	{
+		name: "Landon",
+		avatar: "/landon.jpeg",
 		played: allInfo.rounds,
 		round1: 0,
 		round2: 0,
@@ -85,23 +96,12 @@ const allTeams = [
 		},
 	},
 	{
-		name: "Landon",
-		avatar: "/landon.jpeg",
-		played: allInfo.rounds,
-		round1: 7,
-		round2: 5,
-		round3: 8,
-		get points() {
-			return calculatePoints.call(this);
-		},
-	},
-	{
 		name: "Christine",
 		avatar: "/christine.jpeg",
 		played: allInfo.rounds,
-		round1: 9,
-		round2: 6,
-		round3: 3,
+		round1: 7,
+		round2: 4,
+		round3: 4,
 		get points() {
 			return calculatePoints.call(this);
 		},
