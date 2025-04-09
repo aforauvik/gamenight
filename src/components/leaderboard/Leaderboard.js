@@ -28,7 +28,7 @@ export const allTeams = [
 		name: "Grandma",
 		avatar: "/grandma.webp",
 		game: allInfo.game,
-		first: 2,
+		first: 3,
 		second: 2,
 		third: 1,
 	},
@@ -62,7 +62,7 @@ export const allTeams = [
 		game: allInfo.game,
 		first: 1,
 		second: 0,
-		third: 2,
+		third: 3,
 	},
 	{
 		name: "Landon",
@@ -77,7 +77,7 @@ export const allTeams = [
 		avatar: "/christine.jpeg",
 		game: allInfo.game,
 		first: 1,
-		second: 0,
+		second: 2,
 		third: 0,
 	},
 ].map((team) => ({

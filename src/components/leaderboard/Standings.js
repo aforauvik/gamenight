@@ -19,7 +19,7 @@ import Image from "next/image";
 import {ModeToggle} from "../mode-toggler";
 
 const allInfo = {
-	gameName: "Food Facts",
+	gameName: "Animal Facts",
 	season: "Apr, 2025",
 	rounds: 30,
 };
@@ -33,9 +33,9 @@ const allTeams = [
 		name: "Grandma",
 		avatar: "/grandma.webp",
 		played: allInfo.rounds,
-		round1: 10,
-		round2: 4,
-		round3: 7,
+		round1: 9,
+		round2: 6,
+		round3: 8,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -67,8 +67,8 @@ const allTeams = [
 		avatar: "/hannah.jpeg",
 		played: allInfo.rounds,
 		round1: 9,
-		round2: 5,
-		round3: 7,
+		round2: 7,
+		round3: 5,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -77,9 +77,9 @@ const allTeams = [
 		name: "Julian",
 		avatar: "/julian.jpeg",
 		played: allInfo.rounds,
-		round1: 7,
-		round2: 2,
-		round3: 5,
+		round1: 10,
+		round2: 8,
+		round3: 4,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -99,9 +99,9 @@ const allTeams = [
 		name: "Christine",
 		avatar: "/christine.jpeg",
 		played: allInfo.rounds,
-		round1: 7,
-		round2: 3,
-		round3: 3,
+		round1: 10,
+		round2: 5,
+		round3: 7,
 		get points() {
 			return calculatePoints.call(this);
 		},
