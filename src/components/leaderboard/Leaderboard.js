@@ -20,7 +20,7 @@ import {RankingGraph} from "./RankingGraph";
 import {StandingGraph} from "./StandingGraph";
 
 export const allInfo = {
-	game: 8,
+	game: 9,
 };
 
 export const allTeams = [
