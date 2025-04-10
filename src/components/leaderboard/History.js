@@ -26,7 +26,7 @@ const allTeams = [
 		date: "Apr 8, 2025",
 		name: "Grandma",
 		topic: "Animal Facts",
-		avatar: "/grandma.jpeg",
+		avatar: "/grandma.webp",
 		round1: 9,
 		round2: 6,
 		round3: 8,
