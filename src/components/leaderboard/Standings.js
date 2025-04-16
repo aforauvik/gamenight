@@ -19,13 +19,13 @@ import Image from "next/image";
 import {ModeToggle} from "../mode-toggler";
 
 const allInfo = {
-	gameName: "Animal Facts",
+	gameName: "Space Facts",
 	season: "Apr, 2025",
 	rounds: 30,
 };
 
 function calculatePoints() {
-	return this.round1 * 5 + this.round2 * 10 + this.round3 * 15;
+	return this.round1 * 5 + this.round2 * 10 + this.round3 * 15 + this.bonus;
 }
 
 const allTeams = [
@@ -33,9 +33,10 @@ const allTeams = [
 		name: "Grandma",
 		avatar: "/grandma.webp",
 		played: allInfo.rounds,
-		round1: 9,
-		round2: 6,
-		round3: 8,
+		round1: 8,
+		round2: 7,
+		round3: 6,
+		bonus: 2,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -47,6 +48,7 @@ const allTeams = [
 		round1: 0,
 		round2: 0,
 		round3: 0,
+		bonus: 0,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -58,6 +60,7 @@ const allTeams = [
 		round1: 0,
 		round2: 0,
 		round3: 0,
+		bonus: 0,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -67,8 +70,9 @@ const allTeams = [
 		avatar: "/hannah.jpeg",
 		played: allInfo.rounds,
 		round1: 9,
-		round2: 7,
+		round2: 6,
 		round3: 5,
+		bonus: 1,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -77,9 +81,10 @@ const allTeams = [
 		name: "Julian",
 		avatar: "/julian.jpeg",
 		played: allInfo.rounds,
-		round1: 10,
-		round2: 8,
+		round1: 9,
+		round2: 5,
 		round3: 4,
+		bonus: 1,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -88,9 +93,10 @@ const allTeams = [
 		name: "Landon",
 		avatar: "/landon.jpeg",
 		played: allInfo.rounds,
-		round1: 0,
-		round2: 0,
-		round3: 0,
+		round1: 10,
+		round2: 3,
+		round3: 9,
+		bonus: 2,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -99,9 +105,10 @@ const allTeams = [
 		name: "Christine",
 		avatar: "/christine.jpeg",
 		played: allInfo.rounds,
-		round1: 10,
-		round2: 5,
-		round3: 7,
+		round1: 7,
+		round2: 4,
+		round3: 5,
+		bonus: 1,
 		get points() {
 			return calculatePoints.call(this);
 		},

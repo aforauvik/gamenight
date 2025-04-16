@@ -20,7 +20,7 @@ import {RankingGraph} from "./RankingGraph";
 import {StandingGraph} from "./StandingGraph";
 
 export const allInfo = {
-	game: 9,
+	game: 10,
 };
 
 export const allTeams = [
@@ -29,7 +29,7 @@ export const allTeams = [
 		avatar: "/grandma.webp",
 		game: allInfo.game,
 		first: 3,
-		second: 2,
+		second: 3,
 		third: 1,
 	},
 	{
@@ -54,7 +54,7 @@ export const allTeams = [
 		game: allInfo.game,
 		first: 2,
 		second: 4,
-		third: 1,
+		third: 2,
 	},
 	{
 		name: "Julian",
@@ -68,7 +68,7 @@ export const allTeams = [
 		name: "Landon",
 		avatar: "/landon.jpeg",
 		game: allInfo.game,
-		first: 1,
+		first: 2,
 		second: 1,
 		third: 0,
 	},
