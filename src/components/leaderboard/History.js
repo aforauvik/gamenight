@@ -18,7 +18,7 @@ import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import Image from "next/image";
 
 function calculatePoints() {
-	return this.round1 * 5 + this.round2 * 10 + this.round3 * 15;
+	return this.round1 * 5 + this.round2 * 10 + this.round3 * 15 + this.bonus;
 }
 
 const allTeams = [
@@ -30,6 +30,7 @@ const allTeams = [
 		round1: 10,
 		round2: 3,
 		round3: 9,
+		bonus: 2,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -42,6 +43,7 @@ const allTeams = [
 		round1: 9,
 		round2: 6,
 		round3: 8,
+		bonus: 0,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -54,6 +56,7 @@ const allTeams = [
 		round1: 9,
 		round2: 5,
 		round3: 7,
+		bonus: 0,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -66,6 +69,7 @@ const allTeams = [
 		round1: 7,
 		round2: 4,
 		round3: 4,
+		bonus: 0,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -78,6 +82,7 @@ const allTeams = [
 		round1: 7,
 		round2: 4,
 		round3: 4,
+		bonus: 0,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -90,6 +95,7 @@ const allTeams = [
 		round1: 5,
 		round2: 5,
 		round3: 7,
+		bonus: 0,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -102,6 +108,7 @@ const allTeams = [
 		round1: 5,
 		round2: 5,
 		round3: 7,
+		bonus: 0,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -114,6 +121,7 @@ const allTeams = [
 		round1: 5,
 		round2: 5,
 		round3: 7,
+		bonus: 0,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -126,6 +134,7 @@ const allTeams = [
 		round1: 5,
 		round2: 5,
 		round3: 7,
+		bonus: 0,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -138,6 +147,7 @@ const allTeams = [
 		round1: 5,
 		round2: 5,
 		round3: 7,
+		bonus: 0,
 		get points() {
 			return calculatePoints.call(this);
 		},
