@@ -19,8 +19,8 @@ import Image from "next/image";
 import {ModeToggle} from "../mode-toggler";
 
 const allInfo = {
-	gameName: "Learn About Asia",
-	season: "Apr, 2025",
+	gameName: "Guess The Person",
+	season: "May, 2025",
 	rounds: 30,
 };
 
@@ -45,9 +45,9 @@ const allTeams = [
 		name: "Aunt Sabrina",
 		avatar: "/aunt-sabrina.webp",
 		played: allInfo.rounds,
-		round1: 0,
-		round2: 0,
-		round3: 0,
+		round1: 23,
+		round2: 26,
+		round3: 13,
 		bonus: 0,
 		get points() {
 			return calculatePoints.call(this);
@@ -69,10 +69,10 @@ const allTeams = [
 		name: "Hannah",
 		avatar: "/hannah.jpeg",
 		played: allInfo.rounds,
-		round1: 5,
-		round2: 7,
-		round3: 7,
-		bonus: 3,
+		round1: 19,
+		round2: 24,
+		round3: 14,
+		bonus: 0,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -81,8 +81,8 @@ const allTeams = [
 		name: "Julian",
 		avatar: "/julian.jpeg",
 		played: allInfo.rounds,
-		round1: 2,
-		round2: 4,
+		round1: -8,
+		round2: 14,
 		round3: 3,
 		bonus: 0,
 		get points() {
@@ -93,9 +93,9 @@ const allTeams = [
 		name: "Landon",
 		avatar: "/landon.jpeg",
 		played: allInfo.rounds,
-		round1: 0,
-		round2: 0,
-		round3: 0,
+		round1: 12,
+		round2: 29,
+		round3: 1,
 		bonus: 0,
 		get points() {
 			return calculatePoints.call(this);
@@ -105,10 +105,10 @@ const allTeams = [
 		name: "Christine",
 		avatar: "/christine.jpeg",
 		played: allInfo.rounds,
-		round1: 3,
-		round2: 5,
-		round3: 5,
-		bonus: 3,
+		round1: 22,
+		round2: 36,
+		round3: 15,
+		bonus: 0,
 		get points() {
 			return calculatePoints.call(this);
 		},
