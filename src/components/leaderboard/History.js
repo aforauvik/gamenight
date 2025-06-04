@@ -25,7 +25,7 @@ const allTeams = [
 	{
 		date: "June 03, 2025",
 		name: "Christine",
-		topic: "Guess The Person",
+		topic: "Modern Day Pop Culture",
 		avatar: "/christine.jpeg",
 		round1: 9,
 		round2: 6,
