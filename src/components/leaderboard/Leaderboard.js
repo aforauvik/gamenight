@@ -53,7 +53,7 @@ export const allTeams = [
 		avatar: "/hannah.jpeg",
 		game: allInfo.game,
 		first: 3,
-		second: 4,
+		second: 5,
 		third: 4,
 	},
 	{
@@ -62,7 +62,7 @@ export const allTeams = [
 		game: allInfo.game,
 		first: 1,
 		second: 0,
-		third: 4,
+		third: 5,
 	},
 	{
 		name: "Landon",
@@ -76,7 +76,7 @@ export const allTeams = [
 		name: "Christine",
 		avatar: "/christine.jpeg",
 		game: allInfo.game,
-		first: 3,
+		first: 4,
 		second: 3,
 		third: 0,
 	},

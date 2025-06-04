@@ -19,8 +19,8 @@ import Image from "next/image";
 import {ModeToggle} from "../mode-toggler";
 
 const allInfo = {
-	gameName: "Guess The Person",
-	season: "May, 2025",
+	gameName: "Modern Day Pop Culture",
+	season: "June, 2025",
 	rounds: 30,
 };
 
@@ -33,10 +33,10 @@ const allTeams = [
 		name: "Grandma",
 		avatar: "/grandma.webp",
 		played: allInfo.rounds,
-		round1: 0,
-		round2: 0,
-		round3: 0,
-		bonus: 0,
+		round1: 8,
+		round2: 3,
+		round3: 2,
+		bonus: 2,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -45,9 +45,9 @@ const allTeams = [
 		name: "Aunt Sabrina",
 		avatar: "/aunt-sabrina.webp",
 		played: allInfo.rounds,
-		round1: 23,
-		round2: 26,
-		round3: 13,
+		round1: 0,
+		round2: 0,
+		round3: 0,
 		bonus: 0,
 		get points() {
 			return calculatePoints.call(this);
@@ -57,10 +57,10 @@ const allTeams = [
 		name: "Mom",
 		avatar: "/mom.webp",
 		played: allInfo.rounds,
-		round1: 0,
-		round2: 0,
-		round3: 0,
-		bonus: 0,
+		round1: 7,
+		round2: 2,
+		round3: 4,
+		bonus: 3,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -69,10 +69,10 @@ const allTeams = [
 		name: "Hannah",
 		avatar: "/hannah.jpeg",
 		played: allInfo.rounds,
-		round1: 19,
-		round2: 24,
-		round3: 14,
-		bonus: 0,
+		round1: 9,
+		round2: 7,
+		round3: 3,
+		bonus: 5,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -81,10 +81,10 @@ const allTeams = [
 		name: "Julian",
 		avatar: "/julian.jpeg",
 		played: allInfo.rounds,
-		round1: -8,
-		round2: 14,
-		round3: 3,
-		bonus: 0,
+		round1: 9,
+		round2: 4,
+		round3: 4,
+		bonus: 6,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -93,10 +93,10 @@ const allTeams = [
 		name: "Landon",
 		avatar: "/landon.jpeg",
 		played: allInfo.rounds,
-		round1: 12,
-		round2: 29,
-		round3: 1,
-		bonus: 0,
+		round1: 7,
+		round2: 5,
+		round3: 3,
+		bonus: 3,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -105,10 +105,10 @@ const allTeams = [
 		name: "Christine",
 		avatar: "/christine.jpeg",
 		played: allInfo.rounds,
-		round1: 22,
-		round2: 36,
-		round3: 15,
-		bonus: 0,
+		round1: 9,
+		round2: 6,
+		round3: 4,
+		bonus: 7,
 		get points() {
 			return calculatePoints.call(this);
 		},
