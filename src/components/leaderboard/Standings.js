@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import {MdScoreboard} from "react-icons/md";
 
 import {Button} from "@/components/ui/button";
 import {
@@ -136,16 +137,26 @@ function getRankColor(rank) {
 const Standings = () => {
 	return (
 		<div className="flex flex-col items-start justify-center px-4 lg:px-40 py-4">
-			<hr className="border-zinc-100 border-[1px] w-full mb-4"></hr>
+			<hr className="border-zinc-100 border-[1px] w-full"></hr>
 			<div className="flex lg:flex-row flex-col lg:items-center items-start justify-between w-full">
-				<h1 className="lg:text-xl text-base font-bold text-left lg:mb-4 mb-1">
+				<h1 className="lg:text-xl text-base font-bold text-left py-4">
 					Family Gaming League
 				</h1>
-				<div className="flex lg:flex-row justify-center items-center gap-2">
-					<p className="lg:text-base text-sm font-semibold text-right text-zinc-500 mb-4">
+				<div className="flex lg:flex-row justify-center items-center gap-4">
+					<p className="lg:text-base text-sm font-semibold text-right text-zinc-500">
 						{" "}
 						{allInfo.gameName}
 					</p>
+
+					<Link
+						className="hidden md:table-cell sm:table-cell"
+						href="/calc"
+						target="_blank"
+					>
+						<Button variant="outline">
+							<MdScoreboard />
+						</Button>
+					</Link>
 
 					{/* <p className="lg:text-base text-sm font-semibold text-right mb-4">
 						<ModeToggle />

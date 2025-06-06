@@ -240,8 +240,8 @@ const PointCalculation = () => {
 			<audio ref={bonusSoundRef} src="/game-bonus.mp3" preload="auto" />
 			<audio ref={tickSoundRef} src="/time-ticks.mp3" preload="auto" />
 			<audio ref={timeUpSoundRef} src="/time-up.mp3" preload="auto" />
-			<div className="flex justify-between items-center mb-6 px-2">
-				<h1 className="text-2xl font-bold">Point Calculation</h1>
+			<div className="flex justify-between items-center mb-6 px-2 pb-4 border-b-1">
+				<h1 className="text-lg font-bold">Point Calculation</h1>
 				<div className="flex items-center gap-4">
 					<div className="flex items-center gap-2">
 						<Button
@@ -276,6 +276,7 @@ const PointCalculation = () => {
 							)}
 						</Button>
 					</div>
+
 					<AlertDialog>
 						<AlertDialogTrigger asChild>
 							<Button variant="outline" className="gap-2">
@@ -304,7 +305,7 @@ const PointCalculation = () => {
 
 			{[0, 1, 2].map((roundIndex) => (
 				<div key={roundIndex} className="w-full mb-8">
-					<h2 className="text-xl font-bold mb-4 px-2">
+					<h2 className="text-sm font-bold mb-4 px-2">
 						Round {roundIndex + 1}
 					</h2>
 
@@ -424,7 +425,7 @@ const PointCalculation = () => {
 			))}
 
 			<div className="w-full mt-8">
-				<h2 className="text-xl font-bold mb-4 px-2">Total Scores</h2>
+				<h2 className="text-lg font-bold mb-4 px-2">Total Scores</h2>
 				<div className="w-full overflow-x-auto">
 					<Table>
 						<TableHeader>
