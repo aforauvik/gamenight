@@ -1,6 +1,6 @@
 "use client";
 
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useRef} from "react";
 import {
 	Table,
 	TableBody,
@@ -49,6 +49,13 @@ const initialScores = allTeams.map((player) => ({
 const PointCalculation = () => {
 	const [playerScores, setPlayerScores] = useState(initialScores);
 	const [isClient, setIsClient] = useState(false);
+	const [timer, setTimer] = useState(0);
+	const [isTimerRunning, setIsTimerRunning] = useState(false);
+	const bonusSoundRef = useRef(null);
+	const tickSoundRef = useRef(null);
+	const timeUpSoundRef = useRef(null);
+	const timerIntervalRef = useRef(null);
+	const hasPlayedTickSound = useRef(false);
 
 	useEffect(() => {
 		setIsClient(true);
@@ -63,6 +70,63 @@ const PointCalculation = () => {
 			localStorage.setItem(STORAGE_KEY, JSON.stringify(playerScores));
 		}
 	}, [playerScores, isClient]);
+
+	useEffect(() => {
+		if (timer === 0 && isTimerRunning) {
+			setIsTimerRunning(false);
+			hasPlayedTickSound.current = false;
+			if (timeUpSoundRef.current) {
+				timeUpSoundRef.current.currentTime = 0;
+				timeUpSoundRef.current.play().catch((error) => {
+					console.log("Error playing time up sound:", error);
+				});
+			}
+		} else if (timer === 7 && isTimerRunning && !hasPlayedTickSound.current) {
+			if (tickSoundRef.current) {
+				tickSoundRef.current.currentTime = 0;
+				tickSoundRef.current.play().catch((error) => {
+					console.log("Error playing tick sound:", error);
+				});
+				hasPlayedTickSound.current = true;
+			}
+		}
+	}, [timer, isTimerRunning]);
+
+	const startTimer = () => {
+		if (isTimerRunning) return;
+
+		setTimer(15);
+		setIsTimerRunning(true);
+		hasPlayedTickSound.current = false;
+
+		timerIntervalRef.current = setInterval(() => {
+			setTimer((prev) => {
+				if (prev <= 1) {
+					clearInterval(timerIntervalRef.current);
+					return 0;
+				}
+				return prev - 1;
+			});
+		}, 1000);
+	};
+
+	const stopTimer = () => {
+		if (timerIntervalRef.current) {
+			clearInterval(timerIntervalRef.current);
+		}
+		setIsTimerRunning(false);
+		setTimer(0);
+		hasPlayedTickSound.current = false;
+	};
+
+	const playBonusSound = () => {
+		if (bonusSoundRef.current) {
+			bonusSoundRef.current.currentTime = 0;
+			bonusSoundRef.current.play().catch((error) => {
+				console.log("Error playing bonus sound:", error);
+			});
+		}
+	};
 
 	const handleAnswer = (playerIndex, roundIndex, questionIndex, isCorrect) => {
 		setPlayerScores((prevScores) => {
@@ -91,6 +155,13 @@ const PointCalculation = () => {
 					consecutiveCorrect = 0;
 					isBonusActive = false;
 				}
+			}
+
+			// Check if bonus points increased
+			const oldBonusPoints = round.bonusPoints;
+			if (bonusPoints > oldBonusPoints) {
+				// Use setTimeout to ensure state update is complete before playing sound
+				setTimeout(playBonusSound, 0);
 			}
 
 			round.questions = questions;
@@ -166,31 +237,69 @@ const PointCalculation = () => {
 
 	return (
 		<div className="w-full px-2 py-4">
+			<audio ref={bonusSoundRef} src="/game-bonus.mp3" preload="auto" />
+			<audio ref={tickSoundRef} src="/time-ticks.mp3" preload="auto" />
+			<audio ref={timeUpSoundRef} src="/time-up.mp3" preload="auto" />
 			<div className="flex justify-between items-center mb-6 px-2">
 				<h1 className="text-2xl font-bold">Point Calculation</h1>
-				<AlertDialog>
-					<AlertDialogTrigger asChild>
-						<Button variant="outline" className="gap-2">
-							<RefreshCw className="h-4 w-4" />
-							Reset All Scores
+				<div className="flex items-center gap-4">
+					<div className="flex items-center gap-2">
+						<Button
+							onClick={isTimerRunning ? stopTimer : startTimer}
+							variant={isTimerRunning ? "destructive" : "default"}
+							className="gap-2"
+						>
+							{isTimerRunning ? (
+								<>
+									<span className="font-mono">{timer}s</span>
+									<X className="h-4 w-4" />
+								</>
+							) : (
+								<>
+									<span>Start Timer</span>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="24"
+										height="24"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										strokeWidth="2"
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										className="h-4 w-4"
+									>
+										<path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+										<path d="M12 6v6l4 2" />
+									</svg>
+								</>
+							)}
 						</Button>
-					</AlertDialogTrigger>
-					<AlertDialogContent>
-						<AlertDialogHeader>
-							<AlertDialogTitle>Reset All Scores</AlertDialogTitle>
-							<AlertDialogDescription>
-								Are you sure you want to reset all scores? This action cannot be
-								undone.
-							</AlertDialogDescription>
-						</AlertDialogHeader>
-						<AlertDialogFooter>
-							<AlertDialogCancel>Cancel</AlertDialogCancel>
-							<AlertDialogAction onClick={resetAllScores}>
-								Reset
-							</AlertDialogAction>
-						</AlertDialogFooter>
-					</AlertDialogContent>
-				</AlertDialog>
+					</div>
+					<AlertDialog>
+						<AlertDialogTrigger asChild>
+							<Button variant="outline" className="gap-2">
+								<RefreshCw className="h-4 w-4" />
+								Reset All Scores
+							</Button>
+						</AlertDialogTrigger>
+						<AlertDialogContent>
+							<AlertDialogHeader>
+								<AlertDialogTitle>Reset All Scores</AlertDialogTitle>
+								<AlertDialogDescription>
+									Are you sure you want to reset all scores? This action cannot
+									be undone.
+								</AlertDialogDescription>
+							</AlertDialogHeader>
+							<AlertDialogFooter>
+								<AlertDialogCancel>Cancel</AlertDialogCancel>
+								<AlertDialogAction onClick={resetAllScores}>
+									Reset
+								</AlertDialogAction>
+							</AlertDialogFooter>
+						</AlertDialogContent>
+					</AlertDialog>
+				</div>
 			</div>
 
 			{[0, 1, 2].map((roundIndex) => (
