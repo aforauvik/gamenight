@@ -240,7 +240,7 @@ const PointCalculation = () => {
 			<audio ref={bonusSoundRef} src="/game-bonus.mp3" preload="auto" />
 			<audio ref={tickSoundRef} src="/time-ticks.mp3" preload="auto" />
 			<audio ref={timeUpSoundRef} src="/time-up.mp3" preload="auto" />
-			<div className="flex justify-between items-center mb-6 px-2 pb-4 border-b-1">
+			<div className="flex justify-between items-center mb-6 px-2 pb-4 border-b-1 sticky top-0 bg-white z-10">
 				<h1 className="text-lg font-bold">Point Calculation</h1>
 				<div className="flex items-center gap-4">
 					<div className="flex items-center gap-2">

@@ -23,6 +23,19 @@ function calculatePoints() {
 
 const allTeams = [
 	{
+		date: "Jun 10, 2025",
+		name: "Hannah",
+		topic: "Super Hero Showdown",
+		avatar: "/hannah.jpeg",
+		round1: 8,
+		round2: 6,
+		round3: 4,
+		bonus: 4,
+		get points() {
+			return calculatePoints.call(this);
+		},
+	},
+	{
 		date: "June 03, 2025",
 		name: "Christine",
 		topic: "Modern Day Pop Culture",
