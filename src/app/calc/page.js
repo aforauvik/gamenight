@@ -139,7 +139,7 @@ const PointCalculation = () => {
 
 			// Calculate bonus points
 			let consecutiveCorrect = 0;
-			let bonusPoints = 0;
+			let consecutiveBonus = 0;
 			let isBonusActive = false;
 
 			for (let i = 0; i < questions.length; i++) {
@@ -149,7 +149,7 @@ const PointCalculation = () => {
 						isBonusActive = true;
 					}
 					if (isBonusActive) {
-						bonusPoints++;
+						consecutiveBonus++;
 					}
 				} else {
 					consecutiveCorrect = 0;
@@ -159,13 +159,13 @@ const PointCalculation = () => {
 
 			// Check if bonus points increased
 			const oldBonusPoints = round.bonusPoints;
-			if (bonusPoints > oldBonusPoints) {
+			if (consecutiveBonus > oldBonusPoints) {
 				// Use setTimeout to ensure state update is complete before playing sound
 				setTimeout(playBonusSound, 0);
 			}
 
 			round.questions = questions;
-			round.bonusPoints = bonusPoints;
+			round.bonusPoints = consecutiveBonus;
 			player.rounds[roundIndex] = round;
 			newScores[playerIndex] = player;
 
@@ -184,7 +184,7 @@ const PointCalculation = () => {
 
 			// Recalculate bonus points
 			let consecutiveCorrect = 0;
-			let bonusPoints = 0;
+			let consecutiveBonus = 0;
 			let isBonusActive = false;
 
 			for (let i = 0; i < questions.length; i++) {
@@ -194,7 +194,7 @@ const PointCalculation = () => {
 						isBonusActive = true;
 					}
 					if (isBonusActive) {
-						bonusPoints++;
+						consecutiveBonus++;
 					}
 				} else {
 					consecutiveCorrect = 0;
@@ -203,7 +203,7 @@ const PointCalculation = () => {
 			}
 
 			round.questions = questions;
-			round.bonusPoints = bonusPoints;
+			round.bonusPoints = consecutiveBonus;
 			player.rounds[roundIndex] = round;
 			newScores[playerIndex] = player;
 
@@ -356,54 +356,180 @@ const PointCalculation = () => {
 													className="text-center w-[60px] min-w-[60px]"
 												>
 													{answer === null ? (
-														<div className="flex justify-center gap-1">
-															<button
-																onClick={() =>
-																	handleAnswer(
-																		playerIndex,
-																		roundIndex,
-																		questionIndex,
-																		true
-																	)
+														<div className="flex flex-col items-center gap-1">
+															<div className="flex justify-center gap-1">
+																<button
+																	onClick={() =>
+																		handleAnswer(
+																			playerIndex,
+																			roundIndex,
+																			questionIndex,
+																			true
+																		)
+																	}
+																	className="p-1 hover:bg-green-100 rounded"
+																>
+																	<Check className="h-4 w-4 text-green-500" />
+																</button>
+																<button
+																	onClick={() =>
+																		handleAnswer(
+																			playerIndex,
+																			roundIndex,
+																			questionIndex,
+																			false
+																		)
+																	}
+																	className="p-1 hover:bg-red-100 rounded"
+																>
+																	<X className="h-4 w-4 text-red-500" />
+																</button>
+															</div>
+															<input
+																type="number"
+																max="5"
+																value={
+																	player.rounds[roundIndex].manualBonus?.[
+																		questionIndex
+																	] || 0
 																}
-																className="p-1 hover:bg-green-100 rounded"
-															>
-																<Check className="h-4 w-4 text-green-500" />
-															</button>
-															<button
-																onClick={() =>
-																	handleAnswer(
-																		playerIndex,
-																		roundIndex,
-																		questionIndex,
-																		false
-																	)
-																}
-																className="p-1 hover:bg-red-100 rounded"
-															>
-																<X className="h-4 w-4 text-red-500" />
-															</button>
+																onChange={(e) => {
+																	const value = Math.min(
+																		5,
+																		parseInt(e.target.value) || 0
+																	);
+																	setPlayerScores((prevScores) => {
+																		const newScores = [...prevScores];
+																		const player = {...newScores[playerIndex]};
+																		const round = {
+																			...player.rounds[roundIndex],
+																		};
+																		if (!round.manualBonus) {
+																			round.manualBonus = Array(10).fill(0);
+																		}
+																		round.manualBonus[questionIndex] = value;
+																		// Calculate total bonus points by adding manual bonus to existing bonus points
+																		const manualBonusTotal =
+																			round.manualBonus.reduce(
+																				(sum, bonus) => sum + (bonus || 0),
+																				0
+																			);
+																		// Calculate consecutive correct answers bonus
+																		let consecutiveCorrect = 0;
+																		let consecutiveBonus = 0;
+																		let isBonusActive = false;
+																		for (
+																			let i = 0;
+																			i < round.questions.length;
+																			i++
+																		) {
+																			if (round.questions[i] === true) {
+																				consecutiveCorrect++;
+																				if (consecutiveCorrect >= 3) {
+																					isBonusActive = true;
+																				}
+																				if (isBonusActive) {
+																					consecutiveBonus++;
+																				}
+																			} else {
+																				consecutiveCorrect = 0;
+																				isBonusActive = false;
+																			}
+																		}
+																		// Set total bonus points as sum of consecutive bonus and manual bonus
+																		round.bonusPoints =
+																			consecutiveBonus + manualBonusTotal;
+																		player.rounds[roundIndex] = round;
+																		newScores[playerIndex] = player;
+																		return newScores;
+																	});
+																}}
+																className="w-12 h-6 text-center border rounded text-xs"
+															/>
 														</div>
 													) : (
-														<button
-															onClick={() =>
-																resetAnswer(
-																	playerIndex,
-																	roundIndex,
-																	questionIndex
-																)
-															}
-															className="p-1 hover:bg-gray-100 rounded group relative"
-														>
-															{answer ? (
-																<Check className="h-4 w-4 text-green-500" />
-															) : (
-																<X className="h-4 w-4 text-red-500" />
-															)}
-															<div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-																<RotateCcw className="h-3 w-3 text-gray-500" />
-															</div>
-														</button>
+														<div className="flex flex-col items-center gap-1">
+															<button
+																onClick={() =>
+																	resetAnswer(
+																		playerIndex,
+																		roundIndex,
+																		questionIndex
+																	)
+																}
+																className="p-1 hover:bg-gray-100 rounded group relative"
+															>
+																{answer ? (
+																	<Check className="h-4 w-4 text-green-500" />
+																) : (
+																	<X className="h-4 w-4 text-red-500" />
+																)}
+																<div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+																	<RotateCcw className="h-3 w-3 text-gray-500" />
+																</div>
+															</button>
+															<input
+																type="number"
+																max="5"
+																value={
+																	player.rounds[roundIndex].manualBonus?.[
+																		questionIndex
+																	] || 0
+																}
+																onChange={(e) => {
+																	const value = Math.min(
+																		5,
+																		parseInt(e.target.value) || 0
+																	);
+																	setPlayerScores((prevScores) => {
+																		const newScores = [...prevScores];
+																		const player = {...newScores[playerIndex]};
+																		const round = {
+																			...player.rounds[roundIndex],
+																		};
+																		if (!round.manualBonus) {
+																			round.manualBonus = Array(10).fill(0);
+																		}
+																		round.manualBonus[questionIndex] = value;
+																		// Calculate total bonus points by adding manual bonus to existing bonus points
+																		const manualBonusTotal =
+																			round.manualBonus.reduce(
+																				(sum, bonus) => sum + (bonus || 0),
+																				0
+																			);
+																		// Calculate consecutive correct answers bonus
+																		let consecutiveCorrect = 0;
+																		let consecutiveBonus = 0;
+																		let isBonusActive = false;
+																		for (
+																			let i = 0;
+																			i < round.questions.length;
+																			i++
+																		) {
+																			if (round.questions[i] === true) {
+																				consecutiveCorrect++;
+																				if (consecutiveCorrect >= 3) {
+																					isBonusActive = true;
+																				}
+																				if (isBonusActive) {
+																					consecutiveBonus++;
+																				}
+																			} else {
+																				consecutiveCorrect = 0;
+																				isBonusActive = false;
+																			}
+																		}
+																		// Set total bonus points as sum of consecutive bonus and manual bonus
+																		round.bonusPoints =
+																			consecutiveBonus + manualBonusTotal;
+																		player.rounds[roundIndex] = round;
+																		newScores[playerIndex] = player;
+																		return newScores;
+																	});
+																}}
+																className="w-12 h-6 text-center border rounded text-xs"
+															/>
+														</div>
 													)}
 												</TableCell>
 											)

@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import {MdScoreboard} from "react-icons/md";
+import {FaFire} from "react-icons/fa";
 
 import {Button} from "@/components/ui/button";
 import {
@@ -21,8 +22,8 @@ import Image from "next/image";
 import {ModeToggle} from "../mode-toggler";
 
 const allInfo = {
-	gameName: "Super Hero Showdown",
-	season: "June, 2025",
+	gameName: "True or False - Tech Edition",
+	season: "July, 2025",
 	rounds: 30,
 };
 
@@ -35,10 +36,10 @@ const allTeams = [
 		name: "Grandma",
 		avatar: "/grandma.webp",
 		played: allInfo.rounds,
-		round1: 6,
-		round2: 5,
-		round3: 1,
-		bonus: 1,
+		round1: 7,
+		round2: 7,
+		round3: 4,
+		bonus: 5,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -47,10 +48,10 @@ const allTeams = [
 		name: "Aunt Sabrina",
 		avatar: "/aunt-sabrina.webp",
 		played: allInfo.rounds,
-		round1: 7,
+		round1: 1,
 		round2: 7,
-		round3: 3,
-		bonus: 3,
+		round3: 5,
+		bonus: 8,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -59,10 +60,10 @@ const allTeams = [
 		name: "Mom",
 		avatar: "/mom.webp",
 		played: allInfo.rounds,
-		round1: 8,
-		round2: 7,
-		round3: 1,
-		bonus: 4,
+		round1: 5,
+		round2: 4,
+		round3: 8,
+		bonus: 5,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -72,9 +73,9 @@ const allTeams = [
 		avatar: "/hannah.jpeg",
 		played: allInfo.rounds,
 		round1: 8,
-		round2: 6,
-		round3: 4,
-		bonus: 4,
+		round2: 4,
+		round3: 7,
+		bonus: 14,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -83,10 +84,10 @@ const allTeams = [
 		name: "Julian",
 		avatar: "/julian.jpeg",
 		played: allInfo.rounds,
-		round1: 7,
-		round2: 6,
-		round3: 2,
-		bonus: 6,
+		round1: 5,
+		round2: 7,
+		round3: 8,
+		bonus: 3,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -107,10 +108,10 @@ const allTeams = [
 		name: "Christine",
 		avatar: "/christine.jpeg",
 		played: allInfo.rounds,
-		round1: 7,
-		round2: 8,
-		round3: 0,
-		bonus: 7,
+		round1: 6,
+		round2: 5,
+		round3: 3,
+		bonus: 1,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -155,6 +156,15 @@ const Standings = () => {
 					>
 						<Button variant="outline">
 							<MdScoreboard />
+						</Button>
+					</Link>
+					<Link
+						className="hidden md:table-cell sm:table-cell"
+						href="/powerups"
+						target="_blank"
+					>
+						<Button variant="outline">
+							<FaFire />
 						</Button>
 					</Link>
 
