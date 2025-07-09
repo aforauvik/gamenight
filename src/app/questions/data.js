@@ -2,245 +2,286 @@ export const quizData = {
 	round1: [
 		{
 			id: 1,
-			question: "Was the first iPhone released in 2007?",
-			options: ["True", "False"],
-			correctAnswer: "True",
+			question: "Which movie is the song 'Let It Go' from?",
+			options: ["Tangled", "Frozen", "Moana", "Brave"],
+			correctAnswer: "Frozen",
 			description:
-				"Apple launched the first iPhone in June 2007, revolutionizing smartphones.",
+				"'Let It Go' became a global hit and won the Academy Award for Best Original Song in 2014.",
 		},
 		{
 			id: 2,
-			question: "Does HTML style web pages?",
-			options: ["True", "False"],
-			correctAnswer: "False",
-			description: "HTML structures content; CSS is used to style web pages.",
+			question: "Which movie features the romantic duet 'A Whole New World'?",
+			options: ["Hercules", "Cinderella", "Aladdin", "Mulan"],
+			correctAnswer: "Aladdin",
+			description:
+				"It was the first Disney song to win the Grammy for Song of the Year (1994).",
 		},
 		{
 			id: 3,
-			question: "Is Wi-Fi short for 'Wireless Fidelity'?",
-			options: ["True", "False"],
-			correctAnswer: "False",
+			question: "The song 'Circle of Life' appears in which movie?",
+			options: ["The Lion King", "Tarzan", "The Jungle Book", "Brother Bear"],
+			correctAnswer: "The Lion King",
 			description:
-				"Wi-Fi doesn't stand for anything; it was a branding term created by a marketing firm.",
+				"The chant is in Zulu and was composed by Lebo M and Elton John.",
 		},
 		{
 			id: 4,
-			question: "Was Google originally called 'Backrub'?",
-			options: ["True", "False"],
-			correctAnswer: "True",
+			question: "Which movie features the song 'How Far I'll Go'?",
+			options: ["Moana", "Pocahontas", "Brave", "Atlantis"],
+			correctAnswer: "Moana",
 			description:
-				"Google was originally called 'Backrub' in 1996, referencing backlink analysis.",
+				"Lin-Manuel Miranda wrote the song, which was nominated for an Oscar.",
 		},
 		{
 			id: 5,
-			question: "Does the 'S' in HTTPS stand for 'Secure'?",
-			options: ["True", "False"],
-			correctAnswer: "True",
+			question: "Which movie includes the Oscar-winning song 'Under the Sea'?",
+			options: ["Finding Nemo", "The Little Mermaid", "Luca", "Lilo & Stitch"],
+			correctAnswer: "The Little Mermaid",
 			description:
-				"HTTPS means Hypertext Transfer Protocol Secure, indicating encrypted communication.",
+				"The song won the Academy Award for Best Original Song in 1990.",
 		},
 		{
 			id: 6,
-			question: "Is Linux an operating system?",
-			options: ["True", "False"],
-			correctAnswer: "True",
-			description:
-				"Linux is an open-source operating system kernel used in many systems and servers.",
+			question: "In which movie does the demigod Maui sing 'You're Welcome'?",
+			options: ["Hercules", "Moana", "Raya and the Last Dragon", "Encanto"],
+			correctAnswer: "Moana",
+			description: "Dwayne 'The Rock' Johnson performed the song in the movie.",
 		},
 		{
 			id: 7,
-			question: "Is a kilobyte exactly 1000 bytes?",
-			options: ["True", "False"],
-			correctAnswer: "False",
+			question: "Which movie includes the musical number 'Be Our Guest'?",
+			options: [
+				"Sleeping Beauty",
+				"Beauty and the Beast",
+				"Cinderella",
+				"Snow White",
+			],
+			correctAnswer: "Beauty and the Beast",
 			description:
-				"In binary, 1 kilobyte = 1024 bytes, though SI defines it as 1000.",
+				"This Broadway-style number was one of the film’s most iconic scenes.",
 		},
 		{
 			id: 8,
-			question: "Are Java and JavaScript the same language?",
-			options: ["True", "False"],
-			correctAnswer: "False",
+			question:
+				"Which movie features the song 'Do You Want to Build a Snowman?'",
+			options: ["Tangled", "Frozen", "Enchanted", "Brave"],
+			correctAnswer: "Frozen",
 			description:
-				"Despite the names, Java and JavaScript are entirely different languages.",
+				"The song shows Anna’s growing loneliness and Elsa’s isolation.",
 		},
 		{
 			id: 9,
-			question: "Was the first computer virus created in the 1980s?",
-			options: ["True", "False"],
-			correctAnswer: "True",
-			description:
-				"The 'Brain' virus, one of the first, was created in 1986 for MS-DOS systems.",
+			question: "Which movie includes the song 'I Just Can't Wait to Be King'?",
+			options: ["Robin Hood", "The Lion King", "Bambi", "Pinocchio"],
+			correctAnswer: "The Lion King",
+			description: "Simba sings it to imagine the power of being king.",
 		},
 		{
 			id: 10,
-			question: "Can QR codes store website URLs?",
-			options: ["True", "False"],
-			correctAnswer: "True",
-			description: "QR codes can encode URLs, text, contact info, and more.",
+			question: "Which movie features the song 'You'll Be in My Heart'?",
+			options: ["Tarzan", "Dumbo", "The Fox and the Hound", "Brother Bear"],
+			correctAnswer: "Tarzan",
+			description: "Phil Collins won an Oscar for this song in 2000.",
 		},
 	],
 	round2: [
 		{
 			id: 11,
-			question: "Is Bluetooth named after a Viking king?",
-			options: ["True", "False"],
-			correctAnswer: "True",
+			question: "Which movie includes the song 'Colors of the Wind'?",
+			options: ["Pocahontas", "Mulan", "The Rescuers Down Under", "Frozen II"],
+			correctAnswer: "Pocahontas",
 			description:
-				"Bluetooth is named after King Harald 'Bluetooth' Gormsson of Denmark.",
+				"The song promotes environmentalism and won the Academy Award.",
 		},
 		{
 			id: 12,
-			question: "Did the term 'bug' in computing come from a real insect?",
-			options: ["True", "False"],
-			correctAnswer: "True",
-			description:
-				"In 1947, a moth caused a malfunction in a Harvard computer, inspiring the term.",
+			question: "In which movie does Rapunzel sing 'When Will My Life Begin?'",
+			options: ["Cinderella", "Tangled", "Sleeping Beauty", "Brave"],
+			correctAnswer: "Tangled",
+			description: "Mandy Moore voices Rapunzel in this modern fairytale.",
 		},
 		{
 			id: 13,
-			question: "Is MySQL a NoSQL database?",
-			options: ["True", "False"],
-			correctAnswer: "False",
-			description:
-				"MySQL is a relational SQL-based database, not a NoSQL database.",
+			question: "Which movie includes the song 'Remember Me'?",
+			options: ["Soul", "Encanto", "Coco", "Onward"],
+			correctAnswer: "Coco",
+			description: "This song won the Oscar for Best Original Song in 2018.",
 		},
 		{
 			id: 14,
-			question: "Was the Tor browser created by Facebook?",
-			options: ["True", "False"],
-			correctAnswer: "False",
+			question: "In which movie would you hear 'We Don’t Talk About Bruno'?",
+			options: ["Luca", "Encanto", "Zootopia", "Turning Red"],
+			correctAnswer: "Encanto",
 			description:
-				"The Tor Project was originally developed by the U.S. Naval Research Lab.",
+				"Despite being the biggest hit, it wasn’t even submitted for Oscar contention.",
 		},
 		{
 			id: 15,
-			question: "Is JPEG a lossless image format?",
-			options: ["True", "False"],
-			correctAnswer: "False",
-			description:
-				"JPEG uses lossy compression to reduce file size with some quality loss.",
+			question:
+				"'Almost There' features jazz influences. What movie is it from?",
+			options: [
+				"Soul",
+				"The Princess and the Frog",
+				"Fantasia 2000",
+				"Oliver & Company",
+			],
+			correctAnswer: "The Princess and the Frog",
+			description: "Sung by Tiana, it reflects her ambition and work ethic.",
 		},
 		{
 			id: 16,
-			question: "Does CAPTCHA help block bots?",
-			options: ["True", "False"],
-			correctAnswer: "True",
-			description:
-				"CAPTCHA (Completely Automated Public Turing test) distinguishes humans from bots.",
+			question:
+				"'Go the Distance' is sung by a demigod seeking his place. Which film?",
+			options: ["Moana", "Hercules", "Atlantis", "Treasure Planet"],
+			correctAnswer: "Hercules",
+			description: "A fan favorite, it’s a classic Disney “I Want” song.",
 		},
 		{
 			id: 17,
-			question: "Was Python named after a snake?",
-			options: ["True", "False"],
-			correctAnswer: "False",
+			question:
+				"'Strangers Like Me' is a montage song of self-discovery. What movie?",
+			options: [
+				"The Jungle Book",
+				"Brother Bear",
+				"Tarzan",
+				"Home on the Range",
+			],
+			correctAnswer: "Tarzan",
 			description:
-				"Python is named after 'Monty Python’s Flying Circus', a British comedy group.",
+				"Another Phil Collins track, highlighting Tarzan’s curiosity.",
 		},
 		{
 			id: 18,
-			question: "Was the first email sent in the 1960s?",
-			options: ["True", "False"],
-			correctAnswer: "False",
-			description:
-				"The first networked email was sent in 1971 by Ray Tomlinson via ARPANET.",
+			question:
+				"'I See the Light' is a romantic duet set in a boat with lanterns. Which movie?",
+			options: ["Enchanted", "Tangled", "Frozen", "The Little Mermaid"],
+			correctAnswer: "Tangled",
+			description: "A highlight of the film’s animation and emotion.",
 		},
 		{
 			id: 19,
-			question: "Are Bitcoin transactions stored on a central server?",
-			options: ["True", "False"],
-			correctAnswer: "False",
-			description:
-				"Bitcoin uses a decentralized blockchain ledger distributed across nodes.",
+			question:
+				"'Why Should I Worry?' is sung by a street-smart dog. Which film is it from?",
+			options: [
+				"Lady and the Tramp",
+				"Oliver & Company",
+				"The Aristocats",
+				"Bolt",
+			],
+			correctAnswer: "Oliver & Company",
+			description: "Sung by Billy Joel, it's a jazzy NYC anthem.",
 		},
 		{
 			id: 20,
-			question: "Does a 'zero-day' mean the software is brand new?",
-			options: ["True", "False"],
-			correctAnswer: "False",
+			question:
+				"'I’ll Make a Man Out of You' is sung during training. From which movie?",
+			options: ["Brave", "Raya and the Last Dragon", "Mulan", "Aladdin"],
+			correctAnswer: "Mulan",
 			description:
-				"A zero-day is a vulnerability that is exploited before it's publicly known or patched.",
+				"Sung by Donny Osmond, it's a fan-favorite training montage song.",
 		},
 	],
 	round3: [
 		{
 			id: 21,
-			question: "Was the Turing Machine a physical machine built by Turing?",
-			options: ["True", "False"],
-			correctAnswer: "False",
-			description:
-				"The Turing Machine is a conceptual model of computation, not a real machine.",
+			question: "'He Mele No Lilo' opens which Hawaiian-themed film?",
+			options: ["Moana", "Lilo & Stitch", "Brother Bear", "Finding Nemo"],
+			correctAnswer: "Lilo & Stitch",
+			description: "It plays during the hula dance at the beginning.",
 		},
 		{
 			id: 22,
-			question: "Was Ctrl+Z undo invented at Xerox PARC?",
-			options: ["True", "False"],
-			correctAnswer: "True",
-			description:
-				"Xerox PARC developed many GUI concepts, including undo in the 1970s.",
+			question:
+				"'The World Es Mi Familia' features mariachi and family themes. From which movie?",
+			options: ["Encanto", "Book of Life", "Coco", "Luca"],
+			correctAnswer: "Coco",
+			description: "A lesser-known but touching number in Coco.",
 		},
 		{
 			id: 23,
-			question: "Do quantum computers use 0s and 1s like normal computers?",
-			options: ["True", "False"],
-			correctAnswer: "False",
-			description:
-				"Quantum computers use qubits, which can be in superpositions of 0 and 1.",
+			question:
+				"'On My Way' follows a bear and his brother. Which film is this from?",
+			options: [
+				"The Good Dinosaur",
+				"Brother Bear",
+				"The Fox and the Hound",
+				"Bolt",
+			],
+			correctAnswer: "Brother Bear",
+			description: "Sung by Phil Collins during a travel montage.",
 		},
 		{
 			id: 24,
-			question: "Is HTTP/3 based on the QUIC protocol?",
-			options: ["True", "False"],
-			correctAnswer: "True",
+			question: "'Nobody Like U' is a boy-band style pop song. Which movie?",
+			options: ["Zootopia", "Turning Red", "Big Hero 6", "Wish"],
+			correctAnswer: "Turning Red",
 			description:
-				"HTTP/3 uses QUIC, a new protocol developed by Google over UDP for speed and security.",
+				"Performed by the fictional group 4*Town, written by Billie Eilish.",
 		},
 		{
 			id: 25,
-			question: "Do ARM processors use more power than x86 processors?",
-			options: ["True", "False"],
-			correctAnswer: "False",
+			question:
+				"'So Close' is sung during a ballroom dance in a live-action/animated film. Which one?",
+			options: [
+				"Cinderella (2015)",
+				"Enchanted",
+				"Beauty and the Beast (2017)",
+				"Frozen II",
+			],
+			correctAnswer: "Enchanted",
 			description:
-				"ARM processors are designed for energy efficiency, especially in mobile devices.",
+				"Sung by Jon McLaughlin, it plays during the real-world dance scene.",
 		},
 		{
 			id: 26,
-			question: "Was the first version of Windows released in 1995?",
-			options: ["True", "False"],
-			correctAnswer: "False",
-			description:
-				"Windows 1.0 was released in 1985; Windows 95 came a decade later.",
+			question:
+				"'One Jump Ahead' follows a street rat through the city. Which movie is it from?",
+			options: [
+				"Treasure Planet",
+				"Robin Hood",
+				"Aladdin",
+				"Emperor’s New Groove",
+			],
+			correctAnswer: "Aladdin",
+			description: "It introduces Aladdin's life in Agrabah.",
 		},
 		{
 			id: 27,
-			question: "Are AI model parameters like learning dials?",
-			options: ["True", "False"],
-			correctAnswer: "True",
-			description:
-				"Parameters in models are adjustable values learned from training data.",
+			question:
+				"'Steady as the Beating Drum' opens which Native American-themed movie?",
+			options: [
+				"Brother Bear",
+				"Pocahontas",
+				"Raya and the Last Dragon",
+				"Atlantis",
+			],
+			correctAnswer: "Pocahontas",
+			description: "A solemn song showing Native life before colonization.",
 		},
 		{
 			id: 28,
-			question: "Does Moore’s Law say power doubles every 6 months?",
-			options: ["True", "False"],
-			correctAnswer: "False",
-			description:
-				"Moore’s Law states transistor counts double roughly every 2 years.",
+			question:
+				"'Little April Shower' is an early example of audio-visual storytelling. What film is it from?",
+			options: ["Fantasia", "Dumbo", "Bambi", "The Rescuers"],
+			correctAnswer: "Bambi",
+			description: "This song mimics rainfall and natural rhythms.",
 		},
 		{
 			id: 29,
-			question: "Can WebAssembly run C++ and Rust in browsers?",
-			options: ["True", "False"],
-			correctAnswer: "True",
-			description:
-				"WebAssembly lets compiled code run in the browser at near-native speed.",
+			question:
+				"'My Own Home' is sung by a young girl at a riverbank. From which film?",
+			options: ["Tarzan", "The Jungle Book", "Atlantis", "Peter Pan"],
+			correctAnswer: "The Jungle Book",
+			description: "She lures Mowgli into the man-village.",
 		},
 		{
 			id: 30,
-			question: "Does Unicode define over 1 million characters?",
-			options: ["True", "False"],
-			correctAnswer: "False",
+			question:
+				"'I Am Moana (Song of the Ancestors)' features a spiritual self-realization. Which film?",
+			options: ["Brave", "Frozen II", "Moana", "Raya and the Last Dragon"],
+			correctAnswer: "Moana",
 			description:
-				"Unicode defines over 143,000 characters across scripts, not over 1 million.",
+				"It marks Moana’s turning point and connection with her heritage.",
 		},
 	],
 };
