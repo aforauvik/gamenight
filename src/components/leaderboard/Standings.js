@@ -22,7 +22,7 @@ import Image from "next/image";
 import {ModeToggle} from "../mode-toggler";
 
 const allInfo = {
-	gameName: "Disney Cartoon",
+	gameName: "Words That Meant Something Else",
 	season: "July, 2025",
 	rounds: 30,
 };
@@ -36,9 +36,9 @@ const allTeams = [
 		name: "Grandma",
 		avatar: "/grandma.webp",
 		played: allInfo.rounds,
-		round1: 0,
-		round2: 0,
-		round3: 0,
+		round1: 3,
+		round2: 2,
+		round3: 3,
 		bonus: 0,
 		get points() {
 			return calculatePoints.call(this);
@@ -48,10 +48,10 @@ const allTeams = [
 		name: "Aunt Sabrina",
 		avatar: "/aunt-sabrina.webp",
 		played: allInfo.rounds,
-		round1: 9,
+		round1: 4,
 		round2: 5,
-		round3: 5,
-		bonus: 11,
+		round3: 3,
+		bonus: 1,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -60,10 +60,10 @@ const allTeams = [
 		name: "Mom",
 		avatar: "/mom.webp",
 		played: allInfo.rounds,
-		round1: 9,
-		round2: 1,
-		round3: 7,
-		bonus: 10,
+		round1: 6,
+		round2: 2,
+		round3: 3,
+		bonus: 1,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -72,10 +72,10 @@ const allTeams = [
 		name: "Hannah",
 		avatar: "/hannah.jpeg",
 		played: allInfo.rounds,
-		round1: 9,
-		round2: 7,
-		round3: 8,
-		bonus: 9,
+		round1: 2,
+		round2: 4,
+		round3: 2,
+		bonus: 1,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -84,10 +84,10 @@ const allTeams = [
 		name: "Julian",
 		avatar: "/julian.jpeg",
 		played: allInfo.rounds,
-		round1: 8,
-		round2: 4,
-		round3: 5,
-		bonus: 1,
+		round1: 5,
+		round2: 2,
+		round3: 1,
+		bonus: 0,
 		get points() {
 			return calculatePoints.call(this);
 		},
