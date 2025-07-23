@@ -22,7 +22,7 @@ import Image from "next/image";
 import {ModeToggle} from "../mode-toggler";
 
 const allInfo = {
-	gameName: "Words That Meant Something Else",
+	gameName: "Interesting World Records",
 	season: "July, 2025",
 	rounds: 30,
 };
@@ -36,10 +36,10 @@ const allTeams = [
 		name: "Grandma",
 		avatar: "/grandma.webp",
 		played: allInfo.rounds,
-		round1: 3,
-		round2: 2,
-		round3: 3,
-		bonus: 0,
+		round1: 4,
+		round2: 4,
+		round3: 6,
+		bonus: 2,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -48,10 +48,10 @@ const allTeams = [
 		name: "Aunt Sabrina",
 		avatar: "/aunt-sabrina.webp",
 		played: allInfo.rounds,
-		round1: 4,
-		round2: 5,
-		round3: 3,
-		bonus: 1,
+		round1: 0,
+		round2: 0,
+		round3: 0,
+		bonus: 0,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -60,10 +60,10 @@ const allTeams = [
 		name: "Mom",
 		avatar: "/mom.webp",
 		played: allInfo.rounds,
-		round1: 6,
-		round2: 2,
-		round3: 3,
-		bonus: 1,
+		round1: 3,
+		round2: 3,
+		round3: 4,
+		bonus: 0,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -72,9 +72,9 @@ const allTeams = [
 		name: "Hannah",
 		avatar: "/hannah.jpeg",
 		played: allInfo.rounds,
-		round1: 2,
+		round1: 4,
 		round2: 4,
-		round3: 2,
+		round3: 4,
 		bonus: 1,
 		get points() {
 			return calculatePoints.call(this);
@@ -84,9 +84,9 @@ const allTeams = [
 		name: "Julian",
 		avatar: "/julian.jpeg",
 		played: allInfo.rounds,
-		round1: 5,
-		round2: 2,
-		round3: 1,
+		round1: 0,
+		round2: 0,
+		round3: 0,
 		bonus: 0,
 		get points() {
 			return calculatePoints.call(this);
