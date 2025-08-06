@@ -3,299 +3,320 @@ export const quizData = {
 		{
 			id: 1,
 			question:
-				"What is the longest time a person has held their breath underwater (static apnea)?",
+				"Which Netflix series features a young girl with psychic powers named Eleven?",
 			options: [
-				"3 minutes 19 seconds",
-				"7 minutes 12 seconds",
-				"24 minutes 37 seconds",
-				"12 minutes 49 seconds",
+				"Stranger Things",
+				"The Witcher",
+				"The Umbrella Academy",
+				"Wednesday",
 			],
-			correctAnswer: "24 minutes 37 seconds",
+			correctAnswer: "Stranger Things",
 			description:
-				"Croatian freediver Budimir Šobat set this record in 2021 after hyperventilating with pure oxygen first.",
+				"Stranger Things premiered in 2016 and became a cultural phenomenon.",
 		},
 		{
 			id: 2,
-			question:
-				"What animal holds the record for the most rotations in a minute on a skateboard?",
-			options: ["Rabbit", "Parrot", "Cat", "Dog"],
-			correctAnswer: "Parrot",
+			question: "What is the name of the tiger in 'Tiger King'?",
+			options: ["Tony", "Shere Khan", "Not specific", "Richard Parker"],
+			correctAnswer: "Not specific",
 			description:
-				"Zac the Macaw spun 32 times in a minute on a skateboard in 2015.",
+				"Tiger King focuses on Joe Exotic and his zoo, but the tigers are not individually named in the show.",
 		},
 		{
 			id: 3,
-			question: "What’s the record for the most T-shirts worn at once?",
-			options: ["75", "150", "257", "300"],
-			correctAnswer: "257",
+			question: "In 'Squid Game', what color is the guard uniform?",
+			options: ["Red/Pink", "Blue", "Green", "Yellow"],
+			correctAnswer: "Red/Pink",
 			description:
-				"Sanath Bandara from Sri Lanka wore 257 shirts at once in 2011.",
+				"Guards wear pinkish-red suits with black masks, while players wear green tracksuits.",
 		},
 		{
 			id: 4,
 			question:
-				"Who holds the record for the longest fingernails ever on a pair of hands (ever)?",
-			options: [
-				"Ayanna Williams",
-				"Lee Redmond",
-				"Chris Walton",
-				"Melvin Booth",
-			],
-			correctAnswer: "Ayanna Williams",
+				"Which Netflix series is about a chess prodigy named Beth Harmon?",
+			options: ["The Crown", "The Queen's Gambit", "Mindhunter", "Ozark"],
+			correctAnswer: "The Queen's Gambit",
 			description:
-				"Ayanna Williams’ nails measured over 24 feet in total length before she cut them in 2021.",
+				"The Queen's Gambit stars Anya Taylor-Joy and boosted chess popularity worldwide.",
 		},
 		{
 			id: 5,
-			question: "What’s the record for the largest pizza ever made?",
-			options: [
-				"10 feet wide",
-				"50 feet wide",
-				"131 feet wide",
-				"250 feet wide",
-			],
-			correctAnswer: "131 feet wide",
+			question:
+				"What is the real first name of the character 'Wednesday Addams' in Netflix's 'Wednesday'?",
+			options: ["Winona", "Wanda", "None", "Wednesday"],
+			correctAnswer: "Wednesday",
 			description:
-				"In 2023, YouTuber Airrack and Pizza Hut created a 13,990-square-foot pizza in Los Angeles.",
+				"Wednesday Addams is her actual first name, named after a nursery rhyme line: 'Wednesday's child is full of woe'.",
 		},
 		{
 			id: 6,
-			question: "What’s the highest number of hot dogs eaten in 10 minutes?",
-			options: ["35", "50", "62", "76"],
-			correctAnswer: "76",
+			question: "Which animated Netflix series features a talking horse?",
+			options: [
+				"BoJack Horseman",
+				"Big Mouth",
+				"Disenchantment",
+				"F is for Family",
+			],
+			correctAnswer: "BoJack Horseman",
 			description:
-				"Joey Chestnut set the record in 2021 at Nathan’s Hot Dog Eating Contest.",
+				"BoJack Horseman is a dark animated comedy about a washed-up actor who is literally a horse.",
 		},
 		{
 			id: 7,
-			question: "What is the world record for the longest hiccuping spree?",
-			options: ["51 years", "68 years", "12 years", "14 years"],
-			correctAnswer: "68 years",
-			description: "Charles Osborne hiccuped continuously from 1922 to 1990.",
+			question:
+				"Which Netflix show is about a Spanish heist crew wearing red jumpsuits?",
+			options: ["Elite", "Dark", "Money Heist", "Narcos"],
+			correctAnswer: "Money Heist",
+			description:
+				"La Casa de Papel (Money Heist) features the iconic Salvador Dalí masks and red jumpsuits.",
 		},
 		{
 			id: 8,
 			question:
-				"What’s the longest metal coil passed through the nose and out the mouth?",
-			options: [
-				"3 ft 10.6 in",
-				"5 ft 10.6 in",
-				"8 ft 10.6 in",
-				"11 ft 10.6 in",
-			],
-			correctAnswer: "11 ft 10.6 in",
-			description: "Andrew Stanton set this bizarre record in 2012.",
+				"Who is the main monster in the first season of 'Stranger Things'?",
+			options: ["Mind Flayer", "Demogorgon", "Vecna", "Shadow Monster"],
+			correctAnswer: "Demogorgon",
+			description: "The Demogorgon terrorizes Hawkins in season 1.",
 		},
 		{
 			id: 9,
-			question:
-				"Which bird holds the record for the fastest walking on tightrope?",
-			options: ["Cockatoo", "Pigeon", "Parrot", "Toucan"],
-			correctAnswer: "Parrot",
-			description:
-				"Zac the Macaw again! He walked a tightrope in 8.55 seconds.",
+			question: "In 'The Witcher', what is the name of Geralt’s horse?",
+			options: ["Roach", "Shadowfax", "Spirit", "Epona"],
+			correctAnswer: "Roach",
+			description: "Geralt names all his horses Roach in The Witcher series.",
 		},
 		{
 			id: 10,
-			question: "What’s the most spoons balanced on a human body?",
-			options: ["45", "79", "100", "85"],
-			correctAnswer: "85",
-			description: "Etibar Elchiyev of Georgia set this record in 2013.",
+			question:
+				"Which Netflix documentary followed the Fyre Festival disaster?",
+			options: [
+				"The Tinder Swindler",
+				"FYRE: The Greatest Party That Never Happened",
+				"Keep Sweet",
+				"Untold",
+			],
+			correctAnswer: "FYRE: The Greatest Party That Never Happened",
+			description:
+				"The 2019 documentary detailed the failed luxury music festival in the Bahamas.",
 		},
 	],
 	round2: [
 		{
 			id: 11,
-			question:
-				"What is the fastest time to solve three Rubik’s cubes while juggling them?",
-			options: [
-				"5 minutes 12 seconds",
-				"1 minute 30 seconds",
-				"2 minutes 30 seconds",
-				"4 minutes 31 seconds",
-			],
-			correctAnswer: "4 minutes 31 seconds",
-			description: "Que Jianyu from China achieved this in 2017 at age 13.",
+			question: "Which country produced the Netflix original series 'Dark'?",
+			options: ["Germany", "Norway", "Denmark", "Sweden"],
+			correctAnswer: "Germany",
+			description:
+				"'Dark' is a German sci-fi thriller about time travel and family secrets.",
 		},
 		{
 			id: 12,
-			question: "What is the most tattooed person in the world’s name?",
-			options: [
-				"Lucky Diamond Rich",
-				"Rick Genest",
-				"Tom Leppard",
-				"Paul Lawrence",
-			],
-			correctAnswer: "Lucky Diamond Rich",
+			question: "In 'Narcos', which actor plays Pablo Escobar?",
+			options: ["Diego Luna", "Pedro Pascal", "Wagner Moura", "Javier Bardem"],
+			correctAnswer: "Wagner Moura",
 			description:
-				"He’s covered 100% of his body, including inside his mouth and eyelids.",
+				"Wagner Moura portrayed Pablo Escobar in the first two seasons of 'Narcos'.",
 		},
 		{
 			id: 13,
 			question:
-				"What’s the highest number of steps climbed while balancing a person on the head?",
-			options: ["60", "100", "90", "79"],
-			correctAnswer: "100",
+				"What chess opening does Beth Harmon famously use in the final match of 'The Queen's Gambit'?",
+			options: [
+				"Queen's Gambit",
+				"Sicilian Defense",
+				"Caro-Kann Defense",
+				"King's Indian Defense",
+			],
+			correctAnswer: "Queen's Gambit",
 			description:
-				"Performed by Li Longlong in 2014 on the set of a Guinness show in China.",
+				"The final episode fittingly has her play the Queen's Gambit opening.",
 		},
 		{
 			id: 14,
 			question:
-				"How many straws were stuffed in a person’s mouth (without hands)?",
-			options: ["250", "300", "200", "275"],
-			correctAnswer: "300",
+				"In 'Money Heist', what city name does the character Andrés de Fonollosa go by?",
+			options: ["Madrid", "Berlin", "Paris", "Oslo"],
+			correctAnswer: "Berlin",
 			description:
-				"Manoj Kumar Maharana from India achieved this feat in 2018.",
+				"Each heist member uses a city name as their alias; Andrés is known as Berlin.",
 		},
 		{
 			id: 15,
 			question:
-				"Who holds the record for the fastest 100-meter sprint on all fours?",
-			options: ["Yuji Uchida", "Kenichi Ito", "Hiroki Nakata", "Ryota Fujii"],
-			correctAnswer: "Kenichi Ito",
+				"Which Netflix original was the first to win an Emmy for Best Drama Series?",
+			options: [
+				"House of Cards",
+				"The Crown",
+				"Orange Is the New Black",
+				"Stranger Things",
+			],
+			correctAnswer: "The Crown",
 			description:
-				"Kenichi Ito did it in 15.71 seconds using 'primate' running techniques.",
+				"The Crown won Outstanding Drama Series at the Emmys in 2021.",
 		},
 		{
 			id: 16,
-			question:
-				"What’s the record for the most toilet seats broken with the head in one minute?",
-			options: ["25", "46", "32", "19"],
-			correctAnswer: "46",
-			description: "Kevin Shelley set this painful record in 2007.",
+			question: "In 'Squid Game', what shape is NOT on the guards' masks?",
+			options: ["Triangle", "Circle", "Square", "Star"],
+			correctAnswer: "Star",
+			description:
+				"Guards wear masks with circles, triangles, or squares—no stars.",
 		},
 		{
 			id: 17,
 			question:
-				"What’s the world record for the heaviest weight lifted with a human tongue?",
-			options: ["20 kg", "10 kg", "12.5 kg", "15 kg"],
-			correctAnswer: "12.5 kg",
+				"In 'Black Mirror: Bandersnatch', what is the name of the fictional video game company?",
+			options: ["Pixel Corp", "Tuckersoft", "Gamehouse", "TechWorks"],
+			correctAnswer: "Tuckersoft",
 			description:
-				"Thomas Blackthorne did this incredible (and bizarre) feat in 2008.",
+				"Tuckersoft develops the interactive game in the 1984-set film.",
 		},
 		{
 			id: 18,
-			question: "What’s the largest object removed from a human skull?",
-			options: ["Nail", "Knife blade", "Rod", "Spear"],
-			correctAnswer: "Knife blade",
+			question:
+				"Which Netflix show features the fictional school 'Moordale Secondary'?",
+			options: ["Outer Banks", "Sex Education", "Elite", "Never Have I Ever"],
+			correctAnswer: "Sex Education",
 			description:
-				"A 17 cm knife blade was removed from a man's skull in 1998 in China.",
+				"'Sex Education' follows the lives of students at Moordale Secondary.",
 		},
 		{
 			id: 19,
-			question: "How many people fit inside a smart car for a record?",
-			options: ["12", "16", "19", "14"],
-			correctAnswer: "19",
+			question: "Which series is Netflix's first Korean original drama?",
+			options: ["Squid Game", "Love Alarm", "Kingdom", "Okja"],
+			correctAnswer: "Love Alarm",
 			description:
-				"In 2010, 19 gymnasts squeezed into a Smart car in Pakistan.",
+				"'Love Alarm' premiered in 2019 as Netflix's first Korean original series.",
 		},
 		{
 			id: 20,
-			question: "What’s the world’s longest beard ever recorded?",
-			options: ["6 ft 5 in", "12 ft 6 in", "17 ft 6 in", "15 ft 10 in"],
-			correctAnswer: "17 ft 6 in",
+			question:
+				"In 'The Umbrella Academy', which sibling can see and talk to the dead?",
+			options: ["Luther", "Klaus", "Diego", "Five"],
+			correctAnswer: "Klaus",
 			description:
-				"Hans Langseth of Norway holds the record. His beard is now on display at the Smithsonian.",
+				"Klaus Hargreeves (Number Four) can communicate with the dead.",
 		},
 	],
 	round3: [
 		{
 			id: 21,
 			question:
-				"What is the record for the most rotations hanging from a power drill in one minute?",
-			options: ["120", "120.25", "148", "102"],
-			correctAnswer: "148",
-			description: "The record was set by The Huy Giang in Germany in 2008.",
+				"In 'Stranger Things', what song does Max listen to to escape Vecna's curse?",
+			options: [
+				"Take on Me",
+				"Every Breath You Take",
+				"Running Up That Hill",
+				"Sweet Dreams",
+			],
+			correctAnswer: "Running Up That Hill",
+			description:
+				"Kate Bush's 'Running Up That Hill' (1985) resurged in popularity due to season 4.",
 		},
 		{
 			id: 22,
-			question: "What’s the record for the fastest typing using the nose?",
-			options: [
-				"47.44 seconds",
-				"1 minute 12 seconds",
-				"1 min 30 sec",
-				"2 minutes 15 seconds",
-			],
-			correctAnswer: "47.44 seconds",
+			question:
+				"Which language is primarily spoken in the Netflix series 'Lupin'?",
+			options: ["Spanish", "French", "Italian", "Portuguese"],
+			correctAnswer: "French",
 			description:
-				"Mohammed Khursheed Hussain typed a 103-character sentence using only his nose.",
+				"'Lupin' is a French heist thriller inspired by Arsène Lupin.",
 		},
 		{
 			id: 23,
-			question: "What’s the world record for the longest usable golf club?",
-			options: ["25 ft", "20 ft", "30 ft", "51 ft"],
-			correctAnswer: "51 ft",
-			description: "The club was used to hit a golf ball 80 yards in 2021.",
+			question:
+				"What is the name of the virtual world in 'Black Mirror' episode 'San Junipero'?",
+			options: ["Nosedive", "White Bear", "San Junipero", "Smithereens"],
+			correctAnswer: "San Junipero",
+			description:
+				"The episode is set in a simulated afterlife called San Junipero.",
 		},
 		{
 			id: 24,
 			question:
-				"What’s the fastest time to drink a bottle of ketchup (standard 14 oz)?",
+				"Which Netflix show is based on the novel 'The Haunting of Hill House'?",
 			options: [
-				"25.15 seconds",
-				"20.34 seconds",
-				"17.53 seconds",
-				"15.23 seconds",
+				"The Haunting of Bly Manor",
+				"The Haunting of Hill House",
+				"Locke & Key",
+				"Midnight Mass",
 			],
-			correctAnswer: "17.53 seconds",
-			description: "Andre Ortolf from Germany holds this tomato-y record.",
+			correctAnswer: "The Haunting of Hill House",
+			description:
+				"Mike Flanagan's adaptation of Shirley Jackson's novel became a hit in 2018.",
 		},
 		{
 			id: 25,
-			question: "Most apples crushed with the bicep in one minute?",
-			options: ["5", "8", "10", "14"],
-			correctAnswer: "14",
-			description: "Mohammad Rashid crushed 14 apples using only his biceps.",
+			question: "In 'Dark', what is the name of the cave system in Winden?",
+			options: [
+				"Winden Caves",
+				"St. Christopher's Caves",
+				"Noah's Passage",
+				"Jonas's Cavern",
+			],
+			correctAnswer: "Winden Caves",
+			description:
+				"The Winden Caves are central to the time travel mystery of 'Dark'.",
 		},
 		{
 			id: 26,
 			question:
-				"What’s the longest time spinning a fidget spinner on one finger?",
+				"Which Netflix original series had the first interactive episode for adults?",
 			options: [
-				"12 minutes 12 seconds",
-				"20 minutes 47 seconds",
-				"24 minutes 46 seconds",
-				"30 minutes 31 seconds",
+				"You vs. Wild",
+				"Escape the Undertaker",
+				"Triviaverse",
+				"Black Mirror: Bandersnatch",
 			],
-			correctAnswer: "24 minutes 46 seconds",
-			description: "Set by William Lee from Malaysia in 2017.",
+			correctAnswer: "Black Mirror: Bandersnatch",
+			description:
+				"Released in 2018, 'Bandersnatch' pioneered interactive storytelling for adults on Netflix.",
 		},
 		{
 			id: 27,
-			question: "What’s the largest bubblegum bubble blown?",
-			options: ["16 inches", "19 inches", "20 inches", "21 inches"],
-			correctAnswer: "19 inches",
-			description: "Chad Fell achieved this in 2004 using three pieces of gum.",
+			question:
+				"What is the name of the cursed videotape series in 'Archive 81'?",
+			options: [
+				"Baldung Footage",
+				"Visser Tapes",
+				"Melody Chronicles",
+				"Spirit Recordings",
+			],
+			correctAnswer: "Visser Tapes",
+			description:
+				"The Visser Tapes document the paranormal events in the 1990s apartment complex.",
 		},
 		{
 			id: 28,
 			question:
-				"What’s the world record for the most Jenga blocks removed while balancing on one foot?",
-			options: ["35", "41", "27", "46"],
-			correctAnswer: "41",
+				"In 'The Crown', which season depicts the wedding of Prince Charles and Lady Diana?",
+			options: ["Season 1", "Season 2", "Season 3", "Season 4"],
+			correctAnswer: "Season 4",
 			description:
-				"Silvio Sabba of Italy broke this record with intense balance and patience.",
+				"Season 4 of 'The Crown' (2020) portrays the 1981 royal wedding.",
 		},
 		{
 			id: 29,
-			question: "Most eggs crushed with the head in one minute (non-boiled)?",
-			options: ["130", "140", "150", "110"],
-			correctAnswer: "140",
+			question:
+				"Which Netflix show features a mysterious board game that changes reality?",
+			options: [
+				"The House",
+				"The Guardians of Justice",
+				"Jumanji: The Series",
+				"The OA",
+			],
+			correctAnswer: "The OA",
 			description:
-				"Ashrita Furman set this record — he holds over 600 world records.",
+				"In part II of 'The OA', the Rose Window puzzle game influences alternate dimensions.",
 		},
 		{
 			id: 30,
-			question: "What’s the farthest arrow shot using feet?",
-			options: [
-				"25 ft 10.6 in",
-				"40 ft 8.1 in",
-				"50 ft 10.6 in",
-				"40 ft 4.64 in",
-			],
-			correctAnswer: "40 ft 4.64 in",
-			description: "Brittany Walsh set this acrobatic record in 2021.",
+			question:
+				"What is the original language of the Netflix series 'Barbarians'?",
+			options: ["English", "Latin", "German", "Gaulish"],
+			correctAnswer: "German",
+			description:
+				"'Barbarians' is primarily in German, depicting events during the Roman Empire.",
 		},
 	],
 };
