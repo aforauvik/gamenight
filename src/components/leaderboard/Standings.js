@@ -22,7 +22,7 @@ import Image from "next/image";
 import {ModeToggle} from "../mode-toggler";
 
 const allInfo = {
-	gameName: "TV Facts",
+	gameName: "Learn About Health Insurance",
 	season: "August, 2025",
 	rounds: 30,
 };
@@ -36,9 +36,9 @@ const allTeams = [
 		name: "Grandma",
 		avatar: "/grandma.webp",
 		played: allInfo.rounds,
-		round1: 3,
-		round2: 2,
-		round3: 4,
+		round1: 0,
+		round2: 0,
+		round3: 0,
 		bonus: 0,
 		get points() {
 			return calculatePoints.call(this);
@@ -60,10 +60,10 @@ const allTeams = [
 		name: "Mom",
 		avatar: "/mom.webp",
 		played: allInfo.rounds,
-		round1: 7,
-		round2: 2,
-		round3: 5,
-		bonus: 5,
+		round1: 8,
+		round2: 6,
+		round3: 3,
+		bonus: 9,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -72,10 +72,10 @@ const allTeams = [
 		name: "Hannah",
 		avatar: "/hannah.jpeg",
 		played: allInfo.rounds,
-		round1: 7,
-		round2: 2,
-		round3: 8,
-		bonus: 8,
+		round1: 8,
+		round2: 8,
+		round3: 9,
+		bonus: 21,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -84,10 +84,10 @@ const allTeams = [
 		name: "Julian",
 		avatar: "/julian.jpeg",
 		played: allInfo.rounds,
-		round1: 8,
-		round2: 3,
-		round3: 5,
-		bonus: 4,
+		round1: 5,
+		round2: 8,
+		round3: 9,
+		bonus: 7,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -96,9 +96,9 @@ const allTeams = [
 		name: "Landon",
 		avatar: "/landon.jpeg",
 		played: allInfo.rounds,
-		round1: 6,
-		round2: 4,
-		round3: 2,
+		round1: 0,
+		round2: 0,
+		round3: 0,
 		bonus: 0,
 		get points() {
 			return calculatePoints.call(this);
@@ -108,10 +108,10 @@ const allTeams = [
 		name: "Christine",
 		avatar: "/christine.jpeg",
 		played: allInfo.rounds,
-		round1: 10,
-		round2: 4,
-		round3: 7,
-		bonus: 13,
+		round1: 4,
+		round2: 3,
+		round3: 8,
+		bonus: 5,
 		get points() {
 			return calculatePoints.call(this);
 		},

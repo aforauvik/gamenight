@@ -2,321 +2,409 @@ export const quizData = {
 	round1: [
 		{
 			id: 1,
-			question:
-				"Which Netflix series features a young girl with psychic powers named Eleven?",
+			question: "What does 'premium' mean in health insurance?",
 			options: [
-				"Stranger Things",
-				"The Witcher",
-				"The Umbrella Academy",
-				"Wednesday",
+				"A refund from your insurance",
+				"A fee you pay only when you use care",
+				"The amount you pay each month to keep your plan active",
+				"The maximum your insurer will pay each year",
 			],
-			correctAnswer: "Stranger Things",
+			correctAnswer: "The amount you pay each month to keep your plan active",
 			description:
-				"Stranger Things premiered in 2016 and became a cultural phenomenon.",
+				"A premium is the regular (often monthly) payment to keep coverage in force.",
 		},
 		{
 			id: 2,
-			question: "What is the name of the tiger in 'Tiger King'?",
-			options: ["Tony", "Shere Khan", "Not specific", "Richard Parker"],
-			correctAnswer: "Not specific",
+			question: "What is a 'deductible'?",
+			options: [
+				"The amount you pay out-of-pocket before insurance starts covering costs",
+				"The yearly limit your insurance will pay",
+				"The fee for emergency services",
+				"The cost of adding a family member",
+			],
+			correctAnswer:
+				"The amount you pay out-of-pocket before insurance starts covering costs",
 			description:
-				"Tiger King focuses on Joe Exotic and his zoo, but the tigers are not individually named in the show.",
+				"You must meet the deductible before the plan shares most costs.",
 		},
 		{
 			id: 3,
-			question: "In 'Squid Game', what color is the guard uniform?",
-			options: ["Red/Pink", "Blue", "Green", "Yellow"],
-			correctAnswer: "Red/Pink",
-			description:
-				"Guards wear pinkish-red suits with black masks, while players wear green tracksuits.",
+			question: "Which of these is an example of a copay?",
+			options: [
+				"20% of a hospital bill",
+				"Your annual premium",
+				"A waived fee for preventive care",
+				"$20 fee when visiting your primary care doctor",
+			],
+			correctAnswer: "$20 fee when visiting your primary care doctor",
+			description: "A copay is a fixed dollar amount for a covered service.",
 		},
 		{
 			id: 4,
-			question:
-				"Which Netflix series is about a chess prodigy named Beth Harmon?",
-			options: ["The Crown", "The Queen's Gambit", "Mindhunter", "Ozark"],
-			correctAnswer: "The Queen's Gambit",
+			question: "What does 'out-of-pocket maximum' mean?",
+			options: [
+				"The total amount the insurer will pay",
+				"The most you'll pay in a year for covered services before the plan pays 100%",
+				"The amount owed before coverage begins",
+				"The cost of the most expensive treatment",
+			],
+			correctAnswer:
+				"The most you'll pay in a year for covered services before the plan pays 100%",
 			description:
-				"The Queen's Gambit stars Anya Taylor-Joy and boosted chess popularity worldwide.",
+				"After you hit this limit, the plan pays 100% of covered in-network costs for the rest of the year.",
 		},
 		{
 			id: 5,
-			question:
-				"What is the real first name of the character 'Wednesday Addams' in Netflix's 'Wednesday'?",
-			options: ["Winona", "Wanda", "None", "Wednesday"],
-			correctAnswer: "Wednesday",
+			question: "What is 'coinsurance'?",
+			options: [
+				"A set fee for a service",
+				"The premium amount",
+				"A percentage you pay for a covered service after the deductible",
+				"The deductible amount",
+			],
+			correctAnswer:
+				"A percentage you pay for a covered service after the deductible",
 			description:
-				"Wednesday Addams is her actual first name, named after a nursery rhyme line: 'Wednesday's child is full of woe'.",
+				"Example: You pay 20% and the plan pays 80% after the deductible.",
 		},
 		{
 			id: 6,
-			question: "Which animated Netflix series features a talking horse?",
+			question: "What does 'in-network' mean?",
 			options: [
-				"BoJack Horseman",
-				"Big Mouth",
-				"Disenchantment",
-				"F is for Family",
+				"Any doctor you choose",
+				"Doctors and hospitals that have contracts with your insurer",
+				"Providers outside your state",
+				"Government-run clinics only",
 			],
-			correctAnswer: "BoJack Horseman",
-			description:
-				"BoJack Horseman is a dark animated comedy about a washed-up actor who is literally a horse.",
+			correctAnswer:
+				"Doctors and hospitals that have contracts with your insurer",
+			description: "In-network providers agree to negotiated (lower) rates.",
 		},
 		{
 			id: 7,
-			question:
-				"Which Netflix show is about a Spanish heist crew wearing red jumpsuits?",
-			options: ["Elite", "Dark", "Money Heist", "Narcos"],
-			correctAnswer: "Money Heist",
-			description:
-				"La Casa de Papel (Money Heist) features the iconic Salvador Dalí masks and red jumpsuits.",
+			question: "What is an 'Explanation of Benefits' (EOB)?",
+			options: [
+				"A statement from your insurer explaining what was covered and what you owe",
+				"A bill from your doctor",
+				"A list of covered services in your policy",
+				"A receipt for your premium",
+			],
+			correctAnswer:
+				"A statement from your insurer explaining what was covered and what you owe",
+			description: "An EOB is not a bill; it shows how a claim was processed.",
 		},
 		{
 			id: 8,
-			question:
-				"Who is the main monster in the first season of 'Stranger Things'?",
-			options: ["Mind Flayer", "Demogorgon", "Vecna", "Shadow Monster"],
-			correctAnswer: "Demogorgon",
-			description: "The Demogorgon terrorizes Hawkins in season 1.",
+			question: "What is a 'network' in insurance terms?",
+			options: [
+				"The internet platform for filing claims",
+				"A federal insurance database",
+				"A group of covered services",
+				"A group of healthcare providers contracted with your insurer",
+			],
+			correctAnswer:
+				"A group of healthcare providers contracted with your insurer",
+			description: "Networks help control costs and coordinate care.",
 		},
 		{
 			id: 9,
-			question: "In 'The Witcher', what is the name of Geralt’s horse?",
-			options: ["Roach", "Shadowfax", "Spirit", "Epona"],
-			correctAnswer: "Roach",
-			description: "Geralt names all his horses Roach in The Witcher series.",
+			question: "What is 'preventive care'?",
+			options: [
+				"Care for existing illnesses",
+				"Care to avoid illness or detect it early",
+				"Only emergency room visits",
+				"Services not covered by insurance",
+			],
+			correctAnswer: "Care to avoid illness or detect it early",
+			description: "Includes checkups, vaccines, and screenings.",
 		},
 		{
 			id: 10,
-			question:
-				"Which Netflix documentary followed the Fyre Festival disaster?",
+			question: "What does 'preauthorization' mean?",
 			options: [
-				"The Tinder Swindler",
-				"FYRE: The Greatest Party That Never Happened",
-				"Keep Sweet",
-				"Untold",
+				"Paying your bill before treatment",
+				"Getting a second opinion from a doctor",
+				"Approval from your insurer before a service is provided",
+				"An agreement between you and your doctor",
 			],
-			correctAnswer: "FYRE: The Greatest Party That Never Happened",
+			correctAnswer: "Approval from your insurer before a service is provided",
 			description:
-				"The 2019 documentary detailed the failed luxury music festival in the Bahamas.",
+				"Some services require prior approval to confirm medical necessity and coverage.",
 		},
 	],
 	round2: [
 		{
 			id: 11,
-			question: "Which country produced the Netflix original series 'Dark'?",
-			options: ["Germany", "Norway", "Denmark", "Sweden"],
-			correctAnswer: "Germany",
+			question: "What is an HSA (Health Savings Account)?",
+			options: [
+				"High Service Allocation",
+				"Health Service Agreement",
+				"Hospital Safety Audit",
+				"A savings account for medical expenses with tax advantages tied to an HDHP",
+			],
+			correctAnswer:
+				"A savings account for medical expenses with tax advantages tied to an HDHP",
 			description:
-				"'Dark' is a German sci-fi thriller about time travel and family secrets.",
+				"HSAs pair with high-deductible health plans and offer triple tax advantages.",
 		},
 		{
 			id: 12,
-			question: "In 'Narcos', which actor plays Pablo Escobar?",
-			options: ["Diego Luna", "Pedro Pascal", "Wagner Moura", "Javier Bardem"],
-			correctAnswer: "Wagner Moura",
-			description:
-				"Wagner Moura portrayed Pablo Escobar in the first two seasons of 'Narcos'.",
+			question: "What is a 'formulary'?",
+			options: [
+				"A list of prescription drugs covered by the plan",
+				"A doctor’s prescription pad",
+				"A hospital billing code set",
+				"A medical research protocol",
+			],
+			correctAnswer: "A list of prescription drugs covered by the plan",
+			description: "Formularies often use tiers that affect your cost-sharing.",
 		},
 		{
 			id: 13,
-			question:
-				"What chess opening does Beth Harmon famously use in the final match of 'The Queen's Gambit'?",
+			question: "What is 'balance billing'?",
 			options: [
-				"Queen's Gambit",
-				"Sicilian Defense",
-				"Caro-Kann Defense",
-				"King's Indian Defense",
+				"A monthly premium adjustment",
+				"Splitting bills evenly with your insurer",
+				"When a provider bills you for the difference between their charge and the insurer's allowed amount",
+				"A refund for overpayment",
 			],
-			correctAnswer: "Queen's Gambit",
+			correctAnswer:
+				"When a provider bills you for the difference between their charge and the insurer's allowed amount",
 			description:
-				"The final episode fittingly has her play the Queen's Gambit opening.",
+				"Common out-of-network; many in-network contracts prohibit it.",
 		},
 		{
 			id: 14,
-			question:
-				"In 'Money Heist', what city name does the character Andrés de Fonollosa go by?",
-			options: ["Madrid", "Berlin", "Paris", "Oslo"],
-			correctAnswer: "Berlin",
+			question: "What does 'guaranteed issue' mean?",
+			options: [
+				"Coverage that starts immediately",
+				"Insurer must offer coverage regardless of health status",
+				"A promise of low premiums",
+				"Free preventive care for life",
+			],
+			correctAnswer: "Insurer must offer coverage regardless of health status",
 			description:
-				"Each heist member uses a city name as their alias; Andrés is known as Berlin.",
+				"A key consumer protection for individual and small-group markets.",
 		},
 		{
 			id: 15,
-			question:
-				"Which Netflix original was the first to win an Emmy for Best Drama Series?",
+			question: "What is an HMO plan?",
 			options: [
-				"House of Cards",
-				"The Crown",
-				"Orange Is the New Black",
-				"Stranger Things",
+				"High Medical Option plan",
+				"A plan that allows any out-of-network provider at no extra cost",
+				"A plan with no deductibles by law",
+				"Health Maintenance Organization requiring in-network care and often referrals",
 			],
-			correctAnswer: "The Crown",
+			correctAnswer:
+				"Health Maintenance Organization requiring in-network care and often referrals",
 			description:
-				"The Crown won Outstanding Drama Series at the Emmys in 2021.",
+				"You typically pick a primary care doctor and need referrals for specialists.",
 		},
 		{
 			id: 16,
-			question: "In 'Squid Game', what shape is NOT on the guards' masks?",
-			options: ["Triangle", "Circle", "Square", "Star"],
-			correctAnswer: "Star",
+			question: "What is a PPO plan?",
+			options: [
+				"Preferred Provider Organization offering more flexibility and out-of-network coverage at higher cost",
+				"Public Provider Option",
+				"Patient Protection Order",
+				"A plan that never requires deductibles",
+			],
+			correctAnswer:
+				"Preferred Provider Organization offering more flexibility and out-of-network coverage at higher cost",
 			description:
-				"Guards wear masks with circles, triangles, or squares—no stars.",
+				"PPOs allow self-referrals to specialists and some out-of-network coverage.",
 		},
 		{
 			id: 17,
-			question:
-				"In 'Black Mirror: Bandersnatch', what is the name of the fictional video game company?",
-			options: ["Pixel Corp", "Tuckersoft", "Gamehouse", "TechWorks"],
-			correctAnswer: "Tuckersoft",
+			question: "What is COBRA coverage?",
+			options: [
+				"A low-cost public insurance program",
+				"Temporary continuation of employer-based coverage after qualifying events",
+				"A policy for emergency care only",
+				"A retiree-only plan",
+			],
+			correctAnswer:
+				"Temporary continuation of employer-based coverage after qualifying events",
 			description:
-				"Tuckersoft develops the interactive game in the 1984-set film.",
+				"You keep the same plan but usually pay the full premium plus admin fees.",
 		},
 		{
 			id: 18,
-			question:
-				"Which Netflix show features the fictional school 'Moordale Secondary'?",
-			options: ["Outer Banks", "Sex Education", "Elite", "Never Have I Ever"],
-			correctAnswer: "Sex Education",
+			question: "What is 'assignment of benefits'?",
+			options: [
+				"A preauthorization decision",
+				"Selecting your primary care physician",
+				"Your authorization allowing the insurer to pay the provider directly",
+				"A change to your deductible",
+			],
+			correctAnswer:
+				"Your authorization allowing the insurer to pay the provider directly",
 			description:
-				"'Sex Education' follows the lives of students at Moordale Secondary.",
+				"You assign the benefit payment to the provider instead of being reimbursed yourself.",
 		},
 		{
 			id: 19,
-			question: "Which series is Netflix's first Korean original drama?",
-			options: ["Squid Game", "Love Alarm", "Kingdom", "Okja"],
-			correctAnswer: "Love Alarm",
+			question: "What is an EPO plan?",
+			options: [
+				"Employer Payment Option",
+				"Extended Policy Option",
+				"Emergency Provider Organization",
+				"Exclusive Provider Organization that generally covers only in-network care (except emergencies)",
+			],
+			correctAnswer:
+				"Exclusive Provider Organization that generally covers only in-network care (except emergencies)",
 			description:
-				"'Love Alarm' premiered in 2019 as Netflix's first Korean original series.",
+				"EPOs usually don’t cover out-of-network care except in emergencies; referrals are often not required.",
 		},
 		{
 			id: 20,
-			question:
-				"In 'The Umbrella Academy', which sibling can see and talk to the dead?",
-			options: ["Luther", "Klaus", "Diego", "Five"],
-			correctAnswer: "Klaus",
-			description:
-				"Klaus Hargreeves (Number Four) can communicate with the dead.",
+			question: "What is the 'grace period' in health insurance?",
+			options: [
+				"Time after the premium due date when coverage remains active before cancellation",
+				"Waiting period before benefits start",
+				"Special enrollment period window",
+				"Time limit to file an appeal",
+			],
+			correctAnswer:
+				"Time after the premium due date when coverage remains active before cancellation",
+			description: "A buffer that prevents immediate lapse for a late premium.",
 		},
 	],
 	round3: [
 		{
 			id: 21,
-			question:
-				"In 'Stranger Things', what song does Max listen to to escape Vecna's curse?",
+			question: "What is 'actuarial value'?",
 			options: [
-				"Take on Me",
-				"Every Breath You Take",
-				"Running Up That Hill",
-				"Sweet Dreams",
+				"The insurer’s profit margin for a plan",
+				"The percentage of average covered costs the plan is expected to pay",
+				"The total premiums collected in a year",
+				"The average claim paid per member",
 			],
-			correctAnswer: "Running Up That Hill",
+			correctAnswer:
+				"The percentage of average covered costs the plan is expected to pay",
 			description:
-				"Kate Bush's 'Running Up That Hill' (1985) resurged in popularity due to season 4.",
+				"Higher actuarial value = plan pays more of the average member’s costs.",
 		},
 		{
 			id: 22,
-			question:
-				"Which language is primarily spoken in the Netflix series 'Lupin'?",
-			options: ["Spanish", "French", "Italian", "Portuguese"],
-			correctAnswer: "French",
+			question: "What is 'community rating'?",
+			options: [
+				"A hospital quality score",
+				"A state health index",
+				"A local doctor ranking",
+				"A pricing method where people pay similar rates regardless of health status",
+			],
+			correctAnswer:
+				"A pricing method where people pay similar rates regardless of health status",
 			description:
-				"'Lupin' is a French heist thriller inspired by Arsène Lupin.",
+				"Premiums don’t vary by individual health; limited factors (like age/tobacco) may still affect price.",
 		},
 		{
 			id: 23,
-			question:
-				"What is the name of the virtual world in 'Black Mirror' episode 'San Junipero'?",
-			options: ["Nosedive", "White Bear", "San Junipero", "Smithereens"],
-			correctAnswer: "San Junipero",
+			question: "What is 'experience rating'?",
+			options: [
+				"Setting premiums based on a group’s past claims history",
+				"Judging a doctor’s years in practice",
+				"A patient feedback score",
+				"Ranking hospitals by equipment",
+			],
+			correctAnswer: "Setting premiums based on a group’s past claims history",
 			description:
-				"The episode is set in a simulated afterlife called San Junipero.",
+				"Groups with higher historical claims often face higher premiums.",
 		},
 		{
 			id: 24,
-			question:
-				"Which Netflix show is based on the novel 'The Haunting of Hill House'?",
+			question: "What is 'reinsurance' in health coverage?",
 			options: [
-				"The Haunting of Bly Manor",
-				"The Haunting of Hill House",
-				"Locke & Key",
-				"Midnight Mass",
+				"A policy renewal process",
+				"A secondary plan individuals buy themselves",
+				"Insurance for insurers to protect against very large losses",
+				"A government tax rebate",
 			],
-			correctAnswer: "The Haunting of Hill House",
-			description:
-				"Mike Flanagan's adaptation of Shirley Jackson's novel became a hit in 2018.",
+			correctAnswer:
+				"Insurance for insurers to protect against very large losses",
+			description: "Reduces volatility from high-cost claims.",
 		},
 		{
 			id: 25,
-			question: "In 'Dark', what is the name of the cave system in Winden?",
+			question: "What is a 'capitation payment'?",
 			options: [
-				"Winden Caves",
-				"St. Christopher's Caves",
-				"Noah's Passage",
-				"Jonas's Cavern",
+				"A per-service payment to doctors",
+				"A fixed amount paid per patient per period regardless of services used",
+				"A bonus for quality outcomes",
+				"A penalty for overbilling",
 			],
-			correctAnswer: "Winden Caves",
-			description:
-				"The Winden Caves are central to the time travel mystery of 'Dark'.",
+			correctAnswer:
+				"A fixed amount paid per patient per period regardless of services used",
+			description: "Aligns incentives toward preventive and efficient care.",
 		},
 		{
 			id: 26,
-			question:
-				"Which Netflix original series had the first interactive episode for adults?",
+			question: "What is 'adverse selection'?",
 			options: [
-				"You vs. Wild",
-				"Escape the Undertaker",
-				"Triviaverse",
-				"Black Mirror: Bandersnatch",
+				"When healthy people over-insure",
+				"A biased doctor referral",
+				"Unfair claim denial",
+				"When higher-risk individuals are more likely to buy insurance, raising costs",
 			],
-			correctAnswer: "Black Mirror: Bandersnatch",
+			correctAnswer:
+				"When higher-risk individuals are more likely to buy insurance, raising costs",
 			description:
-				"Released in 2018, 'Bandersnatch' pioneered interactive storytelling for adults on Netflix.",
+				"If not balanced by broad enrollment, premiums can spiral upward.",
 		},
 		{
 			id: 27,
-			question:
-				"What is the name of the cursed videotape series in 'Archive 81'?",
+			question: "What is 'moral hazard' in health insurance?",
 			options: [
-				"Baldung Footage",
-				"Visser Tapes",
-				"Melody Chronicles",
-				"Spirit Recordings",
+				"Fraud in claims processing",
+				"An insurer refusing coverage",
+				"When having insurance leads to riskier behavior or greater use of services",
+				"A hospital ethics violation",
 			],
-			correctAnswer: "Visser Tapes",
-			description:
-				"The Visser Tapes document the paranormal events in the 1990s apartment complex.",
+			correctAnswer:
+				"When having insurance leads to riskier behavior or greater use of services",
+			description: "Lower personal cost can increase utilization.",
 		},
 		{
 			id: 28,
-			question:
-				"In 'The Crown', which season depicts the wedding of Prince Charles and Lady Diana?",
-			options: ["Season 1", "Season 2", "Season 3", "Season 4"],
-			correctAnswer: "Season 4",
+			question: "What is the 'medical loss ratio' (MLR)?",
+			options: [
+				"The percentage of premium revenue spent on medical claims and quality improvement",
+				"The ratio of doctors to patients",
+				"A hospital debt ratio",
+				"A claims denial percentage",
+			],
+			correctAnswer:
+				"The percentage of premium revenue spent on medical claims and quality improvement",
 			description:
-				"Season 4 of 'The Crown' (2020) portrays the 1981 royal wedding.",
+				"MLR rules require insurers to devote most premiums to care rather than admin/profit.",
 		},
 		{
 			id: 29,
-			question:
-				"Which Netflix show features a mysterious board game that changes reality?",
+			question: "What is a 'self-funded' employer health plan?",
 			options: [
-				"The House",
-				"The Guardians of Justice",
-				"Jumanji: The Series",
-				"The OA",
+				"A personal health savings plan",
+				"When an employer pays employees’ claims directly instead of buying full insurance",
+				"Government-provided coverage",
+				"Insurance for executives only",
 			],
-			correctAnswer: "The OA",
-			description:
-				"In part II of 'The OA', the Rose Window puzzle game influences alternate dimensions.",
+			correctAnswer:
+				"When an employer pays employees’ claims directly instead of buying full insurance",
+			description: "Often administered by a third-party administrator (TPA).",
 		},
 		{
 			id: 30,
-			question:
-				"What is the original language of the Netflix series 'Barbarians'?",
-			options: ["English", "Latin", "German", "Gaulish"],
-			correctAnswer: "German",
+			question: "What is the 'stop-loss attachment point'?",
+			options: [
+				"The date a policy begins",
+				"A deductible for preventive services",
+				"The limit on coinsurance",
+				"The dollar amount at which stop-loss coverage begins to reimburse",
+			],
+			correctAnswer:
+				"The dollar amount at which stop-loss coverage begins to reimburse",
 			description:
-				"'Barbarians' is primarily in German, depicting events during the Roman Empire.",
+				"After this threshold, the stop-loss policy covers additional eligible claim costs.",
 		},
 	],
 };
