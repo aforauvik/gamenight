@@ -57,6 +57,14 @@ export const allTeams = [
 		third: 5,
 	},
 	{
+		name: "Leif",
+		avatar: "/leif.jpeg",
+		game: allInfo.game,
+		first: 0,
+		second: 0,
+		third: 0,
+	},
+	{
 		name: "Julian",
 		avatar: "/julian.jpeg",
 		game: allInfo.game,

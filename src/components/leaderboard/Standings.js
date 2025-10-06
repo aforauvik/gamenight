@@ -81,6 +81,18 @@ const allTeams = [
 		},
 	},
 	{
+		name: "Leif",
+		avatar: "/leif.jpeg",
+		played: allInfo.rounds,
+		round1: 0,
+		round2: 0,
+		round3: 0,
+		bonus: 0,
+		get points() {
+			return calculatePoints.call(this);
+		},
+	},
+	{
 		name: "Julian",
 		avatar: "/julian.jpeg",
 		played: allInfo.rounds,
