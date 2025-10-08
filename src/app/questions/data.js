@@ -2,246 +2,322 @@ export const quizData = {
 	round1: [
 		{
 			id: 1,
-			question: "On which continent would you find Mount Kilimanjaro?",
-			options: ["Africa", "Asia", "South America", "Europe"],
-			correctAnswer: "Africa",
+			question: "What city is 'Friends' primarily set in?",
+			options: ["Chicago", "Los Angeles", "New York City", "Boston"],
+			correctAnswer: "New York City",
 			description:
-				"Mount Kilimanjaro, Africa’s tallest peak, is located in Tanzania.",
+				"‘Friends’ takes place in Manhattan, New York City, mostly around Monica’s apartment and Central Perk café.",
 		},
 		{
 			id: 2,
-			question: "On which continent is the Sahara Desert located?",
-			options: ["Asia", "Africa", "Australia", "North America"],
-			correctAnswer: "Africa",
+			question:
+				"Which sitcom features characters working at Dunder Mifflin Paper Company?",
+			options: ["The Office", "Scrubs", "How I Met Your Mother", "Seinfeld"],
+			correctAnswer: "The Office",
 			description:
-				"The Sahara is the largest hot desert in the world, covering much of North Africa.",
+				"‘The Office’ (U.S.) is a mockumentary sitcom set at Dunder Mifflin in Scranton, Pennsylvania.",
 		},
 		{
 			id: 3,
-			question: "Where is the Amazon Rainforest?",
-			options: ["South America", "Africa", "Asia", "Australia"],
-			correctAnswer: "South America",
+			question:
+				"In 'Full House', what is the name of Danny Tanner’s oldest daughter?",
+			options: ["Michelle", "D.J.", "Stephanie", "Kimmy"],
+			correctAnswer: "D.J.",
 			description:
-				"The Amazon spans nine countries, mostly in Brazil, and is the largest rainforest on Earth.",
+				"D.J. Tanner, played by Candace Cameron Bure, is the eldest daughter in ‘Full House’.",
 		},
 		{
 			id: 4,
-			question: "On which continent is the Eiffel Tower located?",
-			options: ["Asia", "North America", "Europe", "South America"],
-			correctAnswer: "Europe",
+			question:
+				"Which 90s sitcom starred Will Smith as a fictionalized version of himself?",
+			options: [
+				"The Fresh Prince of Bel-Air",
+				"Martin",
+				"Living Single",
+				"Family Matters",
+			],
+			correctAnswer: "The Fresh Prince of Bel-Air",
 			description:
-				"The Eiffel Tower stands in Paris, France, one of Europe’s most famous landmarks.",
+				"Will Smith played a teenager from West Philadelphia sent to live with his wealthy relatives in Bel-Air.",
 		},
 		{
 			id: 5,
-			question: "Where would you find kangaroos in the wild?",
-			options: ["Africa", "Australia", "South America", "Asia"],
-			correctAnswer: "Australia",
+			question:
+				"Who lives across the hall from Sheldon and Leonard in 'The Big Bang Theory'?",
+			options: ["Amy", "Penny", "Raj", "Bernadette"],
+			correctAnswer: "Penny",
 			description:
-				"Kangaroos are native to Australia and are an iconic symbol of the continent.",
+				"Penny, played by Kaley Cuoco, is their neighbor and friend living across the hall.",
 		},
 		{
 			id: 6,
-			question: "On which continent is the Nile River found?",
-			options: ["Asia", "Europe", "Africa", "South America"],
-			correctAnswer: "Africa",
+			question:
+				"In 'Friends', what is Chandler Bing's job often joked about as 'unknown'?",
+			options: ["Accountant", "Transponster", "Data Analyst", "Statistician"],
+			correctAnswer: "Data Analyst",
 			description:
-				"The Nile, the world’s longest river, flows through northeastern Africa.",
+				"Chandler's job in statistical analysis and data reconfiguration was famously unknown to his friends.",
 		},
 		{
 			id: 7,
-			question: "Where is the Great Wall of China located?",
-			options: ["Asia", "Europe", "Africa", "North America"],
-			correctAnswer: "Asia",
+			question: "Which sitcom features a coffee shop called 'Central Perk'?",
+			options: ["Frasier", "Will & Grace", "Cheers", "Friends"],
+			correctAnswer: "Friends",
 			description:
-				"The Great Wall is in northern China, stretching thousands of miles across Asia.",
+				"Central Perk is the iconic New York coffee shop where the 'Friends' gang frequently met.",
 		},
 		{
 			id: 8,
-			question: "On which continent is the city of New York located?",
-			options: ["North America", "Europe", "Asia", "South America"],
-			correctAnswer: "North America",
+			question: "In 'That '70s Show', where do the teens often hang out?",
+			options: [
+				"The School Gym",
+				"Jackie's Room",
+				"The Drive-In",
+				"Eric's basement",
+			],
+			correctAnswer: "Eric's basement",
 			description:
-				"New York City is in the United States, on the continent of North America.",
+				"Most scenes in 'That '70s Show' occur in Eric Forman's basement, their favorite hangout spot.",
 		},
 		{
 			id: 9,
-			question: "Where would you find penguins in Antarctica?",
-			options: ["Antarctica", "North America", "Australia", "Europe"],
-			correctAnswer: "Antarctica",
+			question: "What instrument does Phoebe Buffay play in 'Friends'?",
+			options: ["Violin", "Flute", "Guitar", "Piano"],
+			correctAnswer: "Guitar",
 			description:
-				"Most penguin species live in the Southern Hemisphere, with many in Antarctica.",
+				"Phoebe plays guitar and performs songs like 'Smelly Cat' at Central Perk.",
 		},
 		{
 			id: 10,
-			question: "On which continent is the Taj Mahal located?",
-			options: ["Asia", "Europe", "South America", "Africa"],
-			correctAnswer: "Asia",
+			question:
+				"Which show is centered on a bar where 'everybody knows your name'?",
+			options: ["Seinfeld", "Frasier", "Friends", "Cheers"],
+			correctAnswer: "Cheers",
 			description:
-				"The Taj Mahal, a UNESCO World Heritage site, is in India, South Asia.",
+				"'Cheers' (1982–1993) set in Boston inspired spinoffs like 'Frasier'.",
 		},
 	],
+
 	round2: [
 		{
 			id: 11,
-			question: "Where is Machu Picchu located?",
-			options: ["Asia", "Europe", "South America", "Africa"],
-			correctAnswer: "South America",
+			question:
+				"In 'Seinfeld', what kind of restaurant do Jerry and his friends often visit?",
+			options: ["A diner", "A sushi bar", "A coffee house", "A deli"],
+			correctAnswer: "A diner",
 			description:
-				"Machu Picchu is an ancient Incan city high in the Andes of Peru.",
+				"Tom's Restaurant in New York served as the exterior for the diner featured in 'Seinfeld'.",
 		},
 		{
 			id: 12,
-			question: "On which continent would you find the city of Istanbul?",
-			options: ["Asia", "South America", "Europe", "Africa"],
-			correctAnswer: "Europe",
+			question:
+				"Which '90s sitcom starred Tim Allen as a TV show host of 'Tool Time'?",
+			options: [
+				"Boy Meets World",
+				"Home Improvement",
+				"King of Queens",
+				"Step by Step",
+			],
+			correctAnswer: "Home Improvement",
 			description:
-				"Istanbul spans both Europe and Asia, but most of the city lies in Europe.",
+				"Tim Allen played Tim 'The Toolman' Taylor, host of the fictional DIY show 'Tool Time'.",
 		},
 		{
 			id: 13,
-			question: "Where is Victoria Falls located?",
-			options: ["North America", "Asia", "Africa", "South America"],
-			correctAnswer: "Africa",
+			question: "What is the name of the bar in 'How I Met Your Mother'?",
+			options: ["MacLaren's Pub", "Paddy's Pub", "The Winchester", "Cheers"],
+			correctAnswer: "MacLaren's Pub",
 			description:
-				"Victoria Falls is on the border of Zambia and Zimbabwe in southern Africa.",
+				"MacLaren's Pub in Manhattan is the group's hangout spot throughout the series.",
 		},
 		{
 			id: 14,
-			question: "On which continent is the outback found?",
-			options: ["North America", "Asia", "Australia", "Africa"],
-			correctAnswer: "Australia",
+			question: "In 'Scrubs', what is Dr. Cox's first name?",
+			options: ["Robert", "Perry", "John", "Elliot"],
+			correctAnswer: "Perry",
 			description:
-				"The Australian Outback is a vast, remote desert interior of the continent.",
+				"Dr. Perry Cox, played by John C. McGinley, is J.D.'s sarcastic mentor at Sacred Heart Hospital.",
 		},
 		{
 			id: 15,
-			question: "Where is Mount Everest located?",
-			options: ["Europe", "Africa", "Asia", "South America"],
-			correctAnswer: "Asia",
+			question:
+				"Which sitcom features the character Fez, a foreign exchange student?",
+			options: [
+				"That '70s Show",
+				"Malcolm in the Middle",
+				"Freaks and Geeks",
+				"Everybody Hates Chris",
+			],
+			correctAnswer: "That '70s Show",
 			description:
-				"Mount Everest is the world's highest mountain, located in the Himalayas on the Nepal-China border.",
+				"Fez (short for 'foreign exchange student') is one of the main characters in 'That '70s Show'.",
 		},
 		{
 			id: 16,
-			question: "On which continent is the Danube River mainly located?",
-			options: ["Asia", "Africa", "Europe", "South America"],
-			correctAnswer: "Europe",
+			question: "Who plays Liz Lemon in '30 Rock'?",
+			options: [
+				"Amy Poehler",
+				"Tina Fey",
+				"Julia Louis-Dreyfus",
+				"Sarah Silverman",
+			],
+			correctAnswer: "Tina Fey",
 			description:
-				"The Danube flows through 10 European countries, including Germany, Austria, and Hungary.",
+				"Tina Fey created and starred as Liz Lemon, a TV writer on the fictional sketch show 'TGS'.",
 		},
 		{
 			id: 17,
-			question: "Where is the Serengeti National Park?",
-			options: ["North America", "Asia", "Africa", "Australia"],
-			correctAnswer: "Africa",
+			question: "In 'Frasier', what is the name of Frasier's dog?",
+			options: ["Eddie", "Maris", "Niles", "Duke"],
+			correctAnswer: "Eddie",
 			description:
-				"The Serengeti, in Tanzania, is famous for its great migration of wildebeest and zebras.",
+				"Eddie, the Jack Russell Terrier, was played by Moose and often stole scenes with Frasier.",
 		},
 		{
 			id: 18,
-			question: "On which continent is the city of Buenos Aires?",
-			options: ["North America", "Europe", "Australia", "South America"],
-			correctAnswer: "South America",
+			question:
+				"In 'The Office', who starts the fire that leads to the 'Fire Drill' chaos?",
+			options: ["Ryan", "Michael", "Kevin", "Dwight"],
+			correctAnswer: "Ryan",
 			description:
-				"Buenos Aires is the capital of Argentina, located in South America.",
+				"Ryan started the fire by leaving a cheese pita in the toaster oven, causing an office evacuation.",
 		},
 		{
 			id: 19,
-			question: "Where is the city of Kyoto located?",
-			options: ["Europe", "South America", "Asia", "Africa"],
-			correctAnswer: "Asia",
+			question:
+				"What is the name of George Costanza's boss at the Yankees in 'Seinfeld'?",
+			options: ["Mr. Steinbrenner", "Mr. Wilhelm", "Mr. Pitt", "Mr. Kruger"],
+			correctAnswer: "Mr. Steinbrenner",
 			description:
-				"Kyoto, once Japan's capital, is located on the island of Honshu in Asia.",
+				"George Steinbrenner, the real Yankees owner, was portrayed comically by Larry David's voice.",
 		},
 		{
 			id: 20,
-			question: "On which continent would you find the Kalahari Desert?",
-			options: ["Asia", "Australia", "South America", "Africa"],
-			correctAnswer: "Africa",
+			question:
+				"What is the name of the sitcom where a teenage girl has supernatural powers and lives with her aunts?",
+			options: [
+				"Clarissa Explains It All",
+				"Sabrina the Teenage Witch",
+				"Charmed",
+				"Buffy the Vampire Slayer",
+			],
+			correctAnswer: "Sabrina the Teenage Witch",
 			description:
-				"The Kalahari Desert spans Botswana, Namibia, and South Africa.",
+				"Melissa Joan Hart starred as Sabrina Spellman, who discovers she's half-witch, half-human.",
 		},
 	],
+
 	round3: [
 		{
 			id: 21,
-			question: "Where is the Carpathian Mountain range mainly located?",
-			options: ["North America", "Asia", "South America", "Europe"],
-			correctAnswer: "Europe",
+			question:
+				"In 'Arrested Development', what is the name of the frozen banana stand owned by the Bluth family?",
+			options: [
+				"The Banana Hut",
+				"Bluth Family Treats",
+				"Banana Republic",
+				"Bluth's Original Frozen Banana Stand",
+			],
+			correctAnswer: "Bluth's Original Frozen Banana Stand",
 			description:
-				"The Carpathians stretch through Central and Eastern Europe, including Romania and Slovakia.",
+				"The stand's slogan was 'There's always money in the banana stand,' symbolizing hidden funds.",
 		},
 		{
 			id: 22,
-			question: "On which continent is Lake Baikal located?",
-			options: ["North America", "Africa", "Asia", "Europe"],
-			correctAnswer: "Asia",
+			question:
+				"In 'King of Queens', what delivery company does Doug Heffernan work for?",
+			options: ["IPS", "UPS", "FedEx", "ParcelPlus"],
+			correctAnswer: "IPS",
 			description:
-				"Lake Baikal in Siberia is the world's deepest freshwater lake.",
+				"Doug Heffernan works for the fictional International Parcel Service (IPS).",
 		},
 		{
 			id: 23,
-			question: "Where is the Gobi Desert located?",
-			options: ["Australia", "South America", "Asia", "Africa"],
-			correctAnswer: "Asia",
+			question: "What instrument does Niles Crane play in 'Frasier'?",
+			options: ["Cello", "Piano", "Violin", "Clarinet"],
+			correctAnswer: "Piano",
 			description:
-				"The Gobi Desert spans parts of northern China and southern Mongolia.",
+				"Niles, Frasier's brother, is a classically refined psychiatrist who plays piano.",
 		},
 		{
 			id: 24,
-			question: "On which continent is the Matterhorn mountain?",
-			options: ["Asia", "North America", "Europe", "South America"],
-			correctAnswer: "Europe",
+			question:
+				"In 'Community', what fictional college do the characters attend?",
+			options: [
+				"Greenfield Institute",
+				"Springfield College",
+				"Greendale Community College",
+				"Sunnydale Community",
+			],
+			correctAnswer: "Greendale Community College",
 			description:
-				"The Matterhorn is one of the Alps' most famous peaks, on the Switzerland–Italy border.",
+				"The show follows a study group at the quirky Greendale Community College.",
 		},
 		{
 			id: 25,
-			question: "Where is the Namib Desert located?",
-			options: ["North America", "Asia", "Africa", "Australia"],
-			correctAnswer: "Africa",
+			question: "In 'Malcolm in the Middle', what is Malcolm's IQ?",
+			options: ["145", "165", "135", "155"],
+			correctAnswer: "165",
 			description:
-				"The Namib, one of the oldest deserts on Earth, stretches along Namibia's Atlantic coast.",
+				"Malcolm's genius-level IQ is 165, often used to highlight his frustrations with normal life.",
 		},
 		{
 			id: 26,
-			question: "On which continent would you find the city of Tashkent?",
-			options: ["Europe", "Africa", "Asia", "South America"],
-			correctAnswer: "Asia",
-			description: "Tashkent is the capital of Uzbekistan in Central Asia.",
+			question: "In 'The Office', what company buys out Dunder Mifflin?",
+			options: ["Staples", "Sabre", "Utica Paper", "Infinity Paper"],
+			correctAnswer: "Sabre",
+			description:
+				"Sabre, a Florida-based printer company, acquires Dunder Mifflin in Season 6.",
 		},
 		{
 			id: 27,
-			question: "Where is the Andes mountain range located?",
-			options: ["Asia", "Africa", "Europe", "South America"],
-			correctAnswer: "South America",
+			question:
+				"Which 90s sitcom character popularized the catchphrase 'Did I do that?'",
+			options: [
+				"Michael Kelso",
+				"Steve Urkel",
+				"Joey Tribbiani",
+				"George Lopez",
+			],
+			correctAnswer: "Steve Urkel",
 			description:
-				"The Andes stretch along South America's western coast, through seven countries.",
+				"Steve Urkel from 'Family Matters' became iconic for his clumsy antics and catchphrase.",
 		},
 		{
 			id: 28,
-			question: "On which continent would you find Mount Elbrus?",
-			options: ["Asia", "South America", "Europe", "Africa"],
-			correctAnswer: "Europe",
+			question:
+				"What was the original working title for 'Friends' before it aired?",
+			options: [
+				"Central Life",
+				"Roommates",
+				"Insomnia Café",
+				"The One with the Friends",
+			],
+			correctAnswer: "Insomnia Café",
 			description:
-				"Mount Elbrus, in the Caucasus Mountains of Russia, is the highest peak in Europe.",
+				"The show was originally pitched as 'Insomnia Café' before being renamed to 'Friends'.",
 		},
 		{
 			id: 29,
-			question: "Where is the Atacama Desert located?",
-			options: ["Asia", "Australia", "Africa", "South America"],
-			correctAnswer: "South America",
+			question: "In 'Will & Grace', what is Jack's last name?",
+			options: ["Adler", "McFarland", "Truman", "Walker"],
+			correctAnswer: "McFarland",
 			description:
-				"The Atacama Desert in Chile is one of the driest places on Earth.",
+				"Jack McFarland, played by Sean Hayes, is Will and Grace's flamboyant actor friend.",
 		},
 		{
 			id: 30,
-			question: "On which continent is the Drakensberg Mountain range?",
-			options: ["Europe", "South America", "Asia", "Africa"],
-			correctAnswer: "Africa",
+			question:
+				"What 2000s sitcom featured a 'Pawnee Harvest Festival' and a character named Leslie Knope?",
+			options: [
+				"Community",
+				"Parks and Recreation",
+				"The Office",
+				"Brooklyn Nine-Nine",
+			],
+			correctAnswer: "Parks and Recreation",
 			description:
-				"The Drakensberg is the highest mountain range in southern Africa, mainly in South Africa and Lesotho.",
+				"Leslie Knope, played by Amy Poehler, organized Pawnee's Harvest Festival in 'Parks and Rec'.",
 		},
 	],
 };
