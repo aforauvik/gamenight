@@ -2,322 +2,369 @@ export const quizData = {
 	round1: [
 		{
 			id: 1,
-			question: "What city is 'Friends' primarily set in?",
-			options: ["Chicago", "Los Angeles", "New York City", "Boston"],
-			correctAnswer: "New York City",
+			question: "When did World War II begin?",
+			options: ["1941", "1914", "1945", "1939"],
+			correctAnswer: "1939",
 			description:
-				"‘Friends’ takes place in Manhattan, New York City, mostly around Monica’s apartment and Central Perk café.",
+				"World War II began on September 1, 1939, when Nazi Germany invaded Poland.",
 		},
 		{
 			id: 2,
-			question:
-				"Which sitcom features characters working at Dunder Mifflin Paper Company?",
-			options: ["The Office", "Scrubs", "How I Met Your Mother", "Seinfeld"],
-			correctAnswer: "The Office",
+			question: "Who was the leader of Nazi Germany during World War II?",
+			options: [
+				"Erwin Rommel",
+				"Adolf Hitler",
+				"Joseph Goebbels",
+				"Hermann Göring",
+			],
+			correctAnswer: "Adolf Hitler",
 			description:
-				"‘The Office’ (U.S.) is a mockumentary sitcom set at Dunder Mifflin in Scranton, Pennsylvania.",
+				"Adolf Hitler led Nazi Germany from 1933 to 1945 and was responsible for starting WWII and the Holocaust.",
 		},
 		{
 			id: 3,
-			question:
-				"In 'Full House', what is the name of Danny Tanner’s oldest daughter?",
-			options: ["Michelle", "D.J.", "Stephanie", "Kimmy"],
-			correctAnswer: "D.J.",
+			question: "What event led the United States to enter World War II?",
+			options: [
+				"Battle of Britain",
+				"Fall of France",
+				"Attack on Pearl Harbor",
+				"Invasion of Poland",
+			],
+			correctAnswer: "Attack on Pearl Harbor",
 			description:
-				"D.J. Tanner, played by Candace Cameron Bure, is the eldest daughter in ‘Full House’.",
+				"Japan attacked Pearl Harbor on December 7, 1941, prompting the U.S. to declare war.",
 		},
 		{
 			id: 4,
 			question:
-				"Which 90s sitcom starred Will Smith as a fictionalized version of himself?",
+				"Who was the British Prime Minister during most of World War II?",
 			options: [
-				"The Fresh Prince of Bel-Air",
-				"Martin",
-				"Living Single",
-				"Family Matters",
+				"Winston Churchill",
+				"Neville Chamberlain",
+				"Clement Attlee",
+				"Anthony Eden",
 			],
-			correctAnswer: "The Fresh Prince of Bel-Air",
+			correctAnswer: "Winston Churchill",
 			description:
-				"Will Smith played a teenager from West Philadelphia sent to live with his wealthy relatives in Bel-Air.",
+				"Churchill became Prime Minister in 1940 and led Britain through most of the war.",
 		},
 		{
 			id: 5,
-			question:
-				"Who lives across the hall from Sheldon and Leonard in 'The Big Bang Theory'?",
-			options: ["Amy", "Penny", "Raj", "Bernadette"],
-			correctAnswer: "Penny",
+			question: "What was the code name for the Allied invasion of Normandy?",
+			options: [
+				"Operation Barbarossa",
+				"Operation Sea Lion",
+				"Operation Torch",
+				"Operation Overlord",
+			],
+			correctAnswer: "Operation Overlord",
 			description:
-				"Penny, played by Kaley Cuoco, is their neighbor and friend living across the hall.",
+				"Operation Overlord, launched on June 6, 1944 (D-Day), marked the start of the liberation of Western Europe.",
 		},
 		{
 			id: 6,
-			question:
-				"In 'Friends', what is Chandler Bing's job often joked about as 'unknown'?",
-			options: ["Accountant", "Transponster", "Data Analyst", "Statistician"],
-			correctAnswer: "Data Analyst",
+			question: "Approximately how many Jews were killed during the Holocaust?",
+			options: ["10 million", "1 million", "3 million", "6 million"],
+			correctAnswer: "6 million",
 			description:
-				"Chandler's job in statistical analysis and data reconfiguration was famously unknown to his friends.",
+				"About six million Jews were systematically murdered by Nazi Germany between 1941 and 1945.",
 		},
 		{
 			id: 7,
-			question: "Which sitcom features a coffee shop called 'Central Perk'?",
-			options: ["Frasier", "Will & Grace", "Cheers", "Friends"],
-			correctAnswer: "Friends",
+			question: "In which two cities were atomic bombs dropped in 1945?",
+			options: [
+				"Sapporo and Hiroshima",
+				"Tokyo and Osaka",
+				"Kyoto and Nagasaki",
+				"Hiroshima and Nagasaki",
+			],
+			correctAnswer: "Hiroshima and Nagasaki",
 			description:
-				"Central Perk is the iconic New York coffee shop where the 'Friends' gang frequently met.",
+				"The U.S. dropped atomic bombs on Hiroshima (Aug 6) and Nagasaki (Aug 9), leading to Japan's surrender.",
 		},
 		{
 			id: 8,
-			question: "In 'That '70s Show', where do the teens often hang out?",
+			question: "Which countries formed the main Axis Powers?",
 			options: [
-				"The School Gym",
-				"Jackie's Room",
-				"The Drive-In",
-				"Eric's basement",
+				"Germany, France, Japan",
+				"Italy, USA, Japan",
+				"Germany, UK, Italy",
+				"Germany, Italy, Japan",
 			],
-			correctAnswer: "Eric's basement",
+			correctAnswer: "Germany, Italy, Japan",
 			description:
-				"Most scenes in 'That '70s Show' occur in Eric Forman's basement, their favorite hangout spot.",
+				"Germany, Italy, and Japan formed the core of the Axis Powers, opposing the Allies.",
 		},
 		{
 			id: 9,
-			question: "What instrument does Phoebe Buffay play in 'Friends'?",
-			options: ["Violin", "Flute", "Guitar", "Piano"],
-			correctAnswer: "Guitar",
+			question:
+				"Where did Anne Frank and her family hide during the Nazi occupation?",
+			options: ["Vienna", "Amsterdam", "Berlin", "Paris"],
+			correctAnswer: "Amsterdam",
 			description:
-				"Phoebe plays guitar and performs songs like 'Smelly Cat' at Central Perk.",
+				"Anne Frank wrote her diary while hiding in a secret annex in Amsterdam, Netherlands.",
 		},
 		{
 			id: 10,
-			question:
-				"Which show is centered on a bar where 'everybody knows your name'?",
-			options: ["Seinfeld", "Frasier", "Friends", "Cheers"],
-			correctAnswer: "Cheers",
+			question: "In what year did World War II officially end?",
+			options: ["1946", "1943", "1944", "1945"],
+			correctAnswer: "1945",
 			description:
-				"'Cheers' (1982–1993) set in Boston inspired spinoffs like 'Frasier'.",
+				"The war ended in 1945 with Germany's surrender in May and Japan's surrender in September.",
 		},
 	],
 
 	round2: [
 		{
 			id: 11,
-			question:
-				"In 'Seinfeld', what kind of restaurant do Jerry and his friends often visit?",
-			options: ["A diner", "A sushi bar", "A coffee house", "A deli"],
-			correctAnswer: "A diner",
+			question: "What was the outcome of the Battle of Stalingrad?",
+			options: [
+				"German victory",
+				"Soviet victory",
+				"British victory",
+				"Italian victory",
+			],
+			correctAnswer: "Soviet victory",
 			description:
-				"Tom's Restaurant in New York served as the exterior for the diner featured in 'Seinfeld'.",
+				"The Soviet Union defeated Nazi forces at Stalingrad (1942–43), marking a major turning point.",
 		},
 		{
 			id: 12,
-			question:
-				"Which '90s sitcom starred Tim Allen as a TV show host of 'Tool Time'?",
+			question: "What was the purpose of the Enigma machine?",
 			options: [
-				"Boy Meets World",
-				"Home Improvement",
-				"King of Queens",
-				"Step by Step",
+				"Nuclear research",
+				"Radar detection",
+				"Code encryption",
+				"Weapon development",
 			],
-			correctAnswer: "Home Improvement",
+			correctAnswer: "Code encryption",
 			description:
-				"Tim Allen played Tim 'The Toolman' Taylor, host of the fictional DIY show 'Tool Time'.",
+				"The Enigma machine was used by Nazi Germany to encrypt military communications.",
 		},
 		{
 			id: 13,
-			question: "What is the name of the bar in 'How I Met Your Mother'?",
-			options: ["MacLaren's Pub", "Paddy's Pub", "The Winchester", "Cheers"],
-			correctAnswer: "MacLaren's Pub",
+			question: "What was Operation Barbarossa?",
+			options: [
+				"The invasion of France",
+				"The bombing of Britain",
+				"The invasion of the Soviet Union",
+				"The Normandy landings",
+			],
+			correctAnswer: "The invasion of the Soviet Union",
 			description:
-				"MacLaren's Pub in Manhattan is the group's hangout spot throughout the series.",
+				"Operation Barbarossa was Germany’s massive invasion of the Soviet Union launched in June 1941.",
 		},
 		{
 			id: 14,
-			question: "In 'Scrubs', what is Dr. Cox's first name?",
-			options: ["Robert", "Perry", "John", "Elliot"],
-			correctAnswer: "Perry",
+			question:
+				"The Battle of Midway was fought primarily between which two nations?",
+			options: [
+				"Germany and USA",
+				"Japan and USA",
+				"Britain and Germany",
+				"Japan and China",
+			],
+			correctAnswer: "Japan and USA",
 			description:
-				"Dr. Perry Cox, played by John C. McGinley, is J.D.'s sarcastic mentor at Sacred Heart Hospital.",
+				"The U.S. Navy defeated the Japanese fleet at Midway in June 1942, shifting the balance in the Pacific.",
 		},
 		{
 			id: 15,
-			question:
-				"Which sitcom features the character Fez, a foreign exchange student?",
+			question: "What was Joseph Goebbels' main role in Nazi Germany?",
 			options: [
-				"That '70s Show",
-				"Malcolm in the Middle",
-				"Freaks and Geeks",
-				"Everybody Hates Chris",
+				"Foreign Minister",
+				"Propaganda Minister",
+				"Head of Gestapo",
+				"Minister of War",
 			],
-			correctAnswer: "That '70s Show",
+			correctAnswer: "Propaganda Minister",
 			description:
-				"Fez (short for 'foreign exchange student') is one of the main characters in 'That '70s Show'.",
+				"Goebbels controlled Nazi propaganda, shaping public opinion and suppressing dissent.",
 		},
 		{
 			id: 16,
-			question: "Who plays Liz Lemon in '30 Rock'?",
+			question: "What was the Manhattan Project?",
 			options: [
-				"Amy Poehler",
-				"Tina Fey",
-				"Julia Louis-Dreyfus",
-				"Sarah Silverman",
+				"The German invasion of Britain",
+				"Development of the atomic bomb",
+				"The plan for D-Day",
+				"A Soviet spy network",
 			],
-			correctAnswer: "Tina Fey",
+			correctAnswer: "Development of the atomic bomb",
 			description:
-				"Tina Fey created and starred as Liz Lemon, a TV writer on the fictional sketch show 'TGS'.",
+				"The Manhattan Project was a top-secret U.S. program that developed the atomic bomb.",
 		},
 		{
 			id: 17,
-			question: "In 'Frasier', what is the name of Frasier's dog?",
-			options: ["Eddie", "Maris", "Niles", "Duke"],
-			correctAnswer: "Eddie",
+			question: "How did Benito Mussolini die?",
+			options: [
+				"Executed by partisans",
+				"Suicide",
+				"Died in exile",
+				"Executed by Allies",
+			],
+			correctAnswer: "Executed by partisans",
 			description:
-				"Eddie, the Jack Russell Terrier, was played by Moose and often stole scenes with Frasier.",
+				"Italian partisans captured and executed Mussolini in April 1945 as Germany was collapsing.",
 		},
 		{
 			id: 18,
-			question:
-				"In 'The Office', who starts the fire that leads to the 'Fire Drill' chaos?",
-			options: ["Ryan", "Michael", "Kevin", "Dwight"],
-			correctAnswer: "Ryan",
+			question: "When was the United Nations officially established?",
+			options: ["1939", "1943", "1945", "1947"],
+			correctAnswer: "1945",
 			description:
-				"Ryan started the fire by leaving a cheese pita in the toaster oven, causing an office evacuation.",
+				"The UN was founded on October 24, 1945, to promote peace and prevent future wars.",
 		},
 		{
 			id: 19,
-			question:
-				"What is the name of George Costanza's boss at the Yankees in 'Seinfeld'?",
-			options: ["Mr. Steinbrenner", "Mr. Wilhelm", "Mr. Pitt", "Mr. Kruger"],
-			correctAnswer: "Mr. Steinbrenner",
+			question: "What was the 'Blitz'?",
+			options: [
+				"German tank division",
+				"British naval operation",
+				"German bombing of Britain",
+				"Soviet winter offensive",
+			],
+			correctAnswer: "German bombing of Britain",
 			description:
-				"George Steinbrenner, the real Yankees owner, was portrayed comically by Larry David's voice.",
+				"The Blitz was a sustained bombing campaign against Britain from 1940 to 1941.",
 		},
 		{
 			id: 20,
-			question:
-				"What is the name of the sitcom where a teenage girl has supernatural powers and lives with her aunts?",
-			options: [
-				"Clarissa Explains It All",
-				"Sabrina the Teenage Witch",
-				"Charmed",
-				"Buffy the Vampire Slayer",
-			],
-			correctAnswer: "Sabrina the Teenage Witch",
+			question: "Where did the Battle of Iwo Jima take place?",
+			options: ["Europe", "Africa", "Pacific Ocean", "Atlantic Ocean"],
+			correctAnswer: "Pacific Ocean",
 			description:
-				"Melissa Joan Hart starred as Sabrina Spellman, who discovers she's half-witch, half-human.",
+				"Iwo Jima was a crucial island battle in the Pacific between U.S. Marines and Japanese forces.",
 		},
 	],
 
 	round3: [
 		{
 			id: 21,
-			question:
-				"In 'Arrested Development', what is the name of the frozen banana stand owned by the Bluth family?",
+			question: "What was the purpose of Operation Fortitude?",
 			options: [
-				"The Banana Hut",
-				"Bluth Family Treats",
-				"Banana Republic",
-				"Bluth's Original Frozen Banana Stand",
+				"Invade Italy",
+				"Develop atomic weapons",
+				"Deceive Germany about D-Day",
+				"Destroy German submarines",
 			],
-			correctAnswer: "Bluth's Original Frozen Banana Stand",
+			correctAnswer: "Deceive Germany about D-Day",
 			description:
-				"The stand's slogan was 'There's always money in the banana stand,' symbolizing hidden funds.",
+				"Operation Fortitude was a deception plan to make Germany believe the Allies would invade elsewhere.",
 		},
 		{
 			id: 22,
-			question:
-				"In 'King of Queens', what delivery company does Doug Heffernan work for?",
-			options: ["IPS", "UPS", "FedEx", "ParcelPlus"],
-			correctAnswer: "IPS",
+			question: "Which country designed the T-34 tank?",
+			options: ["Germany", "USA", "Soviet Union", "United Kingdom"],
+			correctAnswer: "Soviet Union",
 			description:
-				"Doug Heffernan works for the fictional International Parcel Service (IPS).",
+				"The Soviet T-34 was one of the most effective and influential tanks of World War II.",
 		},
 		{
 			id: 23,
-			question: "What instrument does Niles Crane play in 'Frasier'?",
-			options: ["Cello", "Piano", "Violin", "Clarinet"],
-			correctAnswer: "Piano",
+			question: "What were the Nuremberg Trials?",
+			options: [
+				"Peace negotiations",
+				"War crime trials",
+				"Military alliances",
+				"Economic treaties",
+			],
+			correctAnswer: "War crime trials",
 			description:
-				"Niles, Frasier's brother, is a classically refined psychiatrist who plays piano.",
+				"The Nuremberg Trials (1945–46) prosecuted leading Nazi officials for war crimes and crimes against humanity.",
 		},
 		{
 			id: 24,
 			question:
-				"In 'Community', what fictional college do the characters attend?",
+				"The Winter War (1939–1940) was fought between which two countries?",
 			options: [
-				"Greenfield Institute",
-				"Springfield College",
-				"Greendale Community College",
-				"Sunnydale Community",
+				"Germany and France",
+				"Finland and Soviet Union",
+				"Japan and China",
+				"Italy and Greece",
 			],
-			correctAnswer: "Greendale Community College",
+			correctAnswer: "Finland and Soviet Union",
 			description:
-				"The show follows a study group at the quirky Greendale Community College.",
+				"The Winter War was fought after the Soviet Union invaded Finland in late 1939.",
 		},
 		{
 			id: 25,
-			question: "In 'Malcolm in the Middle', what is Malcolm's IQ?",
-			options: ["145", "165", "135", "155"],
-			correctAnswer: "165",
+			question: "Who was a leading codebreaker at Bletchley Park?",
+			options: [
+				"Albert Einstein",
+				"Alan Turing",
+				"Robert Oppenheimer",
+				"Ernest Rutherford",
+			],
+			correctAnswer: "Alan Turing",
 			description:
-				"Malcolm's genius-level IQ is 165, often used to highlight his frustrations with normal life.",
+				"Alan Turing helped break the Enigma code, which significantly aided the Allied war effort.",
 		},
 		{
 			id: 26,
-			question: "In 'The Office', what company buys out Dunder Mifflin?",
-			options: ["Staples", "Sabre", "Utica Paper", "Infinity Paper"],
-			correctAnswer: "Sabre",
+			question: "Who attended the Potsdam Conference in 1945?",
+			options: [
+				"Roosevelt, Stalin, Churchill",
+				"Truman, Stalin, Churchill/Attlee",
+				"Hitler, Mussolini, Hirohito",
+				"Churchill, de Gaulle, Eisenhower",
+			],
+			correctAnswer: "Truman, Stalin, Churchill/Attlee",
 			description:
-				"Sabre, a Florida-based printer company, acquires Dunder Mifflin in Season 6.",
+				"The Potsdam Conference included Truman (USA), Stalin (USSR), and Churchill/Attlee (UK).",
 		},
 		{
 			id: 27,
-			question:
-				"Which 90s sitcom character popularized the catchphrase 'Did I do that?'",
+			question: "What was Operation Market Garden?",
 			options: [
-				"Michael Kelso",
-				"Steve Urkel",
-				"Joey Tribbiani",
-				"George Lopez",
+				"Invasion of Sicily",
+				"Failed attempt to capture Dutch bridges",
+				"German plan to invade Britain",
+				"Atomic test operation",
 			],
-			correctAnswer: "Steve Urkel",
+			correctAnswer: "Failed attempt to capture Dutch bridges",
 			description:
-				"Steve Urkel from 'Family Matters' became iconic for his clumsy antics and catchphrase.",
+				"Operation Market Garden (1944) was a failed Allied airborne operation in the Netherlands.",
 		},
 		{
 			id: 28,
-			question:
-				"What was the original working title for 'Friends' before it aired?",
+			question: "Who planned the attack on Pearl Harbor?",
 			options: [
-				"Central Life",
-				"Roommates",
-				"Insomnia Café",
-				"The One with the Friends",
+				"Isoroku Yamamoto",
+				"Hideki Tojo",
+				"Hirohito",
+				"Tomoyuki Yamashita",
 			],
-			correctAnswer: "Insomnia Café",
+			correctAnswer: "Isoroku Yamamoto",
 			description:
-				"The show was originally pitched as 'Insomnia Café' before being renamed to 'Friends'.",
+				"Admiral Yamamoto was the architect behind Japan's surprise attack on Pearl Harbor.",
 		},
 		{
 			id: 29,
-			question: "In 'Will & Grace', what is Jack's last name?",
-			options: ["Adler", "McFarland", "Truman", "Walker"],
-			correctAnswer: "McFarland",
+			question: "What was Vichy France?",
+			options: [
+				"A resistance group",
+				"A government-in-exile in London",
+				"A German-occupied puppet regime",
+				"A Nazi military division",
+			],
+			correctAnswer: "A German-occupied puppet regime",
 			description:
-				"Jack McFarland, played by Sean Hayes, is Will and Grace's flamboyant actor friend.",
+				"Vichy France was a collaborationist government in southern France led by Marshal Pétain.",
 		},
 		{
 			id: 30,
 			question:
-				"What 2000s sitcom featured a 'Pawnee Harvest Festival' and a character named Leslie Knope?",
+				"Which battle is considered the largest tank battle in history?",
 			options: [
-				"Community",
-				"Parks and Recreation",
-				"The Office",
-				"Brooklyn Nine-Nine",
+				"Battle of El Alamein",
+				"Battle of Kursk",
+				"Battle of the Bulge",
+				"Battle of Moscow",
 			],
-			correctAnswer: "Parks and Recreation",
+			correctAnswer: "Battle of Kursk",
 			description:
-				"Leslie Knope, played by Amy Poehler, organized Pawnee's Harvest Festival in 'Parks and Rec'.",
+				"The Battle of Kursk (1943) was the largest tank battle ever, involving over 6,000 tanks.",
 		},
 	],
 };
