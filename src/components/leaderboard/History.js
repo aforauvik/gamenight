@@ -23,6 +23,19 @@ function calculatePoints() {
 
 const allTeams = [
 	{
+		date: "Oct 28, 2025",
+		name: "Hannah",
+		topic: "Space Facts",
+		avatar: "/hannah.jpeg",
+		round1: 9,
+		round2: 9,
+		round3: 8,
+		bonus: 16,
+		get points() {
+			return calculatePoints.call(this);
+		},
+	},
+	{
 		date: "Oct 14, 2025",
 		name: "Christine",
 		topic: "World War II",
