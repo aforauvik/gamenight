@@ -29,7 +29,7 @@ export const allTeams = [
 		avatar: "/grandma.webp",
 		game: allInfo.game,
 		first: 4,
-		second: 5,
+		second: 6,
 		third: 1,
 	},
 	{
@@ -54,7 +54,7 @@ export const allTeams = [
 		game: allInfo.game,
 		first: 8,
 		second: 10,
-		third: 5,
+		third: 6,
 	},
 	{
 		name: "Leif",
@@ -68,7 +68,7 @@ export const allTeams = [
 		name: "Julian",
 		avatar: "/julian.jpeg",
 		game: allInfo.game,
-		first: 2,
+		first: 3,
 		second: 2,
 		third: 8,
 	},
