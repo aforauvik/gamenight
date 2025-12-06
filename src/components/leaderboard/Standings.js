@@ -22,9 +22,9 @@ import Image from "next/image";
 import {ModeToggle} from "../mode-toggler";
 
 const allInfo = {
-	gameName: "Space Facts",
+	gameName: "Space Facts II",
 	season: "October, 2025",
-	rounds: 31,
+	rounds: 32,
 };
 
 function calculatePoints() {
@@ -36,10 +36,10 @@ const allTeams = [
 		name: "Grandma",
 		avatar: "/grandma.webp",
 		played: allInfo.rounds,
-		round1: 9,
-		round2: 8,
-		round3: 7,
-		bonus: 9,
+		round1: 0,
+		round2: 0,
+		round3: 0,
+		bonus: 0,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -72,10 +72,10 @@ const allTeams = [
 		name: "Hannah",
 		avatar: "/hannah.jpeg",
 		played: allInfo.rounds,
-		round1: 9,
-		round2: 9,
-		round3: 8,
-		bonus: 16,
+		round1: 0,
+		round2: 0,
+		round3: 0,
+		bonus: 0,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -96,10 +96,10 @@ const allTeams = [
 		name: "Julian",
 		avatar: "/julian.jpeg",
 		played: allInfo.rounds,
-		round1: 8,
-		round2: 8,
-		round3: 7,
-		bonus: 10,
+		round1: 0,
+		round2: 0,
+		round3: 0,
+		bonus: 0,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -120,10 +120,10 @@ const allTeams = [
 		name: "Christine",
 		avatar: "/christine.jpeg",
 		played: allInfo.rounds,
-		round1: 7,
-		round2: 4,
-		round3: 7,
-		bonus: 4,
+		round1: 0,
+		round2: 0,
+		round3: 0,
+		bonus: 0,
 		get points() {
 			return calculatePoints.call(this);
 		},

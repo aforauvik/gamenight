@@ -25,7 +25,7 @@ const allTeams = [
 	{
 		date: "Oct 28, 2025",
 		name: "Hannah",
-		topic: "Space Facts",
+		topic: "Space Facts I",
 		avatar: "/hannah.jpeg",
 		round1: 9,
 		round2: 9,

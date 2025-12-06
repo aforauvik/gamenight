@@ -2,254 +2,261 @@ export const quizData = {
 	round1: [
 		{
 			id: 1,
-			question: "Is the Sun a star?",
-			options: ["Yes", "No"],
-			correctAnswer: "Yes",
+			question: "Was Neil Armstrong the first human to walk on the Moon?",
+			options: ["True", "False"],
+			correctAnswer: "True",
 			description:
-				"The Sun is a G-type main-sequence star located at the center of our Solar System. (Source: NASA / Britannica)",
+				"Neil Armstrong became the first human to walk on the Moon on July 20, 1969, during NASA’s Apollo 11 mission. (Source: NASA History Division)",
 		},
 		{
 			id: 2,
-			question: "Is Earth the third planet from the Sun?",
-			options: ["Yes", "No"],
-			correctAnswer: "Yes",
+			question:
+				"Is the Hubble Space Telescope located on the surface of the Earth?",
+			options: ["True", "False"],
+			correctAnswer: "False",
 			description:
-				"Earth is the third planet from the Sun, after Mercury and Venus. (Source: Britannica)",
+				"Hubble orbits Earth at about 547 km (340 miles) above the surface, allowing it to observe without atmospheric distortion. (Source: NASA Hubble Site)",
 		},
 		{
 			id: 3,
-			question: "Does Mars have two moons?",
-			options: ["Yes", "No"],
-			correctAnswer: "Yes",
+			question: "Is the Milky Way galaxy home to our Solar System?",
+			options: ["True", "False"],
+			correctAnswer: "True",
 			description:
-				"Mars has two small moons, Phobos and Deimos. (Source: NASA Mars Fact Sheet)",
+				"The Solar System resides in one of the Milky Way’s spiral arms, the Orion Arm. (Source: Britannica)",
 		},
 		{
 			id: 4,
-			question: "Is the Moon larger than Earth?",
-			options: ["Yes", "No"],
-			correctAnswer: "No",
+			question: "Did the first human-made object reach space in 1957?",
+			options: ["True", "False"],
+			correctAnswer: "True",
 			description:
-				"The Moon’s diameter is about 1/4 that of Earth’s, making it much smaller. (Source: NASA)",
+				"The Soviet satellite Sputnik 1, launched in October 1957, was the first human-made object in space. (Source: NASA / Britannica)",
 		},
 		{
 			id: 5,
-			question: "Is Jupiter the largest planet in our Solar System?",
-			options: ["Yes", "No"],
-			correctAnswer: "Yes",
+			question: "Is the Moon a planet?",
+			options: ["True", "False"],
+			correctAnswer: "False",
 			description:
-				"Jupiter is the largest planet by both mass and volume in the Solar System. (Source: Britannica)",
+				"The Moon is Earth’s natural satellite, not a planet. (Source: NASA)",
 		},
 		{
 			id: 6,
-			question: "Does Mercury have an atmosphere similar to Earth’s?",
-			options: ["Yes", "No"],
-			correctAnswer: "No",
+			question: "Is the ISS a collaboration between multiple space agencies?",
+			options: ["True", "False"],
+			correctAnswer: "True",
 			description:
-				"Mercury has an extremely thin exosphere, not a breathable atmosphere like Earth. (Source: NASA Mercury Overview)",
+				"The International Space Station is a joint project among NASA, Roscosmos, ESA, JAXA, and CSA. (Source: NASA ISS Facts)",
 		},
 		{
 			id: 7,
-			question: "Is Venus the hottest planet in the Solar System?",
-			options: ["Yes", "No"],
-			correctAnswer: "Yes",
+			question: "Does the Sun rise in the west and set in the east on Earth?",
+			options: ["True", "False"],
+			correctAnswer: "False",
 			description:
-				"Venus’s dense CO₂ atmosphere traps heat, giving it the hottest surface temperatures. (Source: Britannica)",
+				"Earth’s rotation causes the Sun to appear to rise in the east and set in the west. (Source: Britannica)",
 		},
 		{
 			id: 8,
-			question: "Does Saturn have visible rings made mostly of ice and rock?",
-			options: ["Yes", "No"],
-			correctAnswer: "Yes",
+			question: "Was the first spacewalk conducted by a Soviet astronaut?",
+			options: ["True", "False"],
+			correctAnswer: "True",
 			description:
-				"Saturn’s iconic rings are composed primarily of ice particles mixed with dust and rock. (Source: NASA Cassini Mission)",
+				"Alexei Leonov conducted the first spacewalk on March 18, 1965, during the Voskhod 2 mission. (Source: NASA / Britannica)",
 		},
 		{
 			id: 9,
-			question: "Can humans breathe on Mars without a spacesuit?",
-			options: ["Yes", "No"],
-			correctAnswer: "No",
+			question: "Does Earth’s Moon have active volcanoes today?",
+			options: ["True", "False"],
+			correctAnswer: "False",
 			description:
-				"Mars’s atmosphere is 95% carbon dioxide and lacks sufficient oxygen for human survival. (Source: NASA Mars Overview)",
+				"Volcanic activity on the Moon ceased about a billion years ago. (Source: NASA Lunar Science)",
 		},
 		{
 			id: 10,
-			question: "Is Pluto still officially classified as a planet?",
-			options: ["Yes", "No"],
-			correctAnswer: "No",
+			question:
+				"Is the James Webb Space Telescope designed to observe primarily in infrared light?",
+			options: ["True", "False"],
+			correctAnswer: "True",
 			description:
-				"Since 2006, Pluto has been classified as a dwarf planet by the International Astronomical Union. (Source: IAU)",
+				"JWST primarily observes in infrared to study early galaxies and exoplanet atmospheres. (Source: NASA JWST Overview)",
 		},
 	],
 
 	round2: [
 		{
 			id: 11,
-			question: "Is the Milky Way a spiral galaxy?",
-			options: ["Yes", "No"],
-			correctAnswer: "Yes",
+			question: "Is Proxima Centauri the closest star to the Sun?",
+			options: ["True", "False"],
+			correctAnswer: "True",
 			description:
-				"The Milky Way is a barred spiral galaxy containing over 100 billion stars. (Source: NASA / Britannica)",
+				"Proxima Centauri, part of the Alpha Centauri system, is the nearest known star to the Sun at about 4.24 light-years away. (Source: ESA Gaia Mission)",
 		},
 		{
 			id: 12,
 			question:
-				"Does Neptune complete one orbit around the Sun every 10 Earth years?",
-			options: ["Yes", "No"],
-			correctAnswer: "No",
+				"Does Jupiter have the fastest rotation of any planet in the Solar System?",
+			options: ["True", "False"],
+			correctAnswer: "True",
 			description:
-				"Neptune takes about 165 Earth years to orbit the Sun once. (Source: NASA Neptune Overview)",
+				"Jupiter completes a rotation in roughly 10 hours, making it the fastest-spinning planet. (Source: NASA Planetary Factsheet)",
 		},
 		{
 			id: 13,
-			question: "Is the asteroid belt located between Mars and Jupiter?",
-			options: ["Yes", "No"],
-			correctAnswer: "Yes",
+			question: "Was the first American in space John Glenn?",
+			options: ["True", "False"],
+			correctAnswer: "False",
 			description:
-				"The asteroid belt orbits between Mars and Jupiter and contains millions of rocky bodies. (Source: NASA)",
+				"Alan Shepard was the first American in space (1961). John Glenn was the first American to orbit Earth (1962). (Source: NASA Mercury Program)",
 		},
 		{
 			id: 14,
-			question: "Do black holes emit light?",
-			options: ["Yes", "No"],
-			correctAnswer: "No",
+			question: "Do most exoplanets discovered so far orbit red dwarf stars?",
+			options: ["True", "False"],
+			correctAnswer: "True",
 			description:
-				"Black holes do not emit light; their gravity prevents even light from escaping. (Source: NASA / Britannica)",
+				"Red dwarfs are the most common stars, and many detected exoplanets orbit them. (Source: NASA Exoplanet Archive)",
 		},
 		{
 			id: 15,
-			question: "Is the Great Red Spot on Jupiter a massive storm?",
-			options: ["Yes", "No"],
-			correctAnswer: "Yes",
+			question:
+				"Is the center of the Milky Way home to a supermassive black hole?",
+			options: ["True", "False"],
+			correctAnswer: "True",
 			description:
-				"The Great Red Spot is a giant storm that has been raging for at least 400 years. (Source: NASA Juno Mission)",
+				"Sagittarius A* is a supermassive black hole at the Milky Way’s center. (Source: NASA / Event Horizon Telescope)",
 		},
 		{
 			id: 16,
-			question: "Does the Sun revolve around the Earth?",
-			options: ["Yes", "No"],
-			correctAnswer: "No",
+			question: "Is Venus tidally locked to the Sun?",
+			options: ["True", "False"],
+			correctAnswer: "False",
 			description:
-				"Earth orbits the Sun; heliocentric theory was confirmed by Copernicus and Galileo. (Source: Britannica)",
+				"Venus rotates slowly but is not tidally locked; its rotation period is 243 Earth days. (Source: NASA Venus Overview)",
 		},
 		{
 			id: 17,
-			question: "Does the Moon produce its own light?",
-			options: ["Yes", "No"],
-			correctAnswer: "No",
+			question:
+				"Do comets originate mainly from the Kuiper Belt and Oort Cloud?",
+			options: ["True", "False"],
+			correctAnswer: "True",
 			description:
-				"The Moon reflects sunlight; it does not generate its own light. (Source: NASA)",
+				"Short-period comets come from the Kuiper Belt; long-period ones from the Oort Cloud. (Source: NASA)",
 		},
 		{
 			id: 18,
-			question: "Is the International Space Station (ISS) permanently crewed?",
-			options: ["Yes", "No"],
-			correctAnswer: "Yes",
+			question:
+				"Is Europa, one of Jupiter’s moons, believed to have a subsurface ocean?",
+			options: ["True", "False"],
+			correctAnswer: "True",
 			description:
-				"Since November 2000, the ISS has been continuously inhabited by rotating astronaut crews. (Source: NASA)",
+				"Evidence suggests Europa has a liquid ocean beneath its icy crust. (Source: NASA Europa Clipper Mission)",
 		},
 		{
 			id: 19,
-			question: "Is the Kuiper Belt located closer to the Sun than Neptune?",
-			options: ["Yes", "No"],
-			correctAnswer: "No",
+			question:
+				"Did Voyager 1 become the first spacecraft to leave the Solar System?",
+			options: ["True", "False"],
+			correctAnswer: "True",
 			description:
-				"The Kuiper Belt lies beyond Neptune’s orbit and includes objects like Pluto and Eris. (Source: NASA)",
+				"Voyager 1 entered interstellar space in 2012, the first human-made object to do so. (Source: NASA Voyager Mission)",
 		},
 		{
 			id: 20,
-			question: "Can a day on Venus be longer than a year on Venus?",
-			options: ["Yes", "No"],
-			correctAnswer: "Yes",
+			question: "Is there gravity in space?",
+			options: ["True", "False"],
+			correctAnswer: "True",
 			description:
-				"Venus rotates very slowly on its axis — one rotation takes 243 Earth days, longer than its 225-day orbit. (Source: NASA Venus Profile)",
+				"Gravity exists everywhere; astronauts in orbit appear weightless because they are in free fall. (Source: NASA Microgravity Overview)",
 		},
 	],
 
 	round3: [
 		{
 			id: 21,
-			question:
-				"Is the observable universe about 93 billion light-years in diameter?",
-			options: ["Yes", "No"],
-			correctAnswer: "Yes",
+			question: "Is Betelgeuse a blue supergiant star?",
+			options: ["True", "False"],
+			correctAnswer: "False",
 			description:
-				"The observable universe spans roughly 93 billion light-years based on cosmic expansion estimates. (Source: NASA / Britannica)",
+				"Betelgeuse is a red supergiant located in the Orion constellation. (Source: Britannica)",
 		},
 		{
 			id: 22,
-			question: "Does the Sun orbit the Milky Way once every 26,000 years?",
-			options: ["Yes", "No"],
-			correctAnswer: "No",
+			question:
+				"Is dark energy responsible for the observed acceleration of the universe’s expansion?",
+			options: ["True", "False"],
+			correctAnswer: "True",
 			description:
-				"The Sun takes about 230 million years to orbit the Milky Way’s center once. (Source: NASA)",
+				"Dark energy is hypothesized to drive the accelerated expansion of the universe. (Source: NASA Cosmology Overview)",
 		},
 		{
 			id: 23,
-			question:
-				"Is there a region around a black hole called the 'event horizon'?",
-			options: ["Yes", "No"],
-			correctAnswer: "Yes",
+			question: "Does a quasar emit less energy than a typical galaxy?",
+			options: ["True", "False"],
+			correctAnswer: "False",
 			description:
-				"The event horizon is the boundary beyond which nothing can escape a black hole’s gravity. (Source: Britannica)",
+				"Quasars are among the most luminous objects in the universe, often outshining entire galaxies. (Source: Britannica)",
 		},
 		{
 			id: 24,
-			question: "Is the Andromeda Galaxy moving away from the Milky Way?",
-			options: ["Yes", "No"],
-			correctAnswer: "No",
+			question:
+				"Is the nearest large galaxy to the Milky Way the Andromeda Galaxy?",
+			options: ["True", "False"],
+			correctAnswer: "True",
 			description:
-				"Andromeda is moving toward the Milky Way; they are expected to collide in about 4 billion years. (Source: NASA)",
+				"The Andromeda Galaxy (M31) is the nearest major galaxy, about 2.5 million light-years away. (Source: NASA)",
 		},
 		{
 			id: 25,
-			question: "Is light able to travel faster in water than in a vacuum?",
-			options: ["Yes", "No"],
-			correctAnswer: "No",
+			question: "Are pulsars a type of rotating neutron star?",
+			options: ["True", "False"],
+			correctAnswer: "True",
 			description:
-				"Light travels fastest in a vacuum (299,792 km/s); it slows down in materials like water. (Source: Britannica)",
+				"Pulsars are rapidly rotating neutron stars that emit beams of electromagnetic radiation. (Source: NASA Neutron Star Overview)",
 		},
 		{
 			id: 26,
 			question:
-				"Does the Oort Cloud mark the outermost boundary of the Solar System?",
-			options: ["Yes", "No"],
-			correctAnswer: "Yes",
+				"Does the observable universe contain fewer than 1 billion galaxies?",
+			options: ["True", "False"],
+			correctAnswer: "False",
 			description:
-				"The Oort Cloud is a vast spherical shell of icy objects believed to encircle the Solar System’s edge. (Source: NASA)",
+				"Estimates suggest there are over 100 billion galaxies in the observable universe. (Source: NASA / ESA Hubble Data)",
 		},
 		{
 			id: 27,
-			question: "Has any human traveled beyond the Moon?",
-			options: ["Yes", "No"],
-			correctAnswer: "No",
+			question:
+				"Is the cosmic expansion caused by galaxies moving through space?",
+			options: ["True", "False"],
+			correctAnswer: "False",
 			description:
-				"No human has traveled beyond the Moon; all manned missions have remained within the Earth-Moon system. (Source: NASA Apollo Mission Archives)",
+				"Space itself expands; galaxies move apart because space between them stretches. (Source: NASA Cosmology Basics)",
 		},
 		{
 			id: 28,
-			question: "Is Titan, Saturn’s largest moon, larger than Mercury?",
-			options: ["Yes", "No"],
-			correctAnswer: "Yes",
+			question: "Was the first image of a black hole captured in 2019?",
+			options: ["True", "False"],
+			correctAnswer: "True",
 			description:
-				"Titan’s diameter (5,150 km) exceeds Mercury’s (4,880 km). (Source: NASA Cassini Data)",
+				"The Event Horizon Telescope released the first image of a black hole (M87*) in 2019. (Source: EHT Collaboration / NASA)",
 		},
 		{
 			id: 29,
-			question: "Are neutron stars less dense than white dwarfs?",
-			options: ["Yes", "No"],
-			correctAnswer: "No",
+			question:
+				"Is the Crab Nebula the remnant of a supernova observed in 1054 CE?",
+			options: ["True", "False"],
+			correctAnswer: "True",
 			description:
-				"Neutron stars are far denser — a teaspoon of their matter would weigh billions of tons. (Source: Britannica)",
+				"The Crab Nebula formed from a supernova recorded by Chinese astronomers in 1054. (Source: Britannica / NASA Chandra Observatory)",
 		},
 		{
 			id: 30,
-			question:
-				"Is the cosmic microwave background radiation considered evidence of the Big Bang?",
-			options: ["Yes", "No"],
-			correctAnswer: "Yes",
+			question: "Do all stars eventually become black holes?",
+			options: ["True", "False"],
+			correctAnswer: "False",
 			description:
-				"The CMB is the faint radiation left over from the early universe, supporting the Big Bang theory. (Source: NASA / Britannica)",
+				"Only very massive stars become black holes; others end as white dwarfs or neutron stars. (Source: NASA Stellar Evolution Overview)",
 		},
 	],
 };
