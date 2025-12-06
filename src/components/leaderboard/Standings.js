@@ -24,7 +24,7 @@ import {ModeToggle} from "../mode-toggler";
 const allInfo = {
 	gameName: "Space Facts II",
 	season: "December, 2025",
-	rounds: 33,
+	rounds: 30,
 };
 
 function calculatePoints() {
