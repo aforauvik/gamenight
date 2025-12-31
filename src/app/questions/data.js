@@ -3,79 +3,77 @@ export const quizData = {
 		{
 			id: 1,
 			question:
-				"The Self-Stirring Mug – a mug that automatically stirs your drink.",
-			options: ["Real", "Fake"],
-			correctAnswer: "Real",
-			description: "Self-stirring mugs are real and commonly sold online.",
+				"The longest time spent balancing a lawnmower on a chin is over 30 minutes.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description:
+				"A man balanced a running lawnmower on his chin for more than 30 minutes.",
 		},
 		{
 			id: 2,
-			question:
-				"The Baby Mop Onesie – a baby outfit that cleans the floor while crawling.",
-			options: ["Real", "Fake"],
-			correctAnswer: "Real",
-			description:
-				"This novelty baby outfit actually exists and has been sold online.",
+			question: "The world record for the largest pizza is over 100 feet wide.",
+			options: ["True", "False"],
+			correctAnswer: "False",
+			description: "The largest pizza was about 122 feet long, not wide.",
 		},
 		{
 			id: 3,
-			question: "Pet Rock – a rock sold as a low-maintenance pet.",
-			options: ["Real", "Fake"],
-			correctAnswer: "Real",
-			description: "Pet Rocks were a real fad product in the 1970s.",
+			question:
+				"Someone holds the record for the fastest time to eat a bowl of pasta using chopsticks.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "This is a real competitive eating world record.",
 		},
 		{
 			id: 4,
-			question: "USB Pet Rock Warmer – keeps your pet rock warm via USB.",
-			options: ["Real", "Fake"],
-			correctAnswer: "Fake",
-			description:
-				"There is no real consumer product designed to warm a rock via USB.",
+			question: "The longest hiccuping spree lasted more than 60 years.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "Charles Osborne hiccupped for 68 years.",
 		},
 		{
 			id: 5,
-			question: "The Banana Phone – a phone shaped like a banana.",
-			options: ["Real", "Fake"],
-			correctAnswer: "Real",
-			description: "Banana-shaped Bluetooth phones are real novelty items.",
+			question: "The record for the most T-shirts worn at once is under 100.",
+			options: ["True", "False"],
+			correctAnswer: "False",
+			description: "The record is over 260 T-shirts worn at once.",
 		},
 		{
 			id: 6,
-			question: "Scented Laptop Keyboard – releases coffee smell while typing.",
-			options: ["Real", "Fake"],
-			correctAnswer: "Fake",
-			description: "No mainstream scented keyboard product exists.",
+			question: "The longest fingernails ever recorded were longer than a car.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "Combined nail length exceeded 42 feet.",
 		},
 		{
 			id: 7,
-			question: "The Umbrella Hat – a hat with a built-in umbrella.",
-			options: ["Real", "Fake"],
-			correctAnswer: "Real",
-			description: "Umbrella hats are real and commonly sold as gag gifts.",
+			question: "Someone holds a world record for the loudest burp.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "The record was measured at over 100 decibels.",
 		},
 		{
 			id: 8,
-			question: "WiFi-Enabled Toaster – lets you toast bread from your phone.",
-			options: ["Real", "Fake"],
-			correctAnswer: "Real",
-			description: "Smart toasters with app control have been produced.",
+			question:
+				"The fastest time to assemble a Mr. Potato Head is under one second.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "The record is 0.45 seconds.",
 		},
 		{
 			id: 9,
-			question: "Invisible Umbrella – uses air pressure instead of fabric.",
-			options: ["Real", "Fake"],
-			correctAnswer: "Fake",
-			description:
-				"This concept exists as an idea but is not a real consumer product.",
+			question: "The largest collection of rubber ducks is fewer than 1,000.",
+			options: ["True", "False"],
+			correctAnswer: "False",
+			description: "The collection contains over 8,000 rubber ducks.",
 		},
 		{
 			id: 10,
 			question:
-				"The Desktop Punching Bag – a stress-relief punching bag for desks.",
-			options: ["Real", "Fake"],
-			correctAnswer: "Real",
-			description:
-				"Desktop punching bags are real and popular office stress toys.",
+				"There is a world record for the most socks put on one foot in one minute.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "Competitive sock layering is, unfortunately, real.",
 		},
 	],
 
@@ -83,162 +81,163 @@ export const quizData = {
 		{
 			id: 11,
 			question:
-				"The Electric Fork – vibrates to prevent you from eating too fast.",
-			options: ["Real", "Fake"],
-			correctAnswer: "Real",
-			description:
-				"The electric fork was created to help slow down eating habits.",
+				"The longest time spent screaming continuously is over 2 hours.",
+			options: ["True", "False"],
+			correctAnswer: "False",
+			description: "The record is under one hour due to health limits.",
 		},
 		{
 			id: 12,
-			question: "The Smart Water Bottle That Tweets When You’re Dehydrated.",
-			options: ["Real", "Fake"],
-			correctAnswer: "Real",
+			question:
+				"Someone holds the record for the fastest 100 meters run on all fours.",
+			options: ["True", "False"],
+			correctAnswer: "True",
 			description:
-				"Smart bottles have existed that sync hydration data to social media.",
+				"Athletes have competed officially running on hands and feet.",
 		},
 		{
 			id: 13,
-			question: "The Alarm Clock That Runs Away When It Rings.",
-			options: ["Real", "Fake"],
-			correctAnswer: "Real",
-			description: "Clocky is a real alarm clock designed to roll away.",
+			question: "The record for most spoons balanced on a face is over 30.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "More than 30 spoons were balanced using facial muscles.",
 		},
 		{
 			id: 14,
-			question:
-				"The Mood-Sensing Spoon – changes taste based on your emotions.",
-			options: ["Real", "Fake"],
-			correctAnswer: "Fake",
-			description: "No spoon can detect emotions and alter taste accordingly.",
+			question: "The longest time holding a plank position is under 4 hours.",
+			options: ["True", "False"],
+			correctAnswer: "False",
+			description: "The record exceeds 9 hours.",
 		},
 		{
 			id: 15,
-			question: "The Cat Translation Collar – converts meows into English.",
-			options: ["Real", "Fake"],
-			correctAnswer: "Fake",
-			description: "No accurate real-time cat-to-English translator exists.",
+			question:
+				"The largest collection of traffic cones belongs to a single person.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "One individual owns hundreds of traffic cones.",
 		},
 		{
 			id: 16,
 			question:
-				"The USB Heated Slippers – plug into your laptop to warm your feet.",
-			options: ["Real", "Fake"],
-			correctAnswer: "Real",
-			description: "USB-powered heated slippers are real novelty products.",
+				"The most grapes caught in the mouth in one minute is fewer than 20.",
+			options: ["True", "False"],
+			correctAnswer: "False",
+			description: "The record is over 60 grapes.",
 		},
 		{
 			id: 17,
-			question: "The Smart Fridge Camera That Orders Milk Automatically.",
-			options: ["Real", "Fake"],
-			correctAnswer: "Real",
-			description: "Some smart fridges can track inventory and reorder items.",
+			question:
+				"Someone holds the record for the fastest time to pop 100 balloons using only their back.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description:
+				"This record exists and is exactly as uncomfortable as it sounds.",
 		},
 		{
 			id: 18,
-			question:
-				"The Stress-Detecting Mouse – locks your computer if you're angry.",
-			options: ["Real", "Fake"],
-			correctAnswer: "Fake",
-			description: "This concept exists in fiction, not as a real product.",
+			question: "The longest time spent awake without sleep is over 10 days.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "The documented record is 11 days.",
 		},
 		{
 			id: 19,
-			question: "The Pillow With Built-In Headphones.",
-			options: ["Real", "Fake"],
-			correctAnswer: "Real",
-			description:
-				"Pillows with integrated speakers are commercially available.",
+			question: "There is a world record for the most hugs given in one hour.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "Over 1,700 hugs were recorded in one hour.",
 		},
 		{
 			id: 20,
-			question: "The Anti-Snoring Pillow That Shocks You Awake.",
-			options: ["Real", "Fake"],
-			correctAnswer: "Fake",
-			description:
-				"Anti-snoring pillows exist, but shocking users is unsafe and not real.",
+			question: "The fastest time to eat a raw onion is under 10 seconds.",
+			options: ["True", "False"],
+			correctAnswer: "False",
+			description: "The record is longer due to safety rules.",
 		},
 	],
 
 	round3: [
 		{
 			id: 21,
-			question: "The Smart Salt Shaker That Tracks Your Sodium Intake.",
-			options: ["Real", "Fake"],
-			correctAnswer: "Real",
-			description:
-				"Smart salt shakers have been developed to monitor sodium use.",
+			question:
+				"The world record for the longest line of people dressed as Smurfs exceeds 2,000.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "Thousands of people have participated in Smurf gatherings.",
 		},
 		{
 			id: 22,
 			question:
-				"The Bluetooth Toothbrush That Plays Music Based on Brushing Speed.",
-			options: ["Real", "Fake"],
-			correctAnswer: "Real",
+				"The heaviest weight ever lifted by a human exceeds 7,000 pounds.",
+			options: ["True", "False"],
+			correctAnswer: "True",
 			description:
-				"Smart toothbrushes use sound or apps to guide brushing habits.",
+				"Using back lift techniques, weights over 7,000 pounds have been lifted.",
 		},
 		{
 			id: 23,
-			question: "The Shirt That Automatically Tweets Your Mood.",
-			options: ["Real", "Fake"],
-			correctAnswer: "Fake",
-			description:
-				"No consumer clothing accurately detects mood and tweets it.",
+			question:
+				"Someone holds a record for the longest time sitting in ice water wearing only swimwear.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "Cold endurance records include extreme ice immersion.",
 		},
 		{
 			id: 24,
-			question: "The Digital Pet You Have to Feed With Real Money.",
-			options: ["Real", "Fake"],
-			correctAnswer: "Real",
-			description:
-				"Some apps and NFTs require real money to keep digital pets active.",
+			question:
+				"The largest gathering of people dressed as nuns is fewer than 500.",
+			options: ["True", "False"],
+			correctAnswer: "False",
+			description: "The gathering exceeded 1,000 participants.",
 		},
 		{
 			id: 25,
-			question: "The Smart Fork That Detects Alcohol in Your Food.",
-			options: ["Real", "Fake"],
-			correctAnswer: "Fake",
-			description: "No fork currently detects alcohol content in food.",
+			question:
+				"There is a world record for the fastest time to type a text message with the nose.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "Unusual typing records include nose-only input.",
 		},
 		{
 			id: 26,
-			question: "The AI-Powered Trash Can That Sorts Recycling Automatically.",
-			options: ["Real", "Fake"],
-			correctAnswer: "Real",
-			description:
-				"AI recycling bins exist and are used in some public spaces.",
+			question:
+				"The longest time spent holding one’s breath underwater is over 30 minutes.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "This was achieved using pure oxygen beforehand.",
 		},
 		{
 			id: 27,
-			question: "The Sleep Mask That Shows Ads While You Dream.",
-			options: ["Real", "Fake"],
-			correctAnswer: "Fake",
-			description: "This idea is satire; no such consumer product exists.",
+			question:
+				"The largest collection of belly button lint fits in a small jar.",
+			options: ["True", "False"],
+			correctAnswer: "False",
+			description: "The collection filled multiple containers.",
 		},
 		{
 			id: 28,
-			question: "The Smart Deodorant That Alerts You When You Smell.",
-			options: ["Real", "Fake"],
-			correctAnswer: "Real",
-			description:
-				"Experimental wearable devices have been created to detect odor.",
+			question:
+				"Someone holds the record for the most watermelons smashed with their thighs in one minute.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "Strength-based fruit smashing is a real record category.",
 		},
 		{
 			id: 29,
-			question: "The Keyboard With a Built-In Coffee Cup Holder.",
-			options: ["Real", "Fake"],
-			correctAnswer: "Real",
-			description:
-				"Keyboards with cup holders have been sold as novelty items.",
+			question:
+				"The longest human chain of people wearing swimsuits was fewer than 100 people.",
+			options: ["True", "False"],
+			correctAnswer: "False",
+			description: "The chain involved hundreds of participants.",
 		},
 		{
 			id: 30,
-			question: "The Phone Case That Grows Real Plants Using Your Body Heat.",
-			options: ["Real", "Fake"],
-			correctAnswer: "Fake",
-			description:
-				"Living-plant phone cases using body heat are not real products.",
+			question:
+				"There is a world record for the most pencils held in one nostril.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "Yes, this was officially measured and verified.",
 		},
 	],
 };
