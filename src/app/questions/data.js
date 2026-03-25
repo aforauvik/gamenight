@@ -2,242 +2,279 @@ export const quizData = {
 	round1: [
 		{
 			id: 1,
-			question:
-				"The longest time spent balancing a lawnmower on a chin is over 30 minutes.",
-			options: ["True", "False"],
-			correctAnswer: "True",
+			question: "What is water made of?",
+			options: [
+				"Hydrogen and Oxygen",
+				"Carbon and Oxygen",
+				"Nitrogen and Hydrogen",
+				"Oxygen and Helium",
+			],
+			correctAnswer: "Hydrogen and Oxygen",
 			description:
-				"A man balanced a running lawnmower on his chin for more than 30 minutes.",
+				"Water (H₂O) consists of two hydrogen atoms and one oxygen atom. (Source: Encyclopaedia Britannica - Water)",
 		},
 		{
 			id: 2,
-			question: "The world record for the largest pizza is over 100 feet wide.",
-			options: ["True", "False"],
-			correctAnswer: "False",
-			description: "The largest pizza was about 122 feet long, not wide.",
+			question: "Which planet is third from the Sun?",
+			options: ["Mars", "Earth", "Venus", "Jupiter"],
+			correctAnswer: "Earth",
+			description:
+				"Earth is the third planet after Mercury and Venus. (Source: Encyclopaedia Britannica - Earth)",
 		},
 		{
 			id: 3,
-			question:
-				"Someone holds the record for the fastest time to eat a bowl of pasta using chopsticks.",
-			options: ["True", "False"],
-			correctAnswer: "True",
-			description: "This is a real competitive eating world record.",
+			question: "In which direction does the Sun rise?",
+			options: ["North", "South", "East", "West"],
+			correctAnswer: "East",
+			description:
+				"The Sun appears to rise in the east due to Earth's rotation. (Source: Encyclopaedia Britannica - Earth rotation)",
 		},
 		{
 			id: 4,
-			question: "The longest hiccuping spree lasted more than 60 years.",
-			options: ["True", "False"],
-			correctAnswer: "True",
-			description: "Charles Osborne hiccupped for 68 years.",
+			question: "What is 2 + 2?",
+			options: ["3", "4", "5", "6"],
+			correctAnswer: "4",
+			description:
+				"Basic arithmetic: 2 + 2 equals 4. (Source: Encyclopaedia Britannica - Arithmetic)",
 		},
 		{
 			id: 5,
-			question: "The record for the most T-shirts worn at once is under 100.",
-			options: ["True", "False"],
-			correctAnswer: "False",
-			description: "The record is over 260 T-shirts worn at once.",
+			question: "What is the solid form of water?",
+			options: ["Steam", "Ice", "Vapor", "Mist"],
+			correctAnswer: "Ice",
+			description:
+				"Water freezes into ice at 0°C (32°F). (Source: Encyclopaedia Britannica - Ice)",
 		},
 		{
 			id: 6,
-			question: "The longest fingernails ever recorded were longer than a car.",
-			options: ["True", "False"],
-			correctAnswer: "True",
-			description: "Combined nail length exceeded 42 feet.",
+			question: "What gas do humans need to survive?",
+			options: ["Carbon Dioxide", "Oxygen", "Nitrogen", "Hydrogen"],
+			correctAnswer: "Oxygen",
+			description:
+				"Humans require oxygen for cellular respiration. (Source: Encyclopaedia Britannica - Respiration)",
 		},
 		{
 			id: 7,
-			question: "Someone holds a world record for the loudest burp.",
-			options: ["True", "False"],
-			correctAnswer: "True",
-			description: "The record was measured at over 100 decibels.",
+			question: "What is the capital of France?",
+			options: ["Berlin", "Madrid", "Paris", "Rome"],
+			correctAnswer: "Paris",
+			description:
+				"Paris has been France’s capital for centuries. (Source: Encyclopaedia Britannica - Paris)",
 		},
 		{
 			id: 8,
-			question:
-				"The fastest time to assemble a Mr. Potato Head is under one second.",
-			options: ["True", "False"],
-			correctAnswer: "True",
-			description: "The record is 0.45 seconds.",
+			question: "What covers a bird’s body?",
+			options: ["Fur", "Scales", "Feathers", "Skin"],
+			correctAnswer: "Feathers",
+			description:
+				"Feathers are unique to birds. (Source: Encyclopaedia Britannica - Bird)",
 		},
 		{
 			id: 9,
-			question: "The largest collection of rubber ducks is fewer than 1,000.",
-			options: ["True", "False"],
-			correctAnswer: "False",
-			description: "The collection contains over 8,000 rubber ducks.",
+			question: "What type of element is gold?",
+			options: ["Gas", "Metal", "Liquid", "Nonmetal"],
+			correctAnswer: "Metal",
+			description:
+				"Gold is a highly conductive metal. (Source: Encyclopaedia Britannica - Gold)",
 		},
 		{
 			id: 10,
-			question:
-				"There is a world record for the most socks put on one foot in one minute.",
-			options: ["True", "False"],
-			correctAnswer: "True",
-			description: "Competitive sock layering is, unfortunately, real.",
+			question: "What is the basic unit of life?",
+			options: ["Atom", "Molecule", "Cell", "Tissue"],
+			correctAnswer: "Cell",
+			description:
+				"Cells are the fundamental building blocks of living organisms. (Source: Encyclopaedia Britannica - Cell biology)",
 		},
 	],
 
 	round2: [
 		{
 			id: 11,
-			question:
-				"The longest time spent screaming continuously is over 2 hours.",
-			options: ["True", "False"],
-			correctAnswer: "False",
-			description: "The record is under one hour due to health limits.",
+			question: "When did the Roman Empire begin?",
+			options: ["27 BCE", "476 CE", "1492 CE", "1066 CE"],
+			correctAnswer: "27 BCE",
+			description:
+				"The Roman Empire began when Augustus became emperor. (Source: Encyclopaedia Britannica - Roman Empire)",
 		},
 		{
 			id: 12,
-			question:
-				"Someone holds the record for the fastest 100 meters run on all fours.",
-			options: ["True", "False"],
-			correctAnswer: "True",
+			question: "What is the tallest mountain above sea level?",
+			options: ["K2", "Kangchenjunga", "Mount Everest", "Makalu"],
+			correctAnswer: "Mount Everest",
 			description:
-				"Athletes have competed officially running on hands and feet.",
+				"Mount Everest is about 8,848 meters tall. (Source: Encyclopaedia Britannica - Mount Everest)",
 		},
 		{
 			id: 13,
-			question: "The record for most spoons balanced on a face is over 30.",
-			options: ["True", "False"],
-			correctAnswer: "True",
-			description: "More than 30 spoons were balanced using facial muscles.",
+			question: "What is the chemical symbol for sodium?",
+			options: ["So", "S", "Sd", "Na"],
+			correctAnswer: "Na",
+			description:
+				"Derived from the Latin word 'natrium.' (Source: Encyclopaedia Britannica - Sodium)",
 		},
 		{
 			id: 14,
-			question: "The longest time holding a plank position is under 4 hours.",
-			options: ["True", "False"],
-			correctAnswer: "False",
-			description: "The record exceeds 9 hours.",
+			question: "When did World War I begin?",
+			options: ["1914", "1912", "1916", "1918"],
+			correctAnswer: "1914",
+			description:
+				"It began after the assassination of Archduke Franz Ferdinand. (Source: Encyclopaedia Britannica - World War I)",
 		},
 		{
 			id: 15,
-			question:
-				"The largest collection of traffic cones belongs to a single person.",
-			options: ["True", "False"],
-			correctAnswer: "True",
-			description: "One individual owns hundreds of traffic cones.",
+			question: "Which travels faster?",
+			options: ["Sound", "Both same", "Light", "Depends on medium"],
+			correctAnswer: "Light",
+			description:
+				"Light travels much faster than sound. (Source: Encyclopaedia Britannica - Light)",
 		},
 		{
 			id: 16,
-			question:
-				"The most grapes caught in the mouth in one minute is fewer than 20.",
-			options: ["True", "False"],
-			correctAnswer: "False",
-			description: "The record is over 60 grapes.",
+			question: "Which is traditionally considered the longest river?",
+			options: ["Amazon", "Yangtze", "Mississippi", "Nile"],
+			correctAnswer: "Nile",
+			description:
+				"The Nile is widely considered the longest river. (Source: Encyclopaedia Britannica - Nile River)",
 		},
 		{
 			id: 17,
-			question:
-				"Someone holds the record for the fastest time to pop 100 balloons using only their back.",
-			options: ["True", "False"],
-			correctAnswer: "True",
+			question: "What does DNA stand for?",
+			options: [
+				"Deoxyribonucleic Acid",
+				"Dynamic Nucleic Acid",
+				"Double Nitrogen Acid",
+				"Deoxynitric Acid",
+			],
+			correctAnswer: "Deoxyribonucleic Acid",
 			description:
-				"This record exists and is exactly as uncomfortable as it sounds.",
+				"DNA carries genetic information. (Source: Encyclopaedia Britannica - DNA)",
 		},
 		{
 			id: 18,
-			question: "The longest time spent awake without sleep is over 10 days.",
-			options: ["True", "False"],
-			correctAnswer: "True",
-			description: "The documented record is 11 days.",
+			question: "Can the Great Wall of China be seen from space unaided?",
+			options: ["No", "Yes easily", "Only at night", "Only with telescope"],
+			correctAnswer: "No",
+			description:
+				"It is a myth that it’s visible to the naked eye from space. (Source: Encyclopaedia Britannica - Great Wall of China)",
 		},
 		{
 			id: 19,
-			question: "There is a world record for the most hugs given in one hour.",
-			options: ["True", "False"],
-			correctAnswer: "True",
-			description: "Over 1,700 hugs were recorded in one hour.",
+			question: "Which is the hottest planet?",
+			options: ["Mercury", "Mars", "Jupiter", "Venus"],
+			correctAnswer: "Venus",
+			description:
+				"Venus is hottest due to a strong greenhouse effect. (Source: Encyclopaedia Britannica - Venus)",
 		},
 		{
 			id: 20,
-			question: "The fastest time to eat a raw onion is under 10 seconds.",
-			options: ["True", "False"],
-			correctAnswer: "False",
-			description: "The record is longer due to safety rules.",
+			question: "When did humans first land on the Moon?",
+			options: ["1965", "1967", "1969", "1971"],
+			correctAnswer: "1969",
+			description:
+				"Apollo 11 landed on July 20, 1969. (Source: Encyclopaedia Britannica - Apollo 11)",
 		},
 	],
 
 	round3: [
 		{
 			id: 21,
-			question:
-				"The world record for the longest line of people dressed as Smurfs exceeds 2,000.",
-			options: ["True", "False"],
-			correctAnswer: "True",
-			description: "Thousands of people have participated in Smurf gatherings.",
+			question: "What is the approximate speed of light?",
+			options: [
+				"150,000 km/s",
+				"1,000,000 km/s",
+				"300,000 km/s",
+				"30,000 km/s",
+			],
+			correctAnswer: "300,000 km/s",
+			description:
+				"The speed of light is about 299,792 km/s. (Source: Encyclopaedia Britannica - Speed of light)",
 		},
 		{
 			id: 22,
-			question:
-				"The heaviest weight ever lifted by a human exceeds 7,000 pounds.",
-			options: ["True", "False"],
-			correctAnswer: "True",
+			question: "When was the Magna Carta signed?",
+			options: ["1066", "1215", "1492", "1603"],
+			correctAnswer: "1215",
 			description:
-				"Using back lift techniques, weights over 7,000 pounds have been lifted.",
+				"It limited the powers of the English monarchy. (Source: Encyclopaedia Britannica - Magna Carta)",
 		},
 		{
 			id: 23,
-			question:
-				"Someone holds a record for the longest time sitting in ice water wearing only swimwear.",
-			options: ["True", "False"],
-			correctAnswer: "True",
-			description: "Cold endurance records include extreme ice immersion.",
+			question: "What is Schrödinger’s cat?",
+			options: [
+				"A real experiment",
+				"A biological study",
+				"A physics law",
+				"A thought experiment",
+			],
+			correctAnswer: "A thought experiment",
+			description:
+				"It illustrates quantum superposition. (Source: Encyclopaedia Britannica - Schrödinger's cat)",
 		},
 		{
 			id: 24,
-			question:
-				"The largest gathering of people dressed as nuns is fewer than 500.",
-			options: ["True", "False"],
-			correctAnswer: "False",
-			description: "The gathering exceeded 1,000 participants.",
+			question: "Approximately how many genes are in the human genome?",
+			options: ["20,000–25,000", "5,000", "10,000", "100,000"],
+			correctAnswer: "20,000–25,000",
+			description:
+				"Modern estimates place it in this range. (Source: Encyclopaedia Britannica - Human genome)",
 		},
 		{
 			id: 25,
-			question:
-				"There is a world record for the fastest time to type a text message with the nose.",
-			options: ["True", "False"],
-			correctAnswer: "True",
-			description: "Unusual typing records include nose-only input.",
+			question: "What does the Planck constant relate?",
+			options: [
+				"Mass and force",
+				"Speed and distance",
+				"Charge and voltage",
+				"Energy and frequency",
+			],
+			correctAnswer: "Energy and frequency",
+			description:
+				"It links photon energy to frequency. (Source: Encyclopaedia Britannica - Planck constant)",
 		},
 		{
 			id: 26,
-			question:
-				"The longest time spent holding one’s breath underwater is over 30 minutes.",
-			options: ["True", "False"],
-			correctAnswer: "True",
-			description: "This was achieved using pure oxygen beforehand.",
+			question: "What was the capital of the Byzantine Empire?",
+			options: ["Rome", "Athens", "Alexandria", "Constantinople"],
+			correctAnswer: "Constantinople",
+			description:
+				"Modern-day Istanbul. (Source: Encyclopaedia Britannica - Byzantine Empire)",
 		},
 		{
 			id: 27,
-			question:
-				"The largest collection of belly button lint fits in a small jar.",
-			options: ["True", "False"],
-			correctAnswer: "False",
-			description: "The collection filled multiple containers.",
+			question: "Which is the driest continent?",
+			options: ["Africa", "Antarctica", "Australia", "Asia"],
+			correctAnswer: "Antarctica",
+			description:
+				"It receives extremely low precipitation. (Source: Encyclopaedia Britannica - Antarctica)",
 		},
 		{
 			id: 28,
-			question:
-				"Someone holds the record for the most watermelons smashed with their thighs in one minute.",
-			options: ["True", "False"],
-			correctAnswer: "True",
-			description: "Strength-based fruit smashing is a real record category.",
+			question: "What does E=mc² describe?",
+			options: ["Gravity", "Motion", "Electricity", "Mass-energy equivalence"],
+			correctAnswer: "Mass-energy equivalence",
+			description:
+				"It shows mass can be converted into energy. (Source: Encyclopaedia Britannica - Relativity)",
 		},
 		{
 			id: 29,
-			question:
-				"The longest human chain of people wearing swimsuits was fewer than 100 people.",
-			options: ["True", "False"],
-			correctAnswer: "False",
-			description: "The chain involved hundreds of participants.",
+			question: "What is the Turing Test used for?",
+			options: [
+				"Testing intelligence",
+				"Measuring speed",
+				"Measuring energy",
+				"Testing memory",
+			],
+			correctAnswer: "Testing intelligence",
+			description:
+				"It evaluates if a machine can mimic human conversation. (Source: Encyclopaedia Britannica - Turing Test)",
 		},
 		{
 			id: 30,
-			question:
-				"There is a world record for the most pencils held in one nostril.",
-			options: ["True", "False"],
-			correctAnswer: "True",
-			description: "Yes, this was officially measured and verified.",
+			question: "Where is the Hubble Space Telescope located?",
+			options: ["Orbiting Earth", "On the Moon", "On Mars", "In deep space"],
+			correctAnswer: "Orbiting Earth",
+			description:
+				"Hubble is in low Earth orbit. (Source: Encyclopaedia Britannica - Hubble Space Telescope)",
 		},
 	],
 };

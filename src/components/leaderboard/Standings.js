@@ -36,10 +36,10 @@ const allTeams = [
 		name: "Grandma",
 		avatar: "/grandma.webp",
 		played: allInfo.rounds,
-		round1: 7,
+		round1: 10,
 		round2: 6,
-		round3: 9,
-		bonus: 9,
+		round3: 4,
+		bonus: 8,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -60,30 +60,6 @@ const allTeams = [
 		name: "Mom",
 		avatar: "/mom.webp",
 		played: allInfo.rounds,
-		round1: 9,
-		round2: 9,
-		round3: 8,
-		bonus: 18,
-		get points() {
-			return calculatePoints.call(this);
-		},
-	},
-	{
-		name: "Hannah",
-		avatar: "/hannah.jpeg",
-		played: allInfo.rounds,
-		round1: 3,
-		round2: 6,
-		round3: 9,
-		bonus: 6,
-		get points() {
-			return calculatePoints.call(this);
-		},
-	},
-	{
-		name: "Leif",
-		avatar: "/leif.jpeg",
-		played: allInfo.rounds,
 		round1: 0,
 		round2: 0,
 		round3: 0,
@@ -93,13 +69,37 @@ const allTeams = [
 		},
 	},
 	{
+		name: "Hannah",
+		avatar: "/hannah.jpeg",
+		played: allInfo.rounds,
+		round1: 8,
+		round2: 6,
+		round3: 0,
+		bonus: 7,
+		get points() {
+			return calculatePoints.call(this);
+		},
+	},
+	{
+		name: "Leif",
+		avatar: "/leif.jpeg",
+		played: allInfo.rounds,
+		round1: 9,
+		round2: 2,
+		round3: 3,
+		bonus: 7,
+		get points() {
+			return calculatePoints.call(this);
+		},
+	},
+	{
 		name: "Julian",
 		avatar: "/julian.jpeg",
 		played: allInfo.rounds,
-		round1: 7,
-		round2: 7,
-		round3: 7,
-		bonus: 7,
+		round1: 0,
+		round2: 0,
+		round3: 0,
+		bonus: 0,
 		get points() {
 			return calculatePoints.call(this);
 		},
@@ -120,10 +120,10 @@ const allTeams = [
 		name: "Christine",
 		avatar: "/christine.jpeg",
 		played: allInfo.rounds,
-		round1: 7,
-		round2: 8,
-		round3: 5,
-		bonus: 8,
+		round1: 0,
+		round2: 0,
+		round3: 0,
+		bonus: 0,
 		get points() {
 			return calculatePoints.call(this);
 		},
