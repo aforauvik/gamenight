@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/table";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Check, X, RotateCcw, RefreshCw} from "lucide-react";
-import {allTeams} from "@/components/leaderboard/Leaderboard";
+import { rawTeams2026 as allTeams } from "@/components/leaderboard/data";
 import {Button} from "@/components/ui/button";
 import {
 	AlertDialog,
@@ -61,7 +61,17 @@ const PointCalculation = () => {
 		setIsClient(true);
 		const savedScores = localStorage.getItem(STORAGE_KEY);
 		if (savedScores) {
-			setPlayerScores(JSON.parse(savedScores));
+			try {
+				const parsed = JSON.parse(savedScores);
+				// Merge existing scores with new players so nobody gets dropped
+				const mergedScores = initialScores.map((initial) => {
+					const existing = parsed.find((p) => p.name === initial.name);
+					return existing ? existing : initial;
+				});
+				setPlayerScores(mergedScores);
+			} catch (e) {
+				console.error("Failed to parse scores", e);
+			}
 		}
 	}, []);
 

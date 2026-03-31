@@ -1,4 +1,4 @@
-export const quizData2 = {
+export const quizData = {
 	round1: [
 		{
 			id: 1,
