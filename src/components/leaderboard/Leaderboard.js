@@ -19,83 +19,32 @@ import Image from "next/image";
 import {RankingGraph} from "./RankingGraph";
 import {StandingGraph} from "./StandingGraph";
 
-export const allInfo = {
-	game: 33,
-};
+import { allInfo2025, allInfo2026, rawTeams2025, rawTeams2026 } from "./data";
 
-export const allTeams = [
-	{
-		name: "Grandma",
-		avatar: "/grandma.webp",
-		game: allInfo.game,
-		first: 4,
-		second: 7,
-		third: 2,
-	},
-	{
-		name: "Aunt Sabrina",
-		avatar: "/aunt-sabrina.webp",
-		game: allInfo.game,
-		first: 4,
-		second: 4,
-		third: 0,
-	},
-	{
-		name: "Mom",
-		avatar: "/mom.webp",
-		game: allInfo.game,
-		first: 2,
-		second: 3,
-		third: 6,
-	},
-	{
-		name: "Hannah",
-		avatar: "/hannah.jpeg",
-		game: allInfo.game,
-		first: 9,
-		second: 10,
-		third: 6,
-	},
-	{
-		name: "Leif",
-		avatar: "/leif.jpeg",
-		game: allInfo.game,
-		first: 0,
-		second: 0,
-		third: 0,
-	},
-	{
-		name: "Julian",
-		avatar: "/julian.jpeg",
-		game: allInfo.game,
-		first: 3,
-		second: 3,
-		third: 9,
-	},
-	{
-		name: "Landon",
-		avatar: "/landon.jpeg",
-		game: allInfo.game,
-		first: 2,
-		second: 1,
-		third: 1,
-	},
-	{
-		name: "Christine",
-		avatar: "/christine.jpeg",
-		game: allInfo.game,
-		first: 6,
-		second: 3,
-		third: 1,
-	},
-].map((team) => ({
+export const allInfo = allInfo2025;
+
+export const allTeams = rawTeams2025.map((team) => ({
 	...team,
+	game: allInfo2025.game,
 	points: team.first * 3 + team.second * 2 + team.third * 1,
 }));
 
-const sortedTeams = allTeams
-	.sort((a, b) => b.points - a.points)
-	.map((team, index) => ({...team, rank: index + 1}));
+const allTeams2026 = rawTeams2026.map((team) => ({
+	...team,
+	game: allInfo2026.game,
+	points: team.first * 3 + team.second * 2 + team.third * 1,
+}));
+
+const leaderboardData = {
+	"2026": {
+		teams: allTeams2026,
+		totalGames: allInfo2026.game,
+	},
+	"2025": {
+		teams: allTeams,
+		totalGames: allInfo2025.game,
+	},
+};
 
 function getRankColor(rank) {
 	if (rank === 1) {
@@ -110,10 +59,33 @@ function getRankColor(rank) {
 }
 
 const Standings = () => {
+	const [activeYear, setActiveYear] = React.useState("2026");
+	const { teams: activeData, totalGames } = leaderboardData[activeYear];
+
+	const sortedTeams = [...activeData]
+		.sort((a, b) => b.points - a.points)
+		.map((team, index) => ({...team, rank: index + 1}));
+
 	return (
 		<>
 			<div className="flex flex-col items-start justify-center px-4 lg:px-40 py-4">
-				<h1 className="text-base font-normal text-left mb-4">Leaderboard</h1>
+				<div className="flex flex-row w-full justify-between items-center mb-4">
+					<h1 className="text-base font-normal text-left mb-4">Leaderboard</h1>
+					<div className="flex gap-2">
+						<Button 
+							variant={activeYear === "2026" ? "default" : "outline"} 
+							onClick={() => setActiveYear("2026")}
+						>
+							2026
+						</Button>
+						<Button 
+							variant={activeYear === "2025" ? "default" : "outline"} 
+							onClick={() => setActiveYear("2025")}
+						>
+							2025
+						</Button>
+					</div>
+				</div>
 				<Table>
 					<TableHeader>
 						<TableRow>
@@ -169,8 +141,8 @@ const Standings = () => {
 			</div>
 
 			<div className="flex lg:flex-row flex-col justify-center gap-4 w-full lg:px-40 py-4 px-4">
-				<RankingGraph />
-				<StandingGraph />
+				<RankingGraph data={activeData} year={activeYear} />
+				<StandingGraph data={activeData} year={activeYear} totalGames={totalGames} />
 			</div>
 		</>
 	);

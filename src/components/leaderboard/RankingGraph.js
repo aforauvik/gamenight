@@ -18,7 +18,6 @@ import {
 	ChartTooltipContent,
 } from "@/components/ui/chart";
 
-import {allTeams} from "./Leaderboard";
 
 const chartConfig = {
 	points: {
@@ -27,8 +26,8 @@ const chartConfig = {
 	},
 };
 
-export function RankingGraph() {
-	const chartData = allTeams
+export function RankingGraph({ data, year }) {
+	const chartData = data
 		.map((team) => ({
 			player: team.name,
 			points: team.points,
@@ -39,7 +38,7 @@ export function RankingGraph() {
 		<Card className="w-full shadow-none">
 			<CardHeader>
 				<CardTitle>Leaderboard - Points</CardTitle>
-				<CardDescription>Jan - Dec 2025</CardDescription>
+				<CardDescription>Jan - Dec {year}</CardDescription>
 			</CardHeader>
 			<CardContent>
 				<ChartContainer config={chartConfig} className="min-h-[200px] w-full">

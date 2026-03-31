@@ -20,12 +20,6 @@ import {
 	ChartTooltipContent,
 } from "@/components/ui/chart";
 
-import {allTeams} from "./Leaderboard";
-import {allInfo} from "./Leaderboard";
-
-function nopositioncalc(first, second, third) {
-	return allInfo.game - (first + second + third);
-}
 
 const chartConfig = {
 	first: {
@@ -46,21 +40,21 @@ const chartConfig = {
 	},
 };
 
-export function StandingGraph() {
-	const chartData = allTeams
+export function StandingGraph({ data, year, totalGames }) {
+	const chartData = data
 		.map((team) => ({
 			player: team.name,
 			first: team.first,
 			second: team.second,
 			third: team.third,
-			noposition: nopositioncalc(team.first, team.second, team.third),
+			noposition: Math.max(0, totalGames - (team.first + team.second + team.third)),
 		}))
 		.sort((a, b) => b.first - a.first);
 	return (
 		<Card className="w-full shadow-none">
 			<CardHeader>
 				<CardTitle>Leaderboard - Standings</CardTitle>
-				<CardDescription>Jan - Dec 2025</CardDescription>
+				<CardDescription>Jan - Dec {year}</CardDescription>
 			</CardHeader>
 			<CardContent>
 				<ChartContainer config={chartConfig} className="min-h-[200px] w-full">

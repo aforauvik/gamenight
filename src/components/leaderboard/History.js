@@ -21,7 +21,23 @@ function calculatePoints() {
 	return this.round1 * 5 + this.round2 * 10 + this.round3 * 15 + this.bonus;
 }
 
-const allTeams = [
+const data2026 = [
+	{
+		date: "Mar 24, 2026",
+		name: "Grandma",
+		topic: "General Knowledge",
+		avatar: "/grandma.webp",
+		round1: 10,
+		round2: 6,
+		round3: 4,
+		bonus: 8,
+		get points() {
+			return calculatePoints.call(this);
+		},
+	},
+];
+
+const data2025 = [
 	{
 		date: "Dec 02, 2025",
 		name: "Julian",
@@ -363,10 +379,36 @@ const allTeams = [
 	},
 ];
 
+
+
+const historyData = {
+	"2026": data2026,
+	"2025": data2025,
+};
+
 const History = () => {
+	const [activeYear, setActiveYear] = React.useState("2026");
+	const activeData = historyData[activeYear] || [];
+
 	return (
 		<div className="flex flex-col items-start justify-center px-4 lg:px-40 py-8">
-			<h1 className="text-base font-regular text-left mb-4">Game Stats</h1>
+			<div className="flex flex-row w-full justify-between items-center mb-4">
+				<h1 className="text-base font-regular text-left">Game Stats</h1>
+				<div className="flex gap-2">
+					<Button 
+						variant={activeYear === "2026" ? "default" : "outline"} 
+						onClick={() => setActiveYear("2026")}
+					>
+						2026
+					</Button>
+					<Button 
+						variant={activeYear === "2025" ? "default" : "outline"} 
+						onClick={() => setActiveYear("2025")}
+					>
+						2025
+					</Button>
+				</div>
+			</div>
 			<Table>
 				<TableHeader>
 					<TableRow>
@@ -388,33 +430,41 @@ const History = () => {
 					</TableRow>
 				</TableHeader>
 				<TableBody>
-					{allTeams.map((team, index) => (
-						<TableRow key={index}>
-							<TableCell className="font-medium">{team.date}</TableCell>
-							<TableCell className="flex items-center gap-2">
-								<Avatar>
-									<AvatarImage src={team.avatar} alt={team.name} />
-									<AvatarFallback>
-										{team.name.substring(0, 2).toUpperCase()}
-									</AvatarFallback>
-								</Avatar>
-								{team.name}
+					{activeData.length === 0 ? (
+						<TableRow>
+							<TableCell colSpan={7} className="text-center py-8 text-zinc-500">
+								No games recorded in {activeYear} yet.
 							</TableCell>
-							<TableCell className="text-right hidden sm:table-cell">
-								{team.topic}
-							</TableCell>
-							<TableCell className="text-right hidden sm:table-cell">
-								{team.round1}
-							</TableCell>
-							<TableCell className="text-right hidden sm:table-cell">
-								{team.round2}
-							</TableCell>
-							<TableCell className="text-right hidden sm:table-cell">
-								{team.round3}
-							</TableCell>
-							<TableCell className="text-right">{team.points}</TableCell>
 						</TableRow>
-					))}
+					) : (
+						activeData.map((team, index) => (
+							<TableRow key={index}>
+								<TableCell className="font-medium">{team.date}</TableCell>
+								<TableCell className="flex items-center gap-2">
+									<Avatar>
+										<AvatarImage src={team.avatar} alt={team.name} />
+										<AvatarFallback>
+											{team.name.substring(0, 2).toUpperCase()}
+										</AvatarFallback>
+									</Avatar>
+									{team.name}
+								</TableCell>
+								<TableCell className="text-right hidden sm:table-cell">
+									{team.topic}
+								</TableCell>
+								<TableCell className="text-right hidden sm:table-cell">
+									{team.round1}
+								</TableCell>
+								<TableCell className="text-right hidden sm:table-cell">
+									{team.round2}
+								</TableCell>
+								<TableCell className="text-right hidden sm:table-cell">
+									{team.round3}
+								</TableCell>
+								<TableCell className="text-right">{team.points}</TableCell>
+							</TableRow>
+						))
+					)}
 				</TableBody>
 			</Table>
 		</div>

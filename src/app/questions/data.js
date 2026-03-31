@@ -1,280 +1,293 @@
-export const quizData = {
+export const quizData2 = {
 	round1: [
 		{
 			id: 1,
-			question: "What is water made of?",
-			options: [
-				"Hydrogen and Oxygen",
-				"Carbon and Oxygen",
-				"Nitrogen and Hydrogen",
-				"Oxygen and Helium",
-			],
-			correctAnswer: "Hydrogen and Oxygen",
+			question: "What color do you get when you mix red and white?",
+			options: ["Purple", "Pink", "Orange", "Brown"],
+			correctAnswer: "Pink",
 			description:
-				"Water (H₂O) consists of two hydrogen atoms and one oxygen atom. (Source: Encyclopaedia Britannica - Water)",
+				"Mixing red and white produces pink. (Source: Encyclopaedia Britannica - Color theory)",
 		},
 		{
 			id: 2,
-			question: "Which planet is third from the Sun?",
-			options: ["Mars", "Earth", "Venus", "Jupiter"],
-			correctAnswer: "Earth",
+			question: "How many days are in a week?",
+			options: ["5", "6", "7", "8"],
+			correctAnswer: "7",
 			description:
-				"Earth is the third planet after Mercury and Venus. (Source: Encyclopaedia Britannica - Earth)",
+				"A standard week has seven days. (Source: Encyclopaedia Britannica - Week)",
 		},
 		{
 			id: 3,
-			question: "In which direction does the Sun rise?",
-			options: ["North", "South", "East", "West"],
-			correctAnswer: "East",
+			question: "Which animal is known as man's best friend?",
+			options: ["Cat", "Dog", "Horse", "Rabbit"],
+			correctAnswer: "Dog",
 			description:
-				"The Sun appears to rise in the east due to Earth's rotation. (Source: Encyclopaedia Britannica - Earth rotation)",
+				"Dogs are commonly referred to as man's best friend. (Source: Encyclopaedia Britannica - Dog)",
 		},
 		{
 			id: 4,
-			question: "What is 2 + 2?",
-			options: ["3", "4", "5", "6"],
-			correctAnswer: "4",
+			question: "What do bees produce?",
+			options: ["Milk", "Honey", "Silk", "Wax only"],
+			correctAnswer: "Honey",
 			description:
-				"Basic arithmetic: 2 + 2 equals 4. (Source: Encyclopaedia Britannica - Arithmetic)",
+				"Bees produce honey from nectar. (Source: Encyclopaedia Britannica - Honeybee)",
 		},
 		{
 			id: 5,
-			question: "What is the solid form of water?",
-			options: ["Steam", "Ice", "Vapor", "Mist"],
-			correctAnswer: "Ice",
+			question: "What is the largest ocean on Earth?",
+			options: ["Atlantic", "Indian", "Pacific", "Arctic"],
+			correctAnswer: "Pacific",
 			description:
-				"Water freezes into ice at 0°C (32°F). (Source: Encyclopaedia Britannica - Ice)",
+				"The Pacific Ocean is the largest and deepest. (Source: Encyclopaedia Britannica - Pacific Ocean)",
 		},
 		{
 			id: 6,
-			question: "What gas do humans need to survive?",
-			options: ["Carbon Dioxide", "Oxygen", "Nitrogen", "Hydrogen"],
-			correctAnswer: "Oxygen",
+			question: "How many legs does a spider have?",
+			options: ["6", "8", "10", "12"],
+			correctAnswer: "8",
 			description:
-				"Humans require oxygen for cellular respiration. (Source: Encyclopaedia Britannica - Respiration)",
+				"Spiders are arachnids and have eight legs. (Source: Encyclopaedia Britannica - Spider)",
 		},
 		{
 			id: 7,
-			question: "What is the capital of France?",
-			options: ["Berlin", "Madrid", "Paris", "Rome"],
-			correctAnswer: "Paris",
+			question: "What is the freezing point of water in Celsius?",
+			options: ["0°C", "10°C", "32°C", "-10°C"],
+			correctAnswer: "0°C",
 			description:
-				"Paris has been France’s capital for centuries. (Source: Encyclopaedia Britannica - Paris)",
+				"Water freezes at 0°C. (Source: Encyclopaedia Britannica - Water)",
 		},
 		{
 			id: 8,
-			question: "What covers a bird’s body?",
-			options: ["Fur", "Scales", "Feathers", "Skin"],
-			correctAnswer: "Feathers",
+			question: "Which fruit is yellow and curved?",
+			options: ["Apple", "Banana", "Pear", "Lemon"],
+			correctAnswer: "Banana",
 			description:
-				"Feathers are unique to birds. (Source: Encyclopaedia Britannica - Bird)",
+				"Bananas are typically yellow and curved. (Source: Encyclopaedia Britannica - Banana)",
 		},
 		{
 			id: 9,
-			question: "What type of element is gold?",
-			options: ["Gas", "Metal", "Liquid", "Nonmetal"],
-			correctAnswer: "Metal",
+			question: "What do plants need for photosynthesis?",
+			options: ["Oxygen", "Sunlight", "Nitrogen", "Salt"],
+			correctAnswer: "Sunlight",
 			description:
-				"Gold is a highly conductive metal. (Source: Encyclopaedia Britannica - Gold)",
+				"Plants use sunlight to produce energy. (Source: Encyclopaedia Britannica - Photosynthesis)",
 		},
 		{
 			id: 10,
-			question: "What is the basic unit of life?",
-			options: ["Atom", "Molecule", "Cell", "Tissue"],
-			correctAnswer: "Cell",
+			question: "How many continents are there?",
+			options: ["5", "6", "7", "8"],
+			correctAnswer: "7",
 			description:
-				"Cells are the fundamental building blocks of living organisms. (Source: Encyclopaedia Britannica - Cell biology)",
+				"There are seven continents on Earth. (Source: Encyclopaedia Britannica - Continent)",
 		},
 	],
 
 	round2: [
 		{
 			id: 11,
-			question: "When did the Roman Empire begin?",
-			options: ["27 BCE", "476 CE", "1492 CE", "1066 CE"],
-			correctAnswer: "27 BCE",
-			description:
-				"The Roman Empire began when Augustus became emperor. (Source: Encyclopaedia Britannica - Roman Empire)",
+			question: "Which blood type is known as the universal red-cell donor?",
+			options: ["AB negative", "A negative", "O negative", "B positive"],
+			correctAnswer: "O negative",
+			description: "O negative red cells can be given to all blood types.",
 		},
 		{
 			id: 12,
-			question: "What is the tallest mountain above sea level?",
-			options: ["K2", "Kangchenjunga", "Mount Everest", "Makalu"],
-			correctAnswer: "Mount Everest",
+			question: "Which mineral defines hardness level 10 on the Mohs scale?",
+			options: ["Diamond", "Corundum", "Topaz", "Quartz"],
+			correctAnswer: "Diamond",
 			description:
-				"Mount Everest is about 8,848 meters tall. (Source: Encyclopaedia Britannica - Mount Everest)",
+				"Diamond is the hardest standard reference mineral on the scale.",
 		},
 		{
 			id: 13,
-			question: "What is the chemical symbol for sodium?",
-			options: ["So", "S", "Sd", "Na"],
-			correctAnswer: "Na",
-			description:
-				"Derived from the Latin word 'natrium.' (Source: Encyclopaedia Britannica - Sodium)",
+			question: "Which city served as Japan's imperial capital before Tokyo?",
+			options: ["Osaka", "Nara", "Sapporo", "Kyoto"],
+			correctAnswer: "Kyoto",
+			description: "Kyoto was the imperial seat for over a millennium.",
 		},
 		{
 			id: 14,
-			question: "When did World War I begin?",
-			options: ["1914", "1912", "1916", "1918"],
-			correctAnswer: "1914",
+			question:
+				"Which chamber of the heart pumps oxygenated blood into the aorta?",
+			options: [
+				"Right ventricle",
+				"Left ventricle",
+				"Right atrium",
+				"Left atrium",
+			],
+			correctAnswer: "Left ventricle",
 			description:
-				"It began after the assassination of Archduke Franz Ferdinand. (Source: Encyclopaedia Britannica - World War I)",
+				"The left ventricle drives systemic circulation through the aorta.",
 		},
 		{
 			id: 15,
-			question: "Which travels faster?",
-			options: ["Sound", "Both same", "Light", "Depends on medium"],
-			correctAnswer: "Light",
+			question:
+				"At sea level, water reaches maximum density at approximately what temperature?",
+			options: ["0 C", "100 C", "4 C", "25 C"],
+			correctAnswer: "4 C",
 			description:
-				"Light travels much faster than sound. (Source: Encyclopaedia Britannica - Light)",
+				"Liquid water is densest near 4 C, not at its freezing point.",
 		},
 		{
 			id: 16,
-			question: "Which is traditionally considered the longest river?",
-			options: ["Amazon", "Yangtze", "Mississippi", "Nile"],
-			correctAnswer: "Nile",
-			description:
-				"The Nile is widely considered the longest river. (Source: Encyclopaedia Britannica - Nile River)",
+			question: "Which planet has the shortest orbital period around the Sun?",
+			options: ["Venus", "Earth", "Mars", "Mercury"],
+			correctAnswer: "Mercury",
+			description: "Mercury completes one orbit in about 88 Earth days.",
 		},
 		{
 			id: 17,
-			question: "What does DNA stand for?",
-			options: [
-				"Deoxyribonucleic Acid",
-				"Dynamic Nucleic Acid",
-				"Double Nitrogen Acid",
-				"Deoxynitric Acid",
-			],
-			correctAnswer: "Deoxyribonucleic Acid",
+			question: "How many cervical vertebrae are in a typical human spine?",
+			options: ["7", "5", "8", "12"],
+			correctAnswer: "7",
 			description:
-				"DNA carries genetic information. (Source: Encyclopaedia Britannica - DNA)",
+				"Humans usually have seven vertebrae in the cervical region.",
 		},
 		{
 			id: 18,
-			question: "Can the Great Wall of China be seen from space unaided?",
-			options: ["No", "Yes easily", "Only at night", "Only with telescope"],
-			correctAnswer: "No",
-			description:
-				"It is a myth that it’s visible to the naked eye from space. (Source: Encyclopaedia Britannica - Great Wall of China)",
+			question:
+				"Which gas contributes the largest share of Earth's dry atmosphere?",
+			options: ["Oxygen", "Argon", "Nitrogen", "Carbon dioxide"],
+			correctAnswer: "Nitrogen",
+			description: "Nitrogen makes up roughly 78 percent of dry air.",
 		},
 		{
 			id: 19,
-			question: "Which is the hottest planet?",
-			options: ["Mercury", "Mars", "Jupiter", "Venus"],
-			correctAnswer: "Venus",
-			description:
-				"Venus is hottest due to a strong greenhouse effect. (Source: Encyclopaedia Britannica - Venus)",
+			question: "Which animal group does the blue whale belong to?",
+			options: ["Fish", "Mammals", "Reptiles", "Cephalopods"],
+			correctAnswer: "Mammals",
+			description: "Blue whales breathe air, nurse young, and are mammals.",
 		},
 		{
 			id: 20,
-			question: "When did humans first land on the Moon?",
-			options: ["1965", "1967", "1969", "1971"],
-			correctAnswer: "1969",
-			description:
-				"Apollo 11 landed on July 20, 1969. (Source: Encyclopaedia Britannica - Apollo 11)",
+			question: "Which civilization built the city of Machu Picchu?",
+			options: ["Aztec", "Maya", "Olmec", "Inca"],
+			correctAnswer: "Inca",
+			description: "Machu Picchu is a 15th-century Inca site in Peru.",
 		},
 	],
 
 	round3: [
 		{
 			id: 21,
-			question: "What is the approximate speed of light?",
+			question:
+				"Which theorem states every finite division ring is commutative?",
 			options: [
-				"150,000 km/s",
-				"1,000,000 km/s",
-				"300,000 km/s",
-				"30,000 km/s",
+				"Wedderburn's little theorem",
+				"Cayley-Hamilton theorem",
+				"Zorn's lemma",
+				"Sylow theorem",
 			],
-			correctAnswer: "300,000 km/s",
-			description:
-				"The speed of light is about 299,792 km/s. (Source: Encyclopaedia Britannica - Speed of light)",
+			correctAnswer: "Wedderburn's little theorem",
+			description: "It implies finite division rings are actually fields.",
 		},
 		{
 			id: 22,
-			question: "When was the Magna Carta signed?",
-			options: ["1066", "1215", "1492", "1603"],
-			correctAnswer: "1215",
+			question:
+				"In quantum mechanics, what equation governs unitary time evolution?",
+			options: [
+				"Klein-Gordon equation",
+				"Schrodinger equation",
+				"Navier-Stokes equations",
+				"Dirac delta identity",
+			],
+			correctAnswer: "Schrodinger equation",
 			description:
-				"It limited the powers of the English monarchy. (Source: Encyclopaedia Britannica - Magna Carta)",
+				"The Schrodinger equation describes wavefunction evolution over time.",
 		},
 		{
 			id: 23,
-			question: "What is Schrödinger’s cat?",
-			options: [
-				"A real experiment",
-				"A biological study",
-				"A physics law",
-				"A thought experiment",
-			],
-			correctAnswer: "A thought experiment",
+			question:
+				"Which isotope is most commonly used in archaeological radiocarbon dating?",
+			options: ["Carbon-12", "Carbon-13", "Nitrogen-14", "Carbon-14"],
+			correctAnswer: "Carbon-14",
 			description:
-				"It illustrates quantum superposition. (Source: Encyclopaedia Britannica - Schrödinger's cat)",
+				"Carbon-14 decay allows age estimates for formerly living material.",
 		},
 		{
 			id: 24,
-			question: "Approximately how many genes are in the human genome?",
-			options: ["20,000–25,000", "5,000", "10,000", "100,000"],
-			correctAnswer: "20,000–25,000",
-			description:
-				"Modern estimates place it in this range. (Source: Encyclopaedia Britannica - Human genome)",
+			question:
+				"What is the name of the boundary around a black hole beyond which light cannot escape?",
+			options: [
+				"Photon sphere",
+				"Schwarzschild radius",
+				"Ergosphere",
+				"Event horizon",
+			],
+			correctAnswer: "Event horizon",
+			description: "The event horizon marks the no-return boundary.",
 		},
 		{
 			id: 25,
-			question: "What does the Planck constant relate?",
-			options: [
-				"Mass and force",
-				"Speed and distance",
-				"Charge and voltage",
-				"Energy and frequency",
-			],
-			correctAnswer: "Energy and frequency",
-			description:
-				"It links photon energy to frequency. (Source: Encyclopaedia Britannica - Planck constant)",
+			question:
+				"In information theory, what is the unit of entropy when logarithms are base 2?",
+			options: ["Nat", "Byte", "Bit", "Hartley"],
+			correctAnswer: "Bit",
+			description: "Base-2 entropy is measured in bits.",
 		},
 		{
 			id: 26,
-			question: "What was the capital of the Byzantine Empire?",
-			options: ["Rome", "Athens", "Alexandria", "Constantinople"],
-			correctAnswer: "Constantinople",
+			question:
+				"Which manifold is used as the state space in special relativity?",
+			options: [
+				"Riemann sphere",
+				"Hilbert space",
+				"Minkowski spacetime",
+				"Calabi-Yau manifold",
+			],
+			correctAnswer: "Minkowski spacetime",
 			description:
-				"Modern-day Istanbul. (Source: Encyclopaedia Britannica - Byzantine Empire)",
+				"Special relativity models events in four-dimensional Minkowski spacetime.",
 		},
 		{
 			id: 27,
-			question: "Which is the driest continent?",
-			options: ["Africa", "Antarctica", "Australia", "Asia"],
-			correctAnswer: "Antarctica",
+			question:
+				"Which algorithm gives the asymptotically fastest known method for integer multiplication?",
+			options: [
+				"Karatsuba algorithm",
+				"Toom-Cook algorithm",
+				"Schoolbook multiplication",
+				"Harvey-van der Hoeven algorithm",
+			],
+			correctAnswer: "Harvey-van der Hoeven algorithm",
 			description:
-				"It receives extremely low precipitation. (Source: Encyclopaedia Britannica - Antarctica)",
+				"It achieves near-optimal asymptotic complexity for large integers.",
 		},
 		{
 			id: 28,
-			question: "What does E=mc² describe?",
-			options: ["Gravity", "Motion", "Electricity", "Mass-energy equivalence"],
-			correctAnswer: "Mass-energy equivalence",
-			description:
-				"It shows mass can be converted into energy. (Source: Encyclopaedia Britannica - Relativity)",
+			question:
+				"Which law gives the blackbody spectral radiance as a function of wavelength?",
+			options: [
+				"Stefan-Boltzmann law",
+				"Planck's law",
+				"Wien's displacement law",
+				"Beer-Lambert law",
+			],
+			correctAnswer: "Planck's law",
+			description: "Planck's law describes the full blackbody spectrum.",
 		},
 		{
 			id: 29,
-			question: "What is the Turing Test used for?",
+			question:
+				"In graph theory, which algorithm is classically used to find shortest paths from a single source in a graph with nonnegative edge weights?",
 			options: [
-				"Testing intelligence",
-				"Measuring speed",
-				"Measuring energy",
-				"Testing memory",
+				"Bellman-Ford algorithm",
+				"Floyd-Warshall algorithm",
+				"Kruskal's algorithm",
+				"Dijkstra's algorithm",
 			],
-			correctAnswer: "Testing intelligence",
+			correctAnswer: "Dijkstra's algorithm",
 			description:
-				"It evaluates if a machine can mimic human conversation. (Source: Encyclopaedia Britannica - Turing Test)",
+				"Dijkstra's algorithm solves single-source shortest paths with nonnegative weights.",
 		},
 		{
 			id: 30,
-			question: "Where is the Hubble Space Telescope located?",
-			options: ["Orbiting Earth", "On the Moon", "On Mars", "In deep space"],
-			correctAnswer: "Orbiting Earth",
+			question:
+				"Which complexity class contains decision problems solvable by a quantum computer in polynomial time with bounded error?",
+			options: ["NP-complete", "PSPACE", "EXP", "BQP"],
+			correctAnswer: "BQP",
 			description:
-				"Hubble is in low Earth orbit. (Source: Encyclopaedia Britannica - Hubble Space Telescope)",
+				"BQP captures bounded-error polynomial-time quantum computation.",
 		},
 	],
 };

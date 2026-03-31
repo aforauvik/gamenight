@@ -21,117 +21,15 @@ import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import Image from "next/image";
 import {ModeToggle} from "../mode-toggler";
 
-const allInfo = {
-	gameName: "Space Facts II",
-	season: "December, 2025",
-	rounds: 33,
-};
+import { allInfo2026 as allInfo, rawTeams2026 as rawTeams } from "./data";
 
-function calculatePoints() {
-	return this.round1 * 5 + this.round2 * 10 + this.round3 * 15 + this.bonus;
-}
-
-const allTeams = [
-	{
-		name: "Grandma",
-		avatar: "/grandma.webp",
-		played: allInfo.rounds,
-		round1: 10,
-		round2: 6,
-		round3: 4,
-		bonus: 8,
-		get points() {
-			return calculatePoints.call(this);
-		},
-	},
-	{
-		name: "Aunt Sabrina",
-		avatar: "/aunt-sabrina.webp",
-		played: allInfo.rounds,
-		round1: 0,
-		round2: 0,
-		round3: 0,
-		bonus: 0,
-		get points() {
-			return calculatePoints.call(this);
-		},
-	},
-	{
-		name: "Mom",
-		avatar: "/mom.webp",
-		played: allInfo.rounds,
-		round1: 0,
-		round2: 0,
-		round3: 0,
-		bonus: 0,
-		get points() {
-			return calculatePoints.call(this);
-		},
-	},
-	{
-		name: "Hannah",
-		avatar: "/hannah.jpeg",
-		played: allInfo.rounds,
-		round1: 8,
-		round2: 6,
-		round3: 0,
-		bonus: 7,
-		get points() {
-			return calculatePoints.call(this);
-		},
-	},
-	{
-		name: "Leif",
-		avatar: "/leif.jpeg",
-		played: allInfo.rounds,
-		round1: 9,
-		round2: 2,
-		round3: 3,
-		bonus: 7,
-		get points() {
-			return calculatePoints.call(this);
-		},
-	},
-	{
-		name: "Julian",
-		avatar: "/julian.jpeg",
-		played: allInfo.rounds,
-		round1: 0,
-		round2: 0,
-		round3: 0,
-		bonus: 0,
-		get points() {
-			return calculatePoints.call(this);
-		},
-	},
-	{
-		name: "Landon",
-		avatar: "/landon.jpeg",
-		played: allInfo.rounds,
-		round1: 0,
-		round2: 0,
-		round3: 0,
-		bonus: 0,
-		get points() {
-			return calculatePoints.call(this);
-		},
-	},
-	{
-		name: "Christine",
-		avatar: "/christine.jpeg",
-		played: allInfo.rounds,
-		round1: 0,
-		round2: 0,
-		round3: 0,
-		bonus: 0,
-		get points() {
-			return calculatePoints.call(this);
-		},
-	},
-];
+const allTeams = rawTeams.map((team) => ({
+	...team,
+	played: allInfo.rounds,
+	points: team.round1 * 5 + team.round2 * 10 + team.round3 * 15 + team.bonus,
+}));
 
 const sortedTeams = allTeams
-	.map((team) => ({...team}))
 	.sort((a, b) => b.points - a.points)
 	.map((team, index) => ({...team, rank: index + 1}));
 
