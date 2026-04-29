@@ -23,6 +23,19 @@ function calculatePoints() {
 
 const data2026 = [
 	{
+		date: "Apr 28, 2026",
+		name: "Hannah",
+		topic: "US States",
+		avatar: "/hannah.jpeg",
+		round1: 9,
+		round2: 5,
+		round3: 4,
+		bonus: 5,
+		get points() {
+			return calculatePoints.call(this);
+		},
+	},
+	{
 		date: "Mar 31, 2026",
 		name: "Grandma",
 		topic: "General Knowledge",
