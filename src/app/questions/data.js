@@ -2,281 +2,335 @@ export const quizData = {
 	round1: [
 		{
 			id: 1,
-			question: "How many states make up the United States of America?",
-			options: ["48", "49", "50", "52"],
-			correctAnswer: "50",
+			question: "What is the capital city of North Carolina?",
+			options: ["Charlotte", "Raleigh", "Asheville", "Wilmington"],
+			correctAnswer: "Raleigh",
 			description:
-				"The U.S. consists of 50 states, with Hawaii being the last to join in August 1959.",
+				"Raleigh was established as the state capital in 1794 and was named after Sir Walter Raleigh.",
 		},
 		{
 			id: 2,
-			question: "Which city is the capital of the United States?",
-			options: [
-				"New York City",
-				"Washington, D.C.",
-				"Philadelphia",
-				"Los Angeles",
-			],
-			correctAnswer: "Washington, D.C.",
+			question:
+				"The Wright Brothers achieved the first successful motor-powered flight in which NC town?",
+			options: ["Nags Head", "Hatteras", "Kitty Hawk", "Duck"],
+			correctAnswer: "Kitty Hawk",
 			description:
-				"Established by the Residence Act of 1790, Washington, D.C. serves as the nation's federal capital.",
+				"On December 17, 1903, Orville and Wilbur Wright made history at Kill Devil Hills, near Kitty Hawk.",
 		},
 		{
 			id: 3,
-			question: "Who was the first President of the United States?",
-			options: [
-				"Thomas Jefferson",
-				"Abraham Lincoln",
-				"George Washington",
-				"John Adams",
-			],
-			correctAnswer: "George Washington",
+			question: "What is the official state bird of North Carolina?",
+			options: ["Robin", "Northern Cardinal", "Blue Jay", "Mockingbird"],
+			correctAnswer: "Northern Cardinal",
 			description:
-				"George Washington served as the first president from 1789 to 1797 and is often called the 'Father of His Country.'",
+				"The Cardinal was officially adopted as the state bird in 1943; it is shared as a symbol with six other states.",
 		},
 		{
 			id: 4,
-			question: "What is the national bird of the USA?",
+			question: "What is North Carolina's most famous nickname?",
 			options: [
-				"Golden Eagle",
-				"Bald Eagle",
-				"Wild Turkey",
-				"Peregrine Falcon",
+				"The Peach State",
+				"The Sunshine State",
+				"The Tar Heel State",
+				"The Empire State",
 			],
-			correctAnswer: "Bald Eagle",
+			correctAnswer: "The Tar Heel State",
 			description:
-				"The Bald Eagle was chosen in 1782 for its long life, great strength, and majestic looks.",
+				"The name likely stems from the state's history as a leading producer of pine tar, pitch, and turpentine for the naval industry.",
 		},
 		{
 			id: 5,
-			question: "In which month is Independence Day celebrated?",
-			options: ["June", "July", "August", "May"],
-			correctAnswer: "July",
+			question:
+				"Which soft drink was invented in New Bern, North Carolina, in 1898?",
+			options: ["Coca-Cola", "Mountain Dew", "Pepsi-Cola", "Dr Pepper"],
+			correctAnswer: "Pepsi-Cola",
 			description:
-				"Independence Day commemorates the adoption of the Declaration of Independence on July 4, 1776.",
+				"Pharmacist Caleb Bradham created the drink 'Brad's Drink,' later renaming it Pepsi-Cola after the enzyme pepsin.",
 		},
 		{
 			id: 6,
-			question: "Which state is the largest by land area?",
-			options: ["Texas", "California", "Alaska", "Montana"],
-			correctAnswer: "Alaska",
+			question: "What is the most populous city in North Carolina?",
+			options: ["Raleigh", "Greensboro", "Charlotte", "Durham"],
+			correctAnswer: "Charlotte",
 			description:
-				"Alaska is the largest state, spanning over 660,000 square miles—more than twice the size of Texas.",
+				"Charlotte is the largest city in the state and serves as a major national financial and banking hub.",
 		},
 		{
 			id: 7,
-			question: "Which state is the smallest by land area?",
-			options: ["Rhode Island", "Delaware", "Connecticut", "Vermont"],
-			correctAnswer: "Rhode Island",
+			question:
+				"Asheville is home to which residence, the largest private home in the United States?",
+			options: [
+				"The Hearst Castle",
+				"The Biltmore Estate",
+				"The Breakers",
+				"Monticello",
+			],
+			correctAnswer: "The Biltmore Estate",
 			description:
-				"Rhode Island covers an area of only about 1,214 square miles.",
+				"Built by George Washington Vanderbilt II, the Biltmore features 250 rooms and sits on 8,000 acres.",
 		},
 		{
 			id: 8,
-			question: "How many stripes are on the American flag?",
-			options: ["10", "12", "13", "50"],
-			correctAnswer: "13",
+			question:
+				"Which institution was the first public university in the U.S. to open its doors to students?",
+			options: [
+				"NC State University",
+				"Duke University",
+				"UNC Chapel Hill",
+				"Wake Forest University",
+			],
+			correctAnswer: "UNC Chapel Hill",
 			description:
-				"The 13 stripes represent the original 13 colonies that declared independence from Great Britain.",
+				"Chartered in 1789, the University of North Carolina began admitting students in 1795.",
 		},
 		{
 			id: 9,
-			question: "What is the official currency of the USA?",
-			options: ["Euro", "Pound", "Dollar", "Peso"],
-			correctAnswer: "Dollar",
+			question: "What is the official state flower of North Carolina?",
+			options: ["Flowering Dogwood", "Magnolia", "Rose", "Carolina Lily"],
+			correctAnswer: "Flowering Dogwood",
 			description:
-				"The U.S. Dollar was established as the country's standard unit of money by the Coinage Act of 1792.",
+				"The Flowering Dogwood is one of the most common trees in NC and was designated the state flower in 1941.",
 		},
 		{
 			id: 10,
-			question: "Where is the Statue of Liberty located?",
-			options: ["Boston", "San Francisco", "New York City", "Miami"],
-			correctAnswer: "New York City",
+			question:
+				"Mount Mitchell is the highest peak in the United States east of which river?",
+			options: ["The Hudson", "The Colorado", "The Mississippi", "The Potomac"],
+			correctAnswer: "The Mississippi",
 			description:
-				"A gift from France, the statue stands on Liberty Island in New York Harbor.",
+				"Standing at 6,684 feet, Mount Mitchell is located in the Black Mountains of the Blue Ridge range.",
 		},
 	],
 	round2: [
 		{
 			id: 11,
-			question: "Which state was the first to ratify the U.S. Constitution?",
-			options: ["Virginia", "Pennsylvania", "Delaware", "New Jersey"],
-			correctAnswer: "Delaware",
+			question: "What is the official state beverage of North Carolina?",
+			options: ["Sweet Tea", "Milk", "Apple Juice", "Cherry Wine"],
+			correctAnswer: "Milk",
 			description:
-				"Delaware ratified the Constitution on December 7, 1787, earning it the nickname 'The First State.'",
+				"Milk was adopted as the state beverage in 1987, reflecting the importance of the dairy industry.",
 		},
 		{
 			id: 12,
-			question: "Which U.S. state has the most National Parks?",
-			options: ["Alaska", "Utah", "California", "Colorado"],
-			correctAnswer: "California",
+			question:
+				"The first documented discovery of gold in the United States occurred at which NC location?",
+			options: [
+				"Reed Gold Mine",
+				"Vanderbilt Mine",
+				"Appalachian Trail",
+				"Cape Fear",
+			],
+			correctAnswer: "Reed Gold Mine",
 			description:
-				"California boasts 9 national parks, including Yosemite, Joshua Tree, and Death Valley.",
+				"In 1799, 12-year-old Conrad Reed found a 17-pound gold nugget in a creek in Cabarrus County.",
 		},
 		{
 			id: 13,
-			question:
-				"What was the original name of New York City before it was captured by the English?",
-			options: ["New London", "New Amsterdam", "New Paris", "Yorktown"],
-			correctAnswer: "New Amsterdam",
+			question: "What is the official state dog of North Carolina?",
+			options: [
+				"Golden Retriever",
+				"Plott Hound",
+				"Beagle",
+				"Black and Tan Coonhound",
+			],
+			correctAnswer: "Plott Hound",
 			description:
-				"It was a 17th-century Dutch settlement established at the southern tip of Manhattan Island.",
+				"The Plott Hound is the only dog breed officially recognized as having originated in North Carolina.",
 		},
 		{
 			id: 14,
-			question: "Which state has a flag that is not rectangular?",
-			options: ["Ohio", "Indiana", "Maryland", "Arizona"],
-			correctAnswer: "Ohio",
+			question: "On which island was the 'Lost Colony' of 1587 established?",
+			options: [
+				"Hatteras Island",
+				"Ocracoke Island",
+				"Roanoke Island",
+				"Bald Head Island",
+			],
+			correctAnswer: "Roanoke Island",
 			description:
-				"Ohio's state flag is a 'burgee,' a triangular swallowtail design adopted in 1902.",
+				"More than 100 settlers disappeared from this colony, leaving behind the mysterious word 'Croatoan.'",
 		},
 		{
 			id: 15,
-			question: "Which was the first National Park established in the USA?",
-			options: ["Grand Canyon", "Yellowstone", "Zion", "Acadia"],
-			correctAnswer: "Yellowstone",
+			question:
+				"North Carolina is the nation's leading producer of which vegetable?",
+			options: ["Carrots", "Sweet Potatoes", "Corn", "Potatoes"],
+			correctAnswer: "Sweet Potatoes",
 			description:
-				"Signed into law by President Ulysses S. Grant in 1872, Yellowstone is widely considered the first national park in the world.",
+				"North Carolina has been the top producer of sweet potatoes in the U.S. since 1971.",
 		},
 		{
 			id: 16,
-			question: "In which city was the first official U.S. Mint established?",
-			options: ["Washington, D.C.", "Philadelphia", "Boston", "San Francisco"],
-			correctAnswer: "Philadelphia",
+			question:
+				"Which NC city is known as the 'Furniture Capital of the World'?",
+			options: ["Hickory", "High Point", "Lexington", "Statesville"],
+			correctAnswer: "High Point",
 			description:
-				"The Philadelphia Mint was created by the Coinage Act of 1792 when Philadelphia was the nation's capital.",
+				"High Point is home to the world's largest furniture trade show, the High Point Market.",
 		},
 		{
 			id: 17,
-			question: "Which state has the longest coastline in the U.S.?",
-			options: ["Florida", "California", "Alaska", "Hawaii"],
-			correctAnswer: "Alaska",
+			question: "Who was the first English child born in the Americas?",
+			options: [
+				"Pocahontas",
+				"John Smith",
+				"Virginia Dare",
+				"William Bradford",
+			],
+			correctAnswer: "Virginia Dare",
 			description:
-				"Alaska's coastline stretches over 6,600 miles, which is more than all other 49 states combined.",
+				"Virginia Dare was born on Roanoke Island in August 1587, shortly before the colony disappeared.",
 		},
 		{
 			id: 18,
-			question: "What is the tallest mountain in the United States?",
-			options: ["Mount Whitney", "Mount Rainier", "Denali", "Mount Elbert"],
-			correctAnswer: "Denali",
+			question: "What is the official state shell of North Carolina?",
+			options: ["Conch", "Scotch Bonnet", "Oyster", "Scallop"],
+			correctAnswer: "Scotch Bonnet",
 			description:
-				"Located in Alaska, Denali reaches an elevation of 20,310 feet above sea level.",
+				"Adopted in 1965, NC was the first state to designate an official state shell.",
 		},
 		{
 			id: 19,
-			question: "Which state is known as the 'Constitution State'?",
-			options: ["Connecticut", "Massachusetts", "Virginia", "Maryland"],
-			correctAnswer: "Connecticut",
+			question:
+				"In which NC city did Babe Ruth hit his first professional home run in 1914?",
+			options: ["Charlotte", "Fayetteville", "Durham", "Raleigh"],
+			correctAnswer: "Fayetteville",
 			description:
-				"The nickname refers to the Fundamental Orders of 1639, considered by some to be the first written constitution.",
+				"George Herman 'Babe' Ruth hit his first pro home run as a member of the Baltimore Orioles on March 7, 1914.",
 		},
 		{
 			id: 20,
-			question:
-				"Which U.S. President is the only one to serve more than two terms?",
-			options: [
-				"Theodore Roosevelt",
-				"Franklin D. Roosevelt",
-				"Woodrow Wilson",
-				"Dwight D. Eisenhower",
-			],
-			correctAnswer: "Franklin D. Roosevelt",
+			question: "What is the official state sport of North Carolina?",
+			options: ["Basketball", "Golf", "Stock Car Racing", "Football"],
+			correctAnswer: "Stock Car Racing",
 			description:
-				"FDR was elected to four terms, leading to the 22nd Amendment, which limited presidents to two terms.",
+				"With the deep roots of NASCAR in the state, stock car racing was named the state sport in 2011.",
 		},
 	],
 	round3: [
 		{
 			id: 21,
-			question: "Which state produces the most pumpkins in the United States?",
-			options: ["Indiana", "California", "Illinois", "Ohio"],
-			correctAnswer: "Illinois",
+			question:
+				"The coastline of North Carolina is often called the 'Graveyard of the Atlantic' due to what?",
+			options: [
+				"Native American burial mounds",
+				"Frequent hurricanes",
+				"Over 5,000 shipwrecks",
+				"A high shark population",
+			],
+			correctAnswer: "Over 5,000 shipwrecks",
 			description:
-				"Illinois grows about 80% of the U.S. supply of canned pumpkins, largely due to the Morton area.",
+				"Shifting sands and colliding currents near Cape Hatteras have caused thousands of shipwrecks over centuries.",
 		},
 		{
 			id: 22,
 			question:
-				"Which two states share the record for bordering the most other states (8)?",
+				"Which document, signed in 1776, made NC the first colony to call for independence from Britain?",
 			options: [
-				"Missouri & Tennessee",
-				"Kentucky & Virginia",
-				"Colorado & Nebraska",
-				"Pennsylvania & New York",
+				"The Halifax Resolves",
+				"The Edenton Tea Party",
+				"The Raleigh Manifesto",
+				"The Liberty Declaration",
 			],
-			correctAnswer: "Missouri & Tennessee",
+			correctAnswer: "The Halifax Resolves",
 			description:
-				"Both Missouri and Tennessee are landlocked and bordered by eight different neighbors each.",
+				"Signed on April 12, 1776, the Halifax Resolves authorized NC's delegates to vote for independence.",
 		},
 		{
 			id: 23,
-			question: "Where is the only royal palace located in the United States?",
-			options: ["Puerto Rico", "Louisiana", "Hawaii", "Virgin Islands"],
-			correctAnswer: "Hawaii",
+			question:
+				"What date is featured on the North Carolina state flag to commemorate the Mecklenburg Declaration?",
+			options: [
+				"July 4, 1776",
+				"May 20, 1775",
+				"April 12, 1776",
+				"November 21, 1789",
+			],
+			correctAnswer: "May 20, 1775",
 			description:
-				"The 'Iolani Palace in Honolulu was the official residence of the Hawaiian monarchs until the monarchy was overthrown in 1893.",
+				"The date allegedly marks the day citizens of Mecklenburg County declared themselves free from British rule.",
 		},
 		{
 			id: 24,
 			question:
-				"Which state was the first to grant women the right to vote (in 1869)?",
-			options: ["New York", "Wyoming", "Colorado", "Utah"],
-			correctAnswer: "Wyoming",
+				"General Cornwallis nicknamed which NC city a 'Hornet’s Nest of Rebellion' during the Revolutionary War?",
+			options: ["Wilmington", "Hillsborough", "Charlotte", "Salisbury"],
+			correctAnswer: "Charlotte",
 			description:
-				"Wyoming Territory passed the first law in U.S. history explicitly granting women the right to vote and hold office.",
+				"The fierce resistance from locals led Cornwallis to write that Charlotte was a 'hornet's nest.'",
 		},
 		{
 			id: 25,
-			question: "Which state has no natural lakes?",
-			options: ["Maryland", "Delaware", "Kansas", "Arizona"],
-			correctAnswer: "Maryland",
+			question:
+				"The Venus Flytrap is the official state carnivorous plant; where is it naturally native to?",
+			options: [
+				"The Appalachian Mountains",
+				"A 75-mile radius of Wilmington",
+				"The Outer Banks",
+				"The Piedmont plateau",
+			],
+			correctAnswer: "A 75-mile radius of Wilmington",
 			description:
-				"While Maryland has many man-made reservoirs, it is the only state in the U.S. without a single natural lake.",
+				"The Venus Flytrap is endemic only to a small coastal area in North and South Carolina.",
 		},
 		{
 			id: 26,
 			question:
-				"Which U.S. state name can be typed using only one row of a standard QWERTY keyboard?",
-			options: ["Ohio", "Alaska", "Iowa", "Utah"],
-			correctAnswer: "Alaska",
+				"What is the name of the tallest living sand dune system on the Atlantic coast, located in Nags Head?",
+			options: [
+				"Cape Hatteras",
+				"Jockey’s Ridge",
+				"Bald Head",
+				"Kill Devil Hill",
+			],
+			correctAnswer: "Jockey’s Ridge",
 			description:
-				"The letters in 'Alaska' (A-L-A-S-K-A) are all found on the home row of a standard keyboard.",
+				"Jockey’s Ridge State Park features the tallest active sand dune system in the Eastern United States.",
 		},
 		{
 			id: 27,
-			question:
-				"What is the only U.S. state capital named after a German Chancellor?",
-			options: ["Lincoln", "Bismarck", "Madison", "Jefferson City"],
-			correctAnswer: "Bismarck",
+			question: "What is the official state folk dance of North Carolina?",
+			options: ["The Two-Step", "Clogging", "Square Dancing", "The Shag"],
+			correctAnswer: "Clogging",
 			description:
-				"Bismarck, North Dakota, was named in 1873 in honor of German Chancellor Otto von Bismarck.",
+				"Clogging was designated the state folk dance in 2005, while the Shag is the official state popular dance.",
 		},
 		{
 			id: 28,
 			question:
-				"Which state was an independent republic for only 25 days in 1846 before joining the U.S.?",
-			options: ["Texas", "California", "Vermont", "Hawaii"],
-			correctAnswer: "California",
+				"In 1947, North Carolina became the first state in the nation to do what regarding art?",
+			options: [
+				"Open a state-funded art museum",
+				"Mandate art in every school",
+				"Hold an outdoor art festival",
+				"Tax art sales",
+			],
+			correctAnswer: "Open a state-funded art museum",
 			description:
-				"The 'Bear Flag Republic' lasted from June 14 to July 9, 1846, during the Mexican-American War.",
+				"The North Carolina Museum of Art was the first major museum collection in the country to be formed by state legislation and funding.",
 		},
 		{
 			id: 29,
 			question:
-				"Which state's highest point is Britton Hill, standing at only 345 feet above sea level?",
-			options: ["Florida", "Louisiana", "Mississippi", "Delaware"],
-			correctAnswer: "Florida",
+				"Which gemstone, the official state precious stone, was first found in NC at the Hiddenite mine?",
+			options: ["Diamond", "Ruby", "Emerald", "Sapphire"],
+			correctAnswer: "Emerald",
 			description:
-				"Britton Hill is the lowest state 'high point' in the U.S., even lower than many skyscrapers.",
+				"North Carolina is the only state in the U.S. where significant amounts of emeralds have been found.",
 		},
 		{
 			id: 30,
 			question:
-				"In which state would you find the geographic center of the 50 United States?",
-			options: ["Kansas", "South Dakota", "Nebraska", "Missouri"],
-			correctAnswer: "South Dakota",
+				"North Carolina is the only state that has two official state berries. What are they?",
+			options: [
+				"Raspberry & Blackberry",
+				"Strawberry & Blueberry",
+				"Elderberry & Gooseberry",
+				"Cranberry & Mulberries",
+			],
+			correctAnswer: "Strawberry & Blueberry",
 			description:
-				"The geographic center of all 50 states is located near Belle Fourche, South Dakota. (The center of the 48 contiguous states is in Kansas).",
+				"The strawberry was named the state red berry and the blueberry the state blue berry in 2001.",
 		},
 	],
 };
