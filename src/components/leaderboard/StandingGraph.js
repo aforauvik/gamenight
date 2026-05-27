@@ -1,7 +1,7 @@
 "use client";
 
-import {TrendingUp} from "lucide-react";
-import {Bar, BarChart, CartesianGrid, XAxis} from "recharts";
+import { TrendingUp, BarChart2 } from "lucide-react";
+import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
 
 import {
 	Card,
@@ -20,23 +20,22 @@ import {
 	ChartTooltipContent,
 } from "@/components/ui/chart";
 
-
 const chartConfig = {
 	first: {
-		label: "First",
-		color: "#10b981",
+		label: "1st Place",
+		color: "#47B39C",
 	},
 	second: {
-		label: "Second",
-		color: "#F9C74F",
+		label: "2nd Place",
+		color: "#FBBE53",
 	},
 	third: {
-		label: "Third",
-		color: "#F94144",
+		label: "3rd Place",
+		color: "#DE6552",
 	},
 	noposition: {
 		label: "No Position",
-		color: "#484848",
+		color: "#cbd5e1",
 	},
 };
 
@@ -50,64 +49,73 @@ export function StandingGraph({ data, year, totalGames }) {
 			noposition: Math.max(0, totalGames - (team.first + team.second + team.third)),
 		}))
 		.sort((a, b) => b.first - a.first);
+
 	return (
-		<Card className="w-full shadow-none">
-			<CardHeader>
-				<CardTitle>Leaderboard - Standings</CardTitle>
-				<CardDescription>Jan - Dec {year}</CardDescription>
+		<Card className="w-full border border-slate-200 dark:border-zinc-800 shadow-md rounded-2xl bg-white dark:bg-zinc-900/50 overflow-hidden transition-all hover:shadow-lg">
+			<CardHeader className="bg-slate-50/50 dark:bg-zinc-900/80 border-b border-slate-100 dark:border-zinc-800 pb-4">
+				<div className="flex items-center gap-2">
+					<BarChart2 className="h-5 w-5 text-indigo-500" />
+					<div>
+						<CardTitle className="text-base font-extrabold text-slate-800 dark:text-zinc-100">
+							Trophy Standings
+						</CardTitle>
+						<CardDescription className="text-xs text-slate-400 dark:text-zinc-500 mt-0.5">
+							Podium distribution stack for {year}
+						</CardDescription>
+					</div>
+				</div>
 			</CardHeader>
-			<CardContent>
-				<ChartContainer config={chartConfig} className="min-h-[200px] w-full">
-					<BarChart accessibilityLayer data={chartData}>
-						<CartesianGrid vertical={false} />
+			<CardContent className="pt-6">
+				<ChartContainer config={chartConfig} className="min-h-[220px] w-full">
+					<BarChart accessibilityLayer data={chartData} margin={{ top: 12, left: 8, right: 8, bottom: 4 }}>
+						<CartesianGrid vertical={false} stroke="rgba(148, 163, 184, 0.08)" strokeDasharray="3 3" />
 						<XAxis
 							dataKey="player"
 							tickLine={false}
 							tickMargin={10}
 							axisLine={false}
 							tickFormatter={(value) => value.slice(0, 3)}
+							className="text-[10px] font-bold text-slate-400 dark:text-zinc-500"
 						/>
-						<ChartTooltip content={<ChartTooltipContent hideLabel />} />
-						<ChartLegend content={<ChartLegendContent />} />
+						<ChartTooltip
+							content={<ChartTooltipContent className="rounded-xl border border-slate-200 dark:border-zinc-800 shadow-lg bg-white/95 dark:bg-zinc-950/95" />}
+						/>
+						<ChartLegend content={<ChartLegendContent className="text-[10px] font-semibold text-slate-500 mt-4" />} />
 
 						<Bar
 							dataKey="first"
 							stackId="a"
 							fill="var(--color-first)"
-							// radius={[0, 0, 4, 4]}
-							fillOpacity={0.4}
+							maxBarSize={45}
 						/>
 						<Bar
 							dataKey="second"
 							stackId="a"
 							fill="var(--color-second)"
-							// radius={[0, 0, 0, 0]}
-							fillOpacity={0.4}
+							maxBarSize={45}
 						/>
 						<Bar
 							dataKey="third"
 							stackId="a"
 							fill="var(--color-third)"
-							// radius={[0, 0, 0, 0]}
-							fillOpacity={0.4}
+							maxBarSize={45}
 						/>
-
 						<Bar
 							dataKey="noposition"
 							stackId="a"
 							fill="var(--color-noposition)"
-							// radius={[4, 4, 0, 0]}
-							fillOpacity={0.4}
+							maxBarSize={45}
 						/>
 					</BarChart>
 				</ChartContainer>
 			</CardContent>
-			<CardFooter className="flex-col items-start gap-2 text-sm">
-				<div className="flex gap-2 font-medium leading-none">
-					Organized by first position <TrendingUp className="h-4 w-4" />
+			<CardFooter className="flex-col items-start gap-2 text-xs border-t border-slate-100 dark:border-zinc-800 pt-4 bg-slate-50/20 dark:bg-zinc-900/10 p-4">
+				<div className="flex items-center gap-1.5 font-semibold text-slate-700 dark:text-zinc-300">
+					<TrendingUp className="h-4 w-4 text-indigo-500" />
+					<span>Sorted by number of first place victories</span>
 				</div>
-				<div className="leading-none text-muted-foreground">
-					Data from the last 12 months
+				<div className="leading-none text-slate-400 dark:text-zinc-500">
+					This stack displays game standings out of {totalGames} total season matches.
 				</div>
 			</CardFooter>
 		</Card>

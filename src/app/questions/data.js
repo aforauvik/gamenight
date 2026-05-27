@@ -2,335 +2,368 @@ export const quizData = {
 	round1: [
 		{
 			id: 1,
-			question: "What is the capital city of North Carolina?",
-			options: ["Charlotte", "Raleigh", "Asheville", "Wilmington"],
-			correctAnswer: "Raleigh",
+			question: "What is the official capital city of New York State?",
+			options: ["New York City", "Buffalo", "Albany", "Syracuse"],
+			correctAnswer: "Albany",
 			description:
-				"Raleigh was established as the state capital in 1794 and was named after Sir Walter Raleigh.",
+				"Albany has served as the continuous capital of New York State since 1797.",
 		},
 		{
 			id: 2,
 			question:
-				"The Wright Brothers achieved the first successful motor-powered flight in which NC town?",
-			options: ["Nags Head", "Hatteras", "Kitty Hawk", "Duck"],
-			correctAnswer: "Kitty Hawk",
+				"Which of these iconic landmarks is located in New York Harbor?",
+			options: [
+				"The Golden Gate Bridge",
+				"The Statue of Liberty",
+				"The Space Needle",
+				"Mount Rushmore",
+			],
+			correctAnswer: "The Statue of Liberty",
 			description:
-				"On December 17, 1903, Orville and Wilbur Wright made history at Kill Devil Hills, near Kitty Hawk.",
+				"The Statue of Liberty was a gift from France to the United States and was dedicated in New York Harbor in 1886.",
 		},
 		{
 			id: 3,
-			question: "What is the official state bird of North Carolina?",
-			options: ["Robin", "Northern Cardinal", "Blue Jay", "Mockingbird"],
-			correctAnswer: "Northern Cardinal",
+			question: "What is the official nickname of New York State?",
+			options: [
+				"The Garden State",
+				"The Sunshine State",
+				"The Empire State",
+				"The Bay State",
+			],
+			correctAnswer: "The Empire State",
 			description:
-				"The Cardinal was officially adopted as the state bird in 1943; it is shared as a symbol with six other states.",
+				"Tradition holds that George Washington referred to New York as the 'seat of empire,' giving rise to its famous nickname.",
 		},
 		{
 			id: 4,
-			question: "What is North Carolina's most famous nickname?",
-			options: [
-				"The Peach State",
-				"The Sunshine State",
-				"The Tar Heel State",
-				"The Empire State",
-			],
-			correctAnswer: "The Tar Heel State",
+			question:
+				"True or False: New York was one of the original 13 colonies that formed the United States.",
+			options: ["True", "False"],
+			correctAnswer: "True",
 			description:
-				"The name likely stems from the state's history as a leading producer of pine tar, pitch, and turpentine for the naval industry.",
+				"New York was established as a British colony before joining the other 12 colonies to declare independence in 1776.",
 		},
 		{
 			id: 5,
-			question:
-				"Which soft drink was invented in New Bern, North Carolina, in 1898?",
-			options: ["Coca-Cola", "Mountain Dew", "Pepsi-Cola", "Dr Pepper"],
-			correctAnswer: "Pepsi-Cola",
+			question: "Which official state bird can be found throughout New York?",
+			options: [
+				"American Robin",
+				"Eastern Bluebird",
+				"Northern Cardinal",
+				"Bald Eagle",
+			],
+			correctAnswer: "Eastern Bluebird",
 			description:
-				"Pharmacist Caleb Bradham created the drink 'Brad's Drink,' later renaming it Pepsi-Cola after the enzyme pepsin.",
+				"The Eastern Bluebird was officially adopted as New York's state bird in 1970.",
 		},
 		{
 			id: 6,
-			question: "What is the most populous city in North Carolina?",
-			options: ["Raleigh", "Greensboro", "Charlotte", "Durham"],
-			correctAnswer: "Charlotte",
+			question:
+				"What is the official motto of New York State, featured on its seal?",
+			options: [
+				"Eureka",
+				"Excelsior",
+				"Liberty and Prosperity",
+				"E Pluribus Unum",
+			],
+			correctAnswer: "Excelsior",
 			description:
-				"Charlotte is the largest city in the state and serves as a major national financial and banking hub.",
+				"The Latin word 'Excelsior' translates directly to 'Ever Upward' and serves as the official state motto.",
 		},
 		{
 			id: 7,
 			question:
-				"Asheville is home to which residence, the largest private home in the United States?",
+				"Which major river flows south through eastern New York and empties into New York Harbor?",
 			options: [
-				"The Hearst Castle",
-				"The Biltmore Estate",
-				"The Breakers",
-				"Monticello",
+				"Mississippi River",
+				"Colorado River",
+				"Hudson River",
+				"Ohio River",
 			],
-			correctAnswer: "The Biltmore Estate",
+			correctAnswer: "Hudson River",
 			description:
-				"Built by George Washington Vanderbilt II, the Biltmore features 250 rooms and sits on 8,000 acres.",
+				"The Hudson River runs 315 miles from the Adirondack Mountains down to the southern tip of Manhattan.",
 		},
 		{
 			id: 8,
-			question:
-				"Which institution was the first public university in the U.S. to open its doors to students?",
-			options: [
-				"NC State University",
-				"Duke University",
-				"UNC Chapel Hill",
-				"Wake Forest University",
-			],
-			correctAnswer: "UNC Chapel Hill",
+			question: "What is the official state flower of New York?",
+			options: ["Rose", "Tulip", "Sunflower", "Marigold"],
+			correctAnswer: "Rose",
 			description:
-				"Chartered in 1789, the University of North Carolina began admitting students in 1795.",
+				"The rose was officially selected as the state flower of New York in 1955.",
 		},
 		{
 			id: 9,
-			question: "What is the official state flower of North Carolina?",
-			options: ["Flowering Dogwood", "Magnolia", "Rose", "Carolina Lily"],
-			correctAnswer: "Flowering Dogwood",
+			question:
+				"Which of the Great Lakes form a portion of New York State's northern and western boundaries?",
+			options: [
+				"Lake Michigan and Lake Superior",
+				"Lake Erie and Lake Ontario",
+				"Lake Huron and Lake Erie",
+				"Lake Ontario and Lake Huron",
+			],
+			correctAnswer: "Lake Erie and Lake Ontario",
 			description:
-				"The Flowering Dogwood is one of the most common trees in NC and was designated the state flower in 1941.",
+				"New York shares water boundaries with both Lake Erie and Lake Ontario along its Canadian border.",
 		},
 		{
 			id: 10,
 			question:
-				"Mount Mitchell is the highest peak in the United States east of which river?",
-			options: ["The Hudson", "The Colorado", "The Mississippi", "The Potomac"],
-			correctAnswer: "The Mississippi",
+				"What is the name of the famous waterfall complex shared between New York State and Ontario, Canada?",
+			options: [
+				"Yosemite Falls",
+				"Niagara Falls",
+				"Yellowstone Falls",
+				"Snoqualmie Falls",
+			],
+			correctAnswer: "Niagara Falls",
 			description:
-				"Standing at 6,684 feet, Mount Mitchell is located in the Black Mountains of the Blue Ridge range.",
+				"Niagara Falls consists of three waterfalls, including the American Falls and Bridal Veil Falls on the U.S. side.",
 		},
 	],
 	round2: [
 		{
 			id: 11,
-			question: "What is the official state beverage of North Carolina?",
-			options: ["Sweet Tea", "Milk", "Apple Juice", "Cherry Wine"],
-			correctAnswer: "Milk",
+			question:
+				"Which historic waterway opened in 1825, connecting the Hudson River directly to the Great Lakes?",
+			options: [
+				"Panama Canal",
+				"Suez Canal",
+				"Erie Canal",
+				"St. Lawrence Seaway",
+			],
+			correctAnswer: "Erie Canal",
 			description:
-				"Milk was adopted as the state beverage in 1987, reflecting the importance of the dairy industry.",
+				"The Erie Canal spanning 363 miles allowed passage from Albany to Buffalo, heavily spurring the state's economic development.",
 		},
 		{
 			id: 12,
 			question:
-				"The first documented discovery of gold in the United States occurred at which NC location?",
+				"Before being captured by the British in 1664 and renamed New York, what was the name of this Dutch colony?",
 			options: [
-				"Reed Gold Mine",
-				"Vanderbilt Mine",
-				"Appalachian Trail",
-				"Cape Fear",
+				"New Amsterdam",
+				"New Netherland",
+				"New Flanders",
+				"New Holland",
 			],
-			correctAnswer: "Reed Gold Mine",
+			correctAnswer: "New Netherland",
 			description:
-				"In 1799, 12-year-old Conrad Reed found a 17-pound gold nugget in a creek in Cabarrus County.",
+				"The entire provincial region was named New Netherland, while the specific settlement on Manhattan was called New Amsterdam.",
 		},
 		{
 			id: 13,
-			question: "What is the official state dog of North Carolina?",
+			question:
+				"What is the highest natural point of elevation in New York State?",
 			options: [
-				"Golden Retriever",
-				"Plott Hound",
-				"Beagle",
-				"Black and Tan Coonhound",
+				"Mount Tremper",
+				"Mount Marcy",
+				"Slide Mountain",
+				"Whiteface Mountain",
 			],
-			correctAnswer: "Plott Hound",
+			correctAnswer: "Mount Marcy",
 			description:
-				"The Plott Hound is the only dog breed officially recognized as having originated in North Carolina.",
+				"Located in the Adirondack High Peaks, Mount Marcy reaches an elevation of 5,344 feet above sea level.",
 		},
 		{
 			id: 14,
-			question: "On which island was the 'Lost Colony' of 1587 established?",
-			options: [
-				"Hatteras Island",
-				"Ocracoke Island",
-				"Roanoke Island",
-				"Bald Head Island",
-			],
-			correctAnswer: "Roanoke Island",
+			question:
+				"Which New York town is home to the National Baseball Hall of Fame and Museum?",
+			options: ["Saratoga Springs", "Lake Placid", "Cooperstown", "Ithaca"],
+			correctAnswer: "Cooperstown",
 			description:
-				"More than 100 settlers disappeared from this colony, leaving behind the mysterious word 'Croatoan.'",
+				"The National Baseball Hall of Fame was established in Cooperstown in 1939 to celebrate the history of the sport.",
 		},
 		{
 			id: 15,
 			question:
-				"North Carolina is the nation's leading producer of which vegetable?",
-			options: ["Carrots", "Sweet Potatoes", "Corn", "Potatoes"],
-			correctAnswer: "Sweet Potatoes",
+				"Four U.S. presidents have served as Governor of New York. Which of the following is one of them?",
+			options: [
+				"Abraham Lincoln",
+				"Grover Cleveland",
+				"John F. Kennedy",
+				"Woodrow Wilson",
+			],
+			correctAnswer: "Grover Cleveland",
 			description:
-				"North Carolina has been the top producer of sweet potatoes in the U.S. since 1971.",
+				"Grover Cleveland, Martin Van Buren, Theodore Roosevelt, and Franklin D. Roosevelt all served as New York governors.",
 		},
 		{
 			id: 16,
 			question:
-				"Which NC city is known as the 'Furniture Capital of the World'?",
-			options: ["Hickory", "High Point", "Lexington", "Statesville"],
-			correctAnswer: "High Point",
+				"Which Revolutionary War battle fought in upstate New York in 1777 is widely considered the turning point of the war?",
+			options: [
+				"Battle of Saratoga",
+				"Battle of Ticonderoga",
+				"Battle of Long Island",
+				"Battle of White Plains",
+			],
+			correctAnswer: "Battle of Saratoga",
 			description:
-				"High Point is home to the world's largest furniture trade show, the High Point Market.",
+				"The American victory at the Battle of Saratoga convinced France to enter the war as an ally to the United States.",
 		},
 		{
 			id: 17,
-			question: "Who was the first English child born in the Americas?",
+			question:
+				"Which mountain range dominates the northeastern corner of New York State and is distinct from the Appalachian chain?",
 			options: [
-				"Pocahontas",
-				"John Smith",
-				"Virginia Dare",
-				"William Bradford",
+				"The Catskills",
+				"The Adirondacks",
+				"The Green Mountains",
+				"The Berkshire Hills",
 			],
-			correctAnswer: "Virginia Dare",
+			correctAnswer: "The Adirondacks",
 			description:
-				"Virginia Dare was born on Roanoke Island in August 1587, shortly before the colony disappeared.",
+				"The Adirondack Mountains form a circular dome of ancient geological structures distinct from the nearby Appalachians.",
 		},
 		{
 			id: 18,
-			question: "What is the official state shell of North Carolina?",
-			options: ["Conch", "Scotch Bonnet", "Oyster", "Scallop"],
-			correctAnswer: "Scotch Bonnet",
+			question:
+				"Which New York state village hosted both the 1932 and 1980 Winter Olympic Games?",
+			options: ["Lake George", "Saranac Lake", "Lake Placid", "Tupper Lake"],
+			correctAnswer: "Lake Placid",
 			description:
-				"Adopted in 1965, NC was the first state to designate an official state shell.",
+				"Lake Placid is one of only a few global sites to host the Winter Games twice, famously featuring the 1980 'Miracle on Ice' hockey game.",
 		},
 		{
 			id: 19,
 			question:
-				"In which NC city did Babe Ruth hit his first professional home run in 1914?",
-			options: ["Charlotte", "Fayetteville", "Durham", "Raleigh"],
-			correctAnswer: "Fayetteville",
+				"George Washington was inaugurated as the first President of the United States in which New York building?",
+			options: [
+				"Federal Hall",
+				"The New York State Capitol",
+				"Fraunces Tavern",
+				"Governor's Mansion",
+			],
+			correctAnswer: "Federal Hall",
 			description:
-				"George Herman 'Babe' Ruth hit his first pro home run as a member of the Baltimore Orioles on March 7, 1914.",
+				"Washington took the oath of office on April 30, 1789, on the balcony of Federal Hall in New York City, the country's temporary capital.",
 		},
 		{
 			id: 20,
-			question: "What is the official state sport of North Carolina?",
-			options: ["Basketball", "Golf", "Stock Car Racing", "Football"],
-			correctAnswer: "Stock Car Racing",
+			question:
+				"In terms of land mass and geographic size, where does New York State rank among all 50 U.S. states?",
+			options: ["4th", "12th", "27th", "45th"],
+			correctAnswer: "27th",
 			description:
-				"With the deep roots of NASCAR in the state, stock car racing was named the state sport in 2011.",
+				"While highly populous, New York ranks 27th in total geographic area, covering 54,555 square miles.",
 		},
 	],
 	round3: [
 		{
 			id: 21,
 			question:
-				"The coastline of North Carolina is often called the 'Graveyard of the Atlantic' due to what?",
-			options: [
-				"Native American burial mounds",
-				"Frequent hurricanes",
-				"Over 5,000 shipwrecks",
-				"A high shark population",
-			],
-			correctAnswer: "Over 5,000 shipwrecks",
+				"In what year did the capital of New York State permanently move from New York City to Albany?",
+			options: ["1777", "1788", "1797", "1825"],
+			correctAnswer: "1797",
 			description:
-				"Shifting sands and colliding currents near Cape Hatteras have caused thousands of shipwrecks over centuries.",
+				"After rotating through locations like Kingston and New York City, the state legislature permanently designated Albany as the capital in 1797.",
 		},
 		{
 			id: 22,
 			question:
-				"Which document, signed in 1776, made NC the first colony to call for independence from Britain?",
+				"Which European explorer was the first to document an expedition into New York Bay in 1524?",
 			options: [
-				"The Halifax Resolves",
-				"The Edenton Tea Party",
-				"The Raleigh Manifesto",
-				"The Liberty Declaration",
+				"Henry Hudson",
+				"Giovanni da Verrazzano",
+				"Samuel de Champlain",
+				"Adriaen Block",
 			],
-			correctAnswer: "The Halifax Resolves",
+			correctAnswer: "Giovanni da Verrazzano",
 			description:
-				"Signed on April 12, 1776, the Halifax Resolves authorized NC's delegates to vote for independence.",
+				"Sailing under the French flag, Italian explorer Giovanni da Verrazzano entered New York Harbor and named the region Nouvelle-Angoulême.",
 		},
 		{
 			id: 23,
 			question:
-				"What date is featured on the North Carolina state flag to commemorate the Mecklenburg Declaration?",
-			options: [
-				"July 4, 1776",
-				"May 20, 1775",
-				"April 12, 1776",
-				"November 21, 1789",
-			],
-			correctAnswer: "May 20, 1775",
+				"Which native geological gemstone, found specifically in the Adirondack region, is the official state gem of New York?",
+			options: ["Diamond", "Garnet", "Emerald", "Amethyst"],
+			correctAnswer: "Garnet",
 			description:
-				"The date allegedly marks the day citizens of Mecklenburg County declared themselves free from British rule.",
+				"The Barton Mines in the Adirondacks are among the world's largest industrial garnet producers; it became the state gem in 1969.",
 		},
 		{
 			id: 24,
 			question:
-				"General Cornwallis nicknamed which NC city a 'Hornet’s Nest of Rebellion' during the Revolutionary War?",
-			options: ["Wilmington", "Hillsborough", "Charlotte", "Salisbury"],
-			correctAnswer: "Charlotte",
+				"How many years did it take workers to fully construct the New York State Capitol building in Albany, completed in 1899?",
+			options: ["5 years", "12 years", "22 years", "32 years"],
+			correctAnswer: "32 years",
 			description:
-				"The fierce resistance from locals led Cornwallis to write that Charlotte was a 'hornet's nest.'",
+				"Construction on the monumental stone capitol building began in 1867 and took over three decades to complete due to immense costs and shifting architects.",
 		},
 		{
 			id: 25,
 			question:
-				"The Venus Flytrap is the official state carnivorous plant; where is it naturally native to?",
+				"What is the name of the highest waterfall in New York State, which features a single vertical drop higher than Niagara Falls?",
 			options: [
-				"The Appalachian Mountains",
-				"A 75-mile radius of Wilmington",
-				"The Outer Banks",
-				"The Piedmont plateau",
+				"Taughannock Falls",
+				"Kaaterskill Falls",
+				"Cohoes Falls",
+				"Letchworth Falls",
 			],
-			correctAnswer: "A 75-mile radius of Wilmington",
+			correctAnswer: "Taughannock Falls",
 			description:
-				"The Venus Flytrap is endemic only to a small coastal area in North and South Carolina.",
+				"Taughannock Falls drops 215 feet straight down, surpassing the vertical drop height of Niagara Falls by nearly 50 feet.",
 		},
 		{
 			id: 26,
 			question:
-				"What is the name of the tallest living sand dune system on the Atlantic coast, located in Nags Head?",
-			options: [
-				"Cape Hatteras",
-				"Jockey’s Ridge",
-				"Bald Head",
-				"Kill Devil Hill",
-			],
-			correctAnswer: "Jockey’s Ridge",
+				"Until it was surpassed by California in the mid-1960s, what was New York's national rank in population?",
+			options: ["1st", "2nd", "3rd", "5th"],
+			correctAnswer: "1st",
 			description:
-				"Jockey’s Ridge State Park features the tallest active sand dune system in the Eastern United States.",
+				"New York held the title of the most populous U.S. state continuously from the 1820 census until California overtook it in 1962.",
 		},
 		{
 			id: 27,
-			question: "What is the official state folk dance of North Carolina?",
-			options: ["The Two-Step", "Clogging", "Square Dancing", "The Shag"],
-			correctAnswer: "Clogging",
+			question:
+				"Which island in New York Harbor served as the primary processing station for over 12 million immigrants arriving between 1892 and 1954?",
+			options: [
+				"Governors Island",
+				"Ellis Island",
+				"Staten Island",
+				"Liberty Island",
+			],
+			correctAnswer: "Ellis Island",
 			description:
-				"Clogging was designated the state folk dance in 2005, while the Shag is the official state popular dance.",
+				"Ellis Island opened as a federal immigration station in 1892, handling the vast majority of international entry records for over 60 years.",
 		},
 		{
 			id: 28,
 			question:
-				"In 1947, North Carolina became the first state in the nation to do what regarding art?",
+				"Which specific Native American league, historically known as the Haudenosaunee, dominated the territory of central and upstate New York?",
 			options: [
-				"Open a state-funded art museum",
-				"Mandate art in every school",
-				"Hold an outdoor art festival",
-				"Tax art sales",
+				"Algonquian Federation",
+				"Iroquois Confederacy",
+				"Wampanoag Confederacy",
+				"Powhatan Alliance",
 			],
-			correctAnswer: "Open a state-funded art museum",
+			correctAnswer: "Iroquois Confederacy",
 			description:
-				"The North Carolina Museum of Art was the first major museum collection in the country to be formed by state legislation and funding.",
+				"The Iroquois Confederacy (Haudenosaunee) initially united five distinct nations—Mohawk, Oneida, Onondaga, Cayuga, and Seneca—across New York.",
 		},
 		{
 			id: 29,
 			question:
-				"Which gemstone, the official state precious stone, was first found in NC at the Hiddenite mine?",
-			options: ["Diamond", "Ruby", "Emerald", "Sapphire"],
-			correctAnswer: "Emerald",
+				"Which unique geographical landform feature covers the vast majority of New York's Southern Tier region?",
+			options: [
+				"The Allegheny Plateau",
+				"The Coastal Plain",
+				"The Canadian Shield",
+				"The Piedmont Region",
+			],
+			correctAnswer: "The Allegheny Plateau",
 			description:
-				"North Carolina is the only state in the U.S. where significant amounts of emeralds have been found.",
+				"The southern portion of New York rests entirely on the northern edge of the Allegheny Plateau, a highly dissected part of the Appalachian plateau system.",
 		},
 		{
 			id: 30,
 			question:
-				"North Carolina is the only state that has two official state berries. What are they?",
-			options: [
-				"Raspberry & Blackberry",
-				"Strawberry & Blueberry",
-				"Elderberry & Gooseberry",
-				"Cranberry & Mulberries",
-			],
-			correctAnswer: "Strawberry & Blueberry",
+				"In what year did New York officially adopt its first state constitution, written amidst the American Revolutionary War?",
+			options: ["1776", "1777", "1783", "1788"],
+			correctAnswer: "1777",
 			description:
-				"The strawberry was named the state red berry and the blueberry the state blue berry in 2001.",
+				"The first New York State Constitution was drafted and adopted by a convention in Kingston, New York, in April 1777.",
 		},
 	],
 };

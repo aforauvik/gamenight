@@ -1,32 +1,30 @@
-
-
 export const allInfo2026 = {
-	gameName: "North Carolina Facts",
+	gameName: "New York Facts",
 	season: "May, 2026",
 	rounds: 30,
-	game: 2,
+	game: 3,
 };
 
 export const rawTeams2026 = [
 	{
 		name: "Grandma",
 		avatar: "/grandma.webp",
-		round1: 6,
+		round1: 8,
 		round2: 5,
-		round3: 3,
-		bonus: 4,
+		round3: 5,
+		bonus: 5,
 		first: 2,
-		second: 1,
+		second: 2,
 		third: 0,
 	},
 	{
 		name: "Aunt Sabrina",
 		avatar: "/aunt-sabrina.webp",
-		round1: 0,
-		round2: 0,
-		round3: 0,
-		bonus: 0,
-		first: 0,
+		round1: 10,
+		round2: 4,
+		round3: 6,
+		bonus: 11,
+		first: 1,
 		second: 0,
 		third: 0,
 	},
@@ -44,13 +42,13 @@ export const rawTeams2026 = [
 	{
 		name: "Hannah",
 		avatar: "/hannah.jpeg",
-		round1: 7,
-		round2: 7,
-		round3: 7,
-		bonus: 7,
+		round1: 9,
+		round2: 3,
+		round3: 4,
+		bonus: 5,
 		first: 2,
 		second: 1,
-		third: 1,
+		third: 2,
 	},
 	{
 		name: "Leif",
@@ -66,10 +64,10 @@ export const rawTeams2026 = [
 	{
 		name: "Julian",
 		avatar: "/julian.jpeg",
-		round1: 6,
-		round2: 5,
-		round3: 2,
-		bonus: 2,
+		round1: 3,
+		round2: 4,
+		round3: 1,
+		bonus: 0,
 		first: 0,
 		second: 0,
 		third: 3,
@@ -108,7 +106,6 @@ export const rawTeams2026 = [
 		third: 0,
 	},
 ];
-
 
 export const allInfo2025 = {
 	gameName: "US States",

@@ -1,24 +1,22 @@
 "use client";
 
 import React from "react";
+import { Sparkles, Trophy } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
-import {Button} from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import {
 	Table,
 	TableBody,
-	TableCaption,
 	TableCell,
 	TableHead,
 	TableHeader,
 	TableRow,
 } from "@/components/ui/table";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-
-import Image from "next/image";
-import {RankingGraph} from "./RankingGraph";
-import {StandingGraph} from "./StandingGraph";
-
+import { RankingGraph } from "./RankingGraph";
+import { StandingGraph } from "./StandingGraph";
 import { allInfo2025, allInfo2026, rawTeams2025, rawTeams2026 } from "./data";
 
 export const allInfo = allInfo2025;
@@ -46,106 +44,155 @@ const leaderboardData = {
 	},
 };
 
-function getRankColor(rank) {
+function getRankRowStyle(rank) {
 	if (rank === 1) {
-		return "bg-emerald-200 dark:bg-emerald-500/9";
+		return "bg-gradient-to-r from-[#47B39C]/10 to-[#47B39C]/5 dark:from-[#47B39C]/20 dark:to-zinc-900/50 border-l-4 border-[#47B39C] font-medium transition-all hover:bg-[#47B39C]/15";
 	} else if (rank === 2) {
-		return "bg-emerald-100 dark:bg-emerald-500/7";
+		return "bg-gradient-to-r from-[#FBBE53]/10 to-[#FBBE53]/5 dark:from-[#FBBE53]/20 dark:to-zinc-900/50 border-l-4 border-[#FBBE53] font-medium transition-all hover:bg-[#FBBE53]/15";
 	} else if (rank === 3) {
-		return "bg-emerald-50 dark:bg-emerald-500/5";
-	} else {
-		return "";
+		return "bg-gradient-to-r from-[#DE6552]/10 to-[#DE6552]/5 dark:from-[#DE6552]/20 dark:to-zinc-900/50 border-l-4 border-[#DE6552] font-medium transition-all hover:bg-[#DE6552]/15";
 	}
+	return "hover:bg-slate-50/50 dark:hover:bg-zinc-900/40 border-l-4 border-transparent transition-all";
 }
 
-const Standings = () => {
+function getRankBadge(rank) {
+	if (rank === 1) {
+		return (
+			<span className="flex items-center gap-1 bg-[#47B39C] text-white font-extrabold text-xs px-2.5 py-1 rounded-full shadow-sm ring-4 ring-[#47B39C]/20">
+				👑 1st
+			</span>
+		);
+	} else if (rank === 2) {
+		return (
+			<span className="flex items-center gap-1 bg-[#FBBE53] text-white font-extrabold text-xs px-2.5 py-1 rounded-full shadow-sm ring-4 ring-[#FBBE53]/20">
+				🥈 2nd
+			</span>
+		);
+	} else if (rank === 3) {
+		return (
+			<span className="flex items-center gap-1 bg-[#DE6552] text-white font-extrabold text-xs px-2.5 py-1 rounded-full shadow-sm ring-4 ring-[#DE6552]/20">
+				🥉 3rd
+			</span>
+		);
+	}
+	return (
+		<span className="text-slate-500 dark:text-zinc-500 font-semibold px-2">
+			{String(rank).padStart(2, "0")}
+		</span>
+	);
+}
+
+const Leaderboard = () => {
 	const [activeYear, setActiveYear] = React.useState("2026");
 	const { teams: activeData, totalGames } = leaderboardData[activeYear];
 
 	const sortedTeams = [...activeData]
 		.sort((a, b) => b.points - a.points)
-		.map((team, index) => ({...team, rank: index + 1}));
+		.map((team, index) => ({ ...team, rank: index + 1 }));
 
 	return (
-		<>
-			<div className="flex flex-col items-start justify-center px-4 lg:px-40 py-4">
-				<div className="flex flex-row w-full justify-between items-center mb-4">
-					<h1 className="text-base font-normal text-left mb-4">Leaderboard</h1>
-					<div className="flex gap-2">
-						<Button 
-							variant={activeYear === "2026" ? "default" : "outline"} 
-							onClick={() => setActiveYear("2026")}
-						>
-							2026
-						</Button>
-						<Button 
-							variant={activeYear === "2025" ? "default" : "outline"} 
-							onClick={() => setActiveYear("2025")}
-						>
-							2025
-						</Button>
+		<div className="w-full max-w-7xl mx-auto px-4 py-6 space-y-6">
+			{/* LEADERBOARD TABLE CARD */}
+			<div className="bg-white dark:bg-zinc-900/50 rounded-2xl border border-slate-200 dark:border-zinc-800 shadow-md p-6">
+				
+				{/* Header Toolbar */}
+				<div className="flex flex-col sm:flex-row w-full justify-between sm:items-center pb-4 mb-6 border-b border-slate-100 dark:border-zinc-800 gap-4">
+					<div>
+						<h2 className="text-xl font-extrabold text-slate-800 dark:text-zinc-100 flex items-center gap-2">
+							<Trophy className="h-5 w-5 text-amber-500 fill-amber-500/10" />
+							All-Time Leaderboard
+						</h2>
+						<p className="text-xs text-slate-500 dark:text-zinc-400 mt-1">
+							Aggregated standings based on podium positions across games (1st = 3pts, 2nd = 2pts, 3rd = 1pt)
+						</p>
+					</div>
+
+					{/* Animated Season Tabs */}
+					<div className="flex bg-slate-100 dark:bg-zinc-800 p-1 rounded-xl self-start sm:self-auto">
+						{["2026", "2025"].map((year) => (
+							<button
+								key={year}
+								onClick={() => setActiveYear(year)}
+								className={`relative p-2 px-5 text-xs font-bold rounded-lg transition-all ${
+									activeYear === year
+										? "bg-white dark:bg-zinc-950 text-indigo-600 dark:text-indigo-400 shadow-sm"
+										: "text-slate-500 hover:text-slate-800 dark:text-zinc-400 dark:hover:text-zinc-200"
+								}`}
+							>
+								{year} Season
+								{activeYear === year && (
+									<motion.span
+										layoutId="activeYearIndicator"
+										className="absolute bottom-0.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-indigo-500"
+									/>
+								)}
+							</button>
+						))}
 					</div>
 				</div>
-				<Table>
-					<TableHeader>
-						<TableRow>
-							<TableHead className="w-[120px]">Rank</TableHead>
-							<TableHead>Player</TableHead>
-							<TableHead className="text-right hidden sm:table-cell">
-								Game
-							</TableHead>
-							<TableHead className="text-right hidden sm:table-cell">
-								1st
-							</TableHead>
-							<TableHead className="text-right hidden sm:table-cell">
-								2nd
-							</TableHead>
-							<TableHead className="text-right hidden sm:table-cell">
-								3rd
-							</TableHead>
-							<TableHead className="text-right">Points</TableHead>
-						</TableRow>
-					</TableHeader>
-					<TableBody>
-						{sortedTeams.map((team, index) => (
-							<TableRow key={index} className={getRankColor(team.rank)}>
-								<TableCell className="font-medium">
-									{String(team.rank).padStart(2, "0")}
-								</TableCell>
-								<TableCell className="flex items-center gap-2">
-									<Avatar>
-										<AvatarImage src={team.avatar} alt={team.name} />
-										<AvatarFallback>
-											{team.name.substring(0, 2).toUpperCase()}
-										</AvatarFallback>
-									</Avatar>
-									{team.name}
-								</TableCell>
-								<TableCell className="text-right hidden sm:table-cell">
-									{team.game}
-								</TableCell>
-								<TableCell className="text-right hidden sm:table-cell">
-									{team.first}
-								</TableCell>
-								<TableCell className="text-right hidden sm:table-cell">
-									{team.second}
-								</TableCell>
-								<TableCell className="text-right hidden sm:table-cell">
-									{team.third}
-								</TableCell>
-								<TableCell className="text-right">{team.points}</TableCell>
+
+				{/* Leaderboard Grid */}
+				<div className="overflow-x-auto rounded-xl">
+					<Table>
+						<TableHeader className="bg-slate-50 dark:bg-zinc-900">
+							<TableRow>
+								<TableHead className="w-[120px] font-bold text-slate-700 dark:text-zinc-300">Rank</TableHead>
+								<TableHead className="font-bold text-slate-700 dark:text-zinc-300">Player</TableHead>
+								<TableHead className="text-right hidden sm:table-cell font-bold text-slate-700 dark:text-zinc-300">Total Games</TableHead>
+								<TableHead className="text-right hidden sm:table-cell font-bold text-slate-700 dark:text-zinc-300">🥇 1st Place</TableHead>
+								<TableHead className="text-right hidden sm:table-cell font-bold text-slate-700 dark:text-zinc-300">🥈 2nd Place</TableHead>
+								<TableHead className="text-right hidden sm:table-cell font-bold text-slate-700 dark:text-zinc-300">🥉 3rd Place</TableHead>
+								<TableHead className="text-right font-bold text-indigo-600 dark:text-indigo-400">Podium Points</TableHead>
 							</TableRow>
-						))}
-					</TableBody>
-				</Table>
+						</TableHeader>
+						<TableBody>
+							<AnimatePresence mode="wait">
+								{sortedTeams.map((team, index) => (
+									<TableRow key={`${activeYear}-${team.name}`} className={getRankRowStyle(team.rank)}>
+										<TableCell className="align-middle py-3">
+											{getRankBadge(team.rank)}
+										</TableCell>
+										<TableCell className="flex items-center gap-3 py-3 align-middle">
+											<Avatar className="h-9 w-9 border border-slate-200 dark:border-zinc-800 shadow-sm">
+												<AvatarImage src={team.avatar} alt={team.name} />
+												<AvatarFallback className="font-bold bg-slate-200 dark:bg-zinc-800 text-xs text-slate-700 dark:text-zinc-300">
+													{team.name.substring(0, 2).toUpperCase()}
+												</AvatarFallback>
+											</Avatar>
+											<span className="font-bold text-slate-800 dark:text-zinc-200 text-sm">
+												{team.name}
+											</span>
+										</TableCell>
+										<TableCell className="text-right hidden sm:table-cell py-3 align-middle text-slate-600 dark:text-zinc-400 font-semibold">
+											{team.game}
+										</TableCell>
+										<TableCell className="text-right hidden sm:table-cell py-3 align-middle text-slate-600 dark:text-zinc-400">
+											{team.first}
+										</TableCell>
+										<TableCell className="text-right hidden sm:table-cell py-3 align-middle text-slate-600 dark:text-zinc-400">
+											{team.second}
+										</TableCell>
+										<TableCell className="text-right hidden sm:table-cell py-3 align-middle text-slate-600 dark:text-zinc-400">
+											{team.third}
+										</TableCell>
+										<TableCell className="text-right py-3 align-middle font-extrabold text-indigo-600 dark:text-indigo-400 text-base">
+											{team.points}
+										</TableCell>
+									</TableRow>
+								))}
+							</AnimatePresence>
+						</TableBody>
+					</Table>
+				</div>
 			</div>
 
-			<div className="flex lg:flex-row flex-col justify-center gap-4 w-full lg:px-40 py-4 px-4">
+			{/* GRAPHS SECTION */}
+			<div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full py-2">
 				<RankingGraph data={activeData} year={activeYear} />
 				<StandingGraph data={activeData} year={activeYear} totalGames={totalGames} />
 			</div>
-		</>
+		</div>
 	);
 };
 
-export default Standings;
+export default Leaderboard;
