@@ -1,31 +1,49 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from "react";
-import { useRouter } from "next/navigation";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
-import { supabase } from "@/lib/supabase";
-import { quizData } from "@/app/questions/data";
+import React, {useState, useEffect, useRef} from "react";
+import {useRouter} from "next/navigation";
+import {
+	Card,
+	CardContent,
+	CardHeader,
+	CardTitle,
+	CardDescription,
+} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Separator} from "@/components/ui/separator";
+import {supabase} from "@/lib/supabase";
+import {quizData} from "@/app/questions/data";
 import {
 	createGameRoom,
 	updateGameState,
 	finalizeGame,
 	updatePlayerBonus,
 } from "@/features/game/services/gameService";
-import { getActiveGameStandings } from "@/features/leaderboard/services/leaderboardService";
-import { Users, Play, SkipForward, CheckCircle, Trophy, Clock, X, ArrowLeft } from "lucide-react";
-import { useForm } from "react-hook-form";
+import {getActiveGameStandings} from "@/features/leaderboard/services/leaderboardService";
+import {
+	Users,
+	Play,
+	SkipForward,
+	CheckCircle,
+	Trophy,
+	Clock,
+	X,
+	XCircle,
+	ArrowLeft,
+} from "lucide-react";
+import {useForm} from "react-hook-form";
 import Link from "next/link";
 
 export default function HostPage() {
 	const router = useRouter();
-	
+
 	const [game, setGame] = useState(null);
 	const [players, setPlayers] = useState([]);
 	const [answerCount, setAnswerCount] = useState(0);
 	const [standings, setStandings] = useState([]);
-	
+	const [playerResponses, setPlayerResponses] = useState([]);
+	const [streaks, setStreaks] = useState({});
+
 	// Timer state
 	const [timer, setTimer] = useState(15);
 	const [isTimerRunning, setIsTimerRunning] = useState(false);
@@ -34,21 +52,31 @@ export default function HostPage() {
 	// Reveal details
 	const [showAnswer, setShowAnswer] = useState(false);
 
-	const { register, handleSubmit, formState: { errors } } = useForm({
+	const {
+		register,
+		handleSubmit,
+		formState: {errors},
+	} = useForm({
 		defaultValues: {
 			topic: "",
 			season: "June, 2026",
-		}
+		},
 	});
+
+	const roundKey = game ? `round${game.current_round}` : "round1";
+	const currentRoundQuestions = quizData[roundKey] || [];
+	const currentQuestion = game
+		? currentRoundQuestions[game.current_question_index]
+		: null;
 
 	// Fetch active game on load
 	useEffect(() => {
 		const fetchActiveGame = async () => {
-			const { data, error } = await supabase
+			const {data, error} = await supabase
 				.from("games")
 				.select("*")
 				.neq("status", "completed")
-				.order("created_at", { ascending: false })
+				.order("created_at", {ascending: false})
 				.limit(1)
 				.maybeSingle();
 
@@ -62,37 +90,93 @@ export default function HostPage() {
 	// Fetch players in the lobby / game
 	const fetchLobbyPlayers = async () => {
 		if (!game) return;
-		const { data, error } = await supabase
+		const {data, error} = await supabase
 			.from("game_scores")
-			.select("players (name, avatar_url), bonus_score")
+			.select("players (id, name, avatar_url), bonus_score")
 			.eq("game_id", game.id);
 
 		if (!error && data) {
-			setPlayers(data.map(p => ({
+			const mapped = data.map((p) => ({
+				id: p.players?.id || "",
 				name: p.players?.name || "Unknown",
 				avatar: p.players?.avatar_url || "",
 				bonus: p.bonus_score || 0,
-			})));
+			}));
+			mapped.sort((a, b) => a.name.localeCompare(b.name));
+			setPlayers(mapped);
 		}
 	};
 
 	// Fetch count of answers submitted for current question
 	const fetchAnswerCount = async () => {
 		if (!game) return;
-		
+
 		const roundKey = `round${game.current_round}`;
 		const currentRoundQuestions = quizData[roundKey] || [];
 		const currentQuestion = currentRoundQuestions[game.current_question_index];
 		if (!currentQuestion) return;
 
-		const { count, error } = await supabase
+		const {count, error} = await supabase
 			.from("player_responses")
-			.select("*", { count: "exact", head: true })
+			.select("*", {count: "exact", head: true})
 			.eq("game_id", game.id)
 			.eq("question_id", currentQuestion.id);
 
 		if (!error) {
 			setAnswerCount(count || 0);
+		}
+	};
+
+	// Fetch actual player responses for active question
+	const fetchPlayerResponses = async () => {
+		if (!game || !currentQuestion) return;
+
+		const {data, error} = await supabase
+			.from("player_responses")
+			.select("player_id, selected_option, is_correct")
+			.eq("game_id", game.id)
+			.eq("question_id", currentQuestion.id);
+
+		if (!error && data) {
+			setPlayerResponses(data);
+		}
+	};
+
+	// Fetch active correct streaks for players
+	const fetchPlayerStreaks = async () => {
+		if (!game) return;
+		const {data, error} = await supabase
+			.from("player_responses")
+			.select("player_id, question_id, is_correct")
+			.eq("game_id", game.id);
+
+		if (!error && data) {
+			const responsesByPlayer = {};
+			data.forEach((r) => {
+				if (!responsesByPlayer[r.player_id]) {
+					responsesByPlayer[r.player_id] = [];
+				}
+				responsesByPlayer[r.player_id].push(r);
+			});
+
+			const newStreaks = {};
+			data.forEach((r) => {
+				const pId = r.player_id;
+				if (newStreaks[pId] !== undefined) return;
+
+				const pResponses = responsesByPlayer[pId] || [];
+				const sorted = pResponses.sort((a, b) => a.question_id - b.question_id);
+				let streak = 0;
+				for (let i = sorted.length - 1; i >= 0; i--) {
+					if (sorted[i].is_correct) {
+						streak++;
+					} else {
+						break;
+					}
+				}
+				newStreaks[pId] = streak;
+			});
+			setStreaks(newStreaks);
 		}
 	};
 
@@ -107,8 +191,11 @@ export default function HostPage() {
 	useEffect(() => {
 		if (!game) return;
 
+		setPlayerResponses([]);
 		fetchLobbyPlayers();
 		fetchAnswerCount();
+		fetchPlayerResponses();
+		fetchPlayerStreaks();
 		fetchStandings();
 
 		// Subscribe to game_scores (players joining or updating scores)
@@ -116,11 +203,16 @@ export default function HostPage() {
 			.channel(`host-scores-sync-${game.id}`)
 			.on(
 				"postgres_changes",
-				{ event: "*", schema: "public", table: "game_scores", filter: `game_id=eq.${game.id}` },
+				{
+					event: "*",
+					schema: "public",
+					table: "game_scores",
+					filter: `game_id=eq.${game.id}`,
+				},
 				() => {
 					fetchLobbyPlayers();
 					fetchStandings();
-				}
+				},
 			)
 			.subscribe();
 
@@ -129,10 +221,17 @@ export default function HostPage() {
 			.channel(`host-responses-sync-${game.id}`)
 			.on(
 				"postgres_changes",
-				{ event: "*", schema: "public", table: "player_responses", filter: `game_id=eq.${game.id}` },
+				{
+					event: "*",
+					schema: "public",
+					table: "player_responses",
+					filter: `game_id=eq.${game.id}`,
+				},
 				() => {
 					fetchAnswerCount();
-				}
+					fetchPlayerResponses();
+					fetchPlayerStreaks();
+				},
 			)
 			.subscribe();
 
@@ -140,7 +239,12 @@ export default function HostPage() {
 			supabase.removeChannel(scoresChannel);
 			supabase.removeChannel(responsesChannel);
 		};
-	}, [game?.id, game?.current_question_index, game?.current_round]);
+	}, [
+		game?.id,
+		game?.current_question_index,
+		game?.current_round,
+		currentQuestion?.id,
+	]);
 
 	// Timer ticks
 	useEffect(() => {
@@ -168,13 +272,15 @@ export default function HostPage() {
 			const newGame = await createGameRoom(values.topic, values.season);
 			setGame(newGame);
 		} catch (error) {
-			alert("Error starting game session. Please verify that the database table structure is set up correctly.");
+			alert(
+				"Error starting game session. Please verify that the database table structure is set up correctly.",
+			);
 		}
 	};
 
 	const handleStartGame = async () => {
 		if (!game) return;
-		const updated = await updateGameState(game.id, { status: "playing" });
+		const updated = await updateGameState(game.id, {status: "playing"});
 		setGame(updated);
 	};
 
@@ -183,10 +289,6 @@ export default function HostPage() {
 		stopTimer();
 	};
 
-	const roundKey = game ? `round${game.current_round}` : "round1";
-	const currentRoundQuestions = quizData[roundKey] || [];
-	const currentQuestion = game ? currentRoundQuestions[game.current_question_index] : null;
-
 	const handleNextQuestion = async () => {
 		if (!game || !currentQuestion) return;
 		setShowAnswer(false);
@@ -194,8 +296,9 @@ export default function HostPage() {
 		setTimer(15);
 		setIsTimerRunning(false);
 
-		const isLastInRound = game.current_question_index === currentRoundQuestions.length - 1;
-		
+		const isLastInRound =
+			game.current_question_index === currentRoundQuestions.length - 1;
+
 		if (isLastInRound) {
 			if (game.current_round < 3) {
 				// Advance round
@@ -206,7 +309,7 @@ export default function HostPage() {
 				setGame(updated);
 			} else {
 				// Completed last question
-				const updated = await updateGameState(game.id, { status: "leaderboard" });
+				const updated = await updateGameState(game.id, {status: "leaderboard"});
 				setGame(updated);
 			}
 		} else {
@@ -220,17 +323,14 @@ export default function HostPage() {
 
 	const handleFinalize = async () => {
 		if (!game) return;
-		if (confirm("Are you sure you want to end this game? Standings will be finalized.")) {
+		if (
+			confirm(
+				"Are you sure you want to end this game? Standings will be finalized.",
+			)
+		) {
 			await finalizeGame(game.id);
 			router.push("/");
 		}
-	};
-
-	const handleAddBonus = async (name, amount) => {
-		if (!game) return;
-		await updatePlayerBonus(game.id, name, amount);
-		fetchLobbyPlayers();
-		fetchStandings();
 	};
 
 	// 1. Setup new Game room
@@ -239,40 +339,55 @@ export default function HostPage() {
 			<div className="min-h-screen bg-slate-50 dark:bg-zinc-950 flex flex-col items-center justify-center p-6 relative">
 				{/* Back Link */}
 				<div className="mb-6 w-full max-w-md">
-					<Link href="/" className="inline-flex items-center gap-1 text-xs font-bold text-slate-500 hover:text-slate-800 dark:text-zinc-400 dark:hover:text-zinc-200 transition-colors">
+					<Link
+						href="/"
+						className="inline-flex items-center gap-1 text-xs font-bold text-slate-500 hover:text-slate-800 dark:text-zinc-400 dark:hover:text-zinc-200 transition-colors"
+					>
 						<ArrowLeft className="h-3.5 w-3.5" />
 						<span>Back to Home</span>
 					</Link>
 				</div>
 
-				<Card className="w-full max-w-md bg-white dark:bg-zinc-900/50 border border-slate-200 dark:border-zinc-800 text-slate-900 dark:text-zinc-100 shadow-md rounded-2xl">
+				<Card className="w-full max-w-lg bg-white dark:bg-zinc-900/50 border border-slate-200 dark:border-zinc-800 text-slate-900 dark:text-zinc-100 shadow-md rounded-2xl">
 					<CardHeader className="border-b border-slate-100 dark:border-zinc-800">
-						<CardTitle className="text-2xl font-extrabold text-center">Host Game Night</CardTitle>
+						<CardTitle className="text-2xl font-extrabold text-center">
+							Host Game Night
+						</CardTitle>
 						<CardDescription className="text-slate-500 dark:text-zinc-400 text-center">
 							Configure your quiz topic and season to launch the room
 						</CardDescription>
 					</CardHeader>
 					<CardContent className="py-6">
-						<form onSubmit={handleSubmit(handleCreateGame)} className="space-y-4">
+						<form
+							onSubmit={handleSubmit(handleCreateGame)}
+							className="space-y-4"
+						>
 							<div className="space-y-2">
-								<label className="text-xs uppercase font-extrabold tracking-wider text-slate-400 dark:text-zinc-500">Game Topic</label>
+								<label className="text-xs uppercase font-extrabold tracking-wider text-slate-400 dark:text-zinc-500">
+									Game Topic
+								</label>
 								<input
 									placeholder="e.g. New York Facts"
 									className="w-full bg-slate-50 dark:bg-zinc-900/50 border border-slate-200 dark:border-zinc-800 text-slate-900 dark:text-zinc-100 font-bold p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
-									{...register("topic", { required: true })}
+									{...register("topic", {required: true})}
 								/>
 							</div>
 
 							<div className="space-y-2">
-								<label className="text-xs uppercase font-extrabold tracking-wider text-slate-400 dark:text-zinc-500">Season / Period</label>
+								<label className="text-xs uppercase font-extrabold tracking-wider text-slate-400 dark:text-zinc-500">
+									Season / Period
+								</label>
 								<input
 									placeholder="e.g. June, 2026"
 									className="w-full bg-slate-50 dark:bg-zinc-900/50 border border-slate-200 dark:border-zinc-800 text-slate-900 dark:text-zinc-100 font-bold p-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
-									{...register("season", { required: true })}
+									{...register("season", {required: true})}
 								/>
 							</div>
 
-							<Button type="submit" className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-xl shadow-sm transition-all mt-2">
+							<Button
+								type="submit"
+								className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 rounded-xl shadow-sm transition-all mt-2"
+							>
 								Open Game Room
 							</Button>
 						</form>
@@ -291,12 +406,18 @@ export default function HostPage() {
 						<span className="text-[10px] uppercase font-black tracking-widest text-indigo-600 dark:text-indigo-400 block mb-1">
 							JOIN ON YOUR PHONE WITH PIN
 						</span>
-						<h1 className="text-6xl font-black font-mono tracking-widest text-indigo-700 dark:text-indigo-300">{game.pin}</h1>
+						<h1 className="text-6xl font-black font-mono tracking-widest text-indigo-700 dark:text-indigo-300">
+							{game.pin}
+						</h1>
 					</div>
 
 					<div>
-						<h2 className="text-3xl font-black text-slate-800 dark:text-zinc-100">{game.topic}</h2>
-						<p className="text-slate-500 dark:text-zinc-400 text-sm mt-1">Season: {game.season}</p>
+						<h2 className="text-3xl font-black text-slate-800 dark:text-zinc-100">
+							{game.topic}
+						</h2>
+						<p className="text-slate-500 dark:text-zinc-400 text-sm mt-1">
+							Season: {game.season}
+						</p>
 					</div>
 
 					<Separator className="border-slate-200 dark:border-zinc-800" />
@@ -314,11 +435,20 @@ export default function HostPage() {
 						) : (
 							<div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
 								{players.map((p, idx) => (
-									<div key={idx} className="bg-white dark:bg-zinc-900/50 border border-slate-200 dark:border-zinc-800 p-4 rounded-xl flex flex-col items-center gap-2 shadow-sm transition-all hover:shadow-md">
+									<div
+										key={idx}
+										className="bg-white dark:bg-zinc-900/50 border border-slate-200 dark:border-zinc-800 p-4 rounded-xl flex flex-col items-center gap-2 shadow-sm transition-all hover:shadow-md"
+									>
 										<div className="h-10 w-10 rounded-full bg-slate-100 overflow-hidden border border-slate-200 dark:border-zinc-800">
-											<img src={p.avatar} alt={p.name} className="h-full w-full object-cover" />
+											<img
+												src={p.avatar}
+												alt={p.name}
+												className="h-full w-full object-cover"
+											/>
 										</div>
-										<span className="font-extrabold text-sm text-slate-700 dark:text-zinc-200">{p.name}</span>
+										<span className="font-extrabold text-sm text-slate-700 dark:text-zinc-200">
+											{p.name}
+										</span>
 									</div>
 								))}
 							</div>
@@ -347,29 +477,49 @@ export default function HostPage() {
 				<div className="max-w-3xl mx-auto space-y-6">
 					<div className="text-center space-y-2">
 						<Trophy className="h-16 w-16 text-amber-500 mx-auto animate-bounce" />
-						<h1 className="text-4xl font-black text-slate-800 dark:text-zinc-100">Game Standings</h1>
-						<p className="text-slate-500 dark:text-zinc-400 text-sm">Final podium points for {game.topic}</p>
+						<h1 className="text-4xl font-black text-slate-800 dark:text-zinc-100">
+							Game Standings
+						</h1>
+						<p className="text-slate-500 dark:text-zinc-400 text-sm">
+							Final podium points for {game.topic}
+						</p>
 					</div>
 
 					<Card className="bg-white dark:bg-zinc-900/50 border border-slate-200 dark:border-zinc-800 text-slate-800 dark:text-zinc-100 rounded-2xl shadow-md p-4">
 						<div className="space-y-3">
 							{standings.map((team, idx) => (
-								<div key={idx} className="flex items-center justify-between p-4 rounded-xl border border-slate-200 dark:border-zinc-800 bg-slate-50/50 dark:bg-zinc-900/30">
+								<div
+									key={idx}
+									className="flex items-center justify-between p-4 rounded-xl border border-slate-200 dark:border-zinc-800 bg-slate-50/50 dark:bg-zinc-900/30"
+								>
 									<div className="flex items-center gap-4">
-										<span className="font-mono text-lg text-slate-400 font-bold">#{idx + 1}</span>
+										<span className="font-mono text-lg text-slate-400 font-bold">
+											#{idx + 1}
+										</span>
 										<div className="h-10 w-10 rounded-full bg-slate-100 overflow-hidden border border-slate-200 dark:border-zinc-850">
-											<img src={team.avatar} alt={team.name} className="h-full w-full object-cover" />
+											<img
+												src={team.avatar}
+												alt={team.name}
+												className="h-full w-full object-cover"
+											/>
 										</div>
-										<span className="font-extrabold text-slate-700 dark:text-zinc-200 text-base">{team.name}</span>
+										<span className="font-extrabold text-slate-700 dark:text-zinc-200 text-base">
+											{team.name}
+										</span>
 									</div>
-									<span className="font-mono text-indigo-600 dark:text-indigo-400 font-black text-lg">{team.points} pts</span>
+									<span className="font-mono text-indigo-600 dark:text-indigo-400 font-black text-lg">
+										{team.points} pts
+									</span>
 								</div>
 							))}
 						</div>
 					</Card>
 
 					<div className="flex justify-center gap-4">
-						<Button onClick={handleFinalize} className="bg-rose-600 hover:bg-rose-700 text-white font-bold px-8 py-3 rounded-xl transition-all shadow-sm">
+						<Button
+							onClick={handleFinalize}
+							className="bg-rose-600 hover:bg-rose-700 text-white font-bold px-8 py-3 rounded-xl transition-all shadow-sm"
+						>
 							Save Results & Close Room
 						</Button>
 					</div>
@@ -381,26 +531,40 @@ export default function HostPage() {
 	// 4. Main Question presenter view
 	return (
 		<div className="min-h-screen bg-slate-50 dark:bg-zinc-950 text-slate-800 dark:text-zinc-200 p-6 flex flex-col justify-between">
-			<div className="max-w-4xl mx-auto w-full space-y-6">
+			<div className=" mx-auto w-full space-y-6">
 				{/* Top bar info */}
 				<div className="flex justify-between items-center bg-white dark:bg-zinc-900/50 border border-slate-200 dark:border-zinc-800 p-4 rounded-xl shadow-sm">
 					<div>
-						<span className="text-[10px] uppercase font-black text-slate-400 dark:text-zinc-500 tracking-wider block">Topic</span>
-						<span className="text-sm font-extrabold text-slate-700 dark:text-zinc-200">{game.topic}</span>
+						<span className="text-[10px] uppercase font-black text-slate-400 dark:text-zinc-500 tracking-wider block">
+							Topic
+						</span>
+						<span className="text-sm font-extrabold text-slate-700 dark:text-zinc-200">
+							{game.topic}
+						</span>
 					</div>
 					<div className="text-center">
-						<span className="text-[10px] uppercase font-black text-slate-400 dark:text-zinc-500 tracking-wider block">Round</span>
-						<span className="text-sm font-extrabold text-slate-700 dark:text-zinc-200">{game.current_round}</span>
+						<span className="text-[10px] uppercase font-black text-slate-400 dark:text-zinc-500 tracking-wider block">
+							Round
+						</span>
+						<span className="text-sm font-extrabold text-slate-700 dark:text-zinc-200">
+							{game.current_round}
+						</span>
 					</div>
 					<div className="text-right">
-						<span className="text-[10px] uppercase font-black text-slate-400 dark:text-zinc-500 tracking-wider block">PIN Code</span>
-						<span className="text-sm font-mono font-black text-indigo-600 dark:text-indigo-400">{game.pin}</span>
+						<span className="text-[10px] uppercase font-black text-slate-400 dark:text-zinc-500 tracking-wider block">
+							PIN Code
+						</span>
+						<span className="text-sm font-mono font-black text-indigo-600 dark:text-indigo-400">
+							{game.pin}
+						</span>
 					</div>
 				</div>
 
 				{/* Question Card */}
 				{!currentQuestion ? (
-					<div className="text-center py-20 text-slate-400 italic">Retrieving question details...</div>
+					<div className="text-center py-20 text-slate-400 italic">
+						Retrieving question details...
+					</div>
 				) : (
 					<Card className="bg-white dark:bg-zinc-900/50 border border-slate-200 dark:border-zinc-800 text-slate-800 dark:text-zinc-100 rounded-2xl shadow-md overflow-hidden">
 						<div className="p-8 space-y-6">
@@ -419,8 +583,9 @@ export default function HostPage() {
 							<div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
 								{currentQuestion.options.map((option, idx) => {
 									const isCorrect = option === currentQuestion.correctAnswer;
-									let itemStyle = "border-slate-200 dark:border-zinc-800 bg-slate-50 dark:bg-zinc-900/30 text-slate-700 dark:text-zinc-300";
-									
+									let itemStyle =
+										"border-slate-200 dark:border-zinc-800 bg-slate-50 dark:bg-zinc-900/30 text-slate-700 dark:text-zinc-300";
+
 									if (showAnswer) {
 										itemStyle = isCorrect
 											? "border-emerald-500/50 bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 font-extrabold"
@@ -428,7 +593,10 @@ export default function HostPage() {
 									}
 
 									return (
-										<div key={idx} className={`p-4 rounded-xl border flex items-center gap-3 transition-all ${itemStyle}`}>
+										<div
+											key={idx}
+											className={`p-4 rounded-xl border flex items-center gap-3 transition-all ${itemStyle}`}
+										>
 											<span className="h-6 w-6 rounded bg-black/5 dark:bg-black/20 flex items-center justify-center text-xs font-mono font-bold text-slate-500">
 												{String.fromCharCode(65 + idx)}
 											</span>
@@ -440,8 +608,12 @@ export default function HostPage() {
 
 							{showAnswer && (
 								<div className="p-4 rounded-xl bg-slate-50 dark:bg-zinc-900/30 border border-slate-200 dark:border-zinc-800 text-sm space-y-1">
-									<span className="font-extrabold text-indigo-600 dark:text-indigo-400 block">Explanation:</span>
-									<p className="text-slate-600 dark:text-zinc-300">{currentQuestion.description}</p>
+									<span className="font-extrabold text-indigo-600 dark:text-indigo-400 block">
+										Explanation:
+									</span>
+									<p className="text-slate-600 dark:text-zinc-300">
+										{currentQuestion.description}
+									</p>
 								</div>
 							)}
 						</div>
@@ -452,39 +624,149 @@ export default function HostPage() {
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 					<Card className="md:col-span-1 bg-white dark:bg-zinc-900/50 border border-slate-200 dark:border-zinc-800 text-slate-800 dark:text-zinc-100 rounded-2xl p-6 flex flex-col justify-center items-center text-center shadow-sm">
 						<Users className="h-8 w-8 text-indigo-600 dark:text-indigo-400 mb-2 animate-pulse" />
-						<span className="text-3xl font-black text-slate-800 dark:text-zinc-100">{answerCount} / {players.length}</span>
+						<span className="text-3xl font-black text-slate-800 dark:text-zinc-100">
+							{answerCount} / {players.length}
+						</span>
 						<span className="text-xs uppercase font-extrabold text-slate-400 dark:text-zinc-500 mt-1.5 tracking-wider">
 							Answers Submitted
 						</span>
 					</Card>
 
 					<Card className="md:col-span-2 bg-white dark:bg-zinc-900/50 border border-slate-200 dark:border-zinc-800 text-slate-800 dark:text-zinc-100 rounded-2xl p-6 shadow-sm">
-						<span className="text-xs uppercase font-extrabold text-slate-400 dark:text-zinc-500 tracking-wider block mb-3">
-							Quick Room Scores & Adjustments
-						</span>
-						<div className="space-y-2 max-h-40 overflow-y-auto pr-1">
-							{players.map((p, idx) => (
-								<div key={idx} className="flex items-center justify-between text-xs py-1.5 border-b border-slate-100 dark:border-zinc-800 last:border-0">
-									<span className="font-bold text-slate-700 dark:text-zinc-300">{p.name}</span>
-									<div className="flex items-center gap-3">
-										<span className="text-slate-500 font-mono">Bonus: {p.bonus}</span>
-										<div className="flex gap-1.5">
-											<button
-												onClick={() => handleAddBonus(p.name, 5)}
-												className="px-2 py-0.5 rounded bg-emerald-50 hover:bg-emerald-100 dark:bg-emerald-950/20 dark:hover:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 font-extrabold border border-emerald-100 dark:border-emerald-900/20"
-											>
-												+5
-											</button>
-											<button
-												onClick={() => handleAddBonus(p.name, -5)}
-												className="px-2 py-0.5 rounded bg-rose-50 hover:bg-rose-100 dark:bg-rose-950/20 dark:hover:bg-rose-900/30 text-rose-600 dark:text-rose-400 font-extrabold border border-rose-100 dark:border-rose-900/20"
-											>
-												-5
-											</button>
-										</div>
-									</div>
+						<div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+							{/* Column 1: Live Responses */}
+							<div>
+								<span className="text-xs uppercase font-extrabold text-slate-400 dark:text-zinc-500 tracking-wider block mb-3">
+									Live Responses
+								</span>
+								<div className="space-y-2 max-h-40 overflow-y-auto pr-1">
+									{players.map((p, idx) => {
+										const response = playerResponses.find(
+											(r) => r.player_id === p.id,
+										);
+										const isCorrect = response?.is_correct;
+										const isWrong = response && !response.is_correct;
+
+										// Map selected option back to letter (A, B, C, D)
+										let optionLetter = "";
+										if (response && currentQuestion?.options) {
+											const optionIdx = currentQuestion.options.indexOf(
+												response.selected_option,
+											);
+											if (optionIdx !== -1) {
+												optionLetter = String.fromCharCode(65 + optionIdx);
+											}
+										}
+
+										// Row background styling
+										let rowClass =
+											"flex items-center justify-between text-xs py-2 px-2 border-b border-slate-100 dark:border-zinc-800 last:border-0 transition-all rounded-lg";
+										if (response) {
+											if (isCorrect) {
+												rowClass +=
+													" bg-emerald-50/50 dark:bg-emerald-950/10 border-emerald-100/50 dark:border-emerald-950/20";
+											} else if (isWrong) {
+												rowClass +=
+													" bg-rose-50/50 dark:bg-rose-950/10 border-rose-100/50 dark:border-rose-950/20";
+											}
+										}
+
+										return (
+											<div key={idx} className={rowClass}>
+												<div className="flex items-center gap-2 max-w-[45%]">
+													{p.avatar && (
+														<div className="h-6 w-6 rounded-full bg-slate-100 overflow-hidden border border-slate-200 dark:border-zinc-800 flex-shrink-0">
+															<img
+																src={p.avatar}
+																alt={p.name}
+																className="h-full w-full object-cover"
+															/>
+														</div>
+													)}
+													<span className="font-extrabold text-slate-700 dark:text-zinc-200 truncate">
+														{p.name}
+													</span>
+												</div>
+												{response ? (
+													<div className="flex items-center gap-2 flex-shrink-0">
+														<div className="flex items-center gap-1 bg-slate-100 dark:bg-zinc-850 px-2 py-0.5 rounded font-mono text-[11px] max-w-[80px]">
+															{optionLetter && (
+																<span className="font-extrabold text-indigo-600 dark:text-indigo-400">
+																	{optionLetter}
+																</span>
+															)}
+															<span
+																className="text-slate-500 dark:text-zinc-400 truncate"
+																title={response.selected_option}
+															>
+																{response.selected_option}
+															</span>
+														</div>
+														{isCorrect ? (
+															<span className="inline-flex items-center gap-1 text-[10px] px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-700 font-extrabold dark:bg-emerald-950/20 dark:text-emerald-400 uppercase tracking-wide">
+																<CheckCircle className="h-3 w-3" />
+																Correct
+															</span>
+														) : (
+															<span className="inline-flex items-center gap-1 text-[10px] px-1.5 py-0.5 rounded bg-rose-100 text-rose-700 font-extrabold dark:bg-rose-950/20 dark:text-rose-400 uppercase tracking-wide">
+																<XCircle className="h-3 w-3" />
+																Wrong
+															</span>
+														)}
+													</div>
+												) : (
+													<span className="text-slate-400 dark:text-zinc-500 italic animate-pulse">
+														Thinking...
+													</span>
+												)}
+											</div>
+										);
+									})}
 								</div>
-							))}
+							</div>
+
+							{/* Column 2: Streaks & Auto-Bonus */}
+							<div>
+								<span className="text-xs uppercase font-extrabold text-slate-400 dark:text-zinc-500 tracking-wider block mb-3">
+									Streaks & Auto-Bonus
+								</span>
+								<div className="space-y-2 max-h-40 overflow-y-auto pr-1">
+									{players.map((p, idx) => {
+										const streak = streaks[p.id] || 0;
+										return (
+											<div
+												key={idx}
+												className="flex items-center justify-between text-xs py-2 px-2 border-b border-slate-100 dark:border-zinc-800 last:border-0 rounded-lg transition-all"
+											>
+												<div className="flex items-center gap-2">
+													{p.avatar && (
+														<div className="h-5 w-5 rounded-full bg-slate-100 overflow-hidden border border-slate-200 dark:border-zinc-800 flex-shrink-0">
+															<img
+																src={p.avatar}
+																alt={p.name}
+																className="h-full w-full object-cover"
+															/>
+														</div>
+													)}
+													<span className="font-bold text-slate-700 dark:text-zinc-300">
+														{p.name}
+													</span>
+												</div>
+												<div className="flex items-center gap-3">
+													{streak > 0 && (
+														<span className="inline-flex items-center gap-1 font-extrabold text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-950/20 px-1.5 py-0.5 rounded border border-amber-200/25 dark:border-amber-900/20">
+															🔥 {streak} {streak >= 3 ? "Streak!" : ""}
+														</span>
+													)}
+													<span className="text-slate-500 dark:text-zinc-400 font-mono font-bold">
+														Bonus: +{p.bonus}
+													</span>
+												</div>
+											</div>
+										);
+									})}
+								</div>
+							</div>
 						</div>
 					</Card>
 				</div>
@@ -522,7 +804,12 @@ export default function HostPage() {
 						size="sm"
 						className="rounded-xl font-bold h-10 bg-indigo-600 hover:bg-indigo-700 text-white gap-2 text-xs transition-all"
 					>
-						<span>{game.current_question_index === currentRoundQuestions.length - 1 && game.current_round === 3 ? "Tally Standings" : "Next Question"}</span>
+						<span>
+							{game.current_question_index ===
+								currentRoundQuestions.length - 1 && game.current_round === 3
+								? "Tally Standings"
+								: "Next Question"}
+						</span>
 						<SkipForward className="h-4 w-4 fill-white" />
 					</Button>
 

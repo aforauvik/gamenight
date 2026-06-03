@@ -61,49 +61,85 @@ export async function joinGameRoom(pin, nickname) {
 		throw new Error("Invalid or inactive game PIN code.");
 	}
 
-	// 2. Create the player record
-	const avatars = [
-		"/grandma.webp",
-		"/mom.webp",
-		"/aunt-sabrina.webp",
-		"/hannah.jpeg",
-		"/leif.jpeg",
-		"/julian.jpeg",
-		"/landon.jpeg",
-		"/christine.jpeg",
-		"/leo.jpeg",
-	];
-	const randomAvatar = avatars[Math.floor(Math.random() * avatars.length)];
+	const trimmedName = nickname.trim();
 
-	const { data: player, error: playerError } = await supabase
+	// 2. Fetch or create the player record
+	const { data: existingPlayer, error: findError } = await supabase
 		.from("players")
-		.insert({
-			name: nickname,
-			avatar_url: randomAvatar,
-		})
-		.select()
-		.single();
+		.select("*")
+		.ilike("name", trimmedName)
+		.maybeSingle();
 
-	if (playerError) {
-		console.error("Error registering player:", playerError);
-		throw playerError;
+	if (findError) {
+		console.error("Error looking up player:", findError);
+		throw findError;
 	}
 
-	// 3. Create the game score record for the player
-	const { error: scoreError } = await supabase
-		.from("game_scores")
-		.insert({
-			game_id: game.id,
-			player_id: player.id,
-			round_1_score: 0,
-			round_2_score: 0,
-			round_3_score: 0,
-			bonus_score: 0,
-		});
+	let player;
 
-	if (scoreError) {
-		console.error("Error creating score entry:", scoreError);
-		throw scoreError;
+	if (existingPlayer) {
+		player = existingPlayer;
+	} else {
+		// Create a new player record
+		const avatars = [
+			"/grandma.webp",
+			"/mom.webp",
+			"/aunt-sabrina.webp",
+			"/hannah.jpeg",
+			"/leif.jpeg",
+			"/julian.jpeg",
+			"/landon.jpeg",
+			"/christine.jpeg",
+			"/leo.jpeg",
+		];
+		const randomAvatar = avatars[Math.floor(Math.random() * avatars.length)];
+
+		const { data: newPlayer, error: playerError } = await supabase
+			.from("players")
+			.insert({
+				name: trimmedName,
+				avatar_url: randomAvatar,
+			})
+			.select()
+			.single();
+
+		if (playerError) {
+			console.error("Error registering player:", playerError);
+			throw playerError;
+		}
+		player = newPlayer;
+	}
+
+	// 3. Check if game score record already exists for this player in this game session
+	const { data: existingScore, error: scoreCheckError } = await supabase
+		.from("game_scores")
+		.select("id")
+		.eq("game_id", game.id)
+		.eq("player_id", player.id)
+		.maybeSingle();
+
+	if (scoreCheckError) {
+		console.error("Error checking score entry:", scoreCheckError);
+		throw scoreCheckError;
+	}
+
+	if (!existingScore) {
+		// Create the game score record for the player
+		const { error: scoreError } = await supabase
+			.from("game_scores")
+			.insert({
+				game_id: game.id,
+				player_id: player.id,
+				round_1_score: 0,
+				round_2_score: 0,
+				round_3_score: 0,
+				bonus_score: 0,
+			});
+
+		if (scoreError) {
+			console.error("Error creating score entry:", scoreError);
+			throw scoreError;
+		}
 	}
 
 	return { player, game };
@@ -164,6 +200,49 @@ export async function submitAnswer(gameId, playerId, questionId, round, selected
 	if (scoreUpdateError) {
 		console.error("Error updating player score:", scoreUpdateError);
 		throw scoreUpdateError;
+	}
+
+	// 4. Automatically add bonus point for 3-in-a-row correct answer streak
+	if (isCorrect) {
+		try {
+			const { data: allResponses, error: fetchErr } = await supabase
+				.from("player_responses")
+				.select("question_id, is_correct")
+				.eq("game_id", gameId)
+				.eq("player_id", playerId);
+
+			if (!fetchErr && allResponses) {
+				const sorted = allResponses.sort((a, b) => a.question_id - b.question_id);
+				let streak = 0;
+				for (let i = sorted.length - 1; i >= 0; i--) {
+					if (sorted[i].is_correct) {
+						streak++;
+					} else {
+						break;
+					}
+				}
+
+				if (streak > 0 && streak % 3 === 0) {
+					// Fetch current bonus score
+					const { data: scoreData } = await supabase
+						.from("game_scores")
+						.select("bonus_score")
+						.eq("game_id", gameId)
+						.eq("player_id", playerId)
+						.maybeSingle();
+
+					const currentBonus = scoreData?.bonus_score || 0;
+					
+					await supabase
+						.from("game_scores")
+						.update({ bonus_score: currentBonus + 1 })
+						.eq("game_id", gameId)
+						.eq("player_id", playerId);
+				}
+			}
+		} catch (streakErr) {
+			console.error("Error calculating streak or updating bonus:", streakErr);
+		}
 	}
 
 	return { correctCount };

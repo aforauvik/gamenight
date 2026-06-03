@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { joinGameRoom } from "@/features/game/services/gameService";
+import { supabase } from "@/lib/supabase";
 import { Sparkles, Gamepad2, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
@@ -13,6 +14,7 @@ export default function JoinPage() {
 	const router = useRouter();
 	const [isLoading, setIsLoading] = useState(false);
 	const [serverError, setServerError] = useState("");
+	const [playersList, setPlayersList] = useState([]);
 	
 	const {
 		register,
@@ -24,6 +26,20 @@ export default function JoinPage() {
 			nickname: "",
 		}
 	});
+
+	// Fetch players list on mount
+	React.useEffect(() => {
+		const fetchPlayers = async () => {
+			const { data, error } = await supabase
+				.from("players")
+				.select("name")
+				.order("name", { ascending: true });
+			if (!error && data) {
+				setPlayersList(data);
+			}
+		};
+		fetchPlayers();
+	}, []);
 
 	const onSubmit = async (values) => {
 		setIsLoading(true);
@@ -65,7 +81,7 @@ export default function JoinPage() {
 						<Sparkles className="h-5 w-5 text-indigo-500" />
 					</CardTitle>
 					<CardDescription className="text-slate-500 dark:text-zinc-400 text-sm mt-1">
-						Enter the room PIN and your nickname to join the lobby
+						Enter the room PIN and select your name to join the lobby
 					</CardDescription>
 				</CardHeader>
 				<CardContent className="py-6">
@@ -102,26 +118,24 @@ export default function JoinPage() {
 
 						<div className="space-y-2">
 							<label htmlFor="nickname" className="text-xs uppercase font-extrabold tracking-wider text-slate-400 dark:text-zinc-500">
-								Your Nickname
+								Select Your Name
 							</label>
-							<input
+							<select
 								id="nickname"
-								placeholder="e.g. Grandma, Hannah, Julian"
 								className={`w-full bg-slate-50 dark:bg-zinc-900/50 border ${
 									errors.nickname ? "border-rose-500 focus:ring-rose-500" : "border-slate-200 dark:border-zinc-800 focus:ring-indigo-500"
 								} text-slate-900 dark:text-zinc-100 font-bold p-3 rounded-xl focus:outline-none focus:ring-2 transition-all`}
 								{...register("nickname", {
-									required: "Nickname is required",
-									minLength: {
-										value: 2,
-										message: "Nickname must be at least 2 characters",
-									},
-									maxLength: {
-										value: 15,
-										message: "Nickname must not exceed 15 characters",
-									},
+									required: "Name selection is required",
 								})}
-							/>
+							>
+								<option value="" className="text-slate-400">-- Choose Your Name --</option>
+								{playersList.map((player) => (
+									<option key={player.name} value={player.name} className="text-slate-800 dark:text-zinc-200">
+										{player.name}
+									</option>
+								))}
+							</select>
 							{errors.nickname && (
 								<p className="text-xs font-semibold text-rose-500">{errors.nickname.message}</p>
 							)}

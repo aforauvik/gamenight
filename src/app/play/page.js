@@ -226,9 +226,12 @@ export default function PlayPage() {
 					</div>
 				) : (
 					<div className="space-y-4">
-						<h2 className="text-lg font-bold text-center text-slate-300 mb-6 leading-relaxed">
-							Tap your answer choice:
-						</h2>
+						<div className="bg-slate-800/40 border border-slate-700/40 p-4 rounded-xl mb-4 shadow-sm text-center">
+							<span className="text-[10px] uppercase font-black text-indigo-400 tracking-wider block mb-1">Active Question</span>
+							<h2 className="text-base font-bold text-white leading-relaxed">
+								{currentQuestion.question}
+							</h2>
+						</div>
 						<div className="grid grid-cols-1 gap-3.5">
 							{currentQuestion.options.map((option, index) => {
 								const colors = [
