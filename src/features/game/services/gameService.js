@@ -1,5 +1,5 @@
-import { supabase } from "@/lib/supabase";
-import { getActiveGameStandings } from "@/features/leaderboard/services/leaderboardService";
+import {supabase} from "@/lib/supabase";
+import {getActiveGameStandings} from "@/features/leaderboard/services/leaderboardService";
 
 /**
  * Creates a new active game room with a unique PIN.
@@ -12,7 +12,7 @@ export async function createGameRoom(topic, season) {
 	// Keep trying to generate a unique 4-digit PIN
 	while (!isUnique && attempts < 10) {
 		pin = Math.floor(1000 + Math.random() * 9000).toString();
-		const { data } = await supabase
+		const {data} = await supabase
 			.from("games")
 			.select("id")
 			.eq("pin", pin)
@@ -24,7 +24,7 @@ export async function createGameRoom(topic, season) {
 		attempts++;
 	}
 
-	const { data: newGame, error } = await supabase
+	const {data: newGame, error} = await supabase
 		.from("games")
 		.insert({
 			pin,
@@ -50,7 +50,7 @@ export async function createGameRoom(topic, season) {
  */
 export async function joinGameRoom(pin, nickname) {
 	// 1. Fetch active game by PIN
-	const { data: game, error: gameError } = await supabase
+	const {data: game, error: gameError} = await supabase
 		.from("games")
 		.select("*")
 		.eq("pin", pin)
@@ -64,7 +64,7 @@ export async function joinGameRoom(pin, nickname) {
 	const trimmedName = nickname.trim();
 
 	// 2. Fetch or create the player record
-	const { data: existingPlayer, error: findError } = await supabase
+	const {data: existingPlayer, error: findError} = await supabase
 		.from("players")
 		.select("*")
 		.ilike("name", trimmedName)
@@ -83,18 +83,18 @@ export async function joinGameRoom(pin, nickname) {
 		// Create a new player record
 		const avatars = [
 			"/grandma.webp",
-			"/mom.webp",
-			"/aunt-sabrina.webp",
-			"/hannah.jpeg",
-			"/leif.jpeg",
-			"/julian.jpeg",
-			"/landon.jpeg",
-			"/christine.jpeg",
-			"/leo.jpeg",
+			"/tabitha.webp",
+			"/sabrina.webp",
+			"/hannah.webp",
+			"/leif.webp",
+			"/julian.webp",
+			"/landon.webp",
+			"/christine.webp",
+			"/leo.webp",
 		];
 		const randomAvatar = avatars[Math.floor(Math.random() * avatars.length)];
 
-		const { data: newPlayer, error: playerError } = await supabase
+		const {data: newPlayer, error: playerError} = await supabase
 			.from("players")
 			.insert({
 				name: trimmedName,
@@ -111,7 +111,7 @@ export async function joinGameRoom(pin, nickname) {
 	}
 
 	// 3. Check if game score record already exists for this player in this game session
-	const { data: existingScore, error: scoreCheckError } = await supabase
+	const {data: existingScore, error: scoreCheckError} = await supabase
 		.from("game_scores")
 		.select("id")
 		.eq("game_id", game.id)
@@ -125,16 +125,14 @@ export async function joinGameRoom(pin, nickname) {
 
 	if (!existingScore) {
 		// Create the game score record for the player
-		const { error: scoreError } = await supabase
-			.from("game_scores")
-			.insert({
-				game_id: game.id,
-				player_id: player.id,
-				round_1_score: 0,
-				round_2_score: 0,
-				round_3_score: 0,
-				bonus_score: 0,
-			});
+		const {error: scoreError} = await supabase.from("game_scores").insert({
+			game_id: game.id,
+			player_id: player.id,
+			round_1_score: 0,
+			round_2_score: 0,
+			round_3_score: 0,
+			bonus_score: 0,
+		});
 
 		if (scoreError) {
 			console.error("Error creating score entry:", scoreError);
@@ -142,27 +140,32 @@ export async function joinGameRoom(pin, nickname) {
 		}
 	}
 
-	return { player, game };
+	return {player, game};
 }
 
 /**
  * Submits a player's answer, computes correctness, and aggregates the round score.
  */
-export async function submitAnswer(gameId, playerId, questionId, round, selectedOption, isCorrect) {
+export async function submitAnswer(
+	gameId,
+	playerId,
+	questionId,
+	round,
+	selectedOption,
+	isCorrect,
+) {
 	// 1. Upsert response into player_responses
-	const { error: responseError } = await supabase
-		.from("player_responses")
-		.upsert(
-			{
-				game_id: gameId,
-				player_id: playerId,
-				question_id: questionId,
-				round: round,
-				selected_option: selectedOption,
-				is_correct: isCorrect,
-			},
-			{ onConflict: "game_id,player_id,question_id" }
-		);
+	const {error: responseError} = await supabase.from("player_responses").upsert(
+		{
+			game_id: gameId,
+			player_id: playerId,
+			question_id: questionId,
+			round: round,
+			selected_option: selectedOption,
+			is_correct: isCorrect,
+		},
+		{onConflict: "game_id,player_id,question_id"},
+	);
 
 	if (responseError) {
 		console.error("Error writing player response:", responseError);
@@ -170,7 +173,7 @@ export async function submitAnswer(gameId, playerId, questionId, round, selected
 	}
 
 	// 2. Fetch the aggregate count of correct answers in this round for this player
-	const { data: correctResponses, error: countError } = await supabase
+	const {data: correctResponses, error: countError} = await supabase
 		.from("player_responses")
 		.select("id")
 		.eq("game_id", gameId)
@@ -191,7 +194,7 @@ export async function submitAnswer(gameId, playerId, questionId, round, selected
 	if (round === 2) updateFields.round_2_score = correctCount;
 	if (round === 3) updateFields.round_3_score = correctCount;
 
-	const { error: scoreUpdateError } = await supabase
+	const {error: scoreUpdateError} = await supabase
 		.from("game_scores")
 		.update(updateFields)
 		.eq("game_id", gameId)
@@ -205,14 +208,16 @@ export async function submitAnswer(gameId, playerId, questionId, round, selected
 	// 4. Automatically add bonus point for 3-in-a-row correct answer streak
 	if (isCorrect) {
 		try {
-			const { data: allResponses, error: fetchErr } = await supabase
+			const {data: allResponses, error: fetchErr} = await supabase
 				.from("player_responses")
 				.select("question_id, is_correct")
 				.eq("game_id", gameId)
 				.eq("player_id", playerId);
 
 			if (!fetchErr && allResponses) {
-				const sorted = allResponses.sort((a, b) => a.question_id - b.question_id);
+				const sorted = allResponses.sort(
+					(a, b) => a.question_id - b.question_id,
+				);
 				let streak = 0;
 				for (let i = sorted.length - 1; i >= 0; i--) {
 					if (sorted[i].is_correct) {
@@ -224,7 +229,7 @@ export async function submitAnswer(gameId, playerId, questionId, round, selected
 
 				if (streak > 0 && streak % 3 === 0) {
 					// Fetch current bonus score
-					const { data: scoreData } = await supabase
+					const {data: scoreData} = await supabase
 						.from("game_scores")
 						.select("bonus_score")
 						.eq("game_id", gameId)
@@ -232,10 +237,10 @@ export async function submitAnswer(gameId, playerId, questionId, round, selected
 						.maybeSingle();
 
 					const currentBonus = scoreData?.bonus_score || 0;
-					
+
 					await supabase
 						.from("game_scores")
-						.update({ bonus_score: currentBonus + 1 })
+						.update({bonus_score: currentBonus + 1})
 						.eq("game_id", gameId)
 						.eq("player_id", playerId);
 				}
@@ -245,14 +250,14 @@ export async function submitAnswer(gameId, playerId, questionId, round, selected
 		}
 	}
 
-	return { correctCount };
+	return {correctCount};
 }
 
 /**
  * Updates the game active states (question index, round, or status).
  */
 export async function updateGameState(gameId, updates) {
-	const { data, error } = await supabase
+	const {data, error} = await supabase
 		.from("games")
 		.update(updates)
 		.eq("id", gameId)
@@ -272,7 +277,7 @@ export async function updateGameState(gameId, updates) {
  */
 export async function updatePlayerBonus(gameId, name, bonusDelta) {
 	// Find player ID
-	const { data: player } = await supabase
+	const {data: player} = await supabase
 		.from("players")
 		.select("id")
 		.eq("name", name)
@@ -282,7 +287,7 @@ export async function updatePlayerBonus(gameId, name, bonusDelta) {
 	if (!player) return;
 
 	// Get current bonus
-	const { data: scoreData } = await supabase
+	const {data: scoreData} = await supabase
 		.from("game_scores")
 		.select("bonus_score")
 		.eq("game_id", gameId)
@@ -293,7 +298,7 @@ export async function updatePlayerBonus(gameId, name, bonusDelta) {
 
 	await supabase
 		.from("game_scores")
-		.update({ bonus_score: currentBonus + bonusDelta })
+		.update({bonus_score: currentBonus + bonusDelta})
 		.eq("game_id", gameId)
 		.eq("player_id", player.id);
 }
@@ -311,7 +316,7 @@ export async function finalizeGame(gameId) {
 		const podiumPosition = i === 0 ? 1 : i === 1 ? 2 : i === 2 ? 3 : null;
 
 		// Fetch player record to get their UUID
-		const { data: player } = await supabase
+		const {data: player} = await supabase
 			.from("players")
 			.select("id")
 			.eq("name", entry.name)
@@ -321,14 +326,14 @@ export async function finalizeGame(gameId) {
 		if (player) {
 			await supabase
 				.from("game_scores")
-				.update({ podium_finish: podiumPosition })
+				.update({podium_finish: podiumPosition})
 				.eq("game_id", gameId)
 				.eq("player_id", player.id);
 		}
 	}
 
 	// 3. Mark the game as completed and remove its active PIN
-	const { error } = await supabase
+	const {error} = await supabase
 		.from("games")
 		.update({
 			status: "completed",

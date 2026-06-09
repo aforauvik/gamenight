@@ -19,7 +19,7 @@ export const rawTeams2026 = [
 	},
 	{
 		name: "Aunt Sabrina",
-		avatar: "/aunt-sabrina.webp",
+		avatar: "/sabrina.webp",
 		round1: 0,
 		round2: 0,
 		round3: 0,
@@ -30,7 +30,7 @@ export const rawTeams2026 = [
 	},
 	{
 		name: "Mom",
-		avatar: "/mom.webp",
+		avatar: "/tabitha.webp",
 		round1: 0,
 		round2: 0,
 		round3: 0,
@@ -41,7 +41,7 @@ export const rawTeams2026 = [
 	},
 	{
 		name: "Hannah",
-		avatar: "/hannah.jpeg",
+		avatar: "/hannah.webp",
 		round1: 0,
 		round2: 0,
 		round3: 0,
@@ -52,7 +52,7 @@ export const rawTeams2026 = [
 	},
 	{
 		name: "Leif",
-		avatar: "/leif.jpeg",
+		avatar: "/leif.webp",
 		round1: 0,
 		round2: 0,
 		round3: 0,
@@ -63,7 +63,7 @@ export const rawTeams2026 = [
 	},
 	{
 		name: "Julian",
-		avatar: "/julian.jpeg",
+		avatar: "/julian.webp",
 		round1: 0,
 		round2: 0,
 		round3: 0,
@@ -74,7 +74,7 @@ export const rawTeams2026 = [
 	},
 	{
 		name: "Landon",
-		avatar: "/landon.jpeg",
+		avatar: "/landon.webp",
 		round1: 0,
 		round2: 0,
 		round3: 0,
@@ -85,7 +85,7 @@ export const rawTeams2026 = [
 	},
 	{
 		name: "Christine",
-		avatar: "/christine.jpeg",
+		avatar: "/christine.webp",
 		round1: 0,
 		round2: 0,
 		round3: 0,
@@ -96,7 +96,7 @@ export const rawTeams2026 = [
 	},
 	{
 		name: "Leo",
-		avatar: "/leo.jpeg",
+		avatar: "/leo.webp",
 		round1: 0,
 		round2: 0,
 		round3: 0,
@@ -150,7 +150,7 @@ export const rawTeams2025 = [
 	},
 	{
 		name: "Hannah",
-		avatar: "/hannah.jpeg",
+		avatar: "/hannah.webp",
 		round1: 8,
 		round2: 6,
 		round3: 0,
@@ -161,7 +161,7 @@ export const rawTeams2025 = [
 	},
 	{
 		name: "Leif",
-		avatar: "/leif.jpeg",
+		avatar: "/leif.webp",
 		round1: 9,
 		round2: 2,
 		round3: 3,
@@ -172,7 +172,7 @@ export const rawTeams2025 = [
 	},
 	{
 		name: "Julian",
-		avatar: "/julian.jpeg",
+		avatar: "/julian.webp",
 		round1: 0,
 		round2: 0,
 		round3: 0,
@@ -183,7 +183,7 @@ export const rawTeams2025 = [
 	},
 	{
 		name: "Landon",
-		avatar: "/landon.jpeg",
+		avatar: "/landon.webp",
 		round1: 0,
 		round2: 0,
 		round3: 0,
@@ -194,7 +194,7 @@ export const rawTeams2025 = [
 	},
 	{
 		name: "Christine",
-		avatar: "/christine.jpeg",
+		avatar: "/christine.webp",
 		round1: 0,
 		round2: 0,
 		round3: 0,
@@ -205,7 +205,7 @@ export const rawTeams2025 = [
 	},
 	{
 		name: "Leo",
-		avatar: "/leo.jpeg",
+		avatar: "/leo.webp",
 		round1: 0,
 		round2: 0,
 		round3: 0,
