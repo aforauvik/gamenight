@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Button } from "@/components/ui/button";
 import { joinGameRoom } from "@/features/game/services/gameService";
 import { supabase } from "@/lib/supabase";
+import { safeSessionStorage } from "@/lib/storage";
 import { Sparkles, Gamepad2, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
@@ -48,10 +49,10 @@ export default function JoinPage() {
 			const { player, game } = await joinGameRoom(values.pin.trim(), values.nickname.trim());
 			
 			// Store session details in sessionStorage
-			sessionStorage.setItem("gamenight_player_id", player.id);
-			sessionStorage.setItem("gamenight_player_name", player.name);
-			sessionStorage.setItem("gamenight_game_id", game.id);
-			sessionStorage.setItem("gamenight_game_pin", game.pin);
+			safeSessionStorage.setItem("gamenight_player_id", player.id);
+			safeSessionStorage.setItem("gamenight_player_name", player.name);
+			safeSessionStorage.setItem("gamenight_game_id", game.id);
+			safeSessionStorage.setItem("gamenight_game_pin", game.pin);
 
 			router.push("/play");
 		} catch (error) {

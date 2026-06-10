@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/lib/supabase";
 import { quizData } from "@/app/questions/data";
+import { safeSessionStorage } from "@/lib/storage";
 import { submitAnswer } from "@/features/game/services/gameService";
 import { Smile, CheckCircle, RefreshCw, LogOut } from "lucide-react";
 
@@ -29,10 +30,10 @@ export default function PlayPage() {
 	
 	// Load player session details
 	useEffect(() => {
-		const storedPlayerId = sessionStorage.getItem("gamenight_player_id");
-		const storedPlayerName = sessionStorage.getItem("gamenight_player_name");
-		const storedGameId = sessionStorage.getItem("gamenight_game_id");
-		const storedGamePin = sessionStorage.getItem("gamenight_game_pin");
+		const storedPlayerId = safeSessionStorage.getItem("gamenight_player_id");
+		const storedPlayerName = safeSessionStorage.getItem("gamenight_player_name");
+		const storedGameId = safeSessionStorage.getItem("gamenight_game_id");
+		const storedGamePin = safeSessionStorage.getItem("gamenight_game_pin");
 
 		if (!storedPlayerId || !storedGameId) {
 			router.push("/join");
@@ -124,7 +125,7 @@ export default function PlayPage() {
 	};
 
 	const handleLeave = () => {
-		sessionStorage.clear();
+		safeSessionStorage.clear();
 		router.push("/");
 	};
 
