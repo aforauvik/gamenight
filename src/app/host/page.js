@@ -639,7 +639,7 @@ export default function HostPage() {
 								<span className="text-xs uppercase font-extrabold text-slate-400 dark:text-zinc-500 tracking-wider block mb-3">
 									Live Responses
 								</span>
-								<div className="space-y-2 max-h-40 overflow-y-auto pr-1">
+								<div className="space-y-2 pr-1">
 									{players.map((p, idx) => {
 										const response = playerResponses.find(
 											(r) => r.player_id === p.id,
