@@ -91,6 +91,8 @@ export async function joinGameRoom(pin, nickname) {
 			"/landon.webp",
 			"/christine.webp",
 			"/leo.webp",
+			"/jamer.webp",
+			"/halona.webp",
 		];
 		const randomAvatar = avatars[Math.floor(Math.random() * avatars.length)];
 

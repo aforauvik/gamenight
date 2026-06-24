@@ -329,6 +329,8 @@ const initialPlayers = [
 	{name: "Landon", avatar_url: "/landon.webp"},
 	{name: "Christine", avatar_url: "/christine.webp"},
 	{name: "Leo", avatar_url: "/leo.webp"},
+	{name: "Jamer", avatar_url: "/jamer.webp"},
+	{name: "Halona", avatar_url: "/halona.webp"},
 ];
 
 // 3. Trophies needed to align standings exactly
@@ -343,6 +345,8 @@ const standingsPodiums = {
 		Landon: {first: 0, second: 0, third: 0},
 		Christine: {first: 0, second: 0, third: 0},
 		Leo: {first: 0, second: 1, third: 0},
+		Jamer: {first: 0, second: 0, third: 0},
+		Halona: {first: 0, second: 0, third: 0},
 	},
 	2025: {
 		Grandma: {first: 4, second: 7, third: 2},
@@ -354,6 +358,8 @@ const standingsPodiums = {
 		Landon: {first: 2, second: 1, third: 1},
 		Christine: {first: 6, second: 3, third: 1},
 		Leo: {first: 0, second: 1, third: 0},
+		Jamer: {first: 0, second: 0, third: 0},
+		Halona: {first: 0, second: 0, third: 0},
 	},
 };
 

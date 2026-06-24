@@ -2,342 +2,384 @@ export const quizData = {
 	round1: [
 		{
 			id: 1,
-			question:
-				"Which of the following exercises is designed to primarily build endurance by elevating your heart rate over an extended period?",
-			options: ["Running", "Heavy Bench Press", "Bicep Curl", "Wrist Roller"],
-			correctAnswer: "Running",
+			question: "What is the primary food source for Giant Pandas in the wild?",
+			options: ["Bamboo", "Eucalyptus leaves", "Fish", "Insects"],
+			correctAnswer: "Bamboo",
 			description:
-				"Running is a classic cardiovascular, aerobic exercise that strengthens the heart and lungs while utilizing large muscle groups continuously.",
+				"According to the Encyclopedia Britannica, bamboo makes up over 99% of a giant panda's daily diet.",
 		},
 		{
 			id: 2,
 			question:
-				"True or False: The 'plank' is a static isometric exercise, meaning you hold the position without moving your joints.",
-			options: ["True", "False"],
-			correctAnswer: "True",
+				"Which sense is a dog's most powerful and highly developed asset?",
+			options: ["Sight", "Taste", "Smell", "Hearing"],
+			correctAnswer: "Smell",
 			description:
-				"During a plank, the core muscles contract under tension without changing length, making it an excellent isometric stability exercise.",
+				"A dog's sense of smell is legendary, possessing up to 300 million olfactory receptors compared to a human's 6 million.",
 		},
 		{
 			id: 3,
 			question:
-				"Which exercise involves stepping one foot forward and lowering your hips until both knees are bent at about a 90-degree angle?",
-			options: ["Crunch", "Lunge", "Pull-up", "Shoulder Press"],
-			correctAnswer: "Lunge",
+				"What unique physical defense feature are armadillos best known for?",
+			options: [
+				"Quills",
+				"Bony armor plates",
+				"Venomous spurs",
+				"Ink spraying",
+			],
+			correctAnswer: "Bony armor plates",
 			description:
-				"The lunge is a functional lower-body movement that targets the quadriceps, glutes, hamstrings, and calves while testing balance.",
+				"The name 'armadillo' is Spanish for 'little armored one', referring to the bony plates (osteoderms) covering their back, head, and tail.",
 		},
 		{
 			id: 4,
 			question:
-				"What is the primary piece of exercise equipment used when performing a 'kettlebell swing'?",
-			options: ["A barbell", "A dumbbell", "A kettlebell", "A medicine ball"],
-			correctAnswer: "A kettlebell",
+				"Where do hamsters naturally store food to carry it back to their burrows?",
+			options: [
+				"In a stomach pouch",
+				"In expandable cheek pouches",
+				"Under their tail",
+				"In their webbed paws",
+			],
+			correctAnswer: "In expandable cheek pouches",
 			description:
-				"A kettlebell is a cast-iron or steel ball with a top handle, used to perform explosive ballistic exercises like swings, snatches, and cleans.",
+				"The word 'hamster' comes from the German 'hamstern', meaning 'to hoard'. Their cheeks can expand to their shoulders to transport food.",
 		},
 		{
 			id: 5,
-			question:
-				"True or False: Calisthenics is a form of workout that relies exclusively on a person's own body weight for resistance.",
-			options: ["True", "False"],
-			correctAnswer: "True",
+			question: "What is the primary reason why cats purr?",
+			options: [
+				"Only when they are angry",
+				"To signal content or self-soothe",
+				"To scare away predators",
+				"To alert other cats to food",
+			],
+			correctAnswer: "To signal content or self-soothe",
 			description:
-				"Calisthenics exercises include movements like push-ups, pull-ups, and dips, requiring minimal to no equipment to build strength and agility.",
+				"While cats purr most often when happy, they also purr as a natural defense mechanism to calm themselves during stress, pain, or labor.",
 		},
 		{
 			id: 6,
 			question:
-				"Which exercise requires you to lie flat on a bench and press a loaded barbell upward away from your chest?",
-			options: ["Deadlift", "Bench Press", "Overhead Press", "Lat Pulldown"],
-			correctAnswer: "Bench Press",
+				"True or False: Giant pandas do not undergo typical winter hibernation.",
+			options: ["True", "False"],
+			correctAnswer: "True",
 			description:
-				"The bench press is a foundational compound upper-body exercise that targets the pectoralis major, anterior deltoids, and triceps.",
+				"Unlike other bears, pandas cannot store enough fat on a bamboo-only diet to hibernate, so they migrate down mountains to warmer areas instead.",
 		},
 		{
 			id: 7,
 			question:
-				"What type of workout involves a continuous cycle of swimming, cycling, and running in immediate succession?",
-			options: ["Decathlon", "CrossFit", "Triathlon", "Powerlifting"],
-			correctAnswer: "Triathlon",
+				"Which of these traits is shared by all newborn domestic puppies?",
+			options: [
+				"They are born with full teeth",
+				"They are born blind and deaf",
+				"They can walk immediately",
+				"They have adult coat colors",
+			],
+			correctAnswer: "They are born blind and deaf",
 			description:
-				"A triathlon is a multi-sport endurance race consisting of sequential swimming, cycling, and distance running over various distances.",
+				"Puppies are born with their eyes closed and ear canals sealed; their eyes open around 10–14 days, and hearing develops shortly after.",
 		},
 		{
 			id: 8,
-			question:
-				"True or False: High-Intensity Interval Training (HIIT) alternates between short bursts of intense activity and brief recovery periods.",
-			options: ["True", "False"],
-			correctAnswer: "True",
+			question: "How many species of armadillos exist in the world today?",
+			options: ["Only 1", "Exactly 5", "About 20", "Over 100"],
+			correctAnswer: "About 20",
 			description:
-				"HIIT workouts are designed to spike the heart rate during maximal effort intervals, followed by lower-intensity rest intervals to maximize cardiovascular efficiency.",
+				"There are approximately 20 recognized species of armadillos, all native to the Americas, ranging from the tiny pink fairy armadillo to the giant armadillo.",
 		},
 		{
 			id: 9,
-			question:
-				"Which of the following movements is a flexibility-focused practice known for incorporating breathing control and physical poses like 'Downfacing Dog'?",
-			options: ["Yoga", "Sprinting", "Box Jumps", "Kipping Pull-ups"],
-			correctAnswer: "Yoga",
+			question: "Are hamsters naturally nocturnal or diurnal creatures?",
+			options: [
+				"Strictly diurnal (active during day)",
+				"Largely nocturnal/crepuscular (active at night/twilight)",
+				"They sleep continuously without waking",
+				"They match human sleep cycles perfectly",
+			],
+			correctAnswer: "Largely nocturnal/crepuscular (active at night/twilight)",
 			description:
-				"Yoga originated in ancient India and combines physical postures (asanas), breathing techniques (pranayama), and meditation to improve physical and mental well-being.",
+				"Wild hamsters stay underground during the day to avoid predators and heat, emerging at night or twilight to forage for food.",
 		},
 		{
 			id: 10,
 			question:
-				"True or False: Jumping jacks are a full-body calisthenic movement that works both aerobic endurance and coordination.",
-			options: ["True", "False"],
-			correctAnswer: "True",
+				"Approximately how many hours a day does an average domestic cat spend sleeping?",
+			options: [
+				"2 to 4 hours",
+				"5 to 7 hours",
+				"8 to 10 hours",
+				"12 to 16 hours",
+			],
+			correctAnswer: "12 to 16 hours",
 			description:
-				"Jumping jacks require simultaneous arm and leg extensions, raising the heart rate quickly and engaging multiple muscle groups at once.",
+				"As natural predators, cats conserve massive amounts of energy by sleeping an average of 12 to 16 hours every day.",
 		},
 	],
 	round2: [
 		{
 			id: 11,
 			question:
-				"Which foundational lifting movement requires pulling a loaded barbell directly off the floor up to hip level while keeping the spine neutral?",
-			options: ["Squat", "Deadlift", "Clean and Jerk", "Good Morning"],
-			correctAnswer: "Deadlift",
+				"What is the unique physiological feature of a Giant Panda's hand used to grip bamboo?",
+			options: [
+				"A fully opposable true thumb",
+				"An elongated wrist bone functioning as a 'pseudo-thumb'",
+				"Webbed skin between claws",
+				"Retractable hunting talons",
+			],
+			correctAnswer: "An elongated wrist bone functioning as a 'pseudo-thumb'",
 			description:
-				"The deadlift is a premier posterior chain movement that heavily recruits the hamstrings, gluteus maximus, spinal erectors, and trapezius.",
+				"The panda's 'thumb' is an enlarged radial sesamoid (wrist bone) covered by a fleshy pad, allowing them to strip leaves off bamboo stalks efficiently.",
 		},
 		{
 			id: 12,
 			question:
-				"What type of dynamic exercise involves rapid, explosive movements where muscles exert maximum force in short intervals, such as a box jump?",
+				"What physical feature unique to every individual dog is used for definitive identification?",
 			options: [
-				"Isokinetic training",
-				"Plyometrics",
-				"Pliant stretching",
-				"Callanetics",
+				"Their paw print",
+				"Their nose print",
+				"Their ear shape",
+				"Their tail length",
 			],
-			correctAnswer: "Plyometrics",
+			correctAnswer: "Their nose print",
 			description:
-				"Plyometrics (jump training) focuses on the stretch-shortening cycle of muscles to increase explosive power, velocity, and athletic performance.",
+				"Much like human fingerprints, the pattern of ridges and creases on a dog's nose print is entirely unique to that individual animal.",
 		},
 		{
 			id: 13,
 			question:
-				"Which exercise system, developed in the early 20th century by its namesake, focuses on low-impact core strength, controlled movement, and postural alignment?",
-			options: ["Pilates", "Zumba", "Calisthenics", "Barre"],
-			correctAnswer: "Pilates",
+				"Which specific species of armadillo is famous for rolling into a completely sealed, impenetrable ball?",
+			options: [
+				"The Nine-banded armadillo",
+				"The Three-banded armadillo",
+				"The Giant armadillo",
+				"The Pink fairy armadillo",
+			],
+			correctAnswer: "The Three-banded armadillo",
 			description:
-				"Joseph Pilates created this exercise method initially for rehabilitation, emphasizing core control, breathing, and precise spinal alignment.",
+				"Only the three-banded armadillos (genus Tolypeutes) can fully roll into a ball, fitting their head and tail perfectly together like a puzzle.",
 		},
 		{
 			id: 14,
 			question:
-				"Which variant of the standard pull-up explicitly utilizes an underhand, supinated grip (palms facing you) to place greater emphasis on the biceps?",
-			options: [
-				"Chin-up",
-				"Wide-grip pull-up",
-				"Neutral-grip pull-up",
-				"Behind-the-neck pull-up",
-			],
-			correctAnswer: "Chin-up",
+				"What anatomical feature of a hamster grows continuously throughout its entire life?",
+			options: ["Its tail", "Its incisor teeth", "Its whiskers", "Its ears"],
+			correctAnswer: "Its incisor teeth",
 			description:
-				"While a standard pull-up uses a pronated (overhand) grip, shifting to a supinated grip alters muscle recruitment to place heavier loads on the biceps brachii.",
+				"As rodents, hamsters have open-rooted incisors that grow continuously, requiring them to constantly chew on wood or fiber to wear them down.",
 		},
 		{
 			id: 15,
 			question:
-				"What exercise variation involves lowering your body down, jumping back into a plank, doing a push-up, returning to a squat, and jumping explosively upward?",
-			options: ["Mountain Climber", "Burpee", "Thruster", "Bear Crawl"],
-			correctAnswer: "Burpee",
+				"Unlike most other mammals, how do domestic cats physically walk?",
+			options: [
+				"They move left legs together, then right legs together",
+				"They hop on both back legs simultaneously",
+				"They walk entirely on their heels",
+				"They cannot walk backward",
+			],
+			correctAnswer: "They move left legs together, then right legs together",
 			description:
-				"The burpee is a highly demanding full-body exercise used in strength and aerobic conditioning that engages nearly every major muscle group.",
+				"Cats are 'direct register' pacers; they move both left legs, then both right legs. The only other mammals that walk this way are camels and giraffes.",
 		},
 		{
 			id: 16,
-			question:
-				"True or False: The 'farmer's walk' (carrying heavy weights in each hand while walking) is primarily used to train grip strength and core stability.",
-			options: ["True", "False"],
-			correctAnswer: "True",
+			question: "What color is a newborn giant panda cub at birth?",
+			options: ["Black and white", "Solid black", "Pink", "Solid white"],
+			correctAnswer: "Pink",
 			description:
-				"The farmer's walk forces the core, upper back, and forearms to sustain a protracted isometric hold to stabilize the moving load.",
+				"Newborn pandas are born pink, blind, virtually hairless, and incredibly tiny—weighing only about 100 grams (1/900th of their mother's weight).",
 		},
 		{
 			id: 17,
 			question:
-				"What specific type of barbell exercise focuses on training the body using single-joint movements to target one distinct muscle group, like a concentration curl?",
+				"Which dog breed is historically recognized as the oldest distinct breed surviving today?",
 			options: [
-				"Compound exercise",
-				"Isolation exercise",
-				"Ballistic exercise",
-				"Polyarticular exercise",
+				"German Shepherd",
+				"Golden Retriever",
+				"Saluki",
+				"Labrador Retriever",
 			],
-			correctAnswer: "Isolation exercise",
+			correctAnswer: "Saluki",
 			description:
-				"Isolation exercises focus on a single joint and muscle group, whereas compound exercises involve multiple joints moving simultaneously.",
+				"Guinness World Records and historians accept the Saluki as the oldest dog breed, appearing in ancient Egyptian tombs dating back to 2134 B.C.",
 		},
 		{
 			id: 18,
 			question:
-				"Which exercise requires sitting on a specialized sliding seat, pulling a handle attached to a fly-wheel, and pushing off footplates with your legs?",
+				"What remarkable reproductive adaptation is found in female Nine-banded armadillos?",
 			options: [
-				"Stationary Cycling",
-				"Elliptical Gliding",
-				"Rowing",
-				"Stair Climbing",
+				"They always give birth to identical quadruplets",
+				"They can lay eggs if resources are scarce",
+				"They have a gestation period of three years",
+				"They only reproduce via cloning",
 			],
-			correctAnswer: "Rowing",
+			correctAnswer: "They always give birth to identical quadruplets",
 			description:
-				"Indoor rowing mimics watercraft rowing, offering a non-impact workout that recruits roughly 86% of the body's musculature, split between legs, core, and upper body.",
+				"The Nine-banded armadillo exhibits obligate polyembryony; a single fertilized egg splits into four distinct embryos, resulting in identical quadruplets.",
 		},
 		{
 			id: 19,
 			question:
-				"In standard weight training terminology, what exercise is characterized by hip extension while your upper back is elevated on a bench and a barbell rests across your pelvis?",
+				"From which geographic region did the popular pet Syrian Hamster (Golden Hamster) originate?",
 			options: [
-				"Good Morning",
-				"Romanian Deadlift",
-				"Hip Thrust",
-				"Glute Ham Raise",
+				"The Australian Outback",
+				"The Middle East",
+				"The Amazon Rainforest",
+				"Siberian Tundra",
 			],
-			correctAnswer: "Hip Thrust",
+			correctAnswer: "The Middle East",
 			description:
-				"Popularized by sports science, the barbell hip thrust isolates and maximizes tension on the gluteus maximus throughout its full range of motion.",
+				"The Golden Hamster is native to the arid regions of northern Syria and southern Turkey, where they were first successfully bred in labs in the 1930s.",
 		},
 		{
 			id: 20,
 			question:
-				"True or False: The 'Arnold Press' is a variation of the shoulder press that introduces a rotational element, turning the palms from facing inward to facing outward as you press.",
-			options: ["True", "False"],
-			correctAnswer: "True",
+				"How many bones make up the skeleton of an average domestic cat?",
+			options: ["Exactly 106", "Around 206", "About 230", "Over 400"],
+			correctAnswer: "About 230",
 			description:
-				"Named after Arnold Schwarzenegger, this exercise incorporates a 180-degree rotation during the ascent to engage all three sections of the deltoids.",
+				"While a human has 206 bones, an average cat has around 230 bones. The extra bones are found mostly in their highly flexible spine and tail.",
 		},
 	],
 	round3: [
 		{
 			id: 21,
 			question:
-				"Which Olympic weightlifting discipline requires explosively lifting a loaded barbell from the floor to overhead in one single, continuous, fluid motion?",
+				"What ancestral carnivore trait does the giant panda still possess despite its herbivorous diet?",
 			options: [
-				"The Clean and Jerk",
-				"The Snatch",
-				"The Sumo Deadlift High Pull",
-				"The Power Clean",
+				"A simple, short digestive tract designed for meat",
+				"The ability to run at 40 mph",
+				"Venom glands behind their jaw",
+				"A four-chambered ruminant stomach",
 			],
-			correctAnswer: "The Snatch",
+			correctAnswer: "A simple, short digestive tract designed for meat",
 			description:
-				"Unlike the two-stage Clean and Jerk, the Snatch is a single continuous lift requiring extreme speed, mobility, and precision to catch the bar in a full overhead squat.",
+				"Pandas evolved from carnivores and still possess the short, simple digestive system of a meat-eater, meaning they digest bamboo very inefficiently.",
 		},
 		{
 			id: 22,
 			question:
-				"What cardiovascular exercise format utilizes a specific protocol of 20 seconds of ultra-maximal effort followed by 10 seconds of rest, repeated for 8 consecutive cycles?",
+				"What unusual physical feature is shared by the Chow Chow and Shar-Pei dog breeds?",
 			options: [
-				"Fartlek Training",
-				"Tabata Protocol",
-				"Gibala Method",
-				"Lydiard System",
+				"They completely lack a tail",
+				"They have blue-black tongues",
+				"They have webbed front toes for swimming",
+				"They have three eyelids",
 			],
-			correctAnswer: "Tabata Protocol",
+			correctAnswer: "They have blue-black tongues",
 			description:
-				"Developed by Dr. Izumi Tabata in 1996 for Olympic speedskaters, this specific 4-minute high-intensity framework significantly boosts both aerobic and anaerobic systems.",
+				"The Chow Chow and the Shar-Pei are the only two dog breeds that naturally possess a distinct solid blue-black tongue.",
 		},
 		{
 			id: 23,
 			question:
-				"What is the exact biomechanical designation for an exercise where the distal segment (hand or foot) is completely fixed to an immovable object or the ground, such as a squat?",
+				"Which bacterial disease are Nine-banded armadillos naturally susceptible to and used to study?",
 			options: [
-				"Open Kinetic Chain Exercise",
-				"Closed Kinetic Chain Exercise",
-				"Isokinetic Exercise",
-				"Axial Variable Exercise",
+				"Tuberculosis",
+				"Leprosy (Hansen's disease)",
+				"Bubonic Plague",
+				"Malaria",
 			],
-			correctAnswer: "Closed Kinetic Chain Exercise",
+			correctAnswer: "Leprosy (Hansen's disease)",
 			description:
-				"In closed kinetic chain exercises, the hand or foot stays fixed (e.g., push-ups, pull-ups), forcing proximal joints to move. In open kinetic chain movements (e.g., bicep curls), the hand/foot moves freely.",
+				"Due to their low body temperature (around 93°F or 34°C), armadillos are one of the few non-human mammals that can harbor the leprosy bacterium.",
 		},
 		{
 			id: 24,
 			question:
-				"What gymnastics-style exercise requires keeping your body entirely straight and horizontal while suspended parallel to the floor, supported only by your hands gripping a bar or rings?",
-			options: ["The Human Flag", "The Planche", "The Iron Cross", "The L-Sit"],
-			correctAnswer: "The Planche",
+				"What distinct anatomical structure do hamsters possess on their flanks or hips used for territory marking?",
+			options: [
+				"Scent glands",
+				"A second set of ears",
+				"An extra fat reserve",
+				"Air sacs for vocalizing",
+			],
+			correctAnswer: "Scent glands",
 			description:
-				"The planche is an elite gymnastics and calisthenics skill requiring immense shoulder strength, protraction, and core tension to counterbalance the lower body weight entirely in mid-air.",
+				"Hamsters have distinct flank glands (visible as dark spots on Syrian hamsters) that secrete secretions used to mark territory by rubbing against objects.",
 		},
 		{
 			id: 25,
 			question:
-				"Which deadlift variation involves soft, semi-rigid knees and lowering the weight by pushing the hips straight back, focusing primarily on stretching and loading the hamstrings?",
+				"What is the function of a cat's 'Jacobson's organ' (vomeronasal organ) located in the roof of its mouth?",
 			options: [
-				"Sumo Deadlift",
-				"Deficit Deadlift",
-				"Romanian Deadlift (RDL)",
-				"Trap Bar Deadlift",
+				"It produces saliva to digest bones",
+				"It allows them to 'taste-smell' chemical signals in the air",
+				"It controls their purring frequency",
+				"It filters out dust while breathing",
 			],
-			correctAnswer: "Romanian Deadlift (RDL)",
+			correctAnswer:
+				"It allows them to 'taste-smell' chemical signals in the air",
 			description:
-				"The RDL starts from a standing position and emphasizes a pure hip hinge without significant knee flexion, maximizing eccentric loading of the hamstrings and glutes.",
+				"When cats pull back their lips in a sneer (the Flehmen response), they are directing scent molecules into the Jacobson's organ to analyze pheromones.",
 		},
 		{
 			id: 26,
 			question:
-				"What type of conditioning workout relies on a structured sequence of exercises executed back-to-back with zero rest between movements, transitioning to rest only after the full circuit?",
-			options: ["Superset", "Giant Set", "Drop Set", "Pyramid Set"],
-			correctAnswer: "Giant Set",
+				"What genetic mutation accounts for the giant panda's inability to taste savory meat flavors?",
+			options: [
+				"A malfunctioning Tas1r1 gene",
+				"A complete absence of taste buds",
+				"An overabundance of sweet receptors",
+				"An inability to process zinc",
+			],
+			correctAnswer: "A malfunctioning Tas1r1 gene",
 			description:
-				"A superset links 2 exercises together, a tri-set links 3, and a giant set links 4 or more exercises targeting similar or different muscle groups with no rest in between.",
+				"Genetic studies show that about 4.2 million years ago, the giant panda's Tas1r1 gene became a pseudogene, losing the ability to taste umami (savory flavors).",
 		},
 		{
 			id: 27,
 			question:
-				"What specialized core exercise requires hanging from a bar and raising your legs completely vertical until your shoelaces physically make contact with the bar?",
+				"Which blood type is considered the universal donor for dogs during blood transfusions?",
 			options: [
-				"Hanging Knee Raise",
-				"Toes-to-Bar",
-				"Windshield Wiper",
-				"Dragon Flag",
+				"DEA 1.1 Negative",
+				"Type O Negative",
+				"DEA 7 Positive",
+				"Type B",
 			],
-			correctAnswer: "Toes-to-Bar",
+			correctAnswer: "DEA 1.1 Negative",
 			description:
-				"Common in gymnastics and functional fitness, Toes-to-Bar requires powerful contraction of the rectus abdominis and hip flexors along with significant lat activation.",
+				"Dog Erythrocyte Antigen (DEA) 1.1 negative blood is the universal donor type in canines, meaning it can safely be given to dogs of other types in an emergency.",
 		},
 		{
 			id: 28,
 			question:
-				"Which physical exercise training principle emphasizes that your body will adapt highly specifically to the exact nature, mechanical angle, and physiological demands placed upon it?",
+				"What is unique about the metabolic rate and body temperature of armadillos compared to other mammals?",
 			options: [
-				"SAID Principle",
-				"Overload Principle",
-				"Reversibility Principle",
-				"FITT Principle",
+				"They have an incredibly high body temperature of 105°F",
+				"They have an exceptionally low metabolic rate and body temperature",
+				"They can change their body temperature at will",
+				"Their metabolism stops completely during sleep",
 			],
-			correctAnswer: "SAID Principle",
+			correctAnswer:
+				"They have an exceptionally low metabolic rate and body temperature",
 			description:
-				"The SAID principle stands for 'Specific Adaptations to Imposed Demands.' It dictates that if you train for explosive power, your body adapts for power, not aerobic endurance.",
+				"Armadillos have a remarkably low basal metabolic rate and a low internal temperature, which explains why they lack thick fat layers and struggle in freezing climates.",
 		},
 		{
 			id: 29,
 			question:
-				"What form of advanced cardio exercise uses unstructured, spontaneous variations in speed and intensity throughout a run, translating from Swedish as 'speed play'?",
+				"Which of these environmental extremes is highly dangerous to hamsters by triggering an unseasonable pseudohibernation?",
 			options: [
-				"Tempo Running",
-				"Fartlek",
-				"Interval Sprints",
-				"Zone 2 Base Training",
+				"Prolonged exposure to temperatures below 50°F (10°C)",
+				"High humidity environments above 40%",
+				"Direct exposure to moonlight",
+				"Environments completely free of soil",
 			],
-			correctAnswer: "Fartlek",
+			correctAnswer: "Prolonged exposure to temperatures below 50°F (10°C)",
 			description:
-				"Developed by Gösta Holmér, Fartlek training is a free-form method where an athlete mixes continuous running with spontaneous fast intervals based on terrain or feel.",
+				"If a pet hamster's environment drops below 50°F (10°C), its heart rate drops and it enters a state of torpor (pseudohibernation) that can easily be mistaken for death.",
 		},
 		{
 			id: 30,
 			question:
-				"Which highly complex kettlebell exercise requires moving your body from lying completely flat on the floor to a standing position while keeping a kettlebell locked out overhead the entire time?",
-			options: [
-				"Turkish Get-Up",
-				"Kettlebell Windmill",
-				"Overhead Sots Press",
-				"Kettlebell Snatch-to-Squat",
-			],
-			correctAnswer: "Turkish Get-Up",
+				"Unlike humans, domestic cats completely lack taste receptors for which flavor profile?",
+			options: ["Sour", "Salty", "Sweet", "Bitter"],
+			correctAnswer: "Sweet",
 			description:
-				"The Turkish Get-Up is an elite multi-planar movement requiring extreme shoulder stability, thoracic mobility, core strength, and step-by-step kinetic coordination.",
+				"Due to a deletion mutation in the Tas1r2 gene, all felines lack the molecular building blocks required to form the taste receptors for sweetness.",
 		},
 	],
 };
