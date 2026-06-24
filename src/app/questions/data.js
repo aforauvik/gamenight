@@ -381,5 +381,33 @@ export const quizData = {
 			description:
 				"Due to a deletion mutation in the Tas1r2 gene, all felines lack the molecular building blocks required to form the taste receptors for sweetness.",
 		},
+		{
+			id: 31,
+			question:
+				"What is the specialized reflective layer behind a cat's retina that enhances their night vision?",
+			options: [
+				"Tapetum lucidum",
+				"Nictitating membrane",
+				"Cornea splits",
+				"Fovea centralis",
+			],
+			correctAnswer: "Tapetum lucidum",
+			description:
+				"According to veterinary anatomy resources, the tapetum lucidum reflects visible light back through the retina, increasing the light available to the photoreceptors and causing their eyes to glow in the dark.",
+		},
+		// {
+		// 	id: 32,
+		// 	question:
+		// 		"Which unique sound-receptive structure allows a dog to pinpoint the exact direction of a noise in 0.06 seconds?",
+		// 	options: [
+		// 		"Mobile ear pinnas controlled by 18 distinct muscles",
+		// 		"A secondary eardrum inside the skull",
+		// 		"A fluid-filled cranial echo chamber",
+		// 		"An internal cartilaginous radar disc",
+		// 	],
+		// 	correctAnswer: "Mobile ear pinnas controlled by 18 distinct muscles",
+		// 	description:
+		// 		"Canine biology records note that dogs have at least 18 muscles controlling their ear pinnas (flaps), allowing them to tilt, rotate, and raise each ear independently to locate sounds accurately.",
+		// },
 	],
 };
