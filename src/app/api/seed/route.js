@@ -5,7 +5,7 @@ import {supabase} from "@/lib/supabase";
 const history2026 = [
 	{
 		date: "2026-05-26",
-		name: "Aunt Sabrina",
+		name: "Tia Bia",
 		topic: "New York Facts",
 		season: "June, 2026",
 		round1: 10,
@@ -138,7 +138,7 @@ const history2025 = [
 	},
 	{
 		date: "2025-07-15",
-		name: "Aunt Sabrina",
+		name: "Tia Bia",
 		topic: "Words That Meant Something Else",
 		season: "April, 2026",
 		round1: 4,
@@ -298,7 +298,7 @@ const history2025 = [
 	},
 	{
 		date: "2025-01-21",
-		name: "Aunt Sabrina",
+		name: "Tia Bia",
 		topic: "American History",
 		season: "April, 2026",
 		round1: 5,
@@ -308,7 +308,7 @@ const history2025 = [
 	},
 	{
 		date: "2025-01-14",
-		name: "Aunt Sabrina",
+		name: "Tia Bia",
 		topic: "Pop Culture",
 		season: "April, 2026",
 		round1: 5,
@@ -321,7 +321,7 @@ const history2025 = [
 // 2. Player names and avatars
 const initialPlayers = [
 	{name: "Grandma", avatar_url: "/grandma.webp"},
-	{name: "Aunt Sabrina", avatar_url: "/sabrina.webp"},
+	{name: "Tia Bia", avatar_url: "/sabrina.webp"},
 	{name: "Mom", avatar_url: "/tabitha.webp"},
 	{name: "Hannah", avatar_url: "/hannah.webp"},
 	{name: "Leif", avatar_url: "/leif.webp"},
@@ -337,7 +337,7 @@ const initialPlayers = [
 const standingsPodiums = {
 	2026: {
 		Grandma: {first: 2, second: 2, third: 0},
-		"Aunt Sabrina": {first: 1, second: 0, third: 0},
+		"Tia Bia": {first: 1, second: 0, third: 0},
 		Mom: {first: 0, second: 1, third: 0},
 		Hannah: {first: 2, second: 1, third: 2},
 		Leif: {first: 0, second: 0, third: 0},
@@ -350,7 +350,7 @@ const standingsPodiums = {
 	},
 	2025: {
 		Grandma: {first: 4, second: 7, third: 2},
-		"Aunt Sabrina": {first: 4, second: 4, third: 0},
+		"Tia Bia": {first: 4, second: 4, third: 0},
 		Mom: {first: 2, second: 3, third: 6},
 		Hannah: {first: 9, second: 10, third: 6},
 		Leif: {first: 0, second: 0, third: 0},

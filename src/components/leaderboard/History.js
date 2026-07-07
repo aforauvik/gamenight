@@ -22,7 +22,7 @@ function calculatePoints() {
 const data2026 = [
 	{
 		date: "May 26, 2026",
-		name: "Aunt Sabrina",
+		name: "Tia Bia",
 		topic: "New York Facts",
 		avatar: "/aunt-sabrina.webp",
 		round1: 10,
@@ -194,7 +194,7 @@ const data2025 = [
 	},
 	{
 		date: "Jul 15, 2025",
-		name: "Aunt Sabrina",
+		name: "Tia Bia",
 		topic: "Words That Meant Something Else",
 		avatar: "/aunt-sabrina.webp",
 		round1: 4,
@@ -402,7 +402,7 @@ const data2025 = [
 	},
 	{
 		date: "Jan 21, 2025",
-		name: "Aunt Sabrina",
+		name: "Tia Bia",
 		topic: "American History",
 		avatar: "/aunt-sabrina.webp",
 		round1: 5,
@@ -415,7 +415,7 @@ const data2025 = [
 	},
 	{
 		date: "Jan 14, 2025",
-		name: "Aunt Sabrina",
+		name: "Tia Bia",
 		topic: "Pop Culture",
 		avatar: "/aunt-sabrina.webp",
 		round1: 5,

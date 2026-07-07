@@ -1,8 +1,8 @@
 export const allInfo2026 = {
-	gameName: "New York Facts",
-	season: "June, 2026",
+	gameName: "Ripley's Believe It or Not!",
+	season: "July, 2026",
 	rounds: 30,
-	game: 3,
+	game: 4,
 };
 
 export const rawTeams2026 = [
@@ -18,7 +18,7 @@ export const rawTeams2026 = [
 		third: 0,
 	},
 	{
-		name: "Aunt Sabrina",
+		name: "Tia Bia",
 		avatar: "/sabrina.webp",
 		round1: 0,
 		round2: 0,
@@ -149,7 +149,7 @@ export const rawTeams2025 = [
 		third: 2,
 	},
 	{
-		name: "Aunt Sabrina",
+		name: "Tia Bia",
 		avatar: "/aunt-sabrina.webp",
 		round1: 0,
 		round2: 0,

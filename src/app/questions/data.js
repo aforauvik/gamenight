@@ -2,412 +2,217 @@ export const quizData = {
 	round1: [
 		{
 			id: 1,
-			question: "What is the primary food source for Giant Pandas in the wild?",
-			options: ["Bamboo", "Eucalyptus leaves", "Fish", "Insects"],
-			correctAnswer: "Bamboo",
-			description:
-				"According to the Encyclopedia Britannica, bamboo makes up over 99% of a giant panda's daily diet.",
+			question: "The founder and original cartoonist of the \"Believe It or Not!\" franchise was named Robert Ripley.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "Robert LeRoy Ripley created the first \"Believe It or Not!\" cartoon panel on December 19, 1918.",
 		},
 		{
 			id: 2,
-			question:
-				"Which sense is a dog's most powerful and highly developed asset?",
-			options: ["Sight", "Taste", "Smell", "Hearing"],
-			correctAnswer: "Smell",
-			description:
-				"A dog's sense of smell is legendary, possessing up to 300 million olfactory receptors compared to a human's 6 million.",
+			question: "Ripley's Believe It or Not! museums, showcasing bizarre collections, are officially called \"Odditoriums.\"",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "The term \"Odditorium\" was coined during the 1933 Chicago World's Fair where Ripley opened his first major exhibition.",
 		},
 		{
 			id: 3,
-			question:
-				"What unique physical defense feature are armadillos best known for?",
-			options: [
-				"Quills",
-				"Bony armor plates",
-				"Venomous spurs",
-				"Ink spraying",
-			],
-			correctAnswer: "Bony armor plates",
-			description:
-				"The name 'armadillo' is Spanish for 'little armored one', referring to the bony plates (osteoderms) covering their back, head, and tail.",
+			question: "The very first \"Believe It or Not!\" cartoon panel focused entirely on unusual sports achievements.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "On December 19, 1918, Ripley compiled a list of sports records and drew them as a cartoon for the New York Globe when he was short on sports cartoon ideas.",
 		},
 		{
 			id: 4,
-			question:
-				"Where do hamsters naturally store food to carry it back to their burrows?",
-			options: [
-				"In a stomach pouch",
-				"In expandable cheek pouches",
-				"Under their tail",
-				"In their webbed paws",
-			],
-			correctAnswer: "In expandable cheek pouches",
-			description:
-				"The word 'hamster' comes from the German 'hamstern', meaning 'to hoard'. Their cheeks can expand to their shoulders to transport food.",
+			question: "Authentic shrunken heads are a signature part of the artifact collection displayed in Ripley's museums.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "Ceremonial shrunken heads (tsantsas) from the Amazon were among the very first items Robert Ripley began collecting during his travels.",
 		},
 		{
 			id: 5,
-			question: "What is the primary reason why cats purr?",
-			options: [
-				"Only when they are angry",
-				"To signal content or self-soothe",
-				"To scare away predators",
-				"To alert other cats to food",
-			],
-			correctAnswer: "To signal content or self-soothe",
-			description:
-				"While cats purr most often when happy, they also purr as a natural defense mechanism to calm themselves during stress, pain, or labor.",
+			question: "The first \"Believe It or Not!\" cartoon strip was created and first published in the 21st century.",
+			options: ["True", "False"],
+			correctAnswer: "False",
+			description: "The cartoon strip debuted in the early 20th century, specifically on December 19, 1918.",
 		},
 		{
 			id: 6,
-			question:
-				"True or False: Giant pandas do not undergo typical winter hibernation.",
+			question: "Ripley's museums frequently feature life-sized wax figure replicas of Robert Wadlow, the tallest recorded human in history.",
 			options: ["True", "False"],
 			correctAnswer: "True",
-			description:
-				"Unlike other bears, pandas cannot store enough fat on a bamboo-only diet to hibernate, so they migrate down mountains to warmer areas instead.",
+			description: "Robert Wadlow stood at 8 feet 11.1 inches tall. Wax figures matching his exact dimensions are iconic exhibits across many Ripley's locations.",
 		},
 		{
 			id: 7,
-			question:
-				"Which of these traits is shared by all newborn domestic puppies?",
-			options: [
-				"They are born with full teeth",
-				"They are born blind and deaf",
-				"They can walk immediately",
-				"They have adult coat colors",
-			],
-			correctAnswer: "They are born blind and deaf",
-			description:
-				"Puppies are born with their eyes closed and ear canals sealed; their eyes open around 10–14 days, and hearing develops shortly after.",
+			question: "Ripley's Believe It or Not! has never been adapted into a television series.",
+			options: ["True", "False"],
+			correctAnswer: "False",
+			description: "The franchise was successfully adapted into several television series, notably hosted by Jack Palance in the 1980s and Dean Cain in the early 2000s.",
 		},
 		{
 			id: 8,
-			question: "How many species of armadillos exist in the world today?",
-			options: ["Only 1", "Exactly 5", "About 20", "Over 100"],
-			correctAnswer: "About 20",
-			description:
-				"There are approximately 20 recognized species of armadillos, all native to the Americas, ranging from the tiny pink fairy armadillo to the giant armadillo.",
+			question: "The first permanent Ripley's Believe It or Not! Odditorium was opened in California.",
+			options: ["True", "False"],
+			correctAnswer: "False",
+			description: "The first permanent Odditorium opened in December 1950 in St. Augustine, Florida, inside the historic Castle Warden.",
 		},
 		{
 			id: 9,
-			question: "Are hamsters naturally nocturnal or diurnal creatures?",
-			options: [
-				"Strictly diurnal (active during day)",
-				"Largely nocturnal/crepuscular (active at night/twilight)",
-				"They sleep continuously without waking",
-				"They match human sleep cycles perfectly",
-			],
-			correctAnswer: "Largely nocturnal/crepuscular (active at night/twilight)",
-			description:
-				"Wild hamsters stay underground during the day to avoid predators and heat, emerging at night or twilight to forage for food.",
+			question: "Charles Schulz, the creator of the \"Peanuts\" comic strip, had his first cartoon published in Ripley's Believe It or Not!",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "In 1937, a 15-year-old Schulz sent in a drawing of his dog, Spike, who ate pins, tacks, and razor blades. Ripley published it, marking Schulz's first professional publication.",
 		},
 		{
 			id: 10,
-			question:
-				"Approximately how many hours a day does an average domestic cat spend sleeping?",
-			options: [
-				"2 to 4 hours",
-				"5 to 7 hours",
-				"8 to 10 hours",
-				"12 to 16 hours",
-			],
-			correctAnswer: "12 to 16 hours",
-			description:
-				"As natural predators, cats conserve massive amounts of energy by sleeping an average of 12 to 16 hours every day.",
+			question: "The official, trademarked motto of the franchise is \"See It to Believe It.\"",
+			options: ["True", "False"],
+			correctAnswer: "False",
+			description: "The official motto and name of the franchise is \"Believe It or Not!\".",
 		},
 	],
 	round2: [
 		{
 			id: 11,
-			question:
-				"What is the unique physiological feature of a Giant Panda's hand used to grip bamboo?",
-			options: [
-				"A fully opposable true thumb",
-				"An elongated wrist bone functioning as a 'pseudo-thumb'",
-				"Webbed skin between claws",
-				"Retractable hunting talons",
-			],
-			correctAnswer: "An elongated wrist bone functioning as a 'pseudo-thumb'",
-			description:
-				"The panda's 'thumb' is an enlarged radial sesamoid (wrist bone) covered by a fleshy pad, allowing them to strip leaves off bamboo stalks efficiently.",
+			question: "The original name of Robert Ripley's sports cartoon strip before he renamed it to \"Believe It or Not!\" was \"Champs and Chumps.\"",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "When first published on December 19, 1918, in the New York Globe, the cartoon was originally titled \"Champs and Chumps\" and featured various unusual athletic feats.",
 		},
 		{
 			id: 12,
-			question:
-				"What physical feature unique to every individual dog is used for definitive identification?",
-			options: [
-				"Their paw print",
-				"Their nose print",
-				"Their ear shape",
-				"Their tail length",
-			],
-			correctAnswer: "Their nose print",
-			description:
-				"Much like human fingerprints, the pattern of ridges and creases on a dog's nose print is entirely unique to that individual animal.",
+			question: "Despite traveling to over 200 countries to find oddities, Robert Ripley had a lifelong fear of flying and preferred to travel by ship or train.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "Ripley was notoriously fearful of flying and almost always traveled by land or sea, only taking flights later in life when absolutely necessary.",
 		},
 		{
 			id: 13,
-			question:
-				"Which specific species of armadillo is famous for rolling into a completely sealed, impenetrable ball?",
-			options: [
-				"The Nine-banded armadillo",
-				"The Three-banded armadillo",
-				"The Giant armadillo",
-				"The Pink fairy armadillo",
-			],
-			correctAnswer: "The Three-banded armadillo",
-			description:
-				"Only the three-banded armadillos (genus Tolypeutes) can fully roll into a ball, fitting their head and tail perfectly together like a puzzle.",
+			question: "Before his cartooning success, Robert Ripley aspired to be a professional baseball player, but his dream was ended by a broken arm.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "Ripley played semi-pro baseball and tried out for the New York Giants, but a fractured arm sustained during the tryout forced him to focus fully on illustration.",
 		},
 		{
 			id: 14,
-			question:
-				"What anatomical feature of a hamster grows continuously throughout its entire life?",
-			options: ["Its tail", "Its incisor teeth", "Its whiskers", "Its ears"],
-			correctAnswer: "Its incisor teeth",
-			description:
-				"As rodents, hamsters have open-rooted incisors that grow continuously, requiring them to constantly chew on wood or fiber to wear them down.",
+			question: "The researcher who verified facts for Ripley for over 50 years, Norbert Pearlroth, spoke only English.",
+			options: ["True", "False"],
+			correctAnswer: "False",
+			description: "Norbert Pearlroth was a multilingual researcher who spoke 14 languages, allowing him to scour foreign books and archives at the New York Public Library for oddities.",
 		},
 		{
 			id: 15,
-			question:
-				"Unlike most other mammals, how do domestic cats physically walk?",
-			options: [
-				"They move left legs together, then right legs together",
-				"They hop on both back legs simultaneously",
-				"They walk entirely on their heels",
-				"They cannot walk backward",
-			],
-			correctAnswer: "They move left legs together, then right legs together",
-			description:
-				"Cats are 'direct register' pacers; they move both left legs, then both right legs. The only other mammals that walk this way are camels and giraffes.",
+			question: "Robert Ripley drew a cartoon pointing out that the United States did not have an official national anthem, which helped lead to \"The Star-Spangled Banner\" being officially designated in 1931.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "In his November 3, 1929 cartoon, Ripley wrote \"Believe It or Not, America has no national anthem.\" This caused massive public petitioning, leading Congress to designate \"The Star-Spangled Banner\" as the official anthem in 1931.",
 		},
 		{
 			id: 16,
-			question: "What color is a newborn giant panda cub at birth?",
-			options: ["Black and white", "Solid black", "Pink", "Solid white"],
-			correctAnswer: "Pink",
-			description:
-				"Newborn pandas are born pink, blind, virtually hairless, and incredibly tiny—weighing only about 100 grams (1/900th of their mother's weight).",
+			question: "Robert Ripley passed away during the live broadcast of his own television show.",
+			options: ["True", "False"],
+			correctAnswer: "False",
+			description: "Ripley suffered a heart attack during the filming of the 13th episode of his NBC television series on May 24, 1949, was taken to the hospital, and died three days later on May 27, 1949.",
 		},
 		{
 			id: 17,
-			question:
-				"Which dog breed is historically recognized as the oldest distinct breed surviving today?",
-			options: [
-				"German Shepherd",
-				"Golden Retriever",
-				"Saluki",
-				"Labrador Retriever",
-			],
-			correctAnswer: "Saluki",
-			description:
-				"Guinness World Records and historians accept the Saluki as the oldest dog breed, appearing in ancient Egyptian tombs dating back to 2134 B.C.",
+			question: "The very first public exhibition of Robert Ripley's collection, dubbed the \"Odditorium,\" was opened at the 1933 World's Fair in Chicago.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "The temporary exhibition was extremely popular, drawing over two million visitors during the run of the fair.",
 		},
 		{
 			id: 18,
-			question:
-				"What remarkable reproductive adaptation is found in female Nine-banded armadillos?",
-			options: [
-				"They always give birth to identical quadruplets",
-				"They can lay eggs if resources are scarce",
-				"They have a gestation period of three years",
-				"They only reproduce via cloning",
-			],
-			correctAnswer: "They always give birth to identical quadruplets",
-			description:
-				"The Nine-banded armadillo exhibits obligate polyembryony; a single fertilized egg splits into four distinct embryos, resulting in identical quadruplets.",
+			question: "Ripley's Believe It or Not! is famous for owning the world's largest collection of 19th-century vampire killing kits.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "The company has acquired over 30 authentic and historically fabricated vampire killing kits from the 19th century, which are displayed in various Odditoriums.",
 		},
 		{
 			id: 19,
-			question:
-				"From which geographic region did the popular pet Syrian Hamster (Golden Hamster) originate?",
-			options: [
-				"The Australian Outback",
-				"The Middle East",
-				"The Amazon Rainforest",
-				"Siberian Tundra",
-			],
-			correctAnswer: "The Middle East",
-			description:
-				"The Golden Hamster is native to the arid regions of northern Syria and southern Turkey, where they were first successfully bred in labs in the 1930s.",
+			question: "Ripley's Believe It or Not! purchased Marilyn Monroe's iconic \"Happy Birthday, Mr. President\" dress at auction for $4.8 million.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "Ripley's bought the dress on November 18, 2016, setting a world record at the time for the most expensive dress ever sold at auction.",
 		},
 		{
 			id: 20,
-			question:
-				"How many bones make up the skeleton of an average domestic cat?",
-			options: ["Exactly 106", "Around 206", "About 230", "Over 400"],
-			correctAnswer: "About 230",
-			description:
-				"While a human has 206 bones, an average cat has around 230 bones. The extra bones are found mostly in their highly flexible spine and tail.",
+			question: "In 2025, Ripley's Believe It or Not! purchased the famous 18-karat solid gold toilet sculpture named \"America\" at auction for over $12 million.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "Ripley's purchased Maurizio Cattelan's fully functional solid gold toilet sculpture named \"America\" for $12.1 million at a Sotheby's auction in November 2025.",
 		},
 	],
 	round3: [
 		{
 			id: 21,
-			question:
-				"What ancestral carnivore trait does the giant panda still possess despite its herbivorous diet?",
-			options: [
-				"A simple, short digestive tract designed for meat",
-				"The ability to run at 40 mph",
-				"Venom glands behind their jaw",
-				"A four-chambered ruminant stomach",
-			],
-			correctAnswer: "A simple, short digestive tract designed for meat",
-			description:
-				"Pandas evolved from carnivores and still possess the short, simple digestive system of a meat-eater, meaning they digest bamboo very inefficiently.",
+			question: "Castle Warden, the home of the first permanent Ripley's museum, was originally built in 1887 as a winter residence for William G. Warden, a partner in the Standard Oil Company.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "William G. Warden was a prominent Standard Oil partner of John D. Rockefeller and Henry Flagler. The Moorish Revival-style mansion was built as his private winter estate.",
 		},
 		{
 			id: 22,
-			question:
-				"What unusual physical feature is shared by the Chow Chow and Shar-Pei dog breeds?",
-			options: [
-				"They completely lack a tail",
-				"They have blue-black tongues",
-				"They have webbed front toes for swimming",
-				"They have three eyelids",
-			],
-			correctAnswer: "They have blue-black tongues",
-			description:
-				"The Chow Chow and the Shar-Pei are the only two dog breeds that naturally possess a distinct solid blue-black tongue.",
+			question: "Robert Ripley purchased Castle Warden himself to establish his museum shortly before his death.",
+			options: ["True", "False"],
+			correctAnswer: "False",
+			description: "Although Ripley had visited and admired the building, it was his estate that purchased Castle Warden in 1950, after his death in 1949.",
 		},
 		{
 			id: 23,
-			question:
-				"Which bacterial disease are Nine-banded armadillos naturally susceptible to and used to study?",
-			options: [
-				"Tuberculosis",
-				"Leprosy (Hansen's disease)",
-				"Bubonic Plague",
-				"Malaria",
-			],
-			correctAnswer: "Leprosy (Hansen's disease)",
-			description:
-				"Due to their low body temperature (around 93°F or 34°C), armadillos are one of the few non-human mammals that can harbor the leprosy bacterium.",
+			question: "Robert Ripley once hosted a live radio broadcast from underwater while wearing a diving suit and feeding sharks.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "On February 23, 1940, Ripley hosted his radio show from inside a diving suit underwater at Marineland in St. Augustine, Florida.",
 		},
 		{
 			id: 24,
-			question:
-				"What distinct anatomical structure do hamsters possess on their flanks or hips used for territory marking?",
-			options: [
-				"Scent glands",
-				"A second set of ears",
-				"An extra fat reserve",
-				"Air sacs for vocalizing",
-			],
-			correctAnswer: "Scent glands",
-			description:
-				"Hamsters have distinct flank glands (visible as dark spots on Syrian hamsters) that secrete secretions used to mark territory by rubbing against objects.",
+			question: "Robert Ripley owned a private island in New York named BION Island, which was named as an acronym for \"Believe It Or Not.\"",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "Ripley purchased the island in Mamaroneck, New York, in 1934, naming it \"BION Island\" (Believe It Or Not). It housed his massive personal collection of oddities.",
 		},
 		{
 			id: 25,
-			question:
-				"What is the function of a cat's 'Jacobson's organ' (vomeronasal organ) located in the roof of its mouth?",
-			options: [
-				"It produces saliva to digest bones",
-				"It allows them to 'taste-smell' chemical signals in the air",
-				"It controls their purring frequency",
-				"It filters out dust while breathing",
-			],
-			correctAnswer:
-				"It allows them to 'taste-smell' chemical signals in the air",
-			description:
-				"When cats pull back their lips in a sneer (the Flehmen response), they are directing scent molecules into the Jacobson's organ to analyze pheromones.",
+			question: "Ripley's Believe It or Not! purchased the actual prop box of chocolates from the 1994 film Forrest Gump at auction.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "Ripley's purchased the iconic prop box of chocolates used by Tom Hanks in the movie at auction for $25,000.",
 		},
 		{
 			id: 26,
-			question:
-				"What genetic mutation accounts for the giant panda's inability to taste savory meat flavors?",
-			options: [
-				"A malfunctioning Tas1r1 gene",
-				"A complete absence of taste buds",
-				"An overabundance of sweet receptors",
-				"An inability to process zinc",
-			],
-			correctAnswer: "A malfunctioning Tas1r1 gene",
-			description:
-				"Genetic studies show that about 4.2 million years ago, the giant panda's Tas1r1 gene became a pseudogene, losing the ability to taste umami (savory flavors).",
+			question: "The U.S. Postmaster General once officially announced that the Postal Service would no longer attempt to decode bizarrely addressed mail sent to Robert Ripley.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "In 1930, Postmaster General Walter Brown announced the post office would no longer waste time trying to decipher uniquely addressed letters (e.g., addressed in code, Braille, or drawn rebuses) sent by fans to Ripley.",
 		},
 		{
 			id: 27,
-			question:
-				"Which blood type is considered the universal donor for dogs during blood transfusions?",
-			options: [
-				"DEA 1.1 Negative",
-				"Type O Negative",
-				"DEA 7 Positive",
-				"Type B",
-			],
-			correctAnswer: "DEA 1.1 Negative",
-			description:
-				"Dog Erythrocyte Antigen (DEA) 1.1 negative blood is the universal donor type in canines, meaning it can safely be given to dogs of other types in an emergency.",
+			question: "Shortly after the fall of the Berlin Wall in 1989, Ripley's Believe It or Not! purchased a 160-foot section of the wall to display in its museums.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "Ripley's acquired sixteen 10-foot graffitied segments (totaling 160 feet) of the Berlin Wall, which are now distributed across several Odditoriums.",
 		},
 		{
 			id: 28,
-			question:
-				"What is unique about the metabolic rate and body temperature of armadillos compared to other mammals?",
-			options: [
-				"They have an incredibly high body temperature of 105°F",
-				"They have an exceptionally low metabolic rate and body temperature",
-				"They can change their body temperature at will",
-				"Their metabolism stops completely during sleep",
-			],
-			correctAnswer:
-				"They have an exceptionally low metabolic rate and body temperature",
-			description:
-				"Armadillos have a remarkably low basal metabolic rate and a low internal temperature, which explains why they lack thick fat layers and struggle in freezing climates.",
+			question: "A Manchurian man named Wang, known as the \"Human Unicorn,\" was featured in early Ripley's archives for having a 13-inch horn-like growth on the back of his head.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "In 1930, a photograph of Wang showing a massive cutaneous horn protruding from the back of his head was sent to Ripley, who featured him in his cartoons.",
 		},
 		{
 			id: 29,
-			question:
-				"Which of these environmental extremes is highly dangerous to hamsters by triggering an unseasonable pseudohibernation?",
-			options: [
-				"Prolonged exposure to temperatures below 50°F (10°C)",
-				"High humidity environments above 40%",
-				"Direct exposure to moonlight",
-				"Environments completely free of soil",
-			],
-			correctAnswer: "Prolonged exposure to temperatures below 50°F (10°C)",
-			description:
-				"If a pet hamster's environment drops below 50°F (10°C), its heart rate drops and it enters a state of torpor (pseudohibernation) that can easily be mistaken for death.",
+			question: "Ripley's Believe It or Not! purchased an original Luke Skywalker lightsaber prop used by Mark Hamill in the original Star Wars films for $450,000.",
+			options: ["True", "False"],
+			correctAnswer: "True",
+			description: "Ripley's purchased the original screen-used lightsaber prop, originally from the collection of producer Gary Kurtz, for $450,000 at auction in June 2017.",
 		},
 		{
 			id: 30,
-			question:
-				"Unlike humans, domestic cats completely lack taste receptors for which flavor profile?",
-			options: ["Sour", "Salty", "Sweet", "Bitter"],
-			correctAnswer: "Sweet",
-			description:
-				"Due to a deletion mutation in the Tas1r2 gene, all felines lack the molecular building blocks required to form the taste receptors for sweetness.",
+			question: "Robert Ripley was born with the first name \"Robert\" but legally changed it to \"LeRoy\" during his sports career.",
+			options: ["True", "False"],
+			correctAnswer: "False",
+			description: "He was born LeRoy Robert Ripley, but he dropped \"LeRoy\" and went by Robert early in his career because he thought LeRoy sounded less professional.",
 		},
-		{
-			id: 31,
-			question:
-				"What is the specialized reflective layer behind a cat's retina that enhances their night vision?",
-			options: [
-				"Tapetum lucidum",
-				"Nictitating membrane",
-				"Cornea splits",
-				"Fovea centralis",
-			],
-			correctAnswer: "Tapetum lucidum",
-			description:
-				"According to veterinary anatomy resources, the tapetum lucidum reflects visible light back through the retina, increasing the light available to the photoreceptors and causing their eyes to glow in the dark.",
-		},
-		// {
-		// 	id: 32,
-		// 	question:
-		// 		"Which unique sound-receptive structure allows a dog to pinpoint the exact direction of a noise in 0.06 seconds?",
-		// 	options: [
-		// 		"Mobile ear pinnas controlled by 18 distinct muscles",
-		// 		"A secondary eardrum inside the skull",
-		// 		"A fluid-filled cranial echo chamber",
-		// 		"An internal cartilaginous radar disc",
-		// 	],
-		// 	correctAnswer: "Mobile ear pinnas controlled by 18 distinct muscles",
-		// 	description:
-		// 		"Canine biology records note that dogs have at least 18 muscles controlling their ear pinnas (flaps), allowing them to tilt, rotate, and raise each ear independently to locate sounds accurately.",
-		// },
 	],
 };
