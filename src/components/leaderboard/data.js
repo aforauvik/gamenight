@@ -1,8 +1,8 @@
 export const allInfo2026 = {
-	gameName: "Ripley's Believe It or Not!",
+	gameName: "Junk Foods",
 	season: "July, 2026",
 	rounds: 30,
-	game: 4,
+	game: 5,
 };
 
 export const rawTeams2026 = [
